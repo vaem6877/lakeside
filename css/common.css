@@ -3,10 +3,9 @@
 /*regular400 medium500*/
 
 /*--폰트--*/
-* {
-  font-family: "Noto Sans KR", sans-serif;
-}
+
 body {
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 20px;
   color: #181f1b;
 }
@@ -34,7 +33,31 @@ footer {
   font-size: 12px;
 }
 
-.button {
-  font-weight: 400;
-  font-size: 18px;
+/*--버튼--*/
+.hole_btn {
+  width: 110px;
+  height: 110px;
+  background: #8ba63d;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 110px;
+  font-weight: 700;
+  color: #fff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
+}
+.hole_btn:hover {
+  background: #234a35;
+}
+.more_btn {
+  width: 109px;
+  height: 28px;
+  border: 1px solid #fff;
+  font-size: 10px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.16em;
 }
