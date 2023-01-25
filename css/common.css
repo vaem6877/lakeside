@@ -1,5 +1,5 @@
 @import url(reset.css);
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
 /*regular400 medium500*/
 
 /*--폰트--*/
@@ -8,6 +8,21 @@
 }
 body {
   font-size: 20px;
+  color: #181f1b;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 51px;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 37px;
+}
+
+h4 {
+  font-size: 27px;
 }
 
 form {
