@@ -7,14 +7,16 @@
   font-family: "Noto Sans KR", sans-serif;
 }
 body {
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: 500;
   font-size: 20px;
 }
 
 form {
-  font-weight: 300;
   font-size: 18px;
+}
+
+footer {
+  font-weight: 700;
+  font-size: 12px;
 }
 
 .button {
