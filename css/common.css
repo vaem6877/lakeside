@@ -38,3 +38,43 @@ footer {
   font-weight: 400;
   font-size: 18px;
 }
+
+/* ================== Varients ================================== */
+
+:root {
+  /* =================== COLOR =================== */
+  --primary-green: #234a35;
+  --primary-ygreen: #8ba63d;
+  --secondary-ivory: #e9e4da;
+  --secondary-brown: #8d7a5d;
+
+  --typo-C-Green: #181f1b;
+  --typo-C-grey: #404040;
+  --typo-C-lightgrey: #808080;
+
+  --bg-green: #f0f6e2;
+  --bg-grey: #dfdfdf;
+  --bg-white: #fff;
+
+  /* =================== TYPOGRAPHY =================== */
+
+  --big-TT-fz: 51px;
+  --main-TT-fz: 37px;
+  --second-TT-fz: 27px;
+  --content-fz: 20px;
+  --second-content-fz: 18px;
+  --small-content-fz: 14px;
+  --xsmall-content-fz: 12px;
+
+  --mobile-mainTT-fz: 35px;
+  --mobile-EngTT-fz: 25px;
+  --mobile-menu-fz: 23px;
+  /* --mobile-KrTT-fz:20px; */
+  /* --mobile-menu-fz:18px; */
+  /* --mobile-mainTT-fz:12px; */
+  --mobile-content-fz: 10px;
+  --mobile-tab-fz: 9px;
+  --mobile-btn-fz: 8px;
+}
+
+/* ====================================================== */
