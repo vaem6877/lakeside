@@ -1,3 +1,5 @@
+/* section:코스소개 */
+
 .course {
   text-align: center;
 }
@@ -35,17 +37,34 @@
 .img_container img {
   width: 65%;
 }
-#tabs .d-flex {
+
+/* section: 코스설명 */
+.hole_desc #tabs .d-flex {
   padding: 0;
+  margin-bottom: 0;
 }
-#tabs .d-flex li {
+.hole_desc #tabs .d-flex li {
   background: #234a35;
   border: 1px solid #000;
   padding: 28px 155px;
 }
-#tabs .d-flex li a {
+.hole_desc #tabs .d-flex li:hover {
+  background: #fff;
+}
+.hole_desc #tabs .d-flex li:hover a {
+  color: #234a35;
+}
+.hole_desc #tabs .d-flex li a {
   color: #fff;
   text-decoration: none;
+  white-space: nowrap;
+}
+.hole_desc #tabs .tab_group {
+  padding: 163px 0px;
+}
+.swiper-slide {
+  padding: 0;
+  margin: 0;
 }
 .swiper-slide a {
   display: block;
@@ -67,20 +86,23 @@
   color: #fff;
   text-decoration: none;
 }
-.hole_desc {
-  margin-bottom: 216px;
-}
-.course_gallery > .container {
-  margin-bottom: 108px;
+/* section: 코스갤러리 */
+
+.course_gallery > .mix-wrapper {
+  margin: 108px 0px 216px;
 }
 .course_gallery button {
-  width: 220px;
+  width: 20%;
   height: 54px;
   background: #234a35;
   color: #fff;
   border: none;
   margin-right: 33px;
   padding: 0;
+}
+.course_gallery button:hover {
+  background: #8ba63d;
+  color: #fff;
 }
 .course_gallery button:last-child {
   margin-right: 0;
@@ -93,4 +115,36 @@
   width: 250px;
   height: 200px;
   padding: 0;
+}
+
+/* section: 홀인원 */
+.holeinone {
+  background: #f0f6e2;
+  padding: 164px 0px 207px;
+}
+.holeinone > div {
+  padding: 54px 199px;
+}
+.holeinone > div > h2 {
+  margin-bottom: 72px;
+}
+.item img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.item p:nth-child(2) {
+  width: 83px;
+  height: 27px;
+  background: #234a35;
+  color: #fff;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 6px;
+}
+.east_course {
+  width: 100%;
+  background: rgba(139, 166, 61, 0.5);
 }
