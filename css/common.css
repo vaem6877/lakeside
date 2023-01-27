@@ -2,43 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
 /*regular400 medium500*/
 
-/*--폰트--*/
-* {
-  font-family: "Noto Sans KR", sans-serif;
-}
-body {
-  font-size: 20px;
-  color: #181f1b;
-}
-
-h2 {
-  font-weight: 900;
-  font-size: 51px;
-}
-
-h3 {
-  font-weight: 500;
-  font-size: 37px;
-}
-
-h4 {
-  font-size: 27px;
-}
-
-form {
-  font-size: 18px;
-}
-
-footer {
-  font-weight: 700;
-  font-size: 12px;
-}
-
-.button {
-  font-weight: 400;
-  font-size: 18px;
-}
-
 /* ================== Varients ================================== */
 
 :root {
@@ -78,3 +41,52 @@ footer {
 }
 
 /* ====================================================== */
+
+/*--폰트--*/
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+  font-size: var(--content-fz);
+  color: var(--typo-C-Green);
+}
+
+h2 {
+  font-weight: 900;
+  font-size: var(--big-TT-fz);
+  /* 51 */
+}
+
+h3 {
+  font-size: var(--main-TT-fz);
+  /* 37 */
+}
+
+h4 {
+  font-size: var(--second-TT-fz);
+  /* 27 */
+}
+
+/* description // 예약폼 빼고 */
+p {
+  font-weight: 300;
+  font-size: var(--second-TT-fz);
+}
+
+h4 {
+  font-size: 27px;
+}
+
+form {
+  font-size: 18px;
+}
+
+footer {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.button {
+  font-weight: 400;
+  font-size: 18px;
+}
