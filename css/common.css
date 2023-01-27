@@ -1,6 +1,5 @@
 @import url(reset.css);
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
-/*regular400 medium500*/
 
 /* ================== Varients ================================== */
 
@@ -71,22 +70,4 @@ h4 {
 p {
   font-weight: 300;
   font-size: var(--second-TT-fz);
-}
-
-h4 {
-  font-size: 27px;
-}
-
-form {
-  font-size: 18px;
-}
-
-footer {
-  font-weight: 700;
-  font-size: 12px;
-}
-
-.button {
-  font-weight: 400;
-  font-size: 18px;
 }
