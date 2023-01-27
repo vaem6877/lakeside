@@ -1,37 +1,108 @@
 @import url(reset.css);
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
-/*regular400 medium500*/
 
-/*--폰트--*/
+/* ================== Varients ================================== */
+
+:root {
+  /* =================== COLOR =================== */
+  --primary-green: #234a35;
+  --primary-ygreen: #8ba63d;
+  --secondary-ivory: #e9e4da;
+  --secondary-brown: #8d7a5d;
+
+  /* 글자색 */
+  --typo-C-Green: #181f1b;
+  --typo-C-grey: #404040;
+  --typo-C-lightgrey: #808080;
+
+  /* 배경색 */
+  --bg-green: #f0f6e2;
+  --bg-grey: #dfdfdf;
+  --bg-white: #fff;
+
+  /* =================== TYPOGRAPHY =================== */
+
+  --big-TT-fz: 51px;
+  --main-TT-fz: 37px;
+  --second-TT-fz: 27px;
+  --content-fz: 20px;
+  --second-content-fz: 18px;
+  --small-content-fz: 14px;
+  --xsmall-content-fz: 12px;
+
+  --mobile-mainTT-fz: 35px;
+  --mobile-EngTT-fz: 25px;
+  --mobile-menu-fz: 23px;
+  /* --mobile-KrTT-fz:20px; */
+  /* --mobile-menu-fz:18px; */
+  /* --mobile-mainTT-fz:12px; */
+  --mobile-content-fz: 10px;
+  --mobile-tab-fz: 9px;
+  --mobile-btn-fz: 8px;
+}
+
+/* ========================== 변수끝 ============================ */
+
+/* ====== 폰트, 기본 스타일 ====== */
 
 body {
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 20px;
-  color: #181f1b;
+  font-weight: 500;
+  font-size: var(--content-fz);
+  color: var(--typo-C-Green);
 }
 
 h2 {
   font-weight: 900;
-  font-size: 51px;
+  font-size: var(--big-TT-fz);
+  /* 51 */
 }
 
 h3 {
-  font-weight: 500;
-  font-size: 37px;
+  font-size: var(--main-TT-fz);
+  /* 37 */
 }
 
 h4 {
-  font-size: 27px;
+  font-size: var(--second-TT-fz);
+  /* 27 */
 }
 
-form {
-  font-size: 18px;
+/* description */
+p {
+  font-weight: 300;
+  font-size: var(--second-TT-fz);
 }
 
-footer {
-  font-weight: 700;
-  font-size: 12px;
+a {
+  text-decoration: none;
+  color: var(--typo-C-Green);
 }
+
+img {
+  vertical-align: bottom;
+}
+
+/* ==================== 공통영역 ==================== */
+
+/* 헤더(배너) - 각각 파트 css에서 배경 이미지(background-image로!) 지정 */
+header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+#logo {
+  padding: 27px 0 676px;
+  width: 133px;
+  height: 27px;
+  text-indent: -999em;
+  /* background-image: url(../img/logo_black.png); 이미지 배경없는걸로 수정필요 */
+}
+
+/* ========= FOOTER ======== */
+
+/* ======================= // 윤희_0127 ===================== */
 
 /*--버튼--*/
 .hole_btn {
