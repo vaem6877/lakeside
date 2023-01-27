@@ -1,12 +1,13 @@
 @import url(./common.css);
 
-header {
+/* header {
   background: #000;
-}
+} */
 
 #logo {
-  padding: 27px 0 676px;
-  color: #fff;
+  /* padding: 27px 0 676px; */
+  /* color: #f00; */
+  /* background-image: url(../img/골프코스배너.jpg); */
 }
 
 .east-course {

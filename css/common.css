@@ -10,10 +10,12 @@
   --secondary-ivory: #e9e4da;
   --secondary-brown: #8d7a5d;
 
+  /* 글자색 */
   --typo-C-Green: #181f1b;
   --typo-C-grey: #404040;
   --typo-C-lightgrey: #808080;
 
+  /* 배경색 */
   --bg-green: #f0f6e2;
   --bg-grey: #dfdfdf;
   --bg-white: #fff;
@@ -39,9 +41,9 @@
   --mobile-btn-fz: 8px;
 }
 
-/* ====================================================== */
+/* ========================== 변수끝 ============================ */
 
-/*--폰트--*/
+/* ====== 폰트, 기본 스타일 ====== */
 
 body {
   font-family: "Noto Sans KR", sans-serif;
@@ -66,8 +68,36 @@ h4 {
   /* 27 */
 }
 
-/* description // 예약폼 빼고 */
+/* description */
 p {
   font-weight: 300;
   font-size: var(--second-TT-fz);
 }
+
+a {
+  text-decoration: none;
+  color: var(--typo-C-Green);
+}
+
+img {
+  vertical-align: bottom;
+}
+
+/* ==================== 공통영역 ==================== */
+
+/* 헤더(배너) - 각각 파트 css에서 배경 이미지(background-image로!) 지정 */
+header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+#logo {
+  padding: 27px 0 676px;
+  width: 133px;
+  height: 27px;
+  text-indent: -999em;
+  /* background-image: url(../img/logo_black.png); 이미지 배경없는걸로 수정필요 */
+}
+
+/* ========= FOOTER ======== */
