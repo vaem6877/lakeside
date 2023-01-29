@@ -1,58 +1,68 @@
-:link{
+:link {
   text-decoration: none;
 }
-.weather_cast{
-    width: 173px;
-    height: 232px;
-    background: #000;
-    color:#fff;
-    box-sizing: border-box;
-    position: relative;
-  }
-.preview{
+.weather_cast {
+  width: 173px;
+  height: 232px;
+  background: #000;
+  color: #fff;
+  box-sizing: border-box;
+  position: relative;
+}
+.preview {
   text-align: center;
-  padding: 15px;
+  padding: 10px 15px;
+  box-sizing: content-box;
 }
-.preview .degree{
-  text-align: left;
+.preview ul {
+  margin: 0;
+  padding: 0;
 }
-.preview p{
+.preview ul li {
+  margin: 0 auto;
+  list-style: none;
+}
+.preview ul li > * {
+  display: none;
+}
+.preview p {
   font-size: 14px;
   margin-bottom: 0;
 }
-.swiper{
+.swiper {
   width: 80%;
   margin-bottom: 10px;
 }
-.swiper-wrapper{
+.swiper-wrapper {
   list-style: none;
   padding: 0;
   text-align: center;
   margin-bottom: 0;
 }
-div:after,div:before{
+div:after,
+div:before {
   display: none;
 }
-.swiper-slide p{
+.swiper-slide p {
   font-size: 10px;
   margin: 0;
-  color:#fff;
+  color: #fff;
 }
-.swiper-button-prev{
+.swiper-button-prev {
   top: 37%;
   left: -7px;
-  color:#fff
+  color: #fff;
 }
-.swiper-button-next{
+.swiper-button-next {
   top: 37%;
   right: -7px;
-  color:#fff
+  color: #fff;
 }
-.shortcut > *{
+.shortcut > * {
   text-align: center;
   padding: 8px 0px;
 }
-.shortcut .faq{
+.shortcut .faq {
   background: #fff;
-  color:#000
+  color: #000;
 }

@@ -13,127 +13,22 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
       />
-      <style>
-          :link{
-            text-decoration: none;
-          }
-          .weather_cast{
-              width: 173px;
-              height: 232px;
-              background: #000;
-              color:#fff;
-              box-sizing: border-box;
-              position: relative;
-            }
-        .preview{
-            text-align: center;
-            padding: 15px;
-        }
-        .preview .degree{
-            text-align: left;
-        }
-        .preview p{
-            font-size: 14px;
-            margin-bottom: 0;
-        }
-        .swiper{
-            width: 80%;
-            margin-bottom: 10px;
-        }
-        .swiper-wrapper{
-            list-style: none;
-            padding: 0;
-            text-align: center;
-            margin-bottom: 0;
-        }
-        div:after,div:before{
-            display: none;
-        }
-        .swiper-slide p{
-            font-size: 10px;
-            margin: 0;
-            color:#fff;
-        }
-        .swiper-button-prev{
-            top: 37%;
-            left: -7px;
-            color:#fff
-        }
-        .swiper-button-next{
-            top: 37%;
-            right: -7px;
-            color:#fff
-        }
-        .shortcut > *{
-            text-align: center;
-            padding: 8px 0px;
-        }
-        .shortcut .faq{
-            background: #fff;
-            color:#000
-        }
-    </style>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="css/widget.css">
   </head>
   <body>
     <div class="widget">
       <div class="weather_cast">
         <div class="preview d-flex justify-content-center gap-3">
-            <div class="icon">콘</div>
-            <div class="degree">
-                <p>MAX 2˚C</p>
-                <p>MIN -10˚C</p>
-            </div>
+          <ul class="d-flex">
+          </ul>
+            <!-- <div class="icon">콘</div>
+            <div class="degree d-flex">
+              <ul></ul>
+            </div> -->
         </div>
         <div class="swiper container">
             <ul class="swiper-wrapper d-flex">
-                <li class="swiper-slide">
-                    <a href="">
-                        <p class="date">27</p>
-                        <p class="day">(금)</p>
-                    </a>
-                </li>
-                <li class="swiper-slide">
-                    <a href="">
-                        <p class="date">28</p>
-                        <p class="day">(토)</p>
-                    </a>
-                </li>
-                <li class="swiper-slide">
-                    <a href="">
-                        <p class="date">29</p>
-                        <p class="day">(일)</p>
-                    </a>
-                </li>
-                <li class="swiper-slide">
-                    <a href="">
-                        <p class="date">30</p>
-                        <p class="day">(월)</p>
-                    </a>
-                </li>
-                <li class="swiper-slide">
-                    <a href="">
-                        <p class="date">31</p>
-                        <p class="day">(화)</p>
-                    </a>
-                </li>
-                <li class="swiper-slide">
-                    <a href="">
-                        <p class="date">1</p>
-                        <p class="day">(수)</p>
-                    </a>
-                </li>
-                <li class="swiper-slide">
-                    <a href="">
-                        <p class="date">2</p>
-                        <p class="day">(목)</p>
-                    </a>
-                </li>
-                <li class="swiper-slide">
-                    <a href="">
-                        <p class="date">3</p>
-                        <p class="day">(금)</p>
-                    </a>
-                </li>
             </ul>
         </div>
         <div class="swiper-button-prev">◀
@@ -141,10 +36,26 @@
           <div class="swiper-button-next">▶
           </div>
       <div class="shortcut">
-        <div class="reservation">예약하기</div>
-        <div class="faq">문의하기</div>
-        <div class="map">오시는길</div>
+        <div class="reservation d-flex justify-content-center align-items-center gap-4">
+            <div class="calendar">예약하기</div>
+            <i class="fa-solid fa-calendar-plus"></i>
+        </div>
+        <div class="faq d-flex justify-content-center align-items-center gap-4">
+            <div class="phone">문의하기</div>
+            <i class="fa-solid fa-square-phone-flip"></i>
+        </div>
+        <div class="location d-flex justify-content-center align-items-center gap-4">
+            <div class="map">오시는길</div>
+            <i class="fa-solid fa-map-location-dot"></i>
+        </div>
       </div>
+    </div>
+
+    <div class="test">
+      <p>실험</p>
+      <ul class="d-flex gap-4">
+        <li>임시</li>
+      </ul>
     </div>
     <script
       src="https://code.jquery.com/jquery-3.6.3.min.js"
@@ -153,32 +64,9 @@
     ></script>
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/widget.js"></script>
     <script>
-      let initDate = new Date();
-      let year = initDate.getFullYear(); // 년도
-      let month = initDate.getMonth() + 1; // 월
-      let date = initDate.getDate(); // 날짜
-      let day= initDate.getDay();  // 요일
-      let today = `${year}0${month}${date}0600`;
-      console.log(today);
-    //   $.ajax({
-    //     url: `https://apis.data.go.kr/1360000/MidFcstInfoService/getMidTa?serviceKey=lwr2knP0%2Bf8GEB9E7R8LpnDlhLySa31uE6xSsYGwHaHGHzS9yivXYhlL%2B6hgGzYV4sbGWJx6QR%2FRS3IrMZXOjA%3D%3D&pageNo=1&numOfRows=10&dataType=JSON&regId=11B20201&tmFc=${today}`,
-    //     success: function (result) {
-    //       let items = result.response.body.items.item;
-    //       console.log(items);
-    //       let cast = `
-    //       <li>
-    //     },
-    //   });
-    var swiper = new Swiper(".swiper", {
-  slidesPerView: 5,
-  spaceBetween: 3,
-  setWrapperSize:true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-}); //홀 스와이퍼
+      
     </script>
   </body>
 </html>
