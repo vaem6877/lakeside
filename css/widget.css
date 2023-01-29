@@ -1,0 +1,58 @@
+:link{
+  text-decoration: none;
+}
+.weather_cast{
+    width: 173px;
+    height: 232px;
+    background: #000;
+    color:#fff;
+    box-sizing: border-box;
+    position: relative;
+  }
+.preview{
+  text-align: center;
+  padding: 15px;
+}
+.preview .degree{
+  text-align: left;
+}
+.preview p{
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.swiper{
+  width: 80%;
+  margin-bottom: 10px;
+}
+.swiper-wrapper{
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 0;
+}
+div:after,div:before{
+  display: none;
+}
+.swiper-slide p{
+  font-size: 10px;
+  margin: 0;
+  color:#fff;
+}
+.swiper-button-prev{
+  top: 37%;
+  left: -7px;
+  color:#fff
+}
+.swiper-button-next{
+  top: 37%;
+  right: -7px;
+  color:#fff
+}
+.shortcut > *{
+  text-align: center;
+  padding: 8px 0px;
+}
+.shortcut .faq{
+  background: #fff;
+  color:#000
+}
