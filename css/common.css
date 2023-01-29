@@ -102,6 +102,25 @@ header {
 
 /* ========= FOOTER ======== */
 
+footer {
+  background: var(--typo-C-Green);
+}
+
+footer * {
+  font-size: var(--xsmall-content-fz);
+  color: var(--bg-white);
+}
+footer .terms {
+  padding: 10px 0 32px;
+}
+
+footer address dl:last-of-type {
+  color: var(--typo-C-lightgrey);
+}
+/* footer .footer-logo {
+  padding-bottom: 22px;
+} */
+
 /* ======================= // 윤희_0127 ===================== */
 
 /*--버튼--*/
