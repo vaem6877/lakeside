@@ -1,0 +1,5 @@
+@import url(./common.css);
+
+header {
+  background-image: url(../이미지/notice_banner.png);
+}

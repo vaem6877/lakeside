@@ -16,6 +16,12 @@
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
@@ -24,11 +30,11 @@
       <h1 id="logo">lakeside</h1>
       <div class="widget"></div>
     </header>
-    <main>
+    <main class="container">
       <section class="main-course">
-        <div class="east-course">
-          <img src="" alt="" />
-          <div class="course-desc">
+        <div class="east-course row">
+          <img src="./이미지/eastcourse.png" alt="" class="col-md-6" />
+          <div class="course-desc col-md-5">
             <h2 class="text-center">동코스</h2>
             <p>
               다른 코스에 비해 짧지만 도전과 흥미를 자극하는데 있어서는 결코
@@ -40,42 +46,70 @@
             <a href="">동코스 전체보기</a>
           </div>
         </div>
-        <div class="west-course">
-          <img src="" alt="" />
-          <div class="course-desc">
+        <div class="west-course d-flex align-items-center">
+          <img src="./이미지/westcourse.png" alt="" class="col-md-6" />
+          <div class="course-desc col-md-5">
             <h2 class="text-center">서코스</h2>
             <p>
-              다른 코스에 비해 짧지만 도전과 흥미를 자극하는데 있어서는 결코
-              뒤지지 않는 동코스는 1~4번홀 까지는 결코 방심해서는 안되는 굴곡이
-              이어지며 기묘한 바위에 둘러싸인 5,6번 홀은 라운드 시 시선을
-              빼앗기지 않는 집중력이 요구됩니다. 7~9번 홀은 전략을 테스트하기에
-              안성맞춤인 코스입니다.
+              가장 긴 전장을 자랑하는 서코스는 아름다운 숲을 향해 굽이쳐
+              흐르면서 시작됩니다. 대담한 용기를 필요로 하며 골퍼의 시선을
+              압도하는 호수는 홀을 지나는 동안 전략적 판단을 요구할 것입니다.
+              또한 산의 정상을 따라가며 펼쳐지는 8번홀과 9번홀은 골퍼의 마음
+              깊이 각인 될 것입니다.
             </p>
             <a href="">서코스 전체보기</a>
           </div>
         </div>
-        <div class="south-course">
-          <img src="" alt="" />
-          <div class="course-desc">
+        <div class="south-course row">
+          <img src="./이미지/southcourse.png" alt="" class="col-md-6" />
+          <div class="course-desc col-md-5">
             <h2 class="text-center">남코스</h2>
             <p>
-              다른 코스에 비해 짧지만 도전과 흥미를 자극하는데 있어서는 결코
-              뒤지지 않는 동코스는 1~4번홀 까지는 결코 방심해서는 안되는 굴곡이
-              이어지며 기묘한 바위에 둘러싸인 5,6번 홀은 라운드 시 시선을
-              빼앗기지 않는 집중력이 요구됩니다. 7~9번 홀은 전략을 테스트하기에
-              안성맞춤인 코스입니다.
+              코스 중 가장 긴 1번 홀은 계곡으로 빨려드는 느낌으로 라운드를
+              시작하게 되고, 이어 지는 각 홀들은 산과 계곡으로 연결되어
+              드라마틱한 광경을 선사합니다. 그 곳을 지나면 천연림을 관통해
+              개활지로 이어지는 풍경이 기다리며, 호수와 연못은 마지막 3홀을
+              마무리하는데 박진감을 선사합니다.
             </p>
             <a href="">남코스 전체보기</a>
           </div>
         </div>
       </section>
-      <section class="main-event"></section>
+      <section class="container">
+        <ul class="main-slide">
+          <li>
+            <a href="">
+              <img src="img/logo_black.png" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="img/logo_black.png" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="img/logo_black.png" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="img/logo_black.png" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="img/logo_black.png" alt="" />
+            </a>
+          </li>
+        </ul>
+      </section>
     </main>
     <a href="#" id="go-top"><i class="fa-solid fa-arrow-up"></i></a>
 
     <footer class="container">
       <div class="notice"></div>
-      <div class="terms d-flex justify-content-between">
+      <div class="terms d-flex justify-content-center">
         <a href="">이용약관</a>
         <a href="">웹회원 약관</a>
         <a href="">개인정보처리방침</a>
@@ -83,10 +117,12 @@
         <a href="">사업자정보확인</a>
         <a href="">사이트맵</a>
       </div>
-      <a href="" class="footer-logo">logo</a>
+      <a href="./img/logo_black.png" class="footer-logo justify-content-center"
+        >logo</a
+      >
 
       <address class="">
-        <dl class="d-flex justify-content-between">
+        <dl class="d-flex justify-content-center">
           <dt>주소 :</dt>
           <dd>16887 경기도 용인시 처인구 모현읍 능원로 181</dd>
           <dt>대표전화 :</dt>
@@ -100,7 +136,7 @@
           <dt>이메일 :</dt>
           <dd>lakeside@lakeside.kr</dd>
         </dl>
-        <dl class="d-flex justify-content-between">
+        <dl class="d-flex justify-content-center">
           <dt>사업자등록번호</dt>
           <dd>135-81-02491</dd>
           <dt>통신판매신고</dt>
@@ -108,11 +144,16 @@
           <dt>대표이사</dt>
           <dd>문지태</dd>
         </dl>
-        <p class="text-uppercase">
+        <p class="text-uppercase text-center">
           copyright lakeside country club. all rights reserved
         </p>
       </address>
     </footer>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

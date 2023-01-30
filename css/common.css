@@ -1,5 +1,6 @@
 @import url(reset.css);
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
+/* regular 400 bold 700 */
 
 /* ================== Varients ================================== */
 
@@ -93,10 +94,13 @@ header {
   overflow: hidden;
 }
 #logo {
+  display: inline-block;
   padding: 27px 0 676px;
   width: 133px;
   height: 27px;
   text-indent: -999em;
+  background: url(../이미지/image\ 1.png) no-repeat 50% 0 / contain;
+
   /* background-image: url(../img/logo_black.png); 이미지 배경없는걸로 수정필요 */
 }
 
@@ -108,19 +112,53 @@ footer {
 
 footer * {
   font-size: var(--xsmall-content-fz);
+  font-weight: 400;
   color: var(--bg-white);
 }
 footer .terms {
   padding: 10px 0 32px;
 }
+footer .terms a:nth-child(3) {
+  font-weight: 700;
+}
 
-footer address dl:last-of-type {
+footer .terms a {
+  padding-right: 15px;
+}
+
+footer address dl {
+  padding-bottom: 9px;
+}
+
+footer address dl:first-of-type {
+  padding: 22px 0 9px;
+}
+
+footer address dl dt {
+  padding-right: 2px;
+}
+
+footer address dl dd {
+  padding-right: 15px;
+}
+
+footer .terms a:not(:nth-child(3)),
+footer address dl:last-of-type *,
+footer address p {
   color: var(--typo-C-lightgrey);
 }
-/* footer .footer-logo {
-  padding-bottom: 22px;
-} */
 
+footer .footer-logo {
+  display: inline-block;
+  width: 157px;
+  height: 32px;
+  text-indent: -999em;
+  background: url(../이미지/logo_white.png) no-repeat center / contain;
+}
+
+footer address p {
+  padding-bottom: 32px;
+}
 /* ======================= // 윤희_0127 ===================== */
 
 /*--버튼--*/

@@ -1,13 +1,21 @@
 @import url(./common.css);
 
-/* header {
-  background: #000;
-} */
+header {
+  background-image: url(../이미지/Mask\ group.png);
+}
 
 #logo {
-  /* padding: 27px 0 676px; */
-  /* color: #f00; */
   /* background-image: url(../img/골프코스배너.jpg); */
+}
+
+.main-course {
+  font-size: var(--content-fz);
+}
+
+.main-course div img {
+  width: 538px;
+  height: 358px;
+  object-fit: cover;
 }
 
 .east-course {
@@ -19,4 +27,14 @@
 }
 .south-course {
   margin: 191px 0;
+}
+
+/* .main-event ul li {
+  display: inline-block;
+} */
+
+.main-event a img {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
 }
