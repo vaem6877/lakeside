@@ -1,6 +1,6 @@
 @import url(reset.css);
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
-/* regular 400 bold 700 */
+/* light 300 regular 400 medium 500 bold 700 black 900 */
 
 /* ================== Varients ================================== */
 
@@ -149,6 +149,7 @@ footer address p {
 }
 
 footer .footer-logo {
+  margin: 0 auto;
   display: inline-block;
   width: 157px;
   height: 32px;

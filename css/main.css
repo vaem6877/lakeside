@@ -8,14 +8,35 @@ header {
   /* background-image: url(../img/골프코스배너.jpg); */
 }
 
-.main-course {
+.main-course p {
   font-size: var(--content-fz);
+  font-weight: 300;
+  line-height: 27px;
+}
+.main-course .course-desc h2 {
+  margin-bottom: 55px;
 }
 
 .main-course div img {
   width: 538px;
   height: 358px;
   object-fit: cover;
+}
+.main-course a {
+  display: inline-block;
+  color: var(--bg-white);
+  text-align: center;
+  line-height: 30px;
+  font-size: var(--second-content-fz);
+  font-weight: 400;
+  width: 160px;
+  height: 30px;
+  border-radius: 5px;
+  background: var(--primary-green);
+}
+
+.main-course .west-course a {
+  background: var(--primary-ygreen);
 }
 
 .east-course {
@@ -24,14 +45,15 @@ header {
 
 .west-course {
   margin: 135px 0;
+  background: var(--bg-green);
 }
 .south-course {
   margin: 191px 0;
 }
 
-/* .main-event ul li {
+.main-slide ul li {
   display: inline-block;
-} */
+}
 
 .main-event a img {
   width: 100%;

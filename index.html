@@ -30,11 +30,13 @@
       <h1 id="logo">lakeside</h1>
       <div class="widget"></div>
     </header>
-    <main class="container">
+    <main>
       <section class="main-course">
-        <div class="east-course row">
+        <div class="east-course row container mx-auto">
           <img src="./이미지/eastcourse.png" alt="" class="col-md-6" />
-          <div class="course-desc col-md-5">
+          <div
+            class="course-desc col-md-5 d-flex flex-column justify-content-center"
+          >
             <h2 class="text-center">동코스</h2>
             <p>
               다른 코스에 비해 짧지만 도전과 흥미를 자극하는데 있어서는 결코
@@ -46,8 +48,10 @@
             <a href="">동코스 전체보기</a>
           </div>
         </div>
-        <div class="west-course d-flex align-items-center">
-          <img src="./이미지/westcourse.png" alt="" class="col-md-6" />
+        <div
+          class="row west-course d-flex align-items-center justify-content-center"
+        >
+          <img src="./이미지/westcourse.png" alt="" class="col-md-6 order-2" />
           <div class="course-desc col-md-5">
             <h2 class="text-center">서코스</h2>
             <p>
@@ -60,7 +64,7 @@
             <a href="">서코스 전체보기</a>
           </div>
         </div>
-        <div class="south-course row">
+        <div class="south-course row container mx-auto">
           <img src="./이미지/southcourse.png" alt="" class="col-md-6" />
           <div class="course-desc col-md-5">
             <h2 class="text-center">남코스</h2>
@@ -79,35 +83,25 @@
         <ul class="main-slide">
           <li>
             <a href="">
-              <img src="img/logo_black.png" alt="" />
+              <img src="./이미지/event-slide1.png" alt="" />
             </a>
           </li>
           <li>
             <a href="">
-              <img src="img/logo_black.png" alt="" />
+              <img src="./이미지/event-slide2.png" alt="" />
             </a>
           </li>
           <li>
             <a href="">
-              <img src="img/logo_black.png" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="img/logo_black.png" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="img/logo_black.png" alt="" />
+              <img src="./이미지/event-slide3.png" alt="" />
             </a>
           </li>
         </ul>
       </section>
     </main>
-    <a href="#" id="go-top"><i class="fa-solid fa-arrow-up"></i></a>
+    <a href="#top" id="go-top"><i class="fa-solid fa-arrow-up"></i></a>
 
-    <footer class="container">
+    <footer>
       <div class="notice"></div>
       <div class="terms d-flex justify-content-center">
         <a href="">이용약관</a>
