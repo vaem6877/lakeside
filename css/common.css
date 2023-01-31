@@ -1,0 +1,204 @@
+@import url(reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
+
+/* ================== Varients ================================== */
+
+:root {
+  /* =================== COLOR =================== */
+  --primary-green: #234a35;
+  --primary-ygreen: #8ba63d;
+  --secondary-ivory: #e9e4da;
+  --secondary-brown: #8d7a5d;
+
+  /* 글자색 */
+  --typo-C-Green: #181f1b;
+  --typo-C-grey: #404040;
+  --typo-C-lightgrey: #808080;
+
+  /* 배경색 */
+  --bg-green: #f0f6e2;
+  --bg-grey: #dfdfdf;
+  --bg-white: #fff;
+
+  /* =================== TYPOGRAPHY =================== */
+
+  --big-TT-fz: 51px;
+  --main-TT-fz: 37px;
+  --second-TT-fz: 27px;
+  --content-fz: 20px;
+  --second-content-fz: 18px;
+  --small-content-fz: 14px;
+  --xsmall-content-fz: 12px;
+
+  --mobile-mainTT-fz: 35px;
+  --mobile-EngTT-fz: 25px;
+  --mobile-menu-fz: 23px;
+  /* --mobile-KrTT-fz:20px; */
+  /* --mobile-menu-fz:18px; */
+  /* --mobile-mainTT-fz:12px; */
+  --mobile-content-fz: 10px;
+  --mobile-tab-fz: 9px;
+  --mobile-btn-fz: 8px;
+}
+
+/* ========================== 변수끝 ============================ */
+
+/* ====== 폰트, 기본 스타일 ====== */
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+  font-size: var(--content-fz);
+  color: var(--typo-C-Green);
+}
+
+h2 {
+  font-weight: 900;
+  font-size: var(--big-TT-fz);
+  /* 51 */
+}
+
+h3 {
+  font-size: var(--main-TT-fz);
+  /* 37 */
+}
+
+h4 {
+  font-size: var(--second-TT-fz);
+  /* 27 */
+}
+
+/* description */
+p {
+  font-weight: 300;
+  font-size: var(--second-TT-fz);
+}
+
+a {
+  text-decoration: none;
+  color: var(--typo-C-Green);
+}
+
+img {
+  vertical-align: bottom;
+}
+
+/* ==================== 공통영역 ==================== */
+
+/* 헤더(배너) - 각각 파트 css에서 배경 이미지(background-image로!) 지정 */
+header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+#logo {
+  padding: 27px 0 676px;
+  width: 133px;
+  height: 27px;
+  text-indent: -999em;
+  /* background-image: url(../img/logo_black.png); 이미지 배경없는걸로 수정필요 */
+}
+
+/* ========= FOOTER ======== */
+
+/* ======================= // 윤희_0127 ===================== */
+
+/*--버튼--*/
+.hole_btn {
+  width: 110px;
+  height: 110px;
+  background: #8ba63d;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 110px;
+  font-weight: 700;
+  color: #fff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
+}
+.hole_btn:hover {
+  background: #234a35;
+}
+.more_btn {
+  width: 109px;
+  height: 28px;
+  border: 1px solid #fff;
+  font-size: 10px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.16em;
+}
+.all_btn {
+  width: 220px;
+  height: 54px;
+  background: #234a35;
+  text-align: center;
+  line-height: 54px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 27px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.all_btn:hover {
+  background: #8ba63d;
+}
+.more_course_btn {
+  width: 160px;
+  height: 30px;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  line-height: 30px;
+  background: #234a35;
+  border-radius: 5px;
+}
+.more_course_btn:hover {
+  background: #8ba63d;
+}
+.all_ev_btn {
+  width: 124px;
+  height: 38px;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  line-height: 38px;
+  background: #8ba63d;
+  border-radius: 20px;
+}
+.all_ev_btn:hover {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.course_btn {
+  width: 483px;
+  height: 81px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 27px;
+  text-align: center;
+  line-height: 81px;
+  background: #234a35;
+}
+.course_btn:hover {
+  background: #fff;
+  border: 1px solid #181f1b;
+  color: #234a35;
+}
+.icon_mouse img {
+  animation: bounce 0.5s infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

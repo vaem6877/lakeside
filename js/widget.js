@@ -46,52 +46,73 @@ $.getJSON(
       dateList.push(date);
 
       let day = filteredDay[i].dt_txt.substr(8, 2); //각 날짜의 일
+      let korWeek = new Array("월", "화", "수", "목", "금", "토", "일");
+      let korDay = korWeek[new Date(dateList[i]).getDay() - 1];
+
       let trHTML = `
       <li class="swiper-slide">
       <a href="">
       <p class="date">${day}</p>
-      <p class="day">요일</p>
+      <p class="day">(${korDay})</p>
       </a>
       </li>
       `;
       target.append(trHTML);
     }); //요일 리스트 가져오기
+
     console.log(dateList);
     // let date = filteredDay[0].dt_txt.substr(8, 2);
     // console.log(date);
     let Temp = "";
+
     $.each(dateList, function (i) {
       Temp = list.filter(function (item) {
         return item.dt_txt.substr(0, 10) == dateList[i];
       });
       console.log(Temp);
       let TempArr = [];
-      let codeArr = [];
-      let codeDescArr = [];
+      let iconArr = [];
       Temp.map((item) => {
         TempArr.push(item.main.temp);
-        codeArr.push(item.weather[0].icon);
-        codeDescArr.push(item.weather[0].main);
+        if (item.dt_txt.substr(-8) == "12:00:00") {
+          iconArr.push(item.weather[0].icon);
+        }
       });
       console.log(TempArr);
-      console.log(codeArr);
+      console.log(iconArr);
 
-      let iconImg = `<img src="http://openweathermap.org/img/wn/${codeArr[i]}.png" alt="${codeDescArr[i]}">`;
+      let weatherIcon = {
+        "01d": "fa-sun",
+        "01n": "fa-moon",
+        "02d": "fa-cloud-sun",
+        "02n": "fa-cloud-moon",
+        "03d": "fa-cloud",
+        "03n": "fa-cloud",
+        "04d": "fa-clouds",
+        "04n": "fa-clouds",
+        "09d": "fa-cloud-showers-heavy",
+        "09n": "fa-cloud-showers-heavy",
+        "10d": "fa-cloud-sun-rain",
+        "10n": "fa-cloud-moon-rain",
+        "11d": "fa-cloud-bolt",
+        "11n": "fa-cloud-bolt",
+        "13d": "fa-snowflake",
+        "13n": "fa-snowflake",
+        "50d": "fa-cloud-fog",
+        "50n": "fa-cloud-fog",
+      };
 
+      let icon = `<i class="fa-solid ${weatherIcon[iconArr]}"></i>`;
+      // console.log(weatherIcon[iconArr[i]]);
       let maxTemp = Math.max(...TempArr);
       let minTemp = Math.min(...TempArr);
 
       console.log(maxTemp);
       console.log(minTemp);
-      // console.log(todayTemp); //오늘 날짜 최고온도추출
-      // let maxTemp = Math.max(...todayTemp);
-      // let minTemp = Math.min(...todayTemp);
-      // console.log(maxTemp); //오늘 날짜 최고온도추출
-      // console.log(minTemp); //오늘 날짜 최고온도추출
-      // console.log(todayMaxTemp.sort().reverse());
+
       trHTML = `
-      <li class="d-flex">
-      ${iconImg}
+      <li class="d-flex gap-3">
+      ${icon}
         <span class="temp">
           <p>MAX ${maxTemp}</p>
           <p>MIN ${minTemp}</p>
@@ -106,8 +127,16 @@ $.getJSON(
       e.preventDefault();
       $(".preview ul li > *").hide();
       let idx = $(this).parent().index();
-      console.log(idx);
       $(".preview ul li").eq(idx).find("> *").show();
     });
+  }
+);
+
+$(".weather_cast").hover(
+  function () {
+    $(this).addClass("active");
+  },
+  function () {
+    $(this).removeClass("active");
   }
 );

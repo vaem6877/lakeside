@@ -1,6 +1,9 @@
 :link {
   text-decoration: none;
 }
+.container {
+  width: 1440px;
+}
 .weather_cast {
   width: 173px;
   height: 232px;
@@ -13,9 +16,10 @@
   text-align: center;
   padding: 10px 15px;
   box-sizing: content-box;
+  margin-bottom: 7px;
 }
 .preview ul {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 .preview ul li {
@@ -24,6 +28,9 @@
 }
 .preview ul li > * {
   display: none;
+}
+.preview ul li i:before {
+  font-size: 45px;
 }
 .preview p {
   font-size: 14px;
