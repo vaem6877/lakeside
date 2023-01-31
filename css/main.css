@@ -1,3 +1,4 @@
+@import url(./reset.css);
 @import url(./common.css);
 
 header {
@@ -8,7 +9,9 @@ header {
   margin-bottom: 417px;
 }
 
-.course-desc {
+.course-desc,
+.img-wrapper,
+.south-wrapper {
   padding: 0;
 }
 /* .east-course .course-desc,
@@ -24,7 +27,7 @@ header {
   font-size: var(--content-fz);
   font-weight: 300;
   line-height: 27px;
-  width: 445px;
+  /* width: 445px; */
 }
 .main-course .course-desc h2 {
   font-size: var(--main-TT-fz);
@@ -53,12 +56,12 @@ header {
   background: var(--primary-green);
   margin-top: 25px;
 }
-.main-course a.align-self-end {
+/* .main-course a.align-self-end {
   margin-right: 58px;
 }
 .main-course a.align-self-start {
   margin-left: 54px;
-}
+} */
 
 .main-course .west-course a {
   background: var(--primary-ygreen);
@@ -67,6 +70,10 @@ header {
 
 .east-course {
   margin: 181px 0 196px;
+}
+
+.west-course {
+  margin: 0 auto;
 }
 
 /* .west-course {
@@ -93,11 +100,12 @@ header {
   /* box-sizing: border-box; */
 }
 
-footer .notice {
+.footer-notice-wrapper {
   background: var(--bg-grey);
   height: 54px;
   line-height: 54px;
 }
+
 footer .notice *,
 footer .notice a {
   font-size: var(--content-fz);
@@ -105,6 +113,9 @@ footer .notice a {
   color: var(--typo-C-Green);
 }
 
+/* footer .notice-slide{
+  w
+} */
 .notice ul li {
   padding: 0 263px 0;
 }
@@ -153,3 +164,7 @@ footer .notice a {
 .fa-solid.fa-plus {
   margin-right: 2px;
 }
+
+/* .slick-vertical .slick-slide {
+  padding: 0;
+} */

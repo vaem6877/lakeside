@@ -1,5 +1,41 @@
+@import url(./reset.css);
 @import url(./common.css);
 
 header {
   background-image: url(../이미지/notice_banner.png);
+}
+
+h3,
+h4 {
+  font-size: var(--second-TT-fz);
+}
+h3 {
+  font-weight: 500;
+  color: var(--typo-C-grey);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+h4 {
+  font-weight: 700;
+  color: var(--primary-green);
+}
+h2 {
+  font-size: var(--big-TT-fz);
+  color: var(--typo-C-Green);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+p {
+  font-weight: 300;
+  /* font-size: var(--content-fz); */
+  color: var(--typo-C-Green);
+}
+.rocess-guide-desc > h4,
+.cart-guide-desc > h4,
+.facility-desc > h4 {
+  font-weight: 300;
+  font-size: var(--content-fz);
+  letter-spacing: 0.1em;
+  line-height: 27px;
 }

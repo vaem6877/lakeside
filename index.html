@@ -21,6 +21,7 @@
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
 
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -34,11 +35,13 @@
       <section class="main-course">
         <div class="east-wrapper container">
           <div class="east-course row mx-auto">
-            <div class="img-wrapper">
+            <div class="img-wrapper" data-aos="fade-right">
               <img src="./이미지/eastcourse.png" alt="" class="col-md-6" />
             </div>
             <div
               class="course-desc offset-md-1 col-md-5 d-flex flex-column justify-content-center align-items-center"
+              data-aos="fade-left"
+              data-aos-delay="300"
             >
               <h2 class="text-center">동코스</h2>
               <p class="text-center">
@@ -55,17 +58,19 @@
         <div class="west-wrapper">
           <div class="container">
             <div
-              class="row west-course d-flex align-items-center justify-content-center"
+              class="row west-course d-flex align-items-center justify-content-center flex-row-reverse"
             >
-              <div class="img-wrapper">
+              <div class="img-wrapper offset-md-1" data-aos="fade-left">
                 <img
                   src="./이미지/westcourse.png"
                   alt=""
-                  class="offset-md-1 col-md-6 order-2"
+                  class="col-md-6 order-2"
                 />
               </div>
               <div
                 class="course-desc col-md-5 d-flex flex-column justify-content-center align-items-center"
+                data-aos="fade-right"
+                data-aos-delay="300"
               >
                 <h2 class="text-center">서코스</h2>
                 <p class="text-center">
@@ -83,11 +88,13 @@
 
         <div class="south-wrapper container">
           <div class="south-course row mx-auto">
-            <div class="img-wrapper">
+            <div class="img-wrapper" data-aos="fade-right">
               <img src="./이미지/southcourse.png" alt="" class="col-md-6" />
             </div>
             <div
               class="course-desc offset-md-1 col-md-5 d-flex flex-column justify-content-center align-items-center"
+              data-aos="fade-left"
+              data-aos-delay="300"
             >
               <h2 class="text-center">남코스</h2>
               <p class="text-center">
@@ -150,17 +157,25 @@
         </div>
       </section>
     </main>
-    <a href="#top" id="go-top"><i class="fa-solid fa-arrow-up"></i></a>
+    <a href="#" id="go-top"><i class="fa-solid fa-arrow-up"></i></a>
 
     <footer>
-      <div class="notice d-flex justify-content-center">
-        <h4>공지사항</h4>
-        <ul>
-          <li>
-            <a href="">[기타] 23년 VIP 선정 기준 변경 및 추가 기준 안내</a>
-          </li>
-        </ul>
-        <a href=""><i class="fa-solid fa-plus"></i>전체보기</a>
+      <div class="footer-notice-wrapper">
+        <div class="container notice d-flex justify-content-center">
+          <h4>공지사항</h4>
+          <ul class="notice-slide">
+            <li>
+              <a href="">[기타] 23년 VIP 선정 기준 변경 및 추가 기준 안내</a>
+            </li>
+            <li>
+              <a href="">[공지] 락카 보수 및 시설 정비 안내</a>
+            </li>
+            <li>
+              <a href="">[공지] 레이크사이드에서 준비한 특선 여름 요리</a>
+            </li>
+          </ul>
+          <a href=""><i class="fa-solid fa-plus"></i>전체보기</a>
+        </div>
       </div>
       <div class="terms d-flex justify-content-center">
         <a href="">이용약관</a>
@@ -205,6 +220,7 @@
       type="text/javascript"
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
+    <script src="./node_modules/aos/dist/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
