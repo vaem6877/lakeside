@@ -93,15 +93,15 @@ header {
   background-position: center;
   overflow: hidden;
 }
-#logo {
+
+#logo a {
   display: inline-block;
-  padding: 27px 0 676px;
+  background: url(../이미지/logo_black.png) no-repeat 0 0 / contain;
+  overflow: hidden;
   width: 133px;
   height: 27px;
-  text-indent: -999em;
-  background: url(../이미지/image\ 1.png) no-repeat 50% 0 / contain;
-
-  /* background-image: url(../img/logo_black.png); 이미지 배경없는걸로 수정필요 */
+  text-indent: -9999em;
+  padding: 27px 0 676px;
 }
 
 /* ========= FOOTER ======== */
@@ -150,16 +150,30 @@ footer address p {
 
 footer .footer-logo {
   margin: 0 auto;
-  display: inline-block;
+  display: block;
   width: 157px;
   height: 32px;
   text-indent: -999em;
-  background: url(../이미지/logo_white.png) no-repeat center / contain;
+  background: url(../이미지/logo_white.png) no-repeat 0 0 / contain;
 }
 
 footer address p {
   padding-bottom: 32px;
 }
+
+#go-top {
+  background: var(--primary-green);
+  color: var(--bg-white);
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  position: fixed;
+  line-height: 37px;
+  text-align: center;
+  bottom: 33px;
+  right: 165px;
+}
+
 /* ======================= // 윤희_0127 ===================== */
 
 /*--버튼--*/

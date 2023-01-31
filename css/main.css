@@ -4,23 +4,41 @@ header {
   background-image: url(../이미지/Mask\ group.png);
 }
 
-#logo {
-  /* background-image: url(../img/골프코스배너.jpg); */
+.main-course {
+  margin-bottom: 417px;
 }
+
+.course-desc {
+  padding: 0;
+}
+/* .east-course .course-desc,
+.south-course .course-desc {
+  margin-left: 125px;
+}
+
+.west-course .course-desc {
+  margin-right: 125px;
+} */
 
 .main-course p {
   font-size: var(--content-fz);
   font-weight: 300;
   line-height: 27px;
+  width: 445px;
 }
 .main-course .course-desc h2 {
+  font-size: var(--main-TT-fz);
+  font-weight: 500;
   margin-bottom: 55px;
+  display: inline-block;
 }
 
-.main-course div img {
+.img-wrapper {
   width: 538px;
-  height: 358px;
-  object-fit: cover;
+}
+
+.main-course .img-wrapper img {
+  width: 100%;
 }
 .main-course a {
   display: inline-block;
@@ -33,18 +51,32 @@ header {
   height: 30px;
   border-radius: 5px;
   background: var(--primary-green);
+  margin-top: 25px;
+}
+.main-course a.align-self-end {
+  margin-right: 58px;
+}
+.main-course a.align-self-start {
+  margin-left: 54px;
 }
 
 .main-course .west-course a {
   background: var(--primary-ygreen);
+  margin-bottom: 187px;
 }
 
 .east-course {
   margin: 181px 0 196px;
 }
 
-.west-course {
-  margin: 135px 0;
+/* .west-course {
+  padding: 323px 0;
+} */
+.west-course h2 {
+  padding-top: 161px;
+}
+
+.west-wrapper {
   background: var(--bg-green);
 }
 .south-course {
@@ -55,8 +87,69 @@ header {
   display: inline-block;
 }
 
-.main-event a img {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
+.main-slide a img {
+  width: 314px;
+  object-fit: contain;
+  /* box-sizing: border-box; */
+}
+
+footer .notice {
+  background: var(--bg-grey);
+  height: 54px;
+  line-height: 54px;
+}
+footer .notice *,
+footer .notice a {
+  font-size: var(--content-fz);
+  font-weight: 400;
+  color: var(--typo-C-Green);
+}
+
+.notice ul li {
+  padding: 0 263px 0;
+}
+
+.main-slide {
+  margin-bottom: 80px;
+}
+
+.main-slide li {
+  padding: 0 22px;
+}
+.slideWrapper {
+  width: 1110px;
+  position: relative;
+}
+
+.controls > * {
+  position: absolute;
+  top: 121.625px;
+  transform: translateY(-50%);
+}
+
+.controls .next {
+  right: -20px;
+}
+
+.controls .prev {
+  left: -20px;
+}
+.round-btn {
+  display: block;
+  text-align: center;
+  line-height: 38px;
+  width: 124px;
+  height: 38px;
+  font-weight: 400;
+  font-size: var(--second-content-fz);
+  background: var(--primary-ygreen);
+  color: var(--bg-white);
+  border-radius: 20px;
+  margin-bottom: 231px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.fa-solid.fa-plus {
+  margin-right: 2px;
 }
