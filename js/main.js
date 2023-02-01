@@ -8,11 +8,9 @@ $(".main-slide").slick({
   autoplaySpeed: 2500,
   responsive: [
     {
-      breakpoint: 1200,
+      breakpoint: 1000,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
+        slidesToShow: 2,
       },
     },
   ],

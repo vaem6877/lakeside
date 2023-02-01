@@ -178,3 +178,10 @@ footer .notice-slide {
     width: 100%;
   }
 }
+
+/* @media (max-width: 1000px) {
+  .controls > * {
+    top: 171.625px;
+  }
+} */
+/* 171.625px */
