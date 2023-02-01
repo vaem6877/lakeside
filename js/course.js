@@ -9,7 +9,7 @@ menuBtn.click(function () {
 document.querySelector("li").removeAttribute("style");
 
 $(function () {
-  $(".hole_desc #tabs").tabs({
+  $("#hole_desc #tabs").tabs({
     active: 0,
   });
 }); //코스 탭
@@ -41,11 +41,11 @@ $(function () {
 //     <div id="tabs-${i}"></div>
 //   `;
 // }
-// $(".hole_desc .img_container").html(holeImgList);
+// $("#hole_desc .img_container").html(holeImgList);
 // $(".swiper-wrapper").html(holeList);
 
-$(".hole_desc #tabs-east .img_container #tabs-1").html(
-  '<img src="img/동코스1.svg" alt="" />'
+$("#hole_desc #tabs-east .img_container #tabs-1").html(
+  '<img src="img/동코스1.svg" alt="" />',
 );
 //<img src="img/동코스1.svg" alt="" />
 
@@ -100,10 +100,10 @@ $(".each_course").each(function () {
 
 // $("#tabs p").eq(0).show();
 let swiperSlideBtn = $(".swiper a"),
-  imgContainer = $(".hole_desc .img_container > div");
+  imgContainer = $("#hole_desc .img_container > div");
 
 swiperSlideBtn.click(function () {
-  // $(".hole_desc #tabs .tab_group p").hide();
+  // $("#hole_desc #tabs .tab_group p").hide();
   let courseName = $(this).parents("div")[2].dataset.name;
   let makeHoleName = $(".tab_group h2");
   let holeName = $(this).text();
@@ -146,7 +146,7 @@ let mix = mixitup(".mix-wrapper", {
   },
 }); //코스갤러리 필터
 
-let courseGallery = $(".course_gallery"),
+let courseGallery = $("#course_gallery"),
   courseGalleryBtn = courseGallery.find("button");
 
 courseGalleryBtn.click(function () {
@@ -169,3 +169,26 @@ galleryImg.click(function (e) {
 exitBtn.click(function () {
   bigImg.hide();
 });
+
+//반응형
+
+// if (matchMedia("screen and (max-width: 360px)").matches) {
+//   let target = $("#select_course");
+//   target.change(function () {
+//     let targetVal = $(this).val();
+//     console.log(targetVal);
+//   });
+//   console.log(target);
+//   let selectCourse = "";
+//   $("#tabs > ul li").each(function () {
+//     selectCourse = $(this).html();
+//   });
+//   let dropdownHTML = `
+//   <select id="select_course" name="select_course">
+//     <option value="east">EAST Course</option>
+//     <option value="west">WEST Course</option>
+//     <option value="south">SOUTH Course</option>
+//   </select>`;
+//   $("#tabs").prepend(dropdownHTML);
+//   $("#salutation").selectmenu();
+// }

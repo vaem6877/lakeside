@@ -5,23 +5,8 @@
   width: 1440px;
 }
 .box {
-  position: absolute;
-  left: -173px;
-}
-.box:hover {
-  animation: active 1s forwards;
-}
-
-@keyframes active {
-  0% {
-    left: -173px;
-  }
-  20% {
-    left: -233px;
-  }
-  100% {
-    left: 0;
-  }
+  /* position: absolute;
+  left: -173px; */
 }
 
 .weather_cast {
@@ -101,14 +86,20 @@ div:before {
 }
 .shortcut > * {
   text-align: center;
-  padding: 9.5px 0px;
+  padding: 11.5px 0px;
+}
+.shortcut p{
+  font-size: var(--content-fz);
 }
 .shortcut i {
-  font-size: 25px;
+  font-size: var(--content-fz)
 }
 .shortcut .faq {
   background: #fff;
   color: #000;
+}
+.shortcut .map{
+  text-indent: 6px;
 }
 /* active시 */
 

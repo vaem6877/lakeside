@@ -1,5 +1,6 @@
 @import url(reset.css);
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
+/* light 300 regular 400 medium 500 bold 700 black 900 */
 
 /* ================== Varients ================================== */
 
@@ -83,26 +84,100 @@ img {
   vertical-align: bottom;
 }
 
-/* ==================== 공통영역 ==================== */
+/* =============================== 공통영역 ============================== */
 
-/* 헤더(배너) - 각각 파트 css에서 배경 이미지(background-image로!) 지정 */
+/* 헤더(배너) - 각각 파트 css에서 배경 이미지(background-image로!!) 지정 */
 header {
+  background-image: url(../img/course_banner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   overflow: hidden;
 }
-#logo {
-  padding: 27px 0 676px;
+
+#logo a {
+  display: inline-block;
+  background: url(../img/logo_black.png) no-repeat 0 27px / contain;
+  overflow: hidden;
   width: 133px;
   height: 27px;
-  text-indent: -999em;
-  /* background-image: url(../img/logo_black.png); 이미지 배경없는걸로 수정필요 */
+  text-indent: -9999em;
+  padding: 27px 0 676px;
 }
 
 /* ========= FOOTER ======== */
 
-/* ======================= // 윤희_0127 ===================== */
+footer {
+  background: var(--typo-C-Green);
+}
+
+footer * {
+  font-size: var(--xsmall-content-fz);
+  font-weight: 400;
+  color: var(--bg-white);
+}
+
+footer .terms {
+  padding: 10px 0 32px;
+}
+footer .terms a:nth-child(3) {
+  font-weight: 700;
+}
+
+footer .terms a {
+  padding-right: 15px;
+}
+
+footer address dl {
+  padding-bottom: 9px;
+}
+
+footer address dl:first-of-type {
+  padding: 22px 0 9px;
+}
+
+footer address dl dt {
+  padding-right: 2px;
+}
+
+footer address dl dd {
+  padding-right: 15px;
+}
+
+footer .terms a:not(:nth-child(3)),
+footer address dl:last-of-type *,
+footer address p {
+  color: var(--typo-C-lightgrey);
+}
+
+footer .footer-logo {
+  margin: 0 auto;
+  display: block;
+  width: 157px;
+  height: 32px;
+  text-indent: -999em;
+  background: url(../img/logo_white.png) no-repeat 0 0 / contain;
+}
+
+footer address p {
+  padding-bottom: 32px;
+  font-size: var(--xsmall-content-fz);
+}
+
+#go-top {
+  background: var(--primary-green);
+  color: var(--bg-white);
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  position: fixed;
+  line-height: 37px;
+  text-align: center;
+  bottom: 33px;
+  right: 165px;
+}
+
+/* ======================= // 윤희_0201 ===================== */
 
 /*--버튼--*/
 .hole_btn {

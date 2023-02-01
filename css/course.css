@@ -15,16 +15,41 @@ body {
 }
 .menu {
   position: fixed;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 100%;
   left: 100%;
   top: 0;
   right: 0;
   bottom: 0;
-  color: #fff;
-  transition: 1s;
+  transition: 0.7s;
   z-index: 100;
+}
+.menu .main_menus {
+  gap: 100px;
+  padding: 50px;
+  border-bottom: 2px solid #fff;
+}
+.menu .sub_menus {
+  gap: 100px;
+  padding: 50px;
+  border-bottom: 2px solid #fff;
+}
+.menu li a {
+  color: #fff;
+  display: inline-block;
+  font-size: var(--second-TT-fz);
+  margin-bottom: px;
+}
+.menu .sub_menu li a {
+  color: #fff;
+  display: inline-block;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+.menu .sub_menu li a:hover {
+  font-weight: bold;
+  text-decoration: underline;
 }
 .menu li {
   list-style: none;
@@ -69,7 +94,7 @@ body {
 }
 
 /* section:코스소개 */
-.course {
+#course {
   text-align: center;
 }
 #tabs {
@@ -80,7 +105,7 @@ body {
   height: 90%;
   list-style: none;
 }
-.course_wv {
+#course_wv {
   background-image: linear-gradient(
     360deg,
     rgba(139, 166, 61, 0.5) 0%,
@@ -90,11 +115,8 @@ body {
   );
   padding: 108px 0;
 }
-.course_wv p {
+#course_wv p {
   margin-bottom: 73px;
-}
-#tabs .img_container {
-  width: 100%;
 }
 .img_container {
   width: 80%;
@@ -102,46 +124,45 @@ body {
   margin: 0 auto;
   border: 10px solid #dfdfdf;
   padding: 35px 0px;
-  padding-top: 76px;
 }
 .img_container img {
   width: 70%;
 }
 
 /* section: 코스설명 */
-.hole_desc #tabs .d-flex {
+#hole_desc #tabs .d-flex {
   padding: 0;
   margin-bottom: 0;
 }
-.hole_desc #tabs .d-flex li {
+#hole_desc #tabs .d-flex li {
   background: #234a35;
   border: 1px solid #000;
   padding: 28px 155px;
 }
-.hole_desc #tabs .d-flex li.active {
+#hole_desc #tabs .d-flex li.active {
   background: #fff;
 }
-.hole_desc #tabs .d-flex li.active a {
+#hole_desc #tabs .d-flex li.active a {
   color: #234a35;
 }
-.hole_desc #tabs .d-flex li:hover {
+#hole_desc #tabs .d-flex li:hover {
   background: #fff;
 }
-.hole_desc #tabs .d-flex li:hover a {
+#hole_desc #tabs .d-flex li:hover a {
   color: #234a35;
 }
-.hole_desc #tabs .d-flex li a {
+#hole_desc #tabs .d-flex li a {
   color: #fff;
   text-decoration: none;
   white-space: nowrap;
 }
-.hole_desc #tabs .d-flex li a:hover {
+#hole_desc #tabs .d-flex li a:hover {
   text-decoration: underline;
 }
-.hole_desc #tabs .tab_group {
+#hole_desc #tabs .tab_group {
   padding: 163px 0px;
 }
-.hole_desc #tabs .tab_group p {
+#hole_desc #tabs .tab_group p {
   height: 50px;
   margin: 57px 0;
 }
@@ -204,10 +225,10 @@ div:before {
 }
 /* section: 코스갤러리 */
 
-.course_gallery > .mix-wrapper {
+#course_gallery > .mix-wrapper {
   margin: 108px 0px 216px;
 }
-.course_gallery button {
+#course_gallery button {
   width: 20%;
   height: 54px;
   background: #8ba63d;
@@ -216,11 +237,11 @@ div:before {
   margin-right: 33px;
   padding: 0;
 }
-.course_gallery button.active {
+#course_gallery button.active {
   background: #234a35;
   color: #fff;
 }
-.course_gallery button:last-child {
+#course_gallery button:last-child {
   margin-right: 0;
 }
 .mix-wrapper {
@@ -265,12 +286,12 @@ div:before {
 }
 
 /* section: 홀인원 */
-.holeinone {
+#holeinone {
   width: 100vw;
   background: #f0f6e2;
   padding: 164px 0px 207px;
 }
-.holeinone > div {
+#holeinone > div {
   padding: 54px 0px;
 }
 .containerBox h2 {
