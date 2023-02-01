@@ -101,7 +101,7 @@ header {
   width: 133px;
   height: 27px;
   text-indent: -9999em;
-  padding: 27px 0 676px;
+  padding-bottom: 100vh;
 }
 
 /* ========= FOOTER ======== */
