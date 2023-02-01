@@ -84,9 +84,9 @@ img {
   vertical-align: bottom;
 }
 
-/* ==================== 공통영역 ==================== */
+/* =============================== 공통영역 ============================== */
 
-/* 헤더(배너) - 각각 파트 css에서 배경 이미지(background-image로!) 지정 */
+/* 헤더(배너) - 각각 파트 css에서 배경 이미지(background-image로!!) 지정 */
 header {
   background-repeat: no-repeat;
   background-size: cover;
@@ -96,7 +96,7 @@ header {
 
 #logo a {
   display: inline-block;
-  background: url(../이미지/logo_black.png) no-repeat 0 27px / contain;
+  background: url(../img/logo_black.png) no-repeat 0 27px / contain;
   overflow: hidden;
   width: 133px;
   height: 27px;
@@ -154,11 +154,12 @@ footer .footer-logo {
   width: 157px;
   height: 32px;
   text-indent: -999em;
-  background: url(../이미지/logo_white.png) no-repeat 0 0 / contain;
+  background: url(../img/logo_white.png) no-repeat 0 0 / contain;
 }
 
 footer address p {
   padding-bottom: 32px;
+  font-size: var(--xsmall-content-fz);
 }
 
 #go-top {
@@ -174,7 +175,7 @@ footer address p {
   right: 165px;
 }
 
-/* ======================= // 윤희_0127 ===================== */
+/* ======================= // 윤희_0201 ===================== */
 
 /*--버튼--*/
 .hole_btn {
