@@ -1,60 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link
-        rel="stylesheet"
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
       href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      />
-      <link
+    />
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-      />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link rel="stylesheet" href="css/widget.css">
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/widget.css" />
   </head>
   <body>
-    <div class="widget">
+    <div class="box d-flex">
       <div class="weather_cast">
         <div class="preview d-flex">
-          <ul class="d-flex">
-          </ul>
-            <!-- <div class="icon">콘</div>
-            <div class="degree d-flex">
-              <ul></ul>
-            </div> -->
-        </div> 
-        <div class="swiper container">
-            <ul class="swiper-wrapper">
-            </ul>
+          <ul class="d-flex"></ul>
+          <!-- <div class="icon">콘</div>
+                <div class="degree d-flex">
+                  <ul></ul>
+                </div> -->
         </div>
-        <div class="swiper-button-prev">◀
-          </div>
-          <div class="swiper-button-next">▶
-          </div>
-      <div class="shortcut">
-        <div class="reservation d-flex justify-content-center align-items-center gap-4">
+        <div class="swiper container">
+          <ul class="swiper-wrapper"></ul>
+        </div>
+        <div class="swiper-button-prev">◀</div>
+        <div class="swiper-button-next">▶</div>
+        <div class="shortcut">
+          <div
+            class="reservation d-flex justify-content-center align-items-center gap-4"
+          >
             <div class="calendar">예약하기</div>
             <i class="fa-solid fa-calendar-plus"></i>
-        </div>
-        <div class="faq d-flex justify-content-center align-items-center gap-4">
+          </div>
+          <div
+            class="faq d-flex justify-content-center align-items-center gap-4"
+          >
             <div class="phone">문의하기</div>
             <i class="fa-solid fa-square-phone-flip"></i>
-        </div>
-        <div class="location d-flex justify-content-center align-items-center gap-4">
+          </div>
+          <div
+            class="location d-flex justify-content-center align-items-center gap-4"
+          >
             <div class="map">오시는길</div>
             <i class="fa-solid fa-map-location-dot"></i>
+          </div>
         </div>
       </div>
-    </div>
-
-   <div>
-    <p>문제점: 왜 특정 아이콘은 안나오는지??</p>
-   </div>
-      </ul>
+      <div class="preview_widget">
+        <div class="today_weather">
+          <div class="today_icon"></div>
+          <div class="today_temp"></div>
+          <div class="today_date"></div>
+          <div class="preview_shortcut">
+            <p>
+              <i class="fa-solid fa-calendar-plus"></i>
+            </p>
+            <p><i class="fa-solid fa-square-phone-flip"></i></p>
+            <p><i class="fa-solid fa-map-location-dot"></i></p>
+          </div>
+        </div>
+      </div>
     </div>
     <script
       src="https://code.jquery.com/jquery-3.6.3.min.js"
@@ -64,8 +82,6 @@
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/widget.js"></script>
-    <script>
-      
-    </script>
+    <script></script>
   </body>
 </html>
