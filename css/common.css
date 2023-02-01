@@ -115,6 +115,13 @@ footer * {
   font-weight: 400;
   color: var(--bg-white);
 }
+
+.footer-notice-wrapper {
+  background: var(--bg-grey);
+  height: 54px;
+  line-height: 54px;
+}
+
 footer .terms {
   padding: 10px 0 32px;
 }
