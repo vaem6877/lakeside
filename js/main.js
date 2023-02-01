@@ -6,6 +6,16 @@ $(".main-slide").slick({
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2500,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+      },
+    },
+  ],
 });
 
 $(".controls .next").on("click", () => {
@@ -34,6 +44,11 @@ topBtn.on("click", function (e) {
   $("html, body").stop().animate({ scrollTop: 0 }, 300);
 });
 
+// topBtn.click(function (e) {
+//   e.preventDefault();
+//   $("html, body").stop().animate({ scrollTop: 0 }, 300);
+// });
+
 // 코스 fade left, right ========================
 
 AOS.init({
@@ -46,9 +61,28 @@ AOS.init({
 
 // ===============
 
-// $("footer .notice .notice-slide").slick({
-//   autoplay: true,
-//   autoplaySpeed: 2000,
-//   vertical: true,
-//   arrows: false,
-// });
+$("footer .notice .notice-slide").slick({
+  autoplay: true,
+  autoplaySpeed: 2000,
+  vertical: true,
+  arrows: false,
+
+  // {
+  //   breakpoint: 600,
+  //   settings: {
+  //     slidesToShow: 2,
+  //     slidesToScroll: 2
+  //   }
+  // },
+  // {
+  //   breakpoint: 480,
+  //   settings: {
+  //     slidesToShow: 1,
+  //     slidesToScroll: 1
+  //   }
+  // }
+  // You can unslick at a given breakpoint now by adding:
+  // settings: "unslick"
+  // instead of a settings object
+  // ],
+});
