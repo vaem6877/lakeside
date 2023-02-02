@@ -40,7 +40,7 @@
             <!-- </div> -->
             <!-- <span class="linebox"></span> -->
           </div>
-          <div class="history-desc offset-md-2 col-md-5">
+          <div class="offset-md-2 col-md-5 history-desc">
             <h3>the lake side</h3>
             <h2>history</h2>
             <ul class="d-flex flex-column align-items-start">
@@ -90,7 +90,7 @@
           >
             <h3>the lake side</h3>
             <h2>contest</h2>
-            <ul class="d-flex flex-column align-items-end">
+            <ul class="d-flex flex-column align-items-end text-end">
               <li class="d-flex justify-content-end flex-row-reverse">
                 <h4>1997</h4>
                 <div class="d-flex flex-column align-items-end">
@@ -306,13 +306,13 @@
                 <img src="./img/facility-club2.png" alt="그늘집" />
                 <img src="./img/facility-club2.png" alt="프로샵" />
               </div>
-              <div class="fac-pager">
+              <p class="fac-pager d-flex justify-content-end">
                 <a href="">클럽하우스</a>
                 <a href="">레스토랑</a>
                 <a href="">락커룸</a>
                 <a href="">그늘집</a>
                 <a href="">프로샵</a>
-              </div>
+              </p>
               <!-- 다 겹쳐놓으세요 
               !!!! absolute ㄴㄴㄴㄴㄴㄴ
             그냥 배치만 똑같이 하고서 dn db 주세요 -->
@@ -380,12 +380,16 @@
           </section>
         </div>
       </div>
-      <section class="directions">
-        <h3>the lake side</h3>
-        <h2>directions</h2>
-        <h4>오시는 길 안내</h4>
-        <!-- MAP API -->
-      </section>
+      <div class="directions">
+        <section class="text-center directions-desc">
+          <h3>the lake side</h3>
+          <h2>directions</h2>
+          <h4>오시는 길 안내</h4>
+          <div class="map-wrapper">
+            <!-- MAP API -->
+          </div>
+        </section>
+      </div>
     </main>
     <a href="#" id="go-top"><i class="fa-solid fa-arrow-up"></i></a>
 

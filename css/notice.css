@@ -63,7 +63,9 @@ img {
   margin-bottom: 4px;
 }
 .facility-desc > h3,
-.facility-desc > h2 {
+.facility-desc > h2,
+.directions-desc > h3,
+.directions-desc > h2 {
   margin-bottom: 5px;
 }
 
@@ -93,7 +95,7 @@ section img,
 .cart-guide-desc ul li > * {
   display: inline-block;
 }
-/* .history-desc  ul li, */
+.history-desc ul li,
 .rocess-guide-desc ul li,
 .cart-guide-desc ul li {
   display: flex;
@@ -123,6 +125,34 @@ section img,
 
 .history-img-wrapper {
   padding-left: 33px;
+}
+
+.history-img-wrapper,
+.contest-img-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.history-img-wrapper::after,
+.contest-img-wrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+
+  width: 223px;
+  height: 223px;
+  z-index: -1;
+}
+
+.history-img-wrapper::after {
+  top: 53.5%;
+  left: -0.3%;
+  border: 8px solid var(--primary-ygreen);
+}
+.contest-img-wrapper::after {
+  top: 51.5%;
+  right: -2.5%;
+  background: var(--primary-ygreen);
 }
 
 .history-img-wrapper img {
@@ -197,6 +227,7 @@ section img,
 .facility-information ul li h4 {
   font-size: var(--main-TT-fz);
   font-weight: 500;
+  line-height: 37px;
   color: var(--typo-C-Green);
   margin: 27px 0 17px;
 }
@@ -225,11 +256,24 @@ section img,
   font-size: var(--second-TT-fz);
   font-weight: 500;
 }
+.fac-pager {
+  margin-top: 27px;
+  margin-bottom: 85px;
+  gap: 27px;
+}
 
 .fac-pager a {
   text-indent: -9999em;
   overflow: hidden;
   display: inline-block;
+  width: 9px;
+  height: 9px;
+  background: var(--typo-C-lightgrey);
+  border-radius: 50%;
+}
+
+.fac-pager a.active {
+  background: #123723;
 }
 
 .facility-wrapper {
@@ -243,7 +287,7 @@ section img,
 
 .fac-nav-img-wrapper {
   margin-top: 54px;
-  margin-bottom: 121px;
+  /* margin-bottom: 121px; */
 }
 
 .facility-nav-wrapper .fac-nav-img-wrapper img,
@@ -258,3 +302,78 @@ section img,
 
 /* pager > 앱솔루트로 안띄우고 그냥 오른쪽으로 밀어놔도 돼요
 p에 그냥 a 밀어놓으면되잖아 */
+
+/* ===================== directions === */
+
+.directions-desc {
+  margin-top: 243px;
+}
+.map-wrapper {
+  padding-top: 783px;
+}
+
+.directions-desc h4 {
+  margin-bottom: 76px;
+}
+
+/* ========================= header absolute */
+
+/* header {
+  position: relative;
+  z-index: 100;
+} */
+/* header, 왜지???????????? */
+.history,
+.contest {
+  position: relative;
+  z-index: 1;
+}
+
+/* .history::after,
+.contest::after */
+header::after,
+.history::before,
+.contest::before {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.history::before {
+  height: 2065px;
+  top: -218px;
+  transform: translateX(-50%);
+  bottom: -100%;
+}
+
+header::after,
+.history::before,
+.contest::before {
+  z-index: -1;
+  border: 2px solid #a08b73;
+}
+
+.history::before,
+.contest::before {
+  left: 50%;
+}
+
+.contest::before {
+  width: 100%;
+  top: -87%;
+}
+
+header::after {
+  width: 100%;
+  right: 50%;
+  /* bottom: -30%; */
+  top: 199%;
+}
+
+@media (max-width: 1200px) {
+  header::after,
+  .history::before,
+  .contest::before {
+    display: none;
+  }
+}
