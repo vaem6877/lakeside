@@ -102,7 +102,7 @@ header {
   width: 133px;
   height: 27px;
   text-indent: -9999em;
-  padding: 27px 0 676px;
+  padding-bottom: 100vh;
 }
 
 /* ========= FOOTER ======== */
@@ -263,15 +263,44 @@ footer address p {
   border: 1px solid #181f1b;
   color: #234a35;
 }
+
+/* ======================= // 마우스바운싱 ===================== */
+
+.icon_mouse {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 28px;
+}
 .icon_mouse img {
-  animation: bounce 0.5s infinite;
+  height: 31px;
+  width: 48px;
+  transform-origin: bottom;
+}
+.icon_mouse:hover img {
+  animation: bounce 0.8s infinite;
 }
 @keyframes bounce {
   0% {
     transform: translateY(0);
+    animation-timing-function: ease-in;
   }
-  50% {
-    transform: translateY(-50%);
+  34% {
+    height: 31px;
+    width: 48px;
+  }
+  45% {
+    transform: translateY(50%);
+    height: 30px;
+    width: 52px;
+    animation-timing-function: ease-out;
+  }
+  55% {
+    height: 31px;
+    width: 48px;
+  }
+  90% {
+    transform: translateY(0);
   }
   100% {
     transform: translateY(0);

@@ -105,6 +105,9 @@ body {
   height: 90%;
   list-style: none;
 }
+#tabs .img_container {
+  width: 100%;
+}
 #course_wv {
   background-image: linear-gradient(
     360deg,
@@ -130,33 +133,33 @@ body {
 }
 
 /* section: 코스설명 */
-#hole_desc #tabs .d-flex {
+#hole_desc #tabs > ul {
   padding: 0;
   margin-bottom: 0;
 }
-#hole_desc #tabs .d-flex li {
+#hole_desc #tabs > ul li {
   background: #234a35;
   border: 1px solid #000;
-  padding: 28px 155px;
+  padding: 28px 0px;
 }
-#hole_desc #tabs .d-flex li.active {
+#hole_desc #tabs > ul li.active {
   background: #fff;
 }
-#hole_desc #tabs .d-flex li.active a {
+#hole_desc #tabs > ul li.active a {
   color: #234a35;
 }
-#hole_desc #tabs .d-flex li:hover {
+#hole_desc #tabs > ul li:hover {
   background: #fff;
 }
-#hole_desc #tabs .d-flex li:hover a {
+#hole_desc #tabs > ul li:hover a {
   color: #234a35;
 }
-#hole_desc #tabs .d-flex li a {
+#hole_desc #tabs > ul li a {
   color: #fff;
   text-decoration: none;
   white-space: nowrap;
 }
-#hole_desc #tabs .d-flex li a:hover {
+#hole_desc #tabs > ul li a:hover {
   text-decoration: underline;
 }
 #hole_desc #tabs .tab_group {
@@ -188,12 +191,14 @@ body {
 }
 
 .swiper-button-prev {
+  color: #181818;
   font-size: 57px;
   position: absolute;
   top: 70px;
   left: 10px;
 }
 .swiper-button-next {
+  color: #181818;
   font-size: 57px;
   position: absolute;
   top: 70px;
@@ -244,12 +249,10 @@ div:before {
 #course_gallery button:last-child {
   margin-right: 0;
 }
-.mix-wrapper {
-  margin: 0 auto;
-}
 .mix-wrapper img {
+  height: 400px;
+  object-fit: cover;
   padding: 10px;
-  height: 300px;
 }
 .course_img_big {
   display: none;
@@ -287,9 +290,9 @@ div:before {
 
 /* section: 홀인원 */
 #holeinone {
-  width: 100vw;
+  width: 100%;
   background: #f0f6e2;
-  padding: 164px 0px 207px;
+  padding: 164px 0px 74px;
 }
 #holeinone > div {
   padding: 54px 0px;
@@ -298,10 +301,13 @@ div:before {
   margin-bottom: 72px;
 }
 
+.item {
+  width: 180px;
+}
 .item img {
+  border-radius: 50%;
   width: 180px;
   height: 180px;
-  border-radius: 50%;
 }
 .item img:hover {
   border: 5px solid #234a35;

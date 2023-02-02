@@ -45,7 +45,7 @@ $(function () {
 // $(".swiper-wrapper").html(holeList);
 
 $("#hole_desc #tabs-east .img_container #tabs-1").html(
-  '<img src="img/동코스1.svg" alt="" />',
+  '<img src="img/동코스1.svg" alt="" />'
 );
 //<img src="img/동코스1.svg" alt="" />
 
@@ -66,7 +66,7 @@ $(".each_course").each(function () {
   let holeImg = "";
 
   for (let i = 1; i < 19; i++) {
-    holeList += `<li class="swiper-slide"><a href="#tabs-${i}">${i} HOLE</a></li>`;
+    holeList += `<li class="swiper-slide"><a href="#tabs-${i}">${i}<span> HOLE</span></a></li>`;
     holeImgList += `
     <div id="tabs-${i}">
     <img src="img/${courseName}코스${i}.svg" alt="">
@@ -172,23 +172,25 @@ exitBtn.click(function () {
 
 //반응형
 
-// if (matchMedia("screen and (max-width: 360px)").matches) {
-//   let target = $("#select_course");
-//   target.change(function () {
-//     let targetVal = $(this).val();
-//     console.log(targetVal);
-//   });
-//   console.log(target);
-//   let selectCourse = "";
-//   $("#tabs > ul li").each(function () {
-//     selectCourse = $(this).html();
-//   });
-//   let dropdownHTML = `
-//   <select id="select_course" name="select_course">
-//     <option value="east">EAST Course</option>
-//     <option value="west">WEST Course</option>
-//     <option value="south">SOUTH Course</option>
-//   </select>`;
-//   $("#tabs").prepend(dropdownHTML);
-//   $("#salutation").selectmenu();
-// }
+if (matchMedia("screen and (max-width: 768px)").matches) {
+  let swiper = new Swiper(".swiper", {
+    slidesPerView: "6",
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+}
+
+if (matchMedia("screen and (max-width: 360px)").matches) {
+  $("#hole_desc #tabs ul li a span").hide();
+  let swiper = new Swiper(".swiper", {
+    slidesPerView: "4",
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+}

@@ -5,19 +5,22 @@
   width: 1440px;
 }
 .box {
-  /* position: absolute;
-  left: -173px; */
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
 }
 
+/* large .ver */
 .weather_cast {
-  /* left: -173px; */
+  left: -173px;
   width: 173px;
   height: 232px;
   background: #000;
   color: #fff;
   box-sizing: border-box;
-  position: relative;
-  transition: 0.3s;
+  position: absolute;
+  border-radius: 0 10px 10px 0;
 }
 /* .weather_cast.active {
   left: 0;
@@ -83,40 +86,41 @@ div:before {
   top: 35%;
   right: -7px;
   color: #fff;
+  z-index: 1;
 }
 .shortcut > * {
   text-align: center;
   padding: 11.5px 0px;
 }
-.shortcut p{
+.shortcut p {
   font-size: var(--content-fz);
 }
 .shortcut i {
-  font-size: var(--content-fz)
+  font-size: var(--content-fz);
 }
 .shortcut .faq {
   background: #fff;
   color: #000;
 }
-.shortcut .map{
+.shortcut .map {
   text-indent: 6px;
 }
-/* active시 */
+
+/* small .ver */
 
 .preview_widget {
-  /* position: absolute; */
-  left: 0;
+  position: absolute;
+  left: -40px;
   text-align: center;
-  width: 50px;
+  width: 90px;
   height: 232px;
   background: #000;
   color: #fff;
   position: relative;
-  transition: 0.3s;
+  z-index: 2;
+  padding-left: 38px;
+  border-radius: 0 10px 10px 0;
 }
-/* .preview_widget.active {
-  left: -50px;
-} */
 .today_icon {
   padding: 10px;
   font-size: 30px;
@@ -137,4 +141,9 @@ div:before {
 }
 .today_date p {
   font-size: var(--xsmall-content-fz);
+  font-weight: normal;
+}
+
+.swiper-slide p {
+  font-weight: normal;
 }

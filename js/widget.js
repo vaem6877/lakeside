@@ -158,11 +158,34 @@ $.getJSON(
   }
 );
 
-$(".box").mouseenter(function () {
-  $(this).addClass("active");
-  $(this).prev().addClass("active");
-});
-$(".weather_cast").mouseout(function () {
-  $(this).removeClass("active");
-  $(this).next().removeClass("active");
-});
+// $(".box").hover(function () {
+//   $(this)
+//     .find(".preview_widget")
+//     .animate(function () {
+//       transform: "translateX(-50px)";
+//     });
+//   $(this).prev().addClass("active");
+// });
+// $(".weather_cast").mouseout(function () {
+//   $(this).removeClass("active");
+//   $(this).next().removeClass("active");
+// });
+
+$(".box").hover(
+  function () {
+    $(this)
+      .find(".preview_widget")
+      .stop()
+      .animate({ left: "-90px" }, 500, "easeInBack", function () {
+        $(this).prev().stop().animate({ left: "0" });
+      });
+  },
+  function () {
+    $(this)
+      .find(".weather_cast")
+      .stop()
+      .animate({ left: "-253px" }, 400, "linear", function () {
+        $(this).next().stop().animate({ left: "-40px" });
+      });
+  }
+);
