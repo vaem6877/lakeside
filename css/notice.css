@@ -193,9 +193,68 @@ section img,
 .cart-guide-desc {
   margin-bottom: 271px;
 }
-
+/* =========================================== */
 .facility-information ul li h4 {
   font-size: var(--main-TT-fz);
   font-weight: 500;
   color: var(--typo-C-Green);
+  margin: 27px 0 17px;
 }
+
+.facility-nav-wrapper {
+  padding-left: 85px;
+}
+
+/* .facility-nav-wrapper ul::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: var(--secondary-brown);
+  
+  보더 바텀 주세요 그냥;;
+} */
+
+.facility .facility-nav-wrapper > ul {
+  padding-bottom: 27px;
+  border-bottom: 3px solid var(--secondary-brown);
+}
+
+.facility-nav-wrapper ul li a {
+  color: var(--secondary-brown);
+  font-size: var(--second-TT-fz);
+  font-weight: 500;
+}
+
+.fac-pager a {
+  text-indent: -9999em;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.facility-wrapper {
+  background: var(--secondary-ivory);
+}
+
+.facility-desc {
+  padding-top: 63px;
+  padding-bottom: 78px;
+}
+
+.fac-nav-img-wrapper {
+  margin-top: 54px;
+  margin-bottom: 121px;
+}
+
+.facility-nav-wrapper .fac-nav-img-wrapper img,
+.facility-information .facility-info-wrapper {
+  display: none;
+}
+
+.facility-nav-wrapper .fac-nav-img-wrapper img.active,
+.facility-information .facility-info-wrapper.active {
+  display: block;
+}
+
+/* pager > 앱솔루트로 안띄우고 그냥 오른쪽으로 밀어놔도 돼요
+p에 그냥 a 밀어놓으면되잖아 */
