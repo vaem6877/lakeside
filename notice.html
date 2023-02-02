@@ -43,7 +43,7 @@
           <div class="history-desc offset-md-2 col-md-5">
             <h3>the lake side</h3>
             <h2>history</h2>
-            <ul>
+            <ul class="d-flex flex-column align-items-start">
               <li>
                 <h4>1986</h4>
                 <p>회사 설립 / 상호: 서울국제관광개발(주)</p>
@@ -63,7 +63,7 @@
                 <h4>1989</h4>
                 <p>회원제 골프장 18홀 사업승인</p>
               </li>
-              <li class="d-flex justify-content-start">
+              <li>
                 <h4>1990</h4>
                 <div>
                   <p>클럽하우스 준공</p>
@@ -138,14 +138,18 @@
       </div>
       <div class="rocess-wrapper">
         <div class="container">
+          <div class="r-desc">
+            <h3>the lake side</h3>
+            <h2>rocess guide</h2>
+            <h4>경기 진행 안내</h4>
+          </div>
           <section class="rocess-guide row">
-            <div class="rocess-guide-img-wrapper col-md-3">
+            <div
+              class="d-flex align-items-start rocess-guide-img-wrapper col-md-3"
+            >
               <img src="./img/notice_rocess.png" alt="" />
             </div>
             <div class="col-md-9 rocess-guide-desc">
-              <h3>the lake side</h3>
-              <h2>rocess guide</h2>
-              <h4>경기 진행 안내</h4>
               <ul>
                 <li class="">
                   <h4>01</h4>
@@ -200,73 +204,81 @@
           </section>
         </div>
       </div>
-
-      <section class="cart-guide">
-        <div class="cart-guide-img-wrapper">
-          <img src="./img/notice_cart.png" alt="" />
-        </div>
-        <div class="cart-guide-desc">
+      <div class="container">
+        <div class="c-desc">
           <h3>the lake side</h3>
           <h2>Cart Use Guide</h2>
           <h4>카트 이용 안내</h4>
-          <ul>
-            <li>
-              <h4>01</h4>
-              <p>안전운행을 위하여 안전수칙을 준수하여 주시기 바랍니다.</p>
-            </li>
-            <li>
-              <h4>02</h4>
-              <p>
-                카트 이동 중에는 안전 손잡이를 잡아주시고, 바른 자세로 탑승하여
-                주시기 바랍니다.
-              </p>
-            </li>
-            <li>
-              <h4>03</h4>
-              <p>내리막, 급경사, 회전구간 등에서의 추락사고 주의</p>
-            </li>
-            <li>
-              <h4>04</h4>
-              <p>
-                골프카트는 무인 유도주행이 가능한 차량입니다. 카트도로 방면에서
-                이동하실 경우에는 유도주행 중인 카트에 부딪히는 사고가 발생하지
-                않도록 유의 바랍니다.
-              </p>
-            </li>
-            <li>
-              <h4>05</h4>
-              <p>담당 캐디 외에는 카트 운전을 일체 금지하여 주시기 바랍니다.</p>
-            </li>
-            <li>
-              <h4>06</h4>
-              <p>
-                플레이어의 운전으로 인하여 발생하는 제반 사고는 운전자의
-                책임입니다.
-              </p>
-            </li>
-            <li>
-              <h4>07</h4>
-              <p>카트가 완전히 정차된 후 탑승 또는 하차하여 주시기 바랍니다.</p>
-            </li>
-            <li>
-              <h4>08</h4>
-              <p>
-                라운딩 종료 후 골프백 인수 시 클럽 개수 및 이상유무를 확인하여
-                주시기 바랍니다.
-              </p>
-            </li>
-            <li>
-              <h4>09</h4>
-              <p>
-                라운딩 종료 후 개인 소지품 및 액세서리류 등을 다시 한번 점검하여
-                주시기 바랍니다.
-              </p>
-            </li>
-          </ul>
         </div>
-      </section>
+        <section class="cart-guide row">
+          <div class="col-md-3 d-flex align-items-start cart-guide-img-wrapper">
+            <img src="./img/notice_cart.png" alt="" />
+          </div>
+          <div class="col-md-9 order-md-first cart-guide-desc">
+            <ul>
+              <li>
+                <h4>01</h4>
+                <p>안전운행을 위하여 안전수칙을 준수하여 주시기 바랍니다.</p>
+              </li>
+              <li>
+                <h4>02</h4>
+                <p>
+                  카트 이동 중에는 안전 손잡이를 잡아주시고, 바른 자세로
+                  탑승하여 주시기 바랍니다.
+                </p>
+              </li>
+              <li>
+                <h4>03</h4>
+                <p>내리막, 급경사, 회전구간 등에서의 추락사고 주의</p>
+              </li>
+              <li>
+                <h4>04</h4>
+                <p>
+                  골프카트는 무인 유도주행이 가능한 차량입니다. 카트도로
+                  방면에서 이동하실 경우에는 유도주행 중인 카트에 부딪히는
+                  사고가 발생하지 않도록 유의 바랍니다.
+                </p>
+              </li>
+              <li>
+                <h4>05</h4>
+                <p>
+                  담당 캐디 외에는 카트 운전을 일체 금지하여 주시기 바랍니다.
+                </p>
+              </li>
+              <li>
+                <h4>06</h4>
+                <p>
+                  플레이어의 운전으로 인하여 발생하는 제반 사고는 운전자의
+                  책임입니다.
+                </p>
+              </li>
+              <li>
+                <h4>07</h4>
+                <p>
+                  카트가 완전히 정차된 후 탑승 또는 하차하여 주시기 바랍니다.
+                </p>
+              </li>
+              <li>
+                <h4>08</h4>
+                <p>
+                  라운딩 종료 후 골프백 인수 시 클럽 개수 및 이상유무를 확인하여
+                  주시기 바랍니다.
+                </p>
+              </li>
+              <li>
+                <h4>09</h4>
+                <p>
+                  라운딩 종료 후 개인 소지품 및 액세서리류 등을 다시 한번
+                  점검하여 주시기 바랍니다.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
       <section class="facility">
-        <div class="facility-desc">
+        <div class="text-center facility-desc">
           <h3>the lake side</h3>
           <h2>Facility information</h2>
           <h4>레이크 사이드 시설안내</h4>
@@ -274,7 +286,7 @@
         <div class="facility-img-wrapper">
           <img src="" alt="" />
         </div>
-        <div class="cart-guide-desc">
+        <div class="facility-information">
           <ul>
             <li>
               <h4>클럽하우스</h4>

@@ -42,6 +42,8 @@ topBtn.on("click", function (e) {
   $("html, body").stop().animate({ scrollTop: 0 }, 300);
 });
 
+// 탑버튼 끝 ===========
+
 // topBtn.click(function (e) {
 //   e.preventDefault();
 //   $("html, body").stop().animate({ scrollTop: 0 }, 300);
