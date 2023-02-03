@@ -28,8 +28,6 @@ div,
 section,
 .history-img-wrapper,
 .contest-img-wrapper,
-/* .rocess-guide-desc,
-.rocess-guide-img-wrapper, */
 img {
   padding: 0;
 }
@@ -189,11 +187,6 @@ section img,
   padding-right: 33px;
 }
 
-/* .contest-desc li.d-flex,
-.history-desc li.d-flex {
-  gap: 3px;
-} */
-
 .history {
   margin-top: 218px;
 }
@@ -201,30 +194,19 @@ section img,
   padding-left: 34px;
 }
 
-/* .rocess-guide-img-wrapper {
-  padding-right: 27px;
-} */
-
 /* cart ============================== */
-
-/* .rocess-guide .rocess-guide-desc > h4 */
-/* --typo-C-Green */
 
 .rocess-wrapper {
   background: var(--bg-green);
 }
-/* .rocess-guide {
-  padding-top: 100px;
-} */
+
 .r-desc > h4 {
   padding-bottom: 86px;
 }
 .r-desc {
   padding-top: 100px;
 }
-/* .rocess-guide-desc li h4 { */
-/* padding-left: 64px; */
-/* } */
+
 .rocess-guide-desc {
   padding-right: 0;
   padding-left: 52px;
@@ -258,16 +240,6 @@ section img,
   padding-left: 85px;
 }
 
-/* .facility-nav-wrapper ul::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 3px;
-  background: var(--secondary-brown);
-  
-  보더 바텀 주세요 그냥
-} */
-
 .facility .facility-nav-wrapper > ul {
   padding-bottom: 27px;
   border-bottom: 3px solid var(--secondary-brown);
@@ -279,14 +251,13 @@ section img,
   position: absolute;
   width: 20%;
   border-bottom: 3px solid var(--primary-ygreen);
-  /* transform: scaleX(0); */
+
   transition: 0.4s cubic-bezier(0.65, 0, 0.35, 1);
   bottom: -3px;
 }
 
 .facility .facility-nav-wrapper > ul li.active ul #bar {
   opacity: 1;
-  /* transform: scaleX(1); */
 }
 .facility .facility-nav-wrapper > ul li.active a {
   color: var(--typo-C-Green);
@@ -330,7 +301,6 @@ section img,
 
 .fac-nav-img-wrapper {
   margin-top: 54px;
-  /* margin-bottom: 121px; */
 }
 
 .facility-nav-wrapper .fac-nav-img-wrapper img,
@@ -342,9 +312,6 @@ section img,
 .facility-information .facility-info-wrapper.active {
   display: block;
 }
-
-/* pager > 앱솔루트로 안띄우고 그냥 오른쪽으로 밀어놔도 돼요
-p에 그냥 a 밀어놓으면되잖아 */
 
 /* ===================== directions === */
 
@@ -361,18 +328,11 @@ p에 그냥 a 밀어놓으면되잖아 */
 
 /* ========================= header absolute */
 
-/* header {
-  position: relative;
-  z-index: 100;
-} */
-/* header, 왜지???????????? */
 .history,
 .contest {
   position: relative;
 }
 
-/* .history::after,
-.contest::after */
 header::after,
 .history::before,
 .contest::before {
@@ -401,7 +361,6 @@ header::after,
 }
 
 .contest::before {
-  /* width: 72%; */
   width: 100%;
   top: -87%;
 }
@@ -409,7 +368,7 @@ header::after,
 header::after {
   width: 100%;
   right: 50%;
-  /* bottom: -30%; */
+
   top: 234%;
 }
 
@@ -449,9 +408,7 @@ header::after {
   .contest {
     margin-bottom: 130px;
   }
-  /* .facility-info-wrapper p {
-    padding-bottom: 70px;
-  } */
+
   .directions-desc {
     margin-top: 120px;
   }
