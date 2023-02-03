@@ -9,19 +9,24 @@ let facWrap = $(".facility-wrapper"),
 navBtn.click(function (e) {
   e.preventDefault();
   let tabIdx = $(this).index();
-  // navImg.removeClass("active");
-  // facInfo.removeClass("active");
-  // pager.removeClass("active");
 
-  // navImg.eq(tabIdx).addClass("active");
-  // facInfo.eq(tabIdx).addClass("active");
-  // pager.eq(tabIdx).addClass("active");
+  showSlide(tabIdx);
+  // navImg.hide();
+  // facInfo.hide();
+  // pager.hide();
 
-  navImg.hide();
-  facInfo.hide();
-  pager.hide();
-
-  navImg.eq(tabIdx).fadeIn();
-  facInfo.eq(tabIdx).fadeIn();
-  pager.eq(tabIdx).fadeIn();
+  // navImg.eq(tabIdx).fadeIn();
+  // facInfo.eq(tabIdx).fadeIn();
+  // pager.eq(tabIdx).fadeIn();
 }); //nav a 클릭시 할일
+
+function showSlide(idx) {
+  navBtn.add(navImg).add(facInfo).add(pager).removeClass("active");
+
+  navBtn
+    .eq(idx)
+    .add(navImg.eq(idx))
+    .add(facInfo.eq(idx))
+    .add(pager.eq(idx))
+    .addClass("active");
+}

@@ -57,12 +57,6 @@ section {
   background: var(--primary-green);
   margin-top: 25px;
 }
-/* .main-course a.align-self-end {
-  margin-right: 58px;
-}
-.main-course a.align-self-start {
-  margin-left: 54px;
-} */
 
 .main-course .west-course a {
   background: var(--primary-ygreen);

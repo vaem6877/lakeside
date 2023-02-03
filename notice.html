@@ -32,15 +32,41 @@
       <div class="widget"></div>
     </header>
     <main>
+      <nav class="aside-nav d-flex flex-column align-items-end">
+        <a href="#history"
+          ><span class="nav-text">연혁</span>
+          <span> </span>
+        </a>
+        <a href="#contest"
+          ><span class="nav-text">대회</span>
+          <span> </span>
+        </a>
+        <a href="#rocess"
+          ><span class="nav-text">경기 진행 안내</span>
+          <span> </span>
+        </a>
+        <a href="#cart"
+          ><span class="nav-text">카트 이용 안내</span>
+          <span> </span>
+        </a>
+        <a href="#facility"
+          ><span class="nav-text">시설안내</span>
+          <span> </span>
+        </a>
+        <a href="#directions"
+          ><span class="nav-text">오시는 길</span>
+          <span> </span>
+        </a>
+      </nav>
       <div class="container">
-        <section class="history row">
-          <div class="history-img-wrapper col-md-5">
+        <section id="history" class="history row">
+          <div class="history-img-wrapper col-lg-5">
             <!-- <div class="img-container"> -->
             <img src="./img/notice_history.png" alt="" />
             <!-- </div> -->
             <!-- <span class="linebox"></span> -->
           </div>
-          <div class="offset-md-2 col-md-5 history-desc">
+          <div class="offset-lg-2 offset-md-1 col-lg-5 col-md-12 history-desc">
             <h3>the lake side</h3>
             <h2>history</h2>
             <ul class="d-flex flex-column align-items-start">
@@ -80,13 +106,17 @@
               </li>
             </ul>
           </div>
+          <div class="circles">
+            <span class="circle1"></span>
+            <span class="circle2"> </span>
+          </div>
         </section>
-        <section class="contest row">
-          <div class="contest-img-wrapper col-md-5 offset-md-2">
+        <section id="contest" class="contest row">
+          <div class="contest-img-wrapper col-lg-5 offset-lg-2 offset-md-1">
             <img src="./img/notice_contest.png" alt="" />
           </div>
           <div
-            class="contest-desc col-md-5 order-md-first d-flex flex-column align-items-end"
+            class="contest-desc col-lg-5 col-md-12 order-md-first d-flex flex-column align-items-end"
           >
             <h3>the lake side</h3>
             <h2>contest</h2>
@@ -116,7 +146,7 @@
                 </div>
               </li>
               <li class="d-flex justify-content-end flex-row-reverse">
-                <div class="lines-2 d-flex flex-column align-items-end">
+                <div class="d-flex flex-column align-items-end">
                   <h4>2001</h4>
                   <h4>2015</h4>
                 </div>
@@ -136,7 +166,7 @@
           </div>
         </section>
       </div>
-      <div class="rocess-wrapper">
+      <div id="rocess" class="rocess-wrapper">
         <div class="container">
           <div class="r-desc">
             <h3>the lake side</h3>
@@ -149,7 +179,7 @@
             >
               <img src="./img/notice_rocess.png" alt="" />
             </div>
-            <div class="col-md-9 rocess-guide-desc">
+            <div class="col-md-9 col-sm-12 rocess-guide-desc">
               <ul>
                 <li class="">
                   <h4>01</h4>
@@ -204,7 +234,7 @@
           </section>
         </div>
       </div>
-      <div class="container">
+      <div id="cart" class="container">
         <div class="c-desc">
           <h3>the lake side</h3>
           <h2>Cart Use Guide</h2>
@@ -214,7 +244,7 @@
           <div class="col-md-3 d-flex align-items-start cart-guide-img-wrapper">
             <img src="./img/notice_cart.png" alt="" />
           </div>
-          <div class="col-md-9 order-md-first cart-guide-desc">
+          <div class="col-md-9 col-sm-12 order-md-first cart-guide-desc">
             <ul>
               <li>
                 <h4>01</h4>
@@ -276,7 +306,7 @@
           </div>
         </section>
       </div>
-      <div class="facility-wrapper">
+      <div id="facility" class="facility-wrapper">
         <div class="container">
           <div class="text-center facility-desc">
             <h3>the lake side</h3>
@@ -286,7 +316,7 @@
 
           <section class="row facility">
             <div
-              class="col-md-8 d-flex flex-column facility-nav-wrapper order-md-last"
+              class="col-md-8 col-sm-12 d-flex flex-column facility-nav-wrapper order-md-last"
             >
               <ul class="d-flex justify-content-evenly">
                 <li><a href="">클럽하우스</a></li>
@@ -294,6 +324,7 @@
                 <li><a href="">락커룸</a></li>
                 <li><a href="">그늘집</a></li>
                 <li><a href="">프로샵</a></li>
+                <span id="bar"></span>
               </ul>
               <div class="fac-nav-img-wrapper">
                 <img
@@ -320,7 +351,7 @@
           다 클릭했을때 idx로 연결.
         링크 # 아이디 필요X -->
             </div>
-            <div class="col-md-4 facility-information">
+            <div class="col-md-4 col-sm-12 facility-information">
               <ul>
                 <li class="facility-info-wrapper active">
                   <img src="./img/facility-club.png" alt="" />
@@ -380,7 +411,7 @@
           </section>
         </div>
       </div>
-      <div class="directions">
+      <div id="directions" class="directions">
         <section class="text-center directions-desc">
           <h3>the lake side</h3>
           <h2>directions</h2>

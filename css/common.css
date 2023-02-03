@@ -173,10 +173,75 @@ footer address p {
   line-height: 37px;
   text-align: center;
   bottom: 33px;
-  right: 165px;
+  right: 9%;
+  /* =========0203추가 */
+  z-index: 100;
 }
 
-/* ======================= // 윤희_0201 ===================== */
+@media (max-width: 960px) {
+  #go-top {
+    right: 7%;
+  }
+}
+
+/* ===== nav bar ===== */
+
+.aside-nav {
+  position: fixed;
+  gap: 45.55px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 3%;
+  z-index: 100;
+}
+
+.aside-nav * {
+  display: inline-block;
+}
+
+.aside-nav a {
+  font-size: var(--xsmall-content-fz);
+  color: var(--primary-green);
+  font-weight: 500;
+}
+
+.nav-text {
+  visibility: hidden;
+}
+
+.aside-nav a span:last-child {
+  margin-left: 10px;
+  width: 14px;
+  height: 14px;
+  background: var(--primary-ygreen);
+  border-radius: 50%;
+  position: relative;
+}
+
+.aside-nav a:hover span:last-child:after {
+  width: 18px;
+  height: 18px;
+}
+
+.aside-nav a span:last-child:after {
+  z-index: -1;
+  content: "";
+  display: block;
+  position: absolute;
+  height: 55.5px;
+  border: 1.8px dashed var(--primary-green);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.aside-nav a:last-child span:last-child:after {
+  display: none;
+}
+.aside-nav a:hover .nav-text {
+  visibility: visible;
+}
+
+/* ======================= // 윤희_0203 ===================== */
 
 /*--버튼--*/
 .hole_btn {

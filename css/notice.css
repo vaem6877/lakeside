@@ -1,5 +1,27 @@
 @import url(./common.css);
 
+main {
+  overflow-x: hidden;
+}
+.circles > * {
+  width: 19px;
+  height: 19px;
+  background: var(--primary-green);
+  border: 5px solid var(--primary-ygreen);
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.circle1 {
+  top: 11.8%;
+}
+.circle2 {
+  top: 111.5%;
+}
+
 .history-desc,
 .contest-desc,
 div,
@@ -243,12 +265,32 @@ section img,
   height: 3px;
   background: var(--secondary-brown);
   
-  보더 바텀 주세요 그냥;;
+  보더 바텀 주세요 그냥
 } */
 
 .facility .facility-nav-wrapper > ul {
   padding-bottom: 27px;
   border-bottom: 3px solid var(--secondary-brown);
+  position: relative;
+}
+.facility .facility-nav-wrapper > ul #bar {
+  display: block;
+  z-index: 3;
+  position: absolute;
+  width: 20%;
+  border-bottom: 3px solid var(--primary-ygreen);
+  /* transform: scaleX(0); */
+  transition: 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  bottom: -3px;
+}
+
+.facility .facility-nav-wrapper > ul li.active ul #bar {
+  opacity: 1;
+  /* transform: scaleX(1); */
+}
+.facility .facility-nav-wrapper > ul li.active a {
+  color: var(--typo-C-Green);
+  font-weight: 700;
 }
 
 .facility-nav-wrapper ul li a {
@@ -270,9 +312,10 @@ section img,
   height: 9px;
   background: var(--typo-C-lightgrey);
   border-radius: 50%;
+  transition: 0.3s;
 }
 
-.fac-pager a.active {
+.fac-pager li.active a {
   background: #123723;
 }
 
@@ -326,7 +369,6 @@ p에 그냥 a 밀어놓으면되잖아 */
 .history,
 .contest {
   position: relative;
-  z-index: 1;
 }
 
 /* .history::after,
@@ -359,6 +401,7 @@ header::after,
 }
 
 .contest::before {
+  /* width: 72%; */
   width: 100%;
   top: -87%;
 }
@@ -367,13 +410,118 @@ header::after {
   width: 100%;
   right: 50%;
   /* bottom: -30%; */
-  top: 199%;
+  top: 234%;
 }
+
+/* ================================================== */
 
 @media (max-width: 1200px) {
   header::after,
   .history::before,
-  .contest::before {
+  .contest::before,
+  .circles {
     display: none;
+  }
+  .lines-2 h4:last-of-type {
+    font-size: var(--mobile-EngTT-fz);
+  }
+  .facility-info-wrapper p {
+    margin-bottom: 120px;
+  }
+}
+@media (max-width: 1000px) {
+  .facility-nav-wrapper ul li a {
+    font-size: var(--content-fz);
+  }
+}
+
+@media (max-width: 992px) {
+  .history-img-wrapper::after,
+  .contest-img-wrapper::after,
+  .history-img-wrapper img,
+  .contest-img-wrapper img {
+    display: none;
+  }
+  .history {
+    margin-bottom: 125px;
+  }
+
+  .contest {
+    margin-bottom: 130px;
+  }
+  /* .facility-info-wrapper p {
+    padding-bottom: 70px;
+  } */
+  .directions-desc {
+    margin-top: 120px;
+  }
+}
+@media (max-width: 768px) {
+  .history {
+    margin-bottom: 125px;
+    margin-top: 170px;
+  }
+  .history-img-wrapper img,
+  .contest-img-wrapper img {
+    margin-bottom: 170px;
+  }
+  .rocess-guide-img-wrapper,
+  .cart-guide-img-wrapper {
+    display: none !important;
+  }
+  .rocess-guide-desc {
+    padding-left: 15px;
+    padding-bottom: 120px;
+  }
+  .cart-guide-desc {
+    margin-bottom: 130px;
+  }
+  .facility-desc {
+    padding-top: 120px;
+  }
+  .facility-nav-wrapper {
+    padding-left: 0;
+  }
+  .facility-information ul li h4 {
+    margin: 38px 0 20px;
+  }
+  .facility-information {
+    margin-bottom: 130px;
+  }
+}
+
+@media (max-width: 576px) {
+  .history-desc,
+  .contest-desc {
+    padding: 0 12px;
+  }
+  .facility-nav-wrapper {
+    padding-left: 12px;
+  }
+  .terms {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .terms a {
+    width: 30%;
+    text-align: center;
+  }
+  address dl.d-flex {
+    /* justify-content: space-evenly; */
+    gap: 12px;
+    flex-wrap: wrap;
+    /* flex-direction: column !important; */
+  }
+  address dl.d-flex > dt {
+    padding: 0;
+    width: 18%;
+    /* text-align: center; */
+  }
+  address dl.d-flex > dd {
+    padding: 0;
+    width: 60%;
+  }
+  .facility-information {
+    margin-bottom: 0;
   }
 }
