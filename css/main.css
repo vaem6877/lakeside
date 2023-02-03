@@ -15,20 +15,11 @@ div,
 section {
   padding: 0;
 }
-/* .east-course .course-desc,
-.south-course .course-desc {
-  margin-left: 125px;
-}
-
-.west-course .course-desc {
-  margin-right: 125px;
-} */
 
 .main-course p {
   font-size: var(--content-fz);
   font-weight: 300;
   line-height: 27px;
-  /* width: 445px; */
 }
 .main-course .course-desc h2 {
   font-size: var(--main-TT-fz);
@@ -36,10 +27,6 @@ section {
   margin-bottom: 55px;
   display: inline-block;
 }
-
-/* .img-wrapper {
-  width: 
-} */
 
 .main-course .img-wrapper img {
   width: 100%;
@@ -71,9 +58,6 @@ section {
   margin: 0 auto;
 }
 
-/* .west-course {
-  padding: 323px 0;
-} */
 .west-course h2 {
   padding-top: 161px;
 }
@@ -92,7 +76,6 @@ section {
 .main-slide a img {
   width: 314px;
   object-fit: contain;
-  /* box-sizing: border-box; */
 }
 
 .footer-notice-wrapper {
@@ -111,9 +94,6 @@ footer .notice a {
 footer .notice-slide {
   width: 500px;
 }
-/* .notice ul li {
-  padding: 0 263px 0;
-} */
 
 .main-slide {
   margin-bottom: 80px;
@@ -172,10 +152,3 @@ footer .notice-slide {
     width: 100%;
   }
 }
-
-/* @media (max-width: 1000px) {
-  .controls > * {
-    top: 171.625px;
-  }
-} */
-/* 171.625px */
