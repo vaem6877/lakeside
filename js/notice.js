@@ -30,3 +30,13 @@ function showSlide(idx) {
     .add(pager.eq(idx))
     .addClass("active");
 }
+
+// ======== aside nav ==============================================
+
+let asideNavWrapper = $(".aside-nav"),
+  asideNav = asideNavWrapper.find("a"),
+  sectionOST;
+
+asideNav.each(function () {
+  let sectionLink = $(this).attr("href");
+});

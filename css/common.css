@@ -218,9 +218,10 @@ footer address p {
   position: relative;
 }
 
-.aside-nav a:hover span:last-child:after {
+.aside-nav a:hover span:last-child {
   width: 18px;
   height: 18px;
+  background: var(--primary-green);
 }
 
 .aside-nav a span:last-child:after {
