@@ -35,11 +35,11 @@ require_once('php/config.php');
     <main class="board_wrapper">
       <div class="container">
         <div class="search"> 
-            
+          <div class="switch_wb">  
             <?php if(isset($_SESSION['id'])) { ?>
             <a href="write.html" class="write_btn">글쓰기</a>
             <?php } ?>
-         
+         </div>
           <form action="">
             <select name="" id="">
               <option value="">제목</option>
