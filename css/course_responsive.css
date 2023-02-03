@@ -1,32 +1,23 @@
-@media (min-width: 1400px) {
+/* @media (min-width: 1400px) {
   .container {
     max-width: 1440px;
-  }
-}
-/* 
-@media screen and (max-width: 1200px) {
-  .swiper-slide a {
-    width: 120px;
-    height: 120px;
-    line-height: 120px;
-  }
-  .swiper-button-next {
-    top: 60px;
-  }
-  .swiper-button-prev {
-    top: 60px;
   }
 } */
 
 @media screen and (max-width: 768px) {
+  .containerBox {
+    width: 85%;
+  }
+
+  /* 메뉴 */
   .menu .main_menus {
-    gap: 50px;
+    gap: 30px;
   }
   .menu .main_menus a {
-    font-size: 20px;
+    font-size: 25px;
   }
   .menu .sub_menus {
-    gap: 30px;
+    gap: 20px;
   }
   .menu .sub_menus a {
     font-size: 16px;
@@ -34,47 +25,160 @@
   .menu li a {
     white-space: nowrap;
   }
+
+  /* 코스갤러리 */
   #course_gallery button {
     font-size: 14px;
     margin-right: 15px;
   }
-  .item {
+  #course_gallery .mix-wrapper img {
+    height: 200px;
+  }
+
+  /* 홀인원 */
+  #holeinone .item {
     width: 100px;
   }
-  .item img {
+  #holeinone .item img {
     width: 100px;
     height: 80px;
   }
-  .gap-5 {
-    gap: 1.5rem !important;
+  #holeinone .item p {
+    word-break: keep-all;
   }
-  .mix-wrapper img {
-    height: 200px;
+  #holeinone .gap-5 {
+    gap: 1.2rem !important;
   }
-  .containerBox {
-    width: 90%;
+
+  #course .swiper {
+    padding: 5px 20px;
   }
-  .swiper {
-    padding: 0 20px;
-  }
-  .swiper-slide a {
+  #course .swiper-slide a {
     font-size: 12px;
     width: 70px;
     height: 70px;
     line-height: 70px;
   }
-  .swiper-button-next {
-    top: 35px;
+  #course .swiper-button-next {
+    top: 40px;
     font-size: 36px;
     right: 5px;
   }
-  .swiper-button-prev {
-    top: 35px;
+  #course .swiper-button-prev {
+    top: 40px;
     font-size: 36px;
     left: 5px;
   }
+  #course .fa-hand-pointer {
+    display: none;
+  }
 }
 @media screen and (max-width: 360px) {
+  footer {
+    display: none;
+  }
+  .widget_box {
+    display: none !important;
+  }
+  .menu {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: auto;
+    right: 0;
+    bottom: 100%;
+    transition: bottom 0.7s;
+    z-index: 100;
+  }
+  .menu .main_menus {
+    width: 90%;
+    gap: 50px;
+    border: none;
+    flex-direction: column;
+  }
+  .menu .main_menus li {
+    padding-bottom: 30px;
+    border-bottom: 2px solid #fff;
+  }
+  .menu .main_menus li:nth-child(4) {
+    display: none;
+  }
+  .menu .sub_menus {
+    padding: 0;
+  }
+  .menu .sub_menus .sub_menu {
+    display: none;
+  }
+  .menu li a {
+    color: #fff;
+    display: inline-block;
+    font-size: var(--second-TT-fz);
+    margin-bottom: px;
+  }
+  .menu .sub_menu li a {
+    color: #fff;
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+  .menu .sub_menu li a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .menu li {
+    list-style: none;
+  }
+  .menu li a {
+    list-style: none;
+    text-decoration: none;
+  }
+  .menu.active {
+    bottom: 0;
+    z-index: 100;
+  }
+  .menu .button {
+    position: fixed;
+    background: black;
+    top: 0%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 150px;
+    right: auto;
+    z-index: 90;
+  }
+  .menu .button p {
+    text-align: right;
+    font-size: 50px;
+    padding-right: 15px;
+    padding-top: 35px;
+    line-height: 150px;
+    color: #fff;
+    z-index: 110;
+  }
+  .menu .button i {
+    display: block;
+    font-size: 50px;
+  }
+  .menu .button.active {
+    background: #000;
+    top: 0;
+    transform: translateY(-50%);
+    right: 0px;
+    width: 100%;
+    height: 150px;
+    z-index: 110;
+  }
+  .menu .button.active p {
+    text-align: right;
+    font-size: 50px;
+    padding-right: 15px;
+    padding-top: 35px;
+    line-height: 150px;
+    color: #fff;
+  }
+
   h2 {
     font-size: var(--mobile-mainTT-fz);
   }
@@ -85,8 +189,7 @@
     font-size: var(--second-content-fz);
   }
   #course_gallery,
-  #holeinone,
-  #menu {
+  #holeinone {
     display: none;
   }
   #course_wv {
@@ -100,7 +203,7 @@
     background: #dfdfdf;
   }
   #hole_desc #tabs ul li {
-    padding: 14px 0px;
+    padding: 8px 0px;
   }
   #hole_desc #tabs > ul li a:hover {
     text-decoration: none;
@@ -122,13 +225,42 @@
   .containerBox h2 {
     margin-bottom: 0;
   }
-  #hole_desc #tabs .tab_group p {
-    height: 80px;
-  }
-
-  .swiper-slide a {
+  #hole_desc .swiper-slide a {
     width: 50px;
     height: 50px;
     line-height: 50px;
+  }
+  [class^="swiper-button"] {
+    display: none;
+  }
+  #hole_desc .swiper {
+    padding: 0;
+  }
+  #hole_desc .fa-hand-pointer {
+    margin-top: 10px;
+    display: block;
+    color: #234a35;
+    font-size: 30px;
+    animation: highlight 1.5s infinite;
+  }
+  @keyframes highlight {
+    0% {
+      transform: translateX(0px);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(0px);
+    }
+    75% {
+      transform: translateX(5px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  #tabs .img_container {
+    margin-bottom: 76px;
   }
 }

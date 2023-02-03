@@ -90,14 +90,14 @@ $.getJSON(
     // let date = filteredDay[0].dt_txt.substr(8, 2);
     // console.log(date);
     let Temp = "";
+    let TempArr = [];
+    let iconArr = [];
 
     $.each(dateList, function (i) {
       Temp = list.filter(function (item) {
         return item.dt_txt.substr(0, 10) == dateList[i];
       });
       console.log(Temp);
-      let TempArr = [];
-      let iconArr = [];
       Temp.map((item) => {
         TempArr.push(item.main.temp);
         if (item.dt_txt.substr(-8) == "12:00:00") {
@@ -136,7 +136,8 @@ $.getJSON(
     });
 
     //preview - icon
-    let previewIcon = list[0].weather[0].icon;
+    let previewIcon = iconArr[0];
+    console.log(previewIcon);
     let previewIconBox = $(".today_icon");
     let previewIconHTML = `<i class="fa-solid ${weatherIcon[previewIcon]}"></i>`;
     previewIconBox.append(previewIconHTML);

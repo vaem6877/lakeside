@@ -22,87 +22,86 @@
   position: absolute;
   border-radius: 0 10px 10px 0;
 }
-/* .weather_cast.active {
-  left: 0;
-} */
-.preview {
+
+.weather_cast .preview {
   text-align: center;
   padding: 10px 15px;
   box-sizing: content-box;
   margin-bottom: 7px;
 }
-.preview ul {
+.weather_cast .preview ul {
   margin: 0 auto;
   padding: 0;
 }
-.preview ul li {
+.weather_cast .preview ul li {
   margin: 0 auto;
   list-style: none;
 }
-.preview ul li > * {
+.weather_cast .preview ul li > * {
   display: none;
 }
-.preview ul li i:before {
+.weather_cast .preview ul li i:before {
   font-size: 45px;
 }
-.preview p {
+.weather_cast .preview p {
   font-size: var(--small-content-fz);
   margin-bottom: 0;
 }
-.preview .temp {
+.weather_cast .preview .temp {
   margin: auto auto;
 }
-.preview .temp p:first-child {
+.weather_cast .preview .temp p:first-child {
   margin-bottom: 5px;
 }
-.swiper {
+.weather_cast .swiper {
   width: 80%;
   margin-bottom: 6px;
 }
-.swiper-wrapper {
+.weather_cast .swiper-wrapper {
   list-style: none;
   padding: 0;
   text-align: center;
   margin-bottom: 0;
 }
-div:after,
-div:before {
+.weather_cast div:after,
+.weather_cast div:before {
   display: none;
 }
-.swiper-slide p {
+.weather_cast .swiper-slide p {
   font-size: 10px;
   margin: 0;
   color: #fff;
+  font-weight: normal;
 }
-[class^="swiper-button"] {
+.weather_cast [class^="swiper-button"] {
   font-size: 5px;
 }
-.swiper-button-prev {
+.weather_cast .swiper-button-prev {
   top: 35%;
   left: -7px;
   color: #fff;
 }
-.swiper-button-next {
+.weather_cast .swiper-button-next {
   top: 35%;
   right: -7px;
   color: #fff;
   z-index: 1;
 }
-.shortcut > * {
+.weather_cast .shortcut > * {
   text-align: center;
   padding: 11.5px 0px;
 }
-.shortcut p {
+.weather_cast .shortcut p {
   font-size: var(--content-fz);
 }
-.shortcut i {
+.weather_cast .shortcut i {
   font-size: var(--content-fz);
 }
-.shortcut .faq {
+.weather_cast .shortcut .faq {
   background: #fff;
   color: #000;
 }
-.shortcut .map {
+.weather_cast .shortcut .map {
   text-indent: 6px;
 }
 
@@ -121,7 +120,7 @@ div:before {
   padding-left: 38px;
   border-radius: 0 10px 10px 0;
 }
-.today_icon {
+.preview_widget .today_icon {
   padding: 10px;
   font-size: 30px;
 }
@@ -139,11 +138,7 @@ div:before {
   content: "/";
   margin: 0 3px;
 }
-.today_date p {
+.preview_widget .today_date p {
   font-size: var(--xsmall-content-fz);
-  font-weight: normal;
-}
-
-.swiper-slide p {
   font-weight: normal;
 }

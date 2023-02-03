@@ -22,8 +22,8 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
-  transition: 0.7s;
-  z-index: 100;
+  transition: left 0.7s;
+  z-index: 200;
 }
 .menu .main_menus {
   gap: 100px;
@@ -34,6 +34,7 @@ body {
   gap: 100px;
   padding: 50px;
   border-bottom: 2px solid #fff;
+  display: block;
 }
 .menu li a {
   color: #fff;
@@ -63,7 +64,7 @@ body {
   z-index: 100;
 }
 
-.button {
+.menu .button {
   position: fixed;
   background: black;
   top: 50%;
@@ -71,26 +72,177 @@ body {
   right: 0px;
   width: 32px;
   height: 135px;
-  z-index: 110;
+  z-index: 200;
 }
-.button p {
+.menu .button p {
   text-align: center;
   line-height: 135px;
   color: #fff;
 }
-.button.active {
+.menu .button i {
+  display: none;
+}
+.menu .button.active {
   background: #fff;
   top: 50%;
   transform: translateY(-50%);
   right: 0px;
   width: 32px;
   height: 135px;
-  z-index: 110;
+  z-index: 200;
 }
-.button.active p {
+.menu .button.active p {
   text-align: center;
   line-height: 135px;
   color: #000;
+}
+
+/* section: 위젯 */
+
+:link {
+  text-decoration: none;
+}
+.container {
+  width: 1440px;
+}
+.widget_box {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: 150;
+}
+
+/* large .ver */
+.weather_cast {
+  left: -173px;
+  width: 173px;
+  height: 232px;
+  background: #000;
+  color: #fff;
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 0 10px 10px 0;
+}
+
+.weather_cast .preview {
+  text-align: center;
+  padding: 10px 15px;
+  box-sizing: content-box;
+  margin-bottom: 7px;
+}
+.weather_cast .preview ul {
+  margin: 0 auto;
+  padding: 0;
+}
+.weather_cast .preview ul li {
+  margin: 0 auto;
+  list-style: none;
+}
+.weather_cast .preview ul li > * {
+  display: none;
+}
+.weather_cast .preview ul li i:before {
+  font-size: 45px;
+}
+.weather_cast .preview p {
+  font-size: var(--small-content-fz);
+  margin-bottom: 0;
+}
+.weather_cast .preview .temp {
+  margin: auto auto;
+}
+.weather_cast .preview .temp p:first-child {
+  margin-bottom: 5px;
+}
+.weather_cast .swiper {
+  width: 80%;
+  margin-bottom: 6px;
+}
+.weather_cast .swiper-wrapper {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 0;
+}
+.weather_cast div:after,
+.weather_cast div:before {
+  display: none;
+}
+.weather_cast .swiper-slide p {
+  font-size: 10px;
+  margin: 0;
+  color: #fff;
+  font-weight: normal;
+}
+.weather_cast [class^="swiper-button"] {
+  font-size: 5px;
+}
+.weather_cast .swiper-button-prev {
+  top: 35%;
+  left: -7px;
+  color: #fff;
+}
+.weather_cast .swiper-button-next {
+  top: 35%;
+  right: -7px;
+  color: #fff;
+  z-index: 1;
+}
+.weather_cast .shortcut > * {
+  text-align: center;
+  padding: 11.5px 0px;
+}
+.weather_cast .shortcut p {
+  font-size: var(--content-fz);
+}
+.weather_cast .shortcut i {
+  font-size: var(--content-fz);
+}
+.weather_cast .shortcut .faq {
+  background: #fff;
+  color: #000;
+}
+.weather_cast .shortcut .map {
+  text-indent: 6px;
+}
+
+/* small .ver */
+
+.preview_widget {
+  position: absolute;
+  left: -40px;
+  text-align: center;
+  width: 90px;
+  height: 232px;
+  background: #000;
+  color: #fff;
+  position: relative;
+  z-index: 200;
+  padding-left: 38px;
+  border-radius: 0 10px 10px 0;
+}
+.preview_widget .today_icon {
+  padding: 10px;
+  font-size: 30px;
+}
+.preview_widget p {
+  margin-bottom: 18px;
+}
+.preview_widget .today_temp span {
+  display: none;
+}
+
+.preview_widget .today_temp p {
+  font-size: var(--mobile-content-fz);
+}
+.preview_widget .today_temp p:nth-child(2)::before {
+  content: "/";
+  margin: 0 3px;
+}
+.preview_widget .today_date p {
+  font-size: var(--xsmall-content-fz);
+  font-weight: normal;
 }
 
 /* section:코스소개 */
@@ -166,14 +318,13 @@ body {
   padding: 163px 0px;
 }
 #hole_desc #tabs .tab_group p {
-  height: 50px;
   margin: 57px 0;
 }
-.swiper {
-  padding: 0 40px;
+#tabs .swiper {
+  padding: 10px 40px;
   margin-bottom: 76px;
 }
-.swiper-container {
+#tabs .swiper-container {
   position: relative;
   width: 100%;
   margin-bottom: 76px;
@@ -182,7 +333,7 @@ body {
   overflow: hidden;
   padding: 0;
 }
-.swiper-slide {
+#tabs .swiper-slide {
   width: auto;
   display: flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
   align-items: center; /* 위아래 기준 중앙정렬 */
@@ -190,25 +341,25 @@ body {
   margin: 0 auto;
 }
 
-.swiper-button-prev {
+#tabs .swiper-button-prev {
   color: #181818;
   font-size: 57px;
   position: absolute;
-  top: 70px;
+  top: 80px;
   left: 10px;
 }
-.swiper-button-next {
+#tabs .swiper-button-next {
   color: #181818;
   font-size: 57px;
   position: absolute;
-  top: 70px;
+  top: 80px;
   right: 10px;
 }
-div:after,
-div:before {
+#tabs div:after,
+#tabs div:before {
   display: none;
 }
-.swiper-slide a {
+#tabs .swiper-slide a {
   display: block;
   width: 150px;
   height: 100%;
@@ -217,14 +368,16 @@ div:before {
   border-radius: 50%;
   background: #8ba63d;
   margin: 0;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
 }
-.swiper-slide.ui-state-hover a {
+#tabs .swiper-slide.ui-state-hover a {
   background: #234a35;
 }
-.swiper-slide.ui-tabs-active a {
+#tabs .swiper-slide.ui-tabs-active a {
   background: #234a35;
 }
-.swiper-slide a {
+#tabs .swiper-slide a {
   color: #fff;
   text-decoration: none;
 }
@@ -249,12 +402,12 @@ div:before {
 #course_gallery button:last-child {
   margin-right: 0;
 }
-.mix-wrapper img {
+#course_gallery .mix-wrapper img {
   height: 400px;
   object-fit: cover;
   padding: 10px;
 }
-.course_img_big {
+#course_gallery .course_img_big {
   display: none;
   position: fixed;
   background: rgba(0, 0, 0, 0.5);
@@ -266,7 +419,7 @@ div:before {
   transition: 1s;
   z-index: 100;
 }
-.course_img_big img {
+#course_gallery .course_img_big img {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -274,7 +427,7 @@ div:before {
   width: 80%;
   height: 70%;
 }
-.course_img_big i {
+#course_gallery .course_img_big i {
   width: 50px;
   height: 50px;
   line-height: 50px;
@@ -297,23 +450,23 @@ div:before {
 #holeinone > div {
   padding: 54px 0px;
 }
-.containerBox h2 {
+#holeinone .containerBox h2 {
   margin-bottom: 72px;
 }
 
-.item {
+#holeinone .item {
   width: 180px;
 }
-.item img {
+#holeinone .item img {
   border-radius: 50%;
   width: 180px;
   height: 180px;
 }
-.item img:hover {
+#holeinone .item img:hover {
   border: 5px solid #234a35;
 }
 
-.item p:nth-child(2) {
+#holeinone .item p:nth-child(2) {
   width: 83px;
   height: 27px;
   background: #234a35;
@@ -322,7 +475,7 @@ div:before {
   margin-top: 20px;
   margin-bottom: 6px;
 }
-.east_course {
+#holeinone .east_course {
   width: 100%;
   background: rgba(139, 166, 61, 0.5);
 }
