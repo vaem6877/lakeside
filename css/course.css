@@ -315,7 +315,7 @@ body {
   text-decoration: underline;
 }
 #hole_desc #tabs .tab_group {
-  padding: 163px 0px;
+  padding: 163px 0px 82px;
 }
 #hole_desc #tabs .tab_group p {
   margin: 57px 0;
@@ -382,7 +382,9 @@ body {
   text-decoration: none;
 }
 /* section: 코스갤러리 */
-
+#course_gallery {
+  padding-top: 81px;
+}
 #course_gallery > .mix-wrapper {
   margin: 108px 0px 216px;
 }

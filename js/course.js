@@ -55,26 +55,100 @@ let weatherIcon = {
 let Temp = "";
 let TempArr = [];
 let iconArr = [];
-let previewIcon = "";
-let previewIconBox = "";
-let previewIconHTML = "";
 
 $.getJSON(
   "http://api.openweathermap.org/data/2.5/forecast?lat=37.5683&lon=126.9778&appid=6683b822924895deb0d2f90cf228a02e&units=metric",
   function (result) {
     console.log(result);
-    //console.log(result.list[0].dt);
     let list = result.list;
-
     console.log(list);
-    $.each(list, function (i) {
-      let convertDate = new Date(list[i].dt * 1000);
+    let convertDate = "";
+    let korWeek = ["일", "월", "화", "수", "목", "금", "토"];
+    list.map((item) => {
+      let newDate = new Date(item.dt * 1000);
+      let year = newDate.getFullYear(); // 년도
+      function add0(n) {
+        return n < 10 ? "0" + n : n;
+      }
+      let month = newDate.getMonth() + 1; // 월
+      let date = newDate.getDate(); // 날짜
+      let day = newDate.getDay(); // 요일
+      let hour = newDate.getHours();
+      let minutes = newDate.getMinutes();
+      let seconds = newDate.getSeconds();
+      let time = `${add0(hour)}:${add0(minutes)}:${add0(seconds)}`;
+      convertDate = `${add0(year)}-${add0(month)}-${add0(date)} ${time}`;
       console.log(convertDate);
+      item.dt = convertDate;
     });
+    // $.each(list, function (i) {
+    // let newDate = new Date(list[i].dt * 1000);
+    // function add0(n) {
+    //   return n < 10 ? "0" + n : n;
+    // }
+    // let year = newDate.getFullYear(); // 년도
+    // let month = newDate.getMonth() + 1; // 월
+    // let date = newDate.getDate(); // 날짜
+    // let day = newDate.getDay(); // 요일
+    // let hour = newDate.getHours();
+    // let minutes = newDate.getMinutes();
+    // let seconds = newDate.getSeconds();
+    // let time = `${add0(hour)}:${add0(minutes)}:${add0(seconds)}`;
+    // convertDate = `${add0(year)}-${add0(month)}-${add0(date)} ${time}`;
+    // console.log(convertDate);
+    // list.map((item) => {
+    //   let newDate = new Date(item.dt * 1000);
+    //   let year = newDate.getFullYear(); // 년도
+    //   function add0(n) {
+    //     return n < 10 ? "0" + n : n;
+    //   }
+    //   let month = newDate.getMonth() + 1; // 월
+    //   let date = newDate.getDate(); // 날짜
+    //   let day = newDate.getDay(); // 요일
+    //   let hour = newDate.getHours();
+    //   let minutes = newDate.getMinutes();
+    //   let seconds = newDate.getSeconds();
+    //   let time = `${add0(hour)}:${add0(minutes)}:${add0(seconds)}`;
+    //   convertDate = `${add0(year)}-${add0(month)}-${add0(date)} ${time}`;
+    //   console.log(convertDate);
+    //   item.dt = convertDate;
+    // });
+    // });
+
+    // $.each(list, function (i) {
+    //   let dateList = list[i].dt;
+    //   console.log(dateList);
+    //   // console.log(dateList);
+    //   function add0(n) {
+    //     return n < 10 ? "0" + n : n;
+    //   }
+    //   let year = dateList.getFullYear(); // 년도
+    //   let month = dateList.getMonth() + 1; // 월
+    //   let date = dateList.getDate(); // 날짜
+    //   let day = dateList.getDay(); // 요일
+    //   let hour = dateList.getHours();
+    //   let minutes = dateList.getMinutes();
+    //   let seconds = dateList.getSeconds();
+    //   let time = `${add0(hour)}:${add0(minutes)}:${add0(seconds)}`;
+    //   let convertDate = `${add0(year)}-${add0(month)}-${add0(date)} ${time}`;
+    //   console.log(convertDate);
+    // });
+
+    // console.log(list);
+    // $.each(list, function (i) {
+    //   console.log(list[i].dt_txt);
+    //   let convertDate = new Date(list[i].dt * 1000);
+    //   console.log(convertDate);
+    //   // console.log(newDate);
+    // });
 
     const filteredDay = list.reduce((acc, current) => {
+      let convertDateACC = new Date(acc.dt * 1000);
+      // console.log(acc);
+      // console.log(acc);
+      // console.log(current);
       const x = acc.find(
-        (item) => item.dt_txt.substr(0, 10) === current.dt_txt.substr(0, 10)
+        (item) => item.dt.substr(0, 10) === current.dt.substr(0, 10)
       );
       if (!x) {
         return acc.concat([current]);
@@ -87,11 +161,11 @@ $.getJSON(
     let date = "";
     let dateList = [];
     $.each(filteredDay, function (i) {
-      date = filteredDay[i].dt_txt.substr(0, 10); // 각 날짜(년-월-일)
+      date = filteredDay[i].dt.substr(0, 10); // 각 날짜(년-월-일)
 
       dateList.push(date);
 
-      let day = filteredDay[i].dt_txt.substr(8, 2); //각 날짜의 일
+      let day = filteredDay[i].dt.substr(8, 2); //각 날짜의 일
       let korDay = korWeek[new Date(dateList[i]).getDay()];
 
       let trHTML = `
@@ -107,19 +181,16 @@ $.getJSON(
 
     console.log(dateList);
     // let date = filteredDay[0].dt_txt.substr(8, 2);
-    // console.log(date);
-    // let Temp = "";
-    // let TempArr = [];
-    // let iconArr = [];
-    // let previewIcon = '';
-    // let previewIconBox = '';
-    // let previewIconHTML = '';
+    console.log(date);
+    let Temp = "";
 
     $.each(dateList, function (i) {
       Temp = list.filter(function (item) {
-        return item.dt_txt.substr(0, 10) == dateList[i];
+        return item.dt.substr(0, 10) == dateList[i];
       });
       console.log(Temp);
+      let TempArr = [];
+      let iconArr = [];
       Temp.map((item) => {
         TempArr.push(item.main.temp);
         if (item.dt_txt.substr(-8) == "12:00:00") {
@@ -158,11 +229,11 @@ $.getJSON(
     });
 
     //preview - icon
-    previewIcon = iconArr[0];
+    let previewIcon = $(".preview ul >li:first-child .fa-solid").clone();
     console.log(previewIcon);
-    previewIconBox = $(".today_icon");
-    previewIconHTML = `<i class="fa-solid ${weatherIcon[previewIcon]}"></i>`;
-    previewIconBox.append(previewIconHTML);
+    let previewIconBox = $(".today_icon");
+    let previewIconHTML = `<i class="fa-solid ${weatherIcon[previewIcon]}"></i>`;
+    previewIconBox.append(previewIcon);
     $(".menu .button").prepend(previewIconHTML);
 
     //preview - temp
