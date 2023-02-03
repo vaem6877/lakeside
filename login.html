@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lakeside - login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/back.css" />
+  </head>
+  <body>
+    <header class="text-center login_header">
+      <h1 id="logo"><a href="#">lakeside</a></h1>
+      <div class="widget"></div>
+    </header>
+    <main>
+      <div class="login_wrapper">
+        <form action="php/login_check.php" method="post" class="login_form">
+          <legend>login</legend>
+          <fieldset>
+            <div class="login_field">
+              <p>
+                <label for="uid" class="hidden">id</label>
+                <input
+                  type="text"
+                  placeholder="아이디를 입력하세요"
+                  id="uid"
+                  name="uid"
+                />
+              </p>
+              <p>
+                <label for="upw" class="hidden">password</label>
+                <input
+                  type="password"
+                  name="upw"
+                  id="upw"
+                  placeholder="비밀번호를 입력하세요"
+                />
+              </p>
+            </div>
+            <button>login</button>
+          </fieldset>
+          <div class="login_help">
+            <span class="desc">회원가입으로 다양한 혜택을 누려보세요!</span>
+            <a href="" class="btn_help">회원가입</a>
+            <a href="" class="btn_help">아이디/비밀번호 찾기</a>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="terms d-flex justify-content-center">
+        <a href="">이용약관</a>
+        <a href="">웹회원 약관</a>
+        <a href="">개인정보처리방침</a>
+        <a href="">영상정보처리기기 방침</a>
+        <a href="">사업자정보확인</a>
+        <a href="">사이트맵</a>
+      </div>
+      <a href="index.html" class="footer-logo text-center">logo</a>
+
+      <address class="">
+        <dl class="d-flex justify-content-center">
+          <dt>주소 :</dt>
+          <dd>16887 경기도 용인시 처인구 모현읍 능원로 181</dd>
+          <dt>대표전화 :</dt>
+          <dd>031-334-2111</dd>
+          <dt>팩스 :</dt>
+          <dd>031-332-2106</dd>
+        </dl>
+        <dl class="d-flex justify-content-center">
+          <dt>팩스 :</dt>
+          <dd>031-332-2106</dd>
+          <dt>이메일 :</dt>
+          <dd>lakeside@lakeside.kr</dd>
+        </dl>
+        <dl class="d-flex justify-content-center">
+          <dt>사업자등록번호</dt>
+          <dd>135-81-02491</dd>
+          <dt>통신판매신고</dt>
+          <dd>제 2009-용인처인-0170호</dd>
+          <dt>대표이사</dt>
+          <dd>문지태</dd>
+        </dl>
+        <p class="text-uppercase text-center">
+          copyright lakeside country club. all rights reserved
+        </p>
+      </address>
+    </footer>
+  </body>
+</html>

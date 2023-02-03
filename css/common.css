@@ -96,7 +96,7 @@ header {
 
 #logo a {
   display: inline-block;
-  background: url(../img/logo_black.png) no-repeat 0 27px / contain;
+  background: url(../img/common/logo_black.png) no-repeat 0 27px / contain;
   overflow: hidden;
   width: 133px;
   height: 27px;
@@ -155,7 +155,7 @@ footer .footer-logo {
   width: 157px;
   height: 32px;
   text-indent: -999em;
-  background: url(../img/logo_white.png) no-repeat 0 0 / contain;
+  background: url(../img/common/logo_white.png) no-repeat 0 0 / contain;
 }
 
 footer address p {
@@ -262,9 +262,6 @@ footer address p {
   border: 1px solid #181f1b;
   color: #234a35;
 }
-
-/* ======================= // 마우스바운싱 ===================== */
-
 .icon_mouse {
   display: flex;
   align-items: flex-end;
