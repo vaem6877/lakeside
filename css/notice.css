@@ -69,10 +69,10 @@ p {
   vertical-align: top;
 }
 
-img {
+/* img {
   object-fit: cover;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-}
+} */
 
 .contest-desc > h2,
 .history-desc > h2 {
@@ -318,9 +318,9 @@ section img,
 .directions-desc {
   margin-top: 243px;
 }
-.map-wrapper {
+/* .map-wrapper {
   padding-top: 783px;
-}
+} */
 
 .directions-desc h4 {
   margin-bottom: 76px;
@@ -462,3 +462,42 @@ header::after {
 }
 
 /* ====== // 리팩터링 전, 윤희 0203 */
+/* ======================= kakao map api =========================== */
+.map-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#api_map {
+  width: 100%;
+  height: 62vh;
+}
+.api_overlay {
+  width: 316px;
+  height: 135px;
+  background: rgba(24, 31, 27, 0.8);
+  padding: 29px 32px;
+}
+
+.api_overlay p:first-child {
+  color: #fff;
+  font-size: 27px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 27px;
+}
+.api_overlay p:first-child i {
+  margin-right: 15px;
+}
+.api_overlay p:nth-child(2) {
+  color: #8ba63d;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 36px;
+  line-height: 27px;
+}
+.api_overlay p:last-child {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+}
