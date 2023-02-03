@@ -498,29 +498,7 @@ header::after {
   .facility-nav-wrapper {
     padding-left: 12px;
   }
-  .terms {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  .terms a {
-    width: 30%;
-    text-align: center;
-  }
-  address dl.d-flex {
-    /* justify-content: space-evenly; */
-    gap: 12px;
-    flex-wrap: wrap;
-    /* flex-direction: column !important; */
-  }
-  address dl.d-flex > dt {
-    padding: 0;
-    width: 18%;
-    /* text-align: center; */
-  }
-  address dl.d-flex > dd {
-    padding: 0;
-    width: 60%;
-  }
+
   .facility-information {
     margin-bottom: 0;
   }
