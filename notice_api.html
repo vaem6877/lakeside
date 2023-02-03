@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>notice - lakeside</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/notice.css" />
+  </head>
+  <body>
+    <header class="text-center">
+      <h1 id="logo"><a href="#">lakeside</a></h1>
+      <div class="widget"></div>
+    </header>
+    <main>
+      <nav class="aside-nav d-flex flex-column align-items-end">
+        <a href="#history"
+          ><span class="nav-text">연혁</span>
+          <span> </span>
+        </a>
+        <a href="#contest"
+          ><span class="nav-text">대회</span>
+          <span> </span>
+        </a>
+        <a href="#rocess"
+          ><span class="nav-text">경기 진행 안내</span>
+          <span> </span>
+        </a>
+        <a href="#cart"
+          ><span class="nav-text">카트 이용 안내</span>
+          <span> </span>
+        </a>
+        <a href="#facility"
+          ><span class="nav-text">시설안내</span>
+          <span> </span>
+        </a>
+        <a href="#directions"
+          ><span class="nav-text">오시는 길</span>
+          <span> </span>
+        </a>
+      </nav>
+      <div class="container">
+        <section id="history" class="history row">
+          <div class="history-img-wrapper col-lg-5">
+            <img src="./img/notice_history.png" alt="" />
+          </div>
+          <div class="offset-lg-2 offset-md-1 col-lg-5 col-md-12 history-desc">
+            <h3>the lake side</h3>
+            <h2>history</h2>
+            <ul class="d-flex flex-column align-items-start">
+              <li>
+                <h4>1986</h4>
+                <p>회사 설립 / 상호: 서울국제관광개발(주)</p>
+              </li>
+              <li>
+                <h4>1987</h4>
+                <p>대중 골프장 36홀 사업승인</p>
+              </li>
+              <li class="d-flex justify-content-start">
+                <h4>1988</h4>
+                <div>
+                  <p>서울레이크사이드로 상호 변경</p>
+                  <p>대중골프장 36홀 공사 기공식</p>
+                </div>
+              </li>
+              <li>
+                <h4>1989</h4>
+                <p>회원제 골프장 18홀 사업승인</p>
+              </li>
+              <li>
+                <h4>1990</h4>
+                <div>
+                  <p>클럽하우스 준공</p>
+                  <p>대중골프장 36홀 개장(동/남코스)</p>
+                </div>
+              </li>
+              <li>
+                <h4>1997</h4>
+                <p>회원제 골프장(서코스) 18홀 개장</p>
+              </li>
+              <li>
+                <h4>2006</h4>
+                <p>ESH 가치경영대상 수상</p>
+              </li>
+            </ul>
+          </div>
+          <div class="circles">
+            <span class="circle1"></span>
+            <span class="circle2"> </span>
+          </div>
+        </section>
+        <section id="contest" class="contest row">
+          <div class="contest-img-wrapper col-lg-5 offset-lg-2 offset-md-1">
+            <img src="./img/notice_contest.png" alt="" />
+          </div>
+          <div
+            class="contest-desc col-lg-5 col-md-12 order-md-first d-flex flex-column align-items-end"
+          >
+            <h3>the lake side</h3>
+            <h2>contest</h2>
+            <ul class="d-flex flex-column align-items-end text-end">
+              <li class="d-flex justify-content-end flex-row-reverse">
+                <h4>1997</h4>
+                <div class="d-flex flex-column align-items-end">
+                  <p>익성배 매경 아마추어 골프대회 개최</p>
+                  <p>US OPEN 삼성 월드 챔피언쉽 개최</p>
+                </div>
+              </li>
+              <li class="d-flex justify-content-end flex-row-reverse">
+                <div class="lines-2">
+                  <h4>1999</h4>
+                  <h4>~현재</h4>
+                </div>
+                <p>결식 아동돕기 자선골프대회 개최</p>
+              </li>
+              <li class="d-flex justify-content-end flex-row-reverse">
+                <div class="lines-2">
+                  <h4>2006</h4>
+                  <h4>~현재</h4>
+                </div>
+                <div class="d-flex flex-column align-items-end">
+                  <p>2006 ESH 가치경영대상 수상</p>
+                  <p>행복나누기 -즐거운 천사들 자선 바자회</p>
+                </div>
+              </li>
+              <li class="d-flex justify-content-end flex-row-reverse">
+                <div class="d-flex flex-column align-items-end">
+                  <h4>2001</h4>
+                  <h4>2015</h4>
+                </div>
+                <div class="d-flex flex-column align-items-end">
+                  <p>레이크사이드 여자오픈골프대회</p>
+                  <p>(KLPGA)</p>
+                </div>
+              </li>
+              <li class="d-flex justify-content-end flex-row-reverse">
+                <h4>2008</h4>
+                <div class="d-flex flex-column align-items-end">
+                  <p>KEB하나은행 인비테이셔널</p>
+                  <p>(KPGA)</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div id="rocess" class="rocess-wrapper">
+        <div class="container">
+          <div class="r-desc">
+            <h3>the lake side</h3>
+            <h2>rocess guide</h2>
+            <h4>경기 진행 안내</h4>
+          </div>
+          <section class="rocess-guide row">
+            <div
+              class="d-flex align-items-start rocess-guide-img-wrapper col-md-3"
+            >
+              <img src="./img/notice_rocess.png" alt="" />
+            </div>
+            <div class="col-md-9 col-sm-12 rocess-guide-desc">
+              <ul>
+                <li class="">
+                  <h4>01</h4>
+                  <p>EE-OFF 이후 뒷팀 패스는 불가합니다.</p>
+                </li>
+                <li>
+                  <h4>02</h4>
+                  <p>개인적인 레슨은 삼가주시기 바랍니다.</p>
+                </li>
+                <li>
+                  <h4>03</h4>
+                  <p>
+                    지나친 연습스윙으로 인한 잔디 손상은 삼가주시고, 샷은
+                    신중하게 해주시기 바랍니다.
+                  </p>
+                </li>
+                <li>
+                  <h4>04</h4>
+                  <p>투볼 플레이, 멀리건을 하는 것은 금지 입니다.</p>
+                </li>
+                <li>
+                  <h4>05</h4>
+                  <p>그린에서 연습 퍼팅은 절대 금지입니다.</p>
+                </li>
+                <li>
+                  <h4>06</h4>
+                  <p>
+                    벙커정리 및 그린보수는 고객님께서 직접 해주시기 바랍니다.
+                  </p>
+                </li>
+                <li>
+                  <h4>07</h4>
+                  <p>그린을 훼손하는 행동을 삼가해 주시기 바랍니다.</p>
+                </li>
+                <li>
+                  <h4>08</h4>
+                  <p>프린지에서의 어프로치는 삼가주시기 바랍니다.</p>
+                </li>
+                <li>
+                  <h4>09</h4>
+                  <p>플레이중 과도한 음주 및 내기골프는 금지합니다.</p>
+                </li>
+                <li>
+                  <h4>10</h4>
+                  <p>
+                    코스 내에서는 금연입니다. 흡연은 지정된 공간 또는 장소를
+                    이용하여 주시기 바랍니다.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div id="cart" class="container">
+        <div class="c-desc">
+          <h3>the lake side</h3>
+          <h2>Cart Use Guide</h2>
+          <h4>카트 이용 안내</h4>
+        </div>
+        <section class="cart-guide row">
+          <div class="col-md-3 d-flex align-items-start cart-guide-img-wrapper">
+            <img src="./img/notice_cart.png" alt="" />
+          </div>
+          <div class="col-md-9 col-sm-12 order-md-first cart-guide-desc">
+            <ul>
+              <li>
+                <h4>01</h4>
+                <p>안전운행을 위하여 안전수칙을 준수하여 주시기 바랍니다.</p>
+              </li>
+              <li>
+                <h4>02</h4>
+                <p>
+                  카트 이동 중에는 안전 손잡이를 잡아주시고, 바른 자세로
+                  탑승하여 주시기 바랍니다.
+                </p>
+              </li>
+              <li>
+                <h4>03</h4>
+                <p>내리막, 급경사, 회전구간 등에서의 추락사고 주의</p>
+              </li>
+              <li>
+                <h4>04</h4>
+                <p>
+                  골프카트는 무인 유도주행이 가능한 차량입니다. 카트도로
+                  방면에서 이동하실 경우에는 유도주행 중인 카트에 부딪히는
+                  사고가 발생하지 않도록 유의 바랍니다.
+                </p>
+              </li>
+              <li>
+                <h4>05</h4>
+                <p>
+                  담당 캐디 외에는 카트 운전을 일체 금지하여 주시기 바랍니다.
+                </p>
+              </li>
+              <li>
+                <h4>06</h4>
+                <p>
+                  플레이어의 운전으로 인하여 발생하는 제반 사고는 운전자의
+                  책임입니다.
+                </p>
+              </li>
+              <li>
+                <h4>07</h4>
+                <p>
+                  카트가 완전히 정차된 후 탑승 또는 하차하여 주시기 바랍니다.
+                </p>
+              </li>
+              <li>
+                <h4>08</h4>
+                <p>
+                  라운딩 종료 후 골프백 인수 시 클럽 개수 및 이상유무를 확인하여
+                  주시기 바랍니다.
+                </p>
+              </li>
+              <li>
+                <h4>09</h4>
+                <p>
+                  라운딩 종료 후 개인 소지품 및 액세서리류 등을 다시 한번
+                  점검하여 주시기 바랍니다.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div id="facility" class="facility-wrapper">
+        <div class="container">
+          <div class="text-center facility-desc">
+            <h3>the lake side</h3>
+            <h2>Facility information</h2>
+            <h4>레이크 사이드 시설안내</h4>
+          </div>
+
+          <section class="row facility">
+            <div
+              class="col-md-8 col-sm-12 d-flex flex-column facility-nav-wrapper order-md-last"
+            >
+              <ul class="d-flex justify-content-evenly">
+                <li><a href="">클럽하우스</a></li>
+                <li><a href="">레스토랑</a></li>
+                <li><a href="">락커룸</a></li>
+                <li><a href="">그늘집</a></li>
+                <li><a href="">프로샵</a></li>
+                <span id="bar"></span>
+              </ul>
+              <div class="fac-nav-img-wrapper">
+                <img
+                  src="./img/facility-club2.png"
+                  class="active"
+                  alt="클럽하우스"
+                />
+                <img src="./img/facility-club2.png" alt="레스토랑" />
+                <img src="./img/facility-club2.png" alt="락커룸" />
+                <img src="./img/facility-club2.png" alt="그늘집" />
+                <img src="./img/facility-club2.png" alt="프로샵" />
+              </div>
+              <p class="fac-pager d-flex justify-content-end">
+                <a href="">클럽하우스</a>
+                <a href="">레스토랑</a>
+                <a href="">락커룸</a>
+                <a href="">그늘집</a>
+                <a href="">프로샵</a>
+              </p>
+            </div>
+            <div class="col-md-4 col-sm-12 facility-information">
+              <ul>
+                <li class="facility-info-wrapper active">
+                  <img src="./img/facility-club.png" alt="" />
+                  <h4>클럽하우스</h4>
+                  <p>
+                    레이크사이드는 자연 생태계적이고 친환경적인 골프장으로서
+                    다른 골프장에 비해 여러 동물들이 서식하고 있으며 자연을
+                    느낄수 있는 클럽하우스 전망에서 최고의 식재료 메뉴의 음식과
+                    조화를 이뤄 우아함과 조형미에 매료될 것입니다.
+                  </p>
+                </li>
+
+                <li class="facility-info-wrapper">
+                  <img src="./img/facility-club.png" alt="" />
+                  <h4>레스토랑</h4>
+                  <p>
+                    레이크사이드 클럽하우스 식당은 한식, 중식, 양식은 물론
+                    퓨전음식과 함께 언제나 최상의 고품격 서비스를 제공하고
+                    있습니다. 세계 각국의 향기로운 와인과 아름다운 커피 그리고
+                    엄격히 관리하는 맥주 한잔으로 그날의 갈증과 피로를 잊게 해
+                    드립니다. 식당 내에는 단체 팀과 품격있는 분을 모시기 위해서
+                    90석의 연회실과 VIP룸을 운영하고 있습니다.
+                  </p>
+                </li>
+                <li class="facility-info-wrapper">
+                  <img src="./img/facility-club.png" alt="" />
+                  <h4>락커룸</h4>
+                  <p>
+                    운동의 시작과 끝을 기분 좋게 풀어드립니다. 대자연과 함께
+                    즐거운 라운딩을 하신 후 그 감동을 그대로 간직하면서 편안히
+                    피로를 풀 수 있도록 정성을 다하겠습니다.
+                  </p>
+                </li>
+                <li class="facility-info-wrapper">
+                  <img src="./img/facility-club.png" alt="" />
+                  <h4>그늘집</h4>
+                  <p>
+                    천수호가 자리잡고 있는 홀로써 아름다운 자연이 펼쳐져 있는
+                    황홀한 코스가 봄에는 아지랑이, 여름에는 싱그럽고 푸르름,
+                    가을에는 풍요로움과 단풍을, 겨울에는 흰눈이 뒤덮고 있어
+                    최고의 조화를 이룹니다. 또한 아름다운 조형미를 갖춘 구조물로
+                    음식의 맛을 한층 더 높여 줍니다.
+                  </p>
+                </li>
+                <li class="facility-info-wrapper">
+                  <img src="./img/facility-club.png" alt="" />
+                  <h4>프로샵</h4>
+                  <p>
+                    럭셔리한 품격과 탁월한 성능 및 최적의 기능 아늑하고 차별화된
+                    품질의 골프용품을 만나 보실 수 있습니다. 제품문의부터
+                    구입까지 고객의 맞춤 서비스를 제공하며 단체 팀을 위한 품격
+                    높은 시상품과 최고등급의 계절과일들이 준비 되어있습니다.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div id="directions" class="directions">
+        <section class="text-center directions-desc">
+          <h3>the lake side</h3>
+          <h2>directions</h2>
+          <h4>오시는 길 안내</h4>
+          <div class="map-wrapper text-start">
+            <div id="api_map"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <a href="#" id="go-top"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <footer>
+      <div class="terms d-flex justify-content-center">
+        <a href="">이용약관</a>
+        <a href="">웹회원 약관</a>
+        <a href="">개인정보처리방침</a>
+        <a href="">영상정보처리기기 방침</a>
+        <a href="">사업자정보확인</a>
+        <a href="">사이트맵</a>
+      </div>
+      <a href="index.html" class="footer-logo text-center">logo</a>
+
+      <address>
+        <dl class="d-flex justify-content-center">
+          <dt>주소 :</dt>
+          <dd>16887 경기도 용인시 처인구 모현읍 능원로 181</dd>
+          <dt>대표전화 :</dt>
+          <dd>031-334-2111</dd>
+          <dt>팩스 :</dt>
+          <dd>031-332-2106</dd>
+        </dl>
+        <dl class="d-flex justify-content-center">
+          <dt>팩스 :</dt>
+          <dd>031-332-2106</dd>
+          <dt>이메일 :</dt>
+          <dd>lakeside@lakeside.kr</dd>
+        </dl>
+        <dl class="d-flex justify-content-center">
+          <dt>사업자등록번호</dt>
+          <dd>135-81-02491</dd>
+          <dt>통신판매신고</dt>
+          <dd>제 2009-용인처인-0170호</dd>
+          <dt>대표이사</dt>
+          <dd>문지태</dd>
+        </dl>
+        <p class="text-uppercase text-center">
+          copyright lakeside country club. all rights reserved
+        </p>
+      </address>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/notice.js"></script>
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d753200077e444dd40df1e458903dfd3"
+    ></script>
+    <script>
+      var container = document.getElementById("api_map"); //지도를 담을 영역의 DOM 레퍼런스
+      var options = {
+        //지도를 생성할 때 필요한 기본 옵션
+        center: new kakao.maps.LatLng(37.319537, 127.179127), //지도의 중심좌표.
+        level: 4, //지도의 레벨(확대, 축소 정도)
+      };
+
+      var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+
+      map.setZoomable(false);
+
+      var zoomControl = new kakao.maps.ZoomControl();
+      var marker = new kakao.maps.Marker({
+        position: new kakao.maps.LatLng(37.319537, 127.179127), // 마커의 좌표
+        map: map,
+      });
+
+      // 커스텀 오버레이를 생성하고 지도에 표시한다
+      var customOverlay = new kakao.maps.CustomOverlay({
+        map: map,
+        content:
+          '<div style="padding:0;"><div class="api_overlay"><p><i class="fa-sharp fa-solid fa-location-dot"></i>lake side map</p>      <p>레이크사이드CC</p><p>주소 : 16887 경기도 용인시 처인구 모현읍 능원로 181</p></div></div>',
+        position: new kakao.maps.LatLng(37.320915, 127.185426), // 커스텀 오버레이를 표시할 좌표
+        xAnchor: 0.5, // 컨텐츠의 x 위치
+        yAnchor: 0, // 컨텐츠의 y 위치
+      });
+    </script>
+  </body>
+</html>
