@@ -13,15 +13,17 @@
       referrerpolicy="no-referrer"
     />
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
     />
     <link
       rel="stylesheet"
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
-    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/notice.css" />
@@ -407,8 +409,8 @@
           <h3>the lake side</h3>
           <h2>directions</h2>
           <h4>오시는 길 안내</h4>
-          <div class="map-wrapper">
-            <!-- MAP API -->
+          <div class="map-wrapper text-start">
+            <div id="api_map"></div>
           </div>
         </section>
       </div>
@@ -454,12 +456,48 @@
         </p>
       </address>
     </footer>
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
     <script
       type="text/javascript"
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
-    <script src="./node_modules/aos/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/notice.js"></script>
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d753200077e444dd40df1e458903dfd3"
+    ></script>
+    <script>
+      var container = document.getElementById("api_map"); //지도를 담을 영역의 DOM 레퍼런스
+      var options = {
+        //지도를 생성할 때 필요한 기본 옵션
+        center: new kakao.maps.LatLng(37.319537, 127.179127), //지도의 중심좌표.
+        level: 4, //지도의 레벨(확대, 축소 정도)
+      };
+
+      var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+
+      map.setZoomable(false);
+
+      var zoomControl = new kakao.maps.ZoomControl();
+      var marker = new kakao.maps.Marker({
+        position: new kakao.maps.LatLng(37.319537, 127.179127), // 마커의 좌표
+        map: map,
+      });
+
+      // 커스텀 오버레이를 생성하고 지도에 표시한다
+      var customOverlay = new kakao.maps.CustomOverlay({
+        map: map,
+        content:
+          '<div style="padding:0;"><div class="api_overlay"><p><i class="fa-sharp fa-solid fa-location-dot"></i>lake side map</p>      <p>레이크사이드CC</p><p>주소 : 16887 경기도 용인시 처인구 모현읍 능원로 181</p></div></div>',
+        position: new kakao.maps.LatLng(37.320915, 127.185426), // 커스텀 오버레이를 표시할 좌표
+        xAnchor: 0.5, // 컨텐츠의 x 위치
+        yAnchor: 0, // 컨텐츠의 y 위치
+      });
+    </script>
   </body>
 </html>
