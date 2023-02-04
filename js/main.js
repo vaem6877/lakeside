@@ -26,9 +26,17 @@ $(".controls .prev").on("click", () => {
 
 // 탑버튼 ======================================================
 let topBtn = $("#go-top");
-
+// let section = $(".course-desc");
+let mobileBtn = $(".course-desc .mobile-btn"); // 모바일 버튼
+// let sectionOST;
+// section.each(function () {
+//   let sectionOST = $(this).offset().top;
+// });
+// console.log(sectionOST);
 $(window).on("scroll", function () {
   btnFade(topBtn, 300);
+
+  // if($(this).scrollTop() > )
 });
 
 function btnFade(btn, ost) {

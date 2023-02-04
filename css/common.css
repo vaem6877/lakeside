@@ -103,6 +103,22 @@ header {
   text-indent: -9999em;
   padding-bottom: 100vh;
 }
+/* 
+#logo-mobile {
+  width: 100px;
+  height: 20.38px;
+}
+#logo-mobile a {
+  text-indent: -9999em;
+  display: block;
+  width: 100px;
+  height: 20.38px;
+  margin: 0;
+  background: url(../img/logo_white.png) no-repeat 0 0 / contain;
+  position: absolute;
+  top: 50%;
+  z-index: 10000;
+} */
 
 /* ========= FOOTER ======== */
 
@@ -788,5 +804,18 @@ body {
     padding-top: 35px;
     line-height: 150px;
     color: #fff;
+  }
+  /* =================== 반응형 모바일 헤더, 푸터 */
+
+  /* header {
+    position: relative;
+    z-index: 1000;
+  } */
+  #logo a {
+    background-image: url(../img/logo_white.png);
+  }
+  footer .footer-logo {
+    width: 104px;
+    height: 21px;
   }
 }

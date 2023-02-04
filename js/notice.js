@@ -109,5 +109,5 @@ AOS.init({
   once: true,
   duration: 400,
   easing: "easeInOutCubic",
-  disable: "mobile", // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  disable: "phone", // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
 });
