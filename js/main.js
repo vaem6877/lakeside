@@ -58,7 +58,7 @@ topBtn.on("click", function (e) {
 AOS.init({
   offset: 200,
   once: true,
-  duration: 600,
+  duration: 1000,
   easing: "easeInOutCubic",
 });
 // easeInOutCubic

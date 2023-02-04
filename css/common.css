@@ -251,6 +251,14 @@ footer address p {
   height: 18px;
   background: var(--primary-green);
 }
+.aside-nav a.active span:last-child {
+  width: 18px;
+  height: 18px;
+  background: var(--primary-green);
+}
+.aside-nav a.active .nav-text {
+  visibility: visible;
+}
 
 .aside-nav a span:last-child:after {
   z-index: -1;

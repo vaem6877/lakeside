@@ -1,5 +1,9 @@
 @import url(./common.css);
 
+main {
+  overflow-x: hidden;
+}
+
 header {
   background-image: url(../img/Mask\ group.png);
 }
@@ -42,7 +46,7 @@ section {
   height: 30px;
   border-radius: 5px;
   background: var(--primary-green);
-  margin-top: 25px;
+  margin-top: 54px;
 }
 
 .main-course .west-course a {
@@ -141,6 +145,10 @@ footer .notice-slide {
 }
 
 @media (max-width: 1200px) {
+  .main-course {
+    margin-bottom: 360px;
+  }
+
   .slideWrapper {
     width: 100%;
   }
@@ -150,5 +158,51 @@ footer .notice-slide {
 
   .main-slide li img {
     width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  /* 섹션 1 */
+
+  .east-course .img-wrapper,
+  .south-course .img-wrapper {
+    margin-bottom: 70px;
+  }
+
+  .west-course h2 {
+    padding-top: 70px;
+  }
+
+  .west-course .img-wrapper {
+    margin-top: 180px;
+  }
+
+  .east-course {
+    margin-bottom: 140px;
+  }
+
+  .main-course {
+    margin-bottom: 330px;
+  }
+
+  .main-course a {
+    align-self: center !important;
+    margin-top: 45px;
+  }
+
+  .footer-notice-wrapper .notice > h4,
+  .footer-notice-wrapper .notice > a {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .controls {
+    display: none;
+  }
+  footer .notice-slide {
+    width: 425px;
+  }
+  .footer-notice-wrapper .notice {
+    justify-content: center !important;
   }
 }
