@@ -62,7 +62,7 @@ h2 {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
-p {
+p:not(.widget_box p):not(footer address p) {
   font-weight: 300;
   font-size: var(--content-fz);
   color: var(--typo-C-Green);
@@ -120,6 +120,10 @@ section img,
 .desc-rocess-guide ul li,
 .desc-cart-guide ul li {
   display: flex;
+}
+
+[class^="desc"] ul li p {
+  text-align: left;
 }
 
 .desc-history ul li,
@@ -252,7 +256,7 @@ section img,
   position: absolute;
   width: 20%;
   border-bottom: 3px solid var(--primary-ygreen);
-
+  left: 0;
   transition: 0.4s cubic-bezier(0.65, 0, 0.35, 1);
   bottom: -3px;
 }

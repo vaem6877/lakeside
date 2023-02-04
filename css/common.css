@@ -408,7 +408,7 @@ footer address p {
   }
 }
 
-/* ======================= // 위젯 ===================== */
+/* ======================= // 위젯 ===================== 
 
 :link {
   text-decoration: none;
@@ -424,7 +424,7 @@ footer address p {
   z-index: 150;
 }
 
-/* large .ver */
+/* large .ver 
 .weather_cast {
   left: -173px;
   width: 173px;
@@ -518,7 +518,7 @@ footer address p {
   text-indent: 6px;
 }
 
-/* small .ver */
+small .ver 
 
 .preview_widget {
   position: absolute;
@@ -556,7 +556,7 @@ footer address p {
   font-weight: normal;
 }
 
-/* ======================= // 메뉴 ===================== */
+ ======================= // 메뉴 ===================== 
 
 h2 {
   margin: 8px 0 13px;
@@ -650,3 +650,4 @@ body {
   line-height: 135px;
   color: #000;
 }
+*/
