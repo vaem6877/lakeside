@@ -144,7 +144,7 @@ $(window).scroll(function () {
 // ==== function ====
 
 // 한번만 실행
-function debounce(callback, time) {
+/* function debounce(callback, time) {
   let executed = false;
   return () => {
     if (!executed) {
@@ -156,7 +156,7 @@ function debounce(callback, time) {
       }, time);
     }
   };
-}
+} */
 
 // 풀페이지 이동
 // function moveSection(num) {
