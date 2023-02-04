@@ -34,9 +34,9 @@
   --mobile-mainTT-fz: 35px;
   --mobile-EngTT-fz: 25px;
   --mobile-menu-fz: 23px;
-  /* --mobile-KrTT-fz:20px; */
-  /* --mobile-menu-fz:18px; */
-  /* --mobile-mainTT-fz:12px; */
+  --mobile-KrTT-fz: 20px;
+  --mobile-menu-fz: 18px;
+  --mobile-mainTT-fz: 12px;
   --mobile-content-fz: 10px;
   --mobile-tab-fz: 9px;
   --mobile-btn-fz: 8px;
@@ -121,6 +121,9 @@ footer .terms {
 }
 footer .terms a:nth-child(3) {
   font-weight: 700;
+}
+footer .terms a:last-child {
+  display: none;
 }
 
 footer .terms a {
@@ -408,155 +411,12 @@ footer address p {
   }
 }
 
-/* ======================= // 위젯 ===================== 
+/* ======================= // 메뉴 ===================== */
 
-:link {
-  text-decoration: none;
-}
-.container {
-  width: 1440px;
-}
-.widget_box {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  z-index: 150;
-}
-
-/* large .ver 
-.weather_cast {
-  left: -173px;
-  width: 173px;
-  height: 232px;
-  background: #000;
-  color: #fff;
-  box-sizing: border-box;
-  position: absolute;
-  border-radius: 0 10px 10px 0;
-}
-
-.weather_cast .preview {
-  text-align: center;
-  padding: 10px 15px;
-  box-sizing: content-box;
-  margin-bottom: 7px;
-}
-.weather_cast .preview ul {
-  margin: 0 auto;
-  padding: 0;
-}
-.weather_cast .preview ul li {
-  margin: 0 auto;
-  list-style: none;
-}
-.weather_cast .preview ul li > * {
-  display: none;
-}
-.weather_cast .preview ul li i:before {
-  font-size: 45px;
-}
-.weather_cast .preview p {
-  font-size: var(--small-content-fz);
-  margin-bottom: 0;
-}
-.weather_cast .preview .temp {
-  margin: auto auto;
-}
-.weather_cast .preview .temp p:first-child {
-  margin-bottom: 5px;
-}
-.weather_cast .swiper {
+.containerBox {
   width: 80%;
-  margin-bottom: 6px;
+  margin: 0 auto;
 }
-.weather_cast .swiper-wrapper {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-  margin-bottom: 0;
-}
-.weather_cast div:after,
-.weather_cast div:before {
-  display: none;
-}
-.weather_cast .swiper-slide p {
-  font-size: 10px;
-  margin: 0;
-  color: #fff;
-  font-weight: normal;
-}
-.weather_cast [class^="swiper-button"] {
-  font-size: 5px;
-}
-.weather_cast .swiper-button-prev {
-  top: 35%;
-  left: -7px;
-  color: #fff;
-}
-.weather_cast .swiper-button-next {
-  top: 35%;
-  right: -7px;
-  color: #fff;
-  z-index: 1;
-}
-.weather_cast .shortcut > * {
-  text-align: center;
-  padding: 11.5px 0px;
-}
-.weather_cast .shortcut p {
-  font-size: var(--content-fz);
-}
-.weather_cast .shortcut i {
-  font-size: var(--content-fz);
-}
-.weather_cast .shortcut .faq {
-  background: #fff;
-  color: #000;
-}
-.weather_cast .shortcut .map {
-  text-indent: 6px;
-}
-
-small .ver 
-
-.preview_widget {
-  position: absolute;
-  left: -40px;
-  text-align: center;
-  width: 90px;
-  height: 232px;
-  background: #000;
-  color: #fff;
-  position: relative;
-  z-index: 200;
-  padding-left: 38px;
-  border-radius: 0 10px 10px 0;
-}
-.preview_widget .today_icon {
-  padding: 10px;
-  font-size: 30px;
-}
-.preview_widget p {
-  margin-bottom: 18px;
-}
-.preview_widget .today_temp span {
-  display: none;
-}
-
-.preview_widget .today_temp p {
-  font-size: var(--mobile-content-fz);
-}
-.preview_widget .today_temp p:nth-child(2)::before {
-  content: "/";
-  margin: 0 3px;
-}
-.preview_widget .today_date p {
-  font-size: var(--xsmall-content-fz);
-  font-weight: normal;
-}
-
- ======================= // 메뉴 ===================== 
 
 h2 {
   margin: 8px 0 13px;
@@ -650,4 +510,283 @@ body {
   line-height: 135px;
   color: #000;
 }
-*/
+
+/* ======================= // 위젯 ===================== */
+
+:link {
+  text-decoration: none;
+}
+.container {
+  width: 1440px;
+}
+.widget_box {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: 150;
+}
+
+/* large .ver */
+.weather_cast {
+  left: -173px;
+  width: 173px;
+  height: 232px;
+  background: #000;
+  color: #fff;
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 0 10px 10px 0;
+}
+
+.weather_cast .preview {
+  text-align: center;
+  padding: 10px 15px;
+  box-sizing: content-box;
+  margin-bottom: 7px;
+}
+.weather_cast .preview ul {
+  margin: 0 auto;
+  padding: 0;
+}
+.weather_cast .preview ul li {
+  margin: 0 auto;
+  list-style: none;
+}
+.weather_cast .preview ul li > * {
+  display: none;
+}
+.weather_cast .preview ul li i:before {
+  font-size: 45px;
+}
+.weather_cast .preview p {
+  font-size: var(--small-content-fz);
+  margin-bottom: 0;
+}
+.weather_cast .preview .temp {
+  margin: auto auto;
+}
+.weather_cast .preview .temp p:first-child {
+  margin-bottom: 5px;
+}
+.weather_cast .swiper {
+  width: 80%;
+  margin-bottom: 6px;
+}
+.weather_cast .swiper-wrapper {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 0;
+}
+.weather_cast div:after,
+.weather_cast div:before {
+  display: none;
+}
+.weather_cast .swiper-slide p {
+  font-size: 10px;
+  margin: 0;
+  color: #fff;
+  font-weight: normal;
+}
+.weather_cast [class^="swiper-button"] {
+  font-size: 5px;
+}
+.weather_cast .swiper-button-prev {
+  top: 35%;
+  left: -7px;
+  color: #fff;
+}
+.weather_cast .swiper-button-next {
+  top: 35%;
+  right: -7px;
+  color: #fff;
+  z-index: 1;
+}
+.weather_cast .shortcut > * {
+  text-align: center;
+  padding: 11.5px 0px;
+}
+.weather_cast .shortcut p {
+  font-size: var(--content-fz);
+}
+.weather_cast .shortcut i {
+  font-size: var(--content-fz);
+}
+.weather_cast .shortcut .faq {
+  background: #fff;
+  color: #000;
+}
+.weather_cast .shortcut .map {
+  text-indent: 6px;
+}
+
+/* small .ver */
+
+.preview_widget {
+  position: absolute;
+  left: -40px;
+  text-align: center;
+  width: 90px;
+  height: 232px;
+  background: #000;
+  color: #fff;
+  position: relative;
+  z-index: 200;
+  padding-left: 38px;
+  border-radius: 0 10px 10px 0;
+}
+.preview_widget .today_icon {
+  padding: 10px;
+  font-size: 30px;
+}
+.preview_widget p {
+  margin-bottom: 18px;
+}
+.preview_widget .today_temp span {
+  display: none;
+}
+
+.preview_widget .today_temp p {
+  font-size: var(--mobile-content-fz);
+}
+.preview_widget .today_temp p:nth-child(2)::before {
+  content: "/";
+  margin: 0 3px;
+}
+.preview_widget .today_date p {
+  font-size: var(--xsmall-content-fz);
+  font-weight: normal;
+}
+
+/* =======================메뉴 반응형 태블릿(768)================== */
+@media screen and (max-width: 768px) {
+  .containerBox {
+    width: 85%;
+  }
+
+  /* 메뉴 */
+  .menu .main_menus {
+    gap: 30px;
+  }
+  .menu .main_menus a {
+    font-size: 25px;
+  }
+  .menu .sub_menus {
+    gap: 20px;
+  }
+  .menu .sub_menus a {
+    font-size: 16px;
+  }
+  .menu li a {
+    white-space: nowrap;
+  }
+}
+
+/* =======================메뉴 반응형 모바일(360)================== */
+@media screen and (max-width: 360px) {
+  footer {
+    display: none;
+  }
+  .widget_box {
+    display: none !important;
+  }
+  .menu {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: auto;
+    right: 0;
+    bottom: 100%;
+    transition: bottom 0.7s;
+    z-index: 100;
+  }
+  .menu .main_menus {
+    width: 90%;
+    gap: 50px;
+    border: none;
+    flex-direction: column;
+  }
+  .menu .main_menus li {
+    padding-bottom: 30px;
+    border-bottom: 2px solid #fff;
+  }
+  .menu .main_menus li:nth-child(4) {
+    display: none;
+  }
+  .menu .sub_menus {
+    padding: 0;
+  }
+  .menu .sub_menus .sub_menu {
+    display: none;
+  }
+  .menu li a {
+    color: #fff;
+    display: inline-block;
+    font-size: var(--second-TT-fz);
+    margin-bottom: px;
+  }
+  .menu .sub_menu li a {
+    color: #fff;
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+  .menu .sub_menu li a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .menu li {
+    list-style: none;
+  }
+  .menu li a {
+    list-style: none;
+    text-decoration: none;
+  }
+  .menu.active {
+    bottom: 0;
+    z-index: 100;
+  }
+  .menu .button {
+    position: fixed;
+    background: black;
+    top: 0%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 150px;
+    right: auto;
+    z-index: 90;
+  }
+  .menu .button p {
+    text-align: right;
+    font-size: 50px;
+    padding-right: 15px;
+    padding-top: 35px;
+    line-height: 150px;
+    color: #fff;
+    z-index: 110;
+  }
+  .menu .button i {
+    display: block;
+    font-size: 50px;
+  }
+  .menu .button.active {
+    background: #000;
+    top: 0;
+    transform: translateY(-50%);
+    right: 0px;
+    width: 100%;
+    height: 150px;
+    z-index: 110;
+  }
+  .menu .button.active p {
+    text-align: right;
+    font-size: 50px;
+    padding-right: 15px;
+    padding-top: 35px;
+    line-height: 150px;
+    color: #fff;
+  }
+}

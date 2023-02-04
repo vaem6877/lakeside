@@ -107,6 +107,7 @@ $(window).scroll(function () {
 AOS.init({
   offset: 200,
   once: true,
-  duration: 1000,
+  duration: 400,
   easing: "easeInOutCubic",
+  disable: "mobile", // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
 });
