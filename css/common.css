@@ -230,6 +230,7 @@ footer address p {
   font-size: var(--xsmall-content-fz);
   color: var(--primary-green);
   font-weight: 500;
+  display: none;
 }
 
 .nav-text {
@@ -249,6 +250,14 @@ footer address p {
   width: 18px;
   height: 18px;
   background: var(--primary-green);
+}
+.aside-nav a.active span:last-child {
+  width: 18px;
+  height: 18px;
+  background: var(--primary-green);
+}
+.aside-nav a.active .nav-text {
+  visibility: visible;
 }
 
 .aside-nav a span:last-child:after {
