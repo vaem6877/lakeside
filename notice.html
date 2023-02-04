@@ -60,13 +60,17 @@
       </nav>
       <div class="container">
         <section id="history" class="history row">
-          <div class="history-img-wrapper col-lg-5">
+          <div class="history-img-wrapper col-lg-5" data-aos="fade-right">
             <!-- <div class="img-container"> -->
             <img src="./img/notice_history.png" alt="" />
             <!-- </div> -->
             <!-- <span class="linebox"></span> -->
           </div>
-          <div class="offset-lg-2 offset-md-1 col-lg-5 col-md-12 history-desc">
+          <div
+            class="desc-history offset-lg-2 offset-md-1 col-lg-5 col-md-12"
+            data-aos="fade-left"
+            data-aos-delay="400"
+          >
             <h3>the lake side</h3>
             <h2>history</h2>
             <ul class="d-flex flex-column align-items-start">
@@ -112,11 +116,16 @@
           </div>
         </section>
         <section id="contest" class="contest row">
-          <div class="contest-img-wrapper col-lg-5 offset-lg-2 offset-md-1">
+          <div
+            class="contest-img-wrapper col-lg-5 offset-lg-2 offset-md-1"
+            data-aos="fade-left"
+          >
             <img src="./img/notice_contest.png" alt="" />
           </div>
           <div
-            class="contest-desc col-lg-5 col-md-12 order-md-first d-flex flex-column align-items-end"
+            class="desc-contest col-lg-5 col-md-12 order-md-first d-flex flex-column align-items-end"
+            data-aos="fade-right"
+            data-aos-delay="400"
           >
             <h3>the lake side</h3>
             <h2>contest</h2>
@@ -168,7 +177,7 @@
       </div>
       <div id="rocess" class="rocess-wrapper">
         <div class="container">
-          <div class="r-desc">
+          <div class="desc-r" data-aos="fade-right">
             <h3>the lake side</h3>
             <h2>rocess guide</h2>
             <h4>경기 진행 안내</h4>
@@ -179,7 +188,11 @@
             >
               <img src="./img/notice_rocess.png" alt="" />
             </div>
-            <div class="col-md-9 col-sm-12 rocess-guide-desc">
+            <div
+              class="desc-rocess-guide col-md-9 col-sm-12"
+              data-aos="fade-left"
+              data-aos-delay="400"
+            >
               <ul>
                 <li class="">
                   <h4>01</h4>
@@ -235,7 +248,7 @@
         </div>
       </div>
       <div id="cart" class="container">
-        <div class="c-desc">
+        <div class="desc-c" data-aos="fade-right">
           <h3>the lake side</h3>
           <h2>Cart Use Guide</h2>
           <h4>카트 이용 안내</h4>
@@ -244,7 +257,11 @@
           <div class="col-md-3 d-flex align-items-start cart-guide-img-wrapper">
             <img src="./img/notice_cart.png" alt="" />
           </div>
-          <div class="col-md-9 col-sm-12 order-md-first cart-guide-desc">
+          <div
+            class="desc-cart-guide col-md-9 col-sm-12 order-md-first"
+            data-aos="fade-right"
+            data-aos-delay="400"
+          >
             <ul>
               <li>
                 <h4>01</h4>
@@ -308,7 +325,7 @@
       </div>
       <div id="facility" class="facility-wrapper">
         <div class="container">
-          <div class="text-center facility-desc">
+          <div class="desc-facility text-center">
             <h3>the lake side</h3>
             <h2>Facility information</h2>
             <h4>레이크 사이드 시설안내</h4>
@@ -412,7 +429,7 @@
         </div>
       </div>
       <div id="directions" class="directions">
-        <section class="text-center directions-desc">
+        <section class="desc-directions text-center">
           <h3>the lake side</h3>
           <h2>directions</h2>
           <h4>오시는 길 안내</h4>
@@ -468,6 +485,7 @@
       type="text/javascript"
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
     <script src="./node_modules/aos/dist/aos.js"></script>
     <script src="js/notice.js"></script>
   </body>

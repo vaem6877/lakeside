@@ -44,16 +44,38 @@ asideNav.each(function () {
   sectionsOST.push($(sectionLink).offset().top);
 });
 
-wholeSectionWrap.on("mousewheel", function (event) {
-  let executed = false;
-  if (executed == false) {
-    moveSection(event.deltaY);
-  }
-});
+console.log(sectionsOST);
+
+// wholeSectionWrap.on("mousewheel", function (event) {
+//   debounce(moveSection(event.deltaY), 300);
+// });
 
 // asideNav.click(function () {});
 
+// 스크롤양에 따라 보이고 안보임
+function btnFade(btn, ost) {
+  let scrAmt = $(this).scrollTop();
+
+  if (scrAmt > ost) {
+    btn.fadeIn();
+  } else {
+    btn.fadeOut();
+  }
+}
+
+// $(window).scroll(function () {
+//   btnFade(asideNavWrapper, 2000);
+// });
+
+$(window).scroll(function () {
+  let scrAmt = $(this).scrollTop();
+
+  btnFade(asideNav, 830);
+});
+
 // ==== function ====
+
+// 한번만 실행
 function debounce(callback, time) {
   let executed = false;
   return () => {
@@ -68,19 +90,27 @@ function debounce(callback, time) {
   };
 }
 
-function moveSection(num) {
-  let nextNum = 0;
+// 풀페이지 이동
+// function moveSection(num) {
+//   let nextNum = 0;
 
-  if (num == -1 && currentIdx < sectionsOST.length) {
-    nextNum = currentIdx + 1;
-  } else if (num == 1 && currentIdx > 0) {
-    nextNum = currentIdx - 1;
-  }
+//   if (num == -1 && currentIdx < sectionsOST.length) {
+//     nextNum = currentIdx + 1;
+//   } else if (num == 1 && currentIdx > 0) {
+//     nextNum = currentIdx - 1;
+//   }
 
-  $("body, html")
-    .stop()
-    .animate({ scrollTop: sectionsOST[nextNum] }, 300, "easeInOutCirc"); //이 숫자번째만큼 스크롤을 만들어서 넘겨줘
-  // jquery ui 아직 로드 안함
+//   $("body, html").stop().animate({ scrollTop: sectionsOST[nextNum] }, 300); //이 숫자번째만큼 스크롤을 만들어서 넘겨줘
+//   // jquery ui 아직 로드 안함 , "easeInOutCirc"
 
-  currentIdx = nextNum;
-}
+//   currentIdx = nextNum;
+// }
+
+// ======= AOS =============================================
+
+AOS.init({
+  offset: 200,
+  once: true,
+  duration: 600,
+  easing: "easeInOutCubic",
+});

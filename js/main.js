@@ -28,14 +28,18 @@ $(".controls .prev").on("click", () => {
 let topBtn = $("#go-top");
 
 $(window).on("scroll", function () {
+  btnFade(topBtn, 300);
+});
+
+function btnFade(btn, ost) {
   let scrAmt = $(this).scrollTop();
 
-  if (scrAmt > 300) {
-    topBtn.fadeIn();
+  if (scrAmt > ost) {
+    btn.fadeIn();
   } else {
-    topBtn.fadeOut();
+    btn.fadeOut();
   }
-});
+}
 
 topBtn.on("click", function (e) {
   e.preventDefault();

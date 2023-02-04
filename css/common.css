@@ -230,6 +230,7 @@ footer address p {
   font-size: var(--xsmall-content-fz);
   color: var(--primary-green);
   font-weight: 500;
+  display: none;
 }
 
 .nav-text {
