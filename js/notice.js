@@ -8,6 +8,8 @@ let facWrap = $(".facility-wrapper"),
   facInfo = facWrap.find(".facility-information .facility-info-wrapper"),
   pager = facWrap.find(".facility-nav-wrapper .fac-pager a");
 
+navBtn.eq(0).add(pager.eq(0)).addClass("active");
+
 navBtn.click(function (e) {
   e.preventDefault();
   let tabIdx = $(this).index();
@@ -15,7 +17,9 @@ navBtn.click(function (e) {
   // console.log(liOSL);
   showSlide(tabIdx);
 
-  navBar.css({ left: liOSL - 0.021 * navBtn.offset().left });
+  // navBar.css({ left: liOSL - 0.021 * navBtn.offset().left });
+  navBar.css({ left: liOSL - 0.022 * navBtn.offset().left });
+
   // 왜지??????????? 픽셀이나 퍼센트 쓰면 안움직이고... 그냥쓰면움직임???;;
   // 이거 가운데로 어케오게하니...
   // , width: navBtn.outerwidth()
@@ -49,7 +53,7 @@ function showSlide(idx) {
   navBtn.eq(idx).add(pager.eq(idx)).addClass("active");
   navImg.eq(idx).add(facInfo.eq(idx)).fadeIn();
 }
-
+/*
 // aside nav bar 시작 ================================================
 
 let wholeSectionWrap = $("main"),
@@ -100,14 +104,14 @@ $(window).scroll(function () {
     }
   });
 });
-
+*/
 // ========================= aside bar 끝 // 0204 윤희
 // ======= AOS =============================================
 
 AOS.init({
   offset: 200,
   once: true,
-  duration: 400,
+  duration: 800,
   easing: "easeInOutCubic",
   disable: "phone", // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
 });

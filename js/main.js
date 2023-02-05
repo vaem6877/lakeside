@@ -24,6 +24,8 @@ $(".controls .prev").on("click", () => {
   $(".main-slide").slick("slickPrev");
 });
 
+/*
+
 // 탑버튼 ======================================================
 let topBtn = $("#go-top");
 // let section = $(".course-desc");
@@ -54,7 +56,7 @@ topBtn.on("click", function (e) {
   $("html, body").stop().animate({ scrollTop: 0 }, 300);
 });
 
-// 탑버튼 끝 ===========
+// 탑버튼 끝 =========== */
 
 // topBtn.click(function (e) {
 //   e.preventDefault();

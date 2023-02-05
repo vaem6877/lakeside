@@ -103,12 +103,20 @@ header {
   text-indent: -9999em;
   padding-bottom: 100vh;
 }
-/* 
+
 #logo-mobile {
+  display: block;
   width: 100px;
   height: 20.38px;
+  /* position: absolute; */
+  /* z-index: 10000; */
 }
-#logo-mobile a {
+
+#logo-mobile img {
+  width: 100%;
+  object-fit: contain;
+}
+/*#logo-mobile a {
   text-indent: -9999em;
   display: block;
   width: 100px;
@@ -817,5 +825,8 @@ body {
   footer .footer-logo {
     width: 104px;
     height: 21px;
+  }
+  .aside-nav {
+    display: none !important;
   }
 }

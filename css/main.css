@@ -25,6 +25,7 @@ section {
   font-weight: 300;
   line-height: 27px;
 }
+
 .main-course .course-desc h2 {
   font-size: var(--main-TT-fz);
   font-weight: 500;
@@ -214,6 +215,10 @@ footer .notice-slide {
 }
 .east-course .mobile-btn::after {
   content: "east course";
+}
+
+.main-course::before {
+  display: none;
 }
 
 /*   content: "south course"; */
@@ -481,5 +486,8 @@ footer .notice-slide {
   }
   .west-course .mobile-btn.active {
     top: -62%;
+  }
+  .main-course::before {
+    display: block;
   }
 }
