@@ -408,6 +408,106 @@ footer address p {
   }
 }
 
+/* ======================= // 메뉴 ===================== */
+
+.containerBox {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h2 {
+  margin: 8px 0 13px;
+}
+p {
+  font-size: var(--content-fz);
+}
+body {
+  text-align: center;
+}
+.menu {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  left: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transition: left 0.7s;
+  z-index: 200;
+}
+.menu .main_menus {
+  gap: 100px;
+  padding: 50px;
+  border-bottom: 2px solid #fff;
+}
+.menu .sub_menus {
+  gap: 100px;
+  padding: 50px;
+  border-bottom: 2px solid #fff;
+  display: block;
+}
+.menu li a {
+  color: #fff;
+  display: inline-block;
+  font-size: var(--second-TT-fz);
+  margin-bottom: px;
+}
+.menu .sub_menu li a {
+  color: #fff;
+  display: inline-block;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+.menu .sub_menu li a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.menu li {
+  list-style: none;
+}
+.menu li a {
+  list-style: none;
+  text-decoration: none;
+}
+.menu.active {
+  left: 0;
+  z-index: 100;
+}
+
+.menu .button {
+  position: fixed;
+  background: black;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0px;
+  width: 32px;
+  height: 135px;
+  z-index: 200;
+}
+.menu .button p {
+  text-align: center;
+  line-height: 135px;
+  color: #fff;
+}
+.menu .button i {
+  display: none;
+}
+.menu .button.active {
+  background: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0px;
+  width: 32px;
+  height: 135px;
+  z-index: 200;
+}
+.menu .button.active p {
+  text-align: center;
+  line-height: 135px;
+  color: #000;
+}
+
 /* ======================= // 위젯 ===================== */
 
 :link {
@@ -556,8 +656,13 @@ footer address p {
   font-weight: normal;
 }
 
-/* ======================= // 메뉴 ===================== */
+/* =======================메뉴 반응형 태블릿(768)================== */
+@media screen and (max-width: 768px) {
+  .containerBox {
+    width: 85%;
+  }
 
+<<<<<<< HEAD
 h2 {
   margin: 8px 0 13px;
 }
@@ -673,6 +778,132 @@ p {
   text-align: center;
   line-height: 135px;
   color: #000;
+=======
+  /* 메뉴 */
+  .menu .main_menus {
+    gap: 30px;
+  }
+  .menu .main_menus a {
+    font-size: 25px;
+  }
+  .menu .sub_menus {
+    gap: 20px;
+  }
+  .menu .sub_menus a {
+    font-size: 16px;
+  }
+  .menu li a {
+    white-space: nowrap;
+  }
+}
+
+/* =======================메뉴 반응형 모바일(360)================== */
+@media screen and (max-width: 360px) {
+  footer {
+    display: none;
+  }
+  .widget_box {
+    display: none !important;
+  }
+  .menu {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: auto;
+    right: 0;
+    bottom: 100%;
+    transition: bottom 0.7s;
+    z-index: 100;
+  }
+  .menu .main_menus {
+    width: 90%;
+    gap: 50px;
+    border: none;
+    flex-direction: column;
+  }
+  .menu .main_menus li {
+    padding-bottom: 30px;
+    border-bottom: 2px solid #fff;
+  }
+  .menu .main_menus li:nth-child(4) {
+    display: none;
+  }
+  .menu .sub_menus {
+    padding: 0;
+  }
+  .menu .sub_menus .sub_menu {
+    display: none;
+  }
+  .menu li a {
+    color: #fff;
+    display: inline-block;
+    font-size: var(--second-TT-fz);
+    margin-bottom: px;
+  }
+  .menu .sub_menu li a {
+    color: #fff;
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+  .menu .sub_menu li a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .menu li {
+    list-style: none;
+  }
+  .menu li a {
+    list-style: none;
+    text-decoration: none;
+  }
+  .menu.active {
+    bottom: 0;
+    z-index: 100;
+  }
+  .menu .button {
+    position: fixed;
+    background: black;
+    top: 0%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 150px;
+    right: auto;
+    z-index: 90;
+  }
+  .menu .button p {
+    text-align: right;
+    font-size: 50px;
+    padding-right: 15px;
+    padding-top: 35px;
+    line-height: 150px;
+    color: #fff;
+    z-index: 110;
+  }
+  .menu .button i {
+    display: block;
+    font-size: 50px;
+  }
+  .menu .button.active {
+    background: #000;
+    top: 0;
+    transform: translateY(-50%);
+    right: 0px;
+    width: 100%;
+    height: 150px;
+    z-index: 110;
+  }
+  .menu .button.active p {
+    text-align: right;
+    font-size: 50px;
+    padding-right: 15px;
+    padding-top: 35px;
+    line-height: 150px;
+    color: #fff;
+  }
+>>>>>>> fd8a3f70ebf9e1b7444b95389408a167ae326ed4
 }
 
 @media screen and (max-width: 768px) {
