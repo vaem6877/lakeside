@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/course.css" />
+    <link rel="stylesheet" href="css/course_responsive.css" />
+  </head>
+  <body>
+    <header class="text-center">
+      <h1 id="logo"><a href="#">lakeside</a></h1>
+      <div class="widget"></div>
+    </header>
+    <!-- <section id="menu"> -->
+      <div
+        class="menu d-flex flex-column justify-content-center align-items-center"
+      >
+        <ul class="menus d-flex">
+          <li>
+            <a href="" class="main_menu">예약하기</a>
+            <ul>
+              <li class="sub_menu"><a href="">예약안내</a></li>
+              <li class="sub_menu"><a href="">빠른예약</a></li>
+              <li class="sub_menu"><a href="">예약확인</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="" class="main_menu">코스안내</a>
+            <ul>
+              <li class="sub_menu"><a href="">코스소개</a></li>
+              <li class="sub_menu"><a href="">코스갤러리</a></li>
+              <li class="sub_menu"><a href="">홀인원이벤트</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="" class="main_menu">클럽안내</a>
+            <ul>
+              <li class="sub_menu"><a href="">연혁/대회</a></li>
+              <li class="sub_menu"><a href="">이용안내</a></li>
+              <li class="sub_menu"><a href="">시설안내</a></li>
+              <li class="sub_menu"><a href="">오시는길</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="" class="main_menu">클럽인포</a>
+            <ul>
+              <li class="sub_menu"><a href="">공지사항</a></li>
+              <li class="sub_menu"><a href="">명예의전당</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="" class="main_menu">회원정보</a>
+            <ul>
+              <li class="sub_menu"><a href="">회원정보관리</a></li>
+              <li class="sub_menu"><a href="">쿠폰함</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="button">
+        </div>
+      </div>
+      </div>
+    <!-- </section> -->
+    <div class="widget_box d-flex">
+      <div class="weather_cast">
+        <div class="preview d-flex">
+          <ul class="d-flex"></ul>
+        </div>
+        <div class="swiper container">
+          <ul class="swiper-wrapper"></ul>
+        </div>
+        <div class="swiper-button-prev">◀</div>
+        <div class="swiper-button-next">▶</div>
+        <div class="shortcut">
+          <div
+            class="reservation d-flex justify-content-center align-items-center gap-4"
+          >
+            <div class="calendar"><p>예약하기</p></div>
+            <i class="fa-solid fa-calendar-plus"></i>
+          </div>
+          <div
+            class="faq d-flex justify-content-center align-items-center gap-4"
+          >
+            <div class="phone"><p>문의하기</p></div>
+            <i class="fa-solid fa-square-phone-flip"></i>
+          </div>
+          <div
+            class="location d-flex justify-content-center align-items-center gap-4"
+          >
+            <div class="map"><p>오시는길</p></div>
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
+        </div>
+      </div>
+      <div class="preview_widget">
+        <div class="today_weather">
+          <div class="today_icon"></div>
+          <div class="today_temp"></div>
+          <div class="today_date"></div>
+          <div class="preview_shortcut">
+            <p>
+              <i class="fa-solid fa-calendar-plus"></i>
+            </p>
+            <p><i class="fa-solid fa-square-phone-flip"></i></p>
+            <p><i class="fa-solid fa-map-location-dot"></i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main id="course">
+      <nav class="aside-nav d-flex flex-column align-items-end">
+  <a href="#course_wv"
+    ><span class="nav-text">홀 전경</span>
+    <span> </span>
+  </a>
+  <a href="#hole_desc"
+    ><span class="nav-text">홀 설명</span>
+    <span> </span>
+  </a>
+  <a href="#course_gallery"
+    ><span class="nav-text">코스 갤러리</span>
+    <span> </span>
+  </a>
+  <a href="#holeinone"
+    ><span class="nav-text">홀인원 이벤트</span>
+    <span> </span>
+  </a>
+</nav>
+      <section id="course_wv">
+        <h3>THE LAKE SIDE</h3>
+        <h2>ALL COURSE</h2>
+        <p>고품격 레이크사이드의 코스를 만나보세요.</p>
+        <div class="img_container">
+          <img src="img/전체코스.svg" alt="" />
+        </div>
+      </section>
+      <section id="hole_desc">
+        <div id="tabs">
+          <ul class="d-flex justify-content-center">
+            <li class="col active"><a href="#tabs-east">EAST Course</a></li>
+            <li class="col"><a href="#tabs-west">WEST Course</a></li>
+            <li class="col"><a href="#tabs-south">SOUTH Course</a></li>
+          </ul>
+          <div class="tab_group">
+            <div id="tabs-east" class="each_course containerBox" data-name="동">
+              <h2>1 HOLE</h2>
+              <p class="">
+                코스 내에서 자생하고 있는 해송 군락으로 둘러싸인 질은 초록 숲과
+                크고 긴 벙커의 조화가 어우러진 코스로서 수목 휴양지의 정취를
+                느끼실 수 있습니다.
+              </p>
+              <div id="tabs">
+                <div class="swiper">
+                  <ul class="swiper-wrapper"></ul>
+                  <div class="swiper-button-prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </div>
+                  <div class="swiper-button-next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                </div>
+                <div class="img_container"></div>
+              </div>
+            </div>
+            <div id="tabs-west" class="each_course containerBox" data-name="서">
+              <h2>1 HOLE</h2>
+              <p>
+                푸르른 연못과 이어지는 하얀 비치벙커 (Beach Bunker), 그리고 초록
+                잔디가 주는 시각적 대비가 인상적인 평지형의 전략적인 코스 로서
+                아름답고 이국적인 경관을 선사합니다.
+              </p>
+              <div id="tabs">
+                <div class="swiper">
+                  <ul class="swiper-wrapper"></ul>
+                </div>
+                <div class="img_container"></div>
+                <div class="swiper-button-prev">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="swiper-button-next">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </div>
+              </div>
+            </div>
+            <div id="tabs-south" class="each_course containerBox" data-name="남">
+              <h2>1 HOLE</h2>
+              <p>
+                다양하게 형성된 계곡과 능선으로 이루어진 자연지형을 그대로 살린
+                코스로서 코스이름 그대로의 크고 깊은 계곡과 곳곳에 도사리고 있는
+                팟벙커(Pot Bunker)들로 구성된 홀들을 정복해야 하는 긴장감과
+                도전을 통한 성취욕, 울창한 숲을 지날 때마다 느끼는 평온함을 함께
+                경험할 수 있습니다.
+              </p>
+              <div id="tabs">
+                <div class="swiper">
+                  <ul class="swiper-wrapper"></ul>
+                </div>
+                <div class="img_container"></div>
+                <div class="swiper-button-prev">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="swiper-button-next">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="course_gallery" class="containerBox">
+        <!-- 라이브러리 mixitup -->
+        <div class="box">
+          <button type="button" data-filter="all" class="active">ALL</button>
+          <button type="button" data-filter=".east">EAST Course</button>
+          <button type="button" data-filter=".west">WEST Course</button>
+          <button type="button" data-filter=".south">SOUTH Course</button>
+        </div>
+        <div class="mix-wrapper row">
+          <img src="img/남코스02.jpg" alt="남코스02" class="mix south col-4 col-md-3" />
+          <img src="img/동코스01.jpg" alt="동코스01" class="mix east col-4 col-md-3" />
+          <img src="img/서코스04.jpg" alt="서코스04" class="mix west col-4 col-md-3" />
+          <img src="img/동코스03.jpg" alt="동코스03" class="mix east col-4 col-md-3" />
+          <img src="img/남코스01.jpg" alt="남코스01" class="mix south col-4 col-md-3" />
+          <img src="img/남코스03.jpg" alt="남코스03" class="mix south col-4 col-md-3" />
+          <img src="img/서코스01.jpg" alt="서코스01" class="mix west col-4 col-md-3" />
+          <img src="img/동코스02.jpg" alt="동코스02" class="mix east col-4 col-md-3" />
+          <img src="img/서코스02.jpg" alt="서코스02" class="mix west col-4 col-md-3" />
+          <img src="img/동코스04.jpg" alt="동코스04" class="mix east col-4 col-md-3" />
+          <img src="img/남코스04.jpeg" alt="남코스04" class="mix south col-4 col-md-3" />
+          <img src="img/서코스03.jpg" alt="서코스03" class="mix west col-4 col-md-3" />
+        </div>
+        <div class="course_img_big">
+          <i class="fa-solid fa-x"></i>
+        </div>
+      </section>
+      <section id="holeinone">
+        <h2>THE LAKE SIDE</h2>
+        <h1>HOLE IN ONE EVENT</h1>
+        <p>멋진 홀인원을 기록하신 분들을 위해 기록했습니다.</p>
+        <div class="west_course containerBox">
+          <h2>동코스</h2>
+          <div class="item_group d-flex justify-content-center gap-5">
+            <div class="item">
+              <img src="img/캐디백.png" alt="" />
+              <p>3번홀</p>
+              <p>정품 캐디백</p>
+            </div>
+            <div class="item">
+              <img src="img/QLED 8K.jpg" alt="" />
+              <p>6번홀</p>
+              <p>QLED 8K TV</p>
+            </div>
+            <div class="item">
+              <img src="img/드라이버.jpg" alt="" />
+              <p>6번홀</p>
+              <p>드라이버 지급</p>
+            </div>
+            <div class="item">
+              <img src="img/상품권.jpg" alt="" />
+              <p>12번홀</p>
+              <p>의류 교환권</p>
+            </div>
+            <div class="item">
+              <img src="img/매트리스.png" alt="" />
+              <p>17번홀</p>
+              <p>매트리스 교환권</p>
+            </div>
+          </div>
+        </div>
+        <div class="east_course">
+            <h2>서코스</h2>
+            <div class="item-group d-flex justify-content-center containerBox gap-5">
+              <div class="item">
+                <img src="img/드라이버.jpg" alt="" />
+                <p>4번홀</p>
+                <p>드라이버 지급</p>
+              </div>
+              <div class="item">
+                <img src="img/캐디백.png" alt="" />
+                <p>8번홀</p>
+                <p>정품 캐디백</p>
+              </div>
+              <div class="item">
+                <img src="img/골프공.jpg" alt="" />
+                <p>8번홀</p>
+                <p>골프공 10DZ</p>
+              </div>
+              <div class="item">
+                <img src="img/베개.jpg" alt="" />
+                <p>12번홀</p>
+                <p>가누다 베개세트</p>
+              </div>
+              <div class="item">
+                <img src="img/상품권.jpg" alt="" />
+                <p>16번홀</p>
+                <p>의류 교환권</p>
+              </div>
+              <div class="item">
+                <img src="img/매트리스.png" alt="" />
+                <p>16번홀</p>
+                <p>매트리스 교환권</p>
+              </div>
+            </div>
+        </div>
+        <div class="south_course containerBox">
+          <h2>남코스</h2>
+          <div class="item_group d-flex justify-content-center gap-5">
+            <div class="item">
+              <img src="img/허벌라이프.jpg" alt="" />
+              <p>3번홀</p>
+              <p>허벌라이프 제품</p>
+            </div>
+            <div class="item">
+              <img src="img/상품권.jpg" alt="" />
+              <p>7번홀</p>
+              <p>의류 교환권</p>
+            </div>
+            <div class="item">
+              <img src="img/매트리스.png" alt="" />
+              <p>7번홀</p>
+              <p>매트리스 교환권</p>
+            </div>
+            <div class="item">
+              <img src="img/상품권.jpg" alt="" />
+              <p>12번홀</p>
+              <p>의류 교환권</p>
+            </div>
+            <div class="item">
+              <img src="img/베개.jpg" alt="" />
+              <p>15번홀</p>
+              <p>가누다 베개세트</p>
+            </div>
+          </div>
+        </div>
+      </section>  
+    </main>
+    <a href="#" id="go-top"><i class="fa-solid fa-arrow-up"></i></a>
+<!-- 탑 버튼 -->
+
+<footer>
+  <div class="terms d-flex justify-content-center">
+    <a href="">이용약관</a>
+    <a href="">웹회원 약관</a>
+    <a href="">개인정보처리방침</a>
+    <a href="">영상정보처리기기 방침</a>
+    <a href="">사업자정보확인</a>
+    <a href="">사이트맵</a>
+  </div>
+  <a href="index.html" class="footer-logo text-center">logo</a>
+
+  <address class="">
+    <dl class="d-flex justify-content-center">
+      <dt>주소 :</dt>
+      <dd>16887 경기도 용인시 처인구 모현읍 능원로 181</dd>
+      <dt>대표전화 :</dt>
+      <dd>031-334-2111</dd>
+      <dt>팩스 :</dt>
+      <dd>031-332-2106</dd>
+    </dl>
+    <dl class="d-flex justify-content-center">
+      <dt>팩스 :</dt>
+      <dd>031-332-2106</dd>
+      <dt>이메일 :</dt>
+      <dd>lakeside@lakeside.kr</dd>
+    </dl>
+    <dl class="d-flex justify-content-center">
+      <dt>사업자등록번호</dt>
+      <dd>135-81-02491</dd>
+      <dt>통신판매신고</dt>
+      <dd>제 2009-용인처인-0170호</dd>
+      <dt>대표이사</dt>
+      <dd>문지태</dd>
+    </dl>
+    <p class="text-uppercase text-center">
+      copyright lakeside country club. all rights reserved
+    </p>
+  </address>
+</footer>
+    
+      <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+        integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"
+        integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <script src="js/course.js"></script>
+      <script src="js/script.js"></script>
+    </div>
+  </body>
+</html>
