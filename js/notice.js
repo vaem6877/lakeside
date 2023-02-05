@@ -109,9 +109,9 @@ $(window).scroll(function () {
 // ======= AOS =============================================
 
 AOS.init({
-  offset: 200,
+  offset: 400,
   once: true,
   duration: 800,
   easing: "easeInOutCubic",
-  disable: "phone", // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  disable: "mobile", // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
 });

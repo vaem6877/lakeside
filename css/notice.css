@@ -246,6 +246,11 @@ section img,
   margin: 27px 0 17px;
 }
 
+.facility-information ul li h4,
+.facility-information ul li p {
+  text-align: left;
+}
+
 .facility-nav-wrapper {
   padding-left: 85px;
 }
@@ -477,3 +482,77 @@ header::after {
 }
 
 /* ====== // 리팩터링 전, 윤희 0203 */
+
+/* ============= 모바일 ========================= */
+@media (max-width: 361px) {
+  .container {
+    padding: 0 12px;
+    width: auto !important;
+  }
+  .history {
+    margin: 94px 0;
+  }
+  .desc-history,
+  .desc-rocess-guide {
+    padding: 0;
+  }
+  .rocess-guide {
+    padding: 0 12px;
+  }
+  .container .history .desc-history h2,
+  .container .contest .desc-contest h2,
+  .rocess-wrapper .desc-r h2 {
+    font-size: var(--mobile-KrTT-fz);
+    line-height: 20px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  .container .history .desc-history h3,
+  .container .contest .desc-contest h3,
+  .rocess-wrapper .desc-r h3 {
+    /* font-size: var(--mobile-mainTT-fz);
+    line-height: 12px;
+    font-weight: 700;
+    margin-bottom: 10px; */
+    display: none;
+  }
+
+  .container .history .desc-history p,
+  .container .contest .desc-contest p,
+  .rocess-wrapper .desc-r p,
+  .rocess-wrapper .desc-rocess-guide p {
+    font-size: var(--mobile-content-fz);
+    vertical-align: top;
+    /* line-height: 10px; */
+    font-weight: 400;
+  }
+  .desc-r > h4 {
+    font-size: var(--small-content-fz);
+  }
+  /* .container .contest .desc-contest ul li {
+    justify-content: center !important;
+  } */
+  .desc-history ul li,
+  .desc-contest ul li,
+  .desc-rocess-guide ul li,
+  .desc-cart-guide ul li {
+    margin-bottom: 0px;
+  }
+  .container .history .desc-history ul li h4,
+  .container .contest .desc-contest ul li h4,
+  .rocess-wrapper .desc-r ul li h4,
+  .rocess-wrapper .desc-rocess-guide h4 {
+    font-size: var(--small-content-fz);
+    /* vertical-align: top; */
+  }
+  #cart {
+    display: none;
+  }
+  .rocess-wrapper {
+    background: none;
+  }
+  .desc-r {
+    padding: 0;
+  }
+}
