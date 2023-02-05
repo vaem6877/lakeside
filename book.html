@@ -11,6 +11,10 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
       integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
       crossorigin="anonymous"
@@ -20,7 +24,7 @@
     <link rel="stylesheet" href="css/back.css" />
   </head>
   <body>
-    <header class="text-center">
+    <header class="text-center book_header">
       <h1 id="logo"><a href="#">lakeside</a></h1>
       <div class="widget_box d-flex">
         <div class="weather_cast">
@@ -112,49 +116,6 @@
         </div>
       </div>
     </header>
-
-    <!-- <section id="menu"> -->
-    <div
-      class="menu d-flex flex-column justify-content-center align-items-center"
-    >
-      <ul class="main_menus d-flex">
-        <li><a href="">예약하기</a></li>
-        <li><a href="">코스안내</a></li>
-        <li><a href="">클럽안내</a></li>
-        <li><a href="">클럽인포</a></li>
-        <li><a href="">회원정보</a></li>
-      </ul>
-      <div class="sub_menus d-flex">
-        <ul class="sub_menu">
-          <li><a href="">예약안내</a></li>
-          <li><a href="">예약하기</a></li>
-          <li><a href="">예약확인</a></li>
-        </ul>
-        <ul class="sub_menu">
-          <li><a href="">코스소개</a></li>
-          <li><a href="">코스갤러리</a></li>
-          <li><a href="">홀인원이벤트</a></li>
-        </ul>
-        <ul class="sub_menu">
-          <li><a href="">연혁/대회</a></li>
-          <li><a href="">이용안내</a></li>
-          <li><a href="">시설안내</a></li>
-          <li><a href="">오시는길</a></li>
-        </ul>
-        <ul class="sub_menu">
-          <li><a href="">공지사항</a></li>
-          <li><a href="">명예의 전당</a></li>
-        </ul>
-        <ul class="sub_menu">
-          <li><a href="">회원정보관리</a></li>
-          <li><a href="">쿠폰함</a></li>
-        </ul>
-      </div>
-      <div class="button">
-        <p>=</p>
-      </div>
-    </div>
-    <!-- </section> -->
     <main>
       <div class="container mb-5 mt-5">
         <ul class="taps row">
@@ -163,7 +124,7 @@
           <li class="col">대기예약</li>
           <li class="col">예약조회&amp;변경</li>
         </ul>
-        <section class="rtbook row">
+        <section class="rtbook row text-start">
           <aside class="col-lg-5">
             <div class="book_cal">
               <div
@@ -361,7 +322,9 @@
       integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
       crossorigin="anonymous"
     ></script>
-    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/back.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/widget.js"></script>
   </body>
 </html>
