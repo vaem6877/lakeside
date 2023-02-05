@@ -53,6 +53,15 @@ function showSlide(idx) {
   navBtn.eq(idx).add(pager.eq(idx)).addClass("active");
   navImg.eq(idx).add(facInfo.eq(idx)).fadeIn();
 }
+
+pager.click(function (e) {
+  e.preventDefault();
+  let tabIdx = $(this).index();
+
+  showSlide(tabIdx);
+});
+// pager 클릭시 할일
+
 /*
 // aside nav bar 시작 ================================================
 
