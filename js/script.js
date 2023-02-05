@@ -286,8 +286,10 @@ $(".widget_box").hover(
 
 //반응형 메뉴
 if (matchMedia("screen and (max-width: 360px)").matches) {
-  let menus = menu.find(".main_menus");
-  menus.find("li:nth-child(3)").html(`<a href="">오시는길</a>`);
+  let menus = menu.find(".menus");
+  menus
+    .find("li:nth-child(3)")
+    .html(`<a href="" class="main_menu">오시는길</a>`);
   menus.find("li:nth-child(4)").hide();
   let previewIconClone = $(".weather_cast .preview ul li").text();
   menuBtn.prepend(previewIconHTML);
