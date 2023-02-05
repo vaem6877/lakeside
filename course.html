@@ -37,41 +37,49 @@
       <div
         class="menu d-flex flex-column justify-content-center align-items-center"
       >
-        <ul class="main_menus d-flex">
-          <li><a href="">예약하기</a></li>
-          <li><a href="">코스안내</a></li>
-          <li><a href="">클럽안내</a></li>
-          <li><a href="">클럽인포</a></li>
-          <li><a href="">회원정보</a></li>
+        <ul class="menus d-flex">
+          <li>
+            <a href="" class="main_menu">예약하기</a>
+            <ul>
+              <li class="sub_menu"><a href="">예약안내</a></li>
+              <li class="sub_menu"><a href="">빠른예약</a></li>
+              <li class="sub_menu"><a href="">예약확인</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="" class="main_menu">코스안내</a>
+            <ul>
+              <li class="sub_menu"><a href="">코스소개</a></li>
+              <li class="sub_menu"><a href="">코스갤러리</a></li>
+              <li class="sub_menu"><a href="">홀인원이벤트</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="" class="main_menu">클럽안내</a>
+            <ul>
+              <li class="sub_menu"><a href="">연혁/대회</a></li>
+              <li class="sub_menu"><a href="">이용안내</a></li>
+              <li class="sub_menu"><a href="">시설안내</a></li>
+              <li class="sub_menu"><a href="">오시는길</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="" class="main_menu">클럽인포</a>
+            <ul>
+              <li class="sub_menu"><a href="">공지사항</a></li>
+              <li class="sub_menu"><a href="">명예의전당</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="" class="main_menu">회원정보</a>
+            <ul>
+              <li class="sub_menu"><a href="">회원정보관리</a></li>
+              <li class="sub_menu"><a href="">쿠폰함</a></li>
+            </ul>
+          </li>
         </ul>
-        <div class="sub_menus d-flex">
-          <ul class="sub_menu">
-            <li><a href="">예약안내</a></li>
-            <li><a href="">예약하기</a></li>
-            <li><a href="">예약확인</a></li>
-          </ul>
-          <ul class="sub_menu">
-            <li><a href="">코스소개</a></li>
-            <li><a href="">코스갤러리</a></li>
-            <li><a href="">홀인원이벤트</a></li>
-          </ul>
-          <ul class="sub_menu">
-            <li><a href="">연혁/대회</a></li>
-            <li><a href="">이용안내</a></li>
-            <li><a href="">시설안내</a></li>
-            <li><a href="">오시는길</a></li>
-          </ul>
-          <ul class="sub_menu">
-            <li><a href="">공지사항</a></li>
-            <li><a href="">명예의 전당</a></li>
-          </ul>
-          <ul class="sub_menu">
-            <li><a href="">회원정보관리</a></li>
-            <li><a href="">쿠폰함</a></li>
-          </ul>
-        </div>
         <div class="button">
-          <p>=</p>
+        </div>
       </div>
       </div>
     <!-- </section> -->
@@ -282,9 +290,8 @@
           </div>
         </div>
         <div class="east_course">
-          <div class="containerBox">
             <h2>서코스</h2>
-            <div class="item-group d-flex justify-content-center gap-5">
+            <div class="item-group d-flex justify-content-center containerBox gap-5">
               <div class="item">
                 <img src="img/드라이버.jpg" alt="" />
                 <p>4번홀</p>
@@ -316,7 +323,6 @@
                 <p>매트리스 교환권</p>
               </div>
             </div>
-          </div>
         </div>
         <div class="south_course containerBox">
           <h2>남코스</h2>
@@ -409,8 +415,7 @@
         referrerpolicy="no-referrer"
       ></script>
       <script src="js/course.js"></script>
-      <script></script>
-      <script></script>
+      <script src="js/script.js"></script>
     </div>
   </body>
 </html>

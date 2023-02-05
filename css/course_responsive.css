@@ -8,21 +8,20 @@
   .containerBox {
     width: 85%;
   }
-
+  .aside-nav {
+    display: none !important;
+  }
   /* 메뉴 */
-  .menu .main_menus {
-    gap: 30px;
-  }
-  .menu .main_menus a {
-    font-size: 25px;
-  }
-  .menu .sub_menus {
+  .menu .menus {
     gap: 20px;
   }
-  .menu .sub_menus a {
-    font-size: 16px;
+  .menu .main_menu {
+    font-size: 18px;
   }
-  .menu li a {
+  .menu .sub_menu {
+    font-size: 12px;
+  }
+  .menu a {
     white-space: nowrap;
   }
 
@@ -82,15 +81,29 @@
   }
   .menu {
     position: fixed;
-    background: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    height: 100%;
+    gap: 30px;
+    background: rgba(24, 34, 26, 0.8);
     left: 0;
     top: auto;
-    right: 0;
+    left: 0;
     bottom: 100%;
     transition: bottom 0.7s;
     z-index: 100;
+  }
+  .menu .menus {
+    flex-direction: column;
+  }
+  .menu .menus li {
+    margin-top: 27px;
+  }
+  .menu .menus ul {
+    display: none;
+  }
+  .menu .main_menu {
+    font-size: 18px;
+  }
+  .menu .sub_menu {
+    font-size: 12px;
   }
   .menu .main_menus {
     width: 90%;
@@ -98,85 +111,48 @@
     border: none;
     flex-direction: column;
   }
-  .menu .main_menus li {
-    padding-bottom: 30px;
-    border-bottom: 2px solid #fff;
-  }
-  .menu .main_menus li:nth-child(4) {
-    display: none;
-  }
-  .menu .sub_menus {
-    padding: 0;
-  }
-  .menu .sub_menus .sub_menu {
-    display: none;
-  }
-  .menu li a {
-    color: #fff;
-    display: inline-block;
-    font-size: var(--second-TT-fz);
-    margin-bottom: px;
-  }
-  .menu .sub_menu li a {
-    color: #fff;
-    display: inline-block;
-    font-size: 20px;
-    margin-bottom: 25px;
-  }
-  .menu .sub_menu li a:hover {
-    font-weight: bold;
-    text-decoration: underline;
-  }
-  .menu li {
-    list-style: none;
-  }
-  .menu li a {
-    list-style: none;
-    text-decoration: none;
-  }
   .menu.active {
     bottom: 0;
-    z-index: 100;
   }
   .menu .button {
     position: fixed;
-    background: black;
-    top: 0%;
-    transform: translateY(-50%);
+    background: #1b221a;
+    top: 0;
+    transform: none;
     width: 100%;
-    height: 150px;
+    height: 60px;
     right: auto;
     z-index: 90;
   }
-  .menu .button p {
-    text-align: right;
-    font-size: 50px;
-    padding-right: 15px;
-    padding-top: 35px;
-    line-height: 150px;
-    color: #fff;
-    z-index: 110;
+  .menu .button:before {
+    height: 6px;
+    width: 30px;
+    background: #fff;
+    top: 33%;
+    left: 84%;
+  }
+  .menu .button:after {
+    height: 6px;
+    width: 30px;
+    background: #fff;
+    top: 53%;
+    left: 86%;
+  }
+  .menu .button.active::before {
+    left: 85%;
+    transform: rotate(-45deg) translate(-1px, -5px);
+    transform-origin: right;
+    background: #fff;
+  }
+  .menu .button.active::after {
+    left: 85%;
+    transform: rotate(45deg) translate(1px, 8px);
+    transform-origin: right;
+    background: #fff;
   }
   .menu .button i {
     display: block;
     font-size: 50px;
-  }
-  .menu .button.active {
-    background: #000;
-    top: 0;
-    transform: translateY(-50%);
-    right: 0px;
-    width: 100%;
-    height: 150px;
-    z-index: 110;
-  }
-  .menu .button.active p {
-    text-align: right;
-    font-size: 50px;
-    padding-right: 15px;
-    padding-top: 35px;
-    line-height: 150px;
-    color: #fff;
   }
 
   h2 {

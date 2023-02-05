@@ -3,7 +3,9 @@
 /* light 300 regular 400 medium 500 bold 700 black 900 */
 
 /* ================== Varients ================================== */
-
+/* img:hover {
+  cursor: url(), auto;
+} */
 :root {
   /* =================== COLOR =================== */
   --primary-green: #234a35;
@@ -365,3 +367,7 @@ footer address p {
 .aside-nav a:hover .nav-text {
   visibility: visible;
 }
+/* 
+.link:hover {
+  cursor: pointer;
+} */

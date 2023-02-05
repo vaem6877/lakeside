@@ -81,72 +81,9 @@ $.getJSON(
       console.log(convertDate);
       item.dt = convertDate;
     });
-    // $.each(list, function (i) {
-    // let newDate = new Date(list[i].dt * 1000);
-    // function add0(n) {
-    //   return n < 10 ? "0" + n : n;
-    // }
-    // let year = newDate.getFullYear(); // 년도
-    // let month = newDate.getMonth() + 1; // 월
-    // let date = newDate.getDate(); // 날짜
-    // let day = newDate.getDay(); // 요일
-    // let hour = newDate.getHours();
-    // let minutes = newDate.getMinutes();
-    // let seconds = newDate.getSeconds();
-    // let time = `${add0(hour)}:${add0(minutes)}:${add0(seconds)}`;
-    // convertDate = `${add0(year)}-${add0(month)}-${add0(date)} ${time}`;
-    // console.log(convertDate);
-    // list.map((item) => {
-    //   let newDate = new Date(item.dt * 1000);
-    //   let year = newDate.getFullYear(); // 년도
-    //   function add0(n) {
-    //     return n < 10 ? "0" + n : n;
-    //   }
-    //   let month = newDate.getMonth() + 1; // 월
-    //   let date = newDate.getDate(); // 날짜
-    //   let day = newDate.getDay(); // 요일
-    //   let hour = newDate.getHours();
-    //   let minutes = newDate.getMinutes();
-    //   let seconds = newDate.getSeconds();
-    //   let time = `${add0(hour)}:${add0(minutes)}:${add0(seconds)}`;
-    //   convertDate = `${add0(year)}-${add0(month)}-${add0(date)} ${time}`;
-    //   console.log(convertDate);
-    //   item.dt = convertDate;
-    // });
-    // });
-
-    // $.each(list, function (i) {
-    //   let dateList = list[i].dt;
-    //   console.log(dateList);
-    //   // console.log(dateList);
-    //   function add0(n) {
-    //     return n < 10 ? "0" + n : n;
-    //   }
-    //   let year = dateList.getFullYear(); // 년도
-    //   let month = dateList.getMonth() + 1; // 월
-    //   let date = dateList.getDate(); // 날짜
-    //   let day = dateList.getDay(); // 요일
-    //   let hour = dateList.getHours();
-    //   let minutes = dateList.getMinutes();
-    //   let seconds = dateList.getSeconds();
-    //   let time = `${add0(hour)}:${add0(minutes)}:${add0(seconds)}`;
-    //   let convertDate = `${add0(year)}-${add0(month)}-${add0(date)} ${time}`;
-    //   console.log(convertDate);
-    // });
-
-    // console.log(list);
-    // $.each(list, function (i) {
-    //   console.log(list[i].dt_txt);
-    //   let convertDate = new Date(list[i].dt * 1000);
-    //   console.log(convertDate);
-    //   // console.log(newDate);
-    // });
 
     const filteredDay = list.reduce((acc, current) => {
       let convertDateACC = new Date(acc.dt * 1000);
-      // console.log(acc);
-      // console.log(acc);
-      // console.log(current);
       const x = acc.find(
         (item) => item.dt.substr(0, 10) === current.dt.substr(0, 10)
       );
@@ -180,7 +117,6 @@ $.getJSON(
     }); //요일 리스트 가져오기
 
     console.log(dateList);
-    // let date = filteredDay[0].dt_txt.substr(8, 2);
     console.log(date);
     let Temp = "";
 
@@ -201,7 +137,6 @@ $.getJSON(
       console.log(iconArr);
 
       let icon = `<i class="fa-solid ${weatherIcon[iconArr]}"></i>`;
-      // console.log(weatherIcon[iconArr[i]]);
       let maxTemp = Math.max(...TempArr);
       let minTemp = Math.min(...TempArr);
 
@@ -253,19 +188,6 @@ $.getJSON(
   }
 );
 
-// $(".box").hover(function () {
-//   $(this)
-//     .find(".preview_widget")
-//     .animate(function () {
-//       transform: "translateX(-50px)";
-//     });
-//   $(this).prev().addClass("active");
-// });
-// $(".weather_cast").mouseout(function () {
-//   $(this).removeClass("active");
-//   $(this).next().removeClass("active");
-// });
-
 $(".widget_box").hover(
   function () {
     $(this)
@@ -309,22 +231,6 @@ $(function () {
   });
 }); //홀 탭
 
-// $('.tab_group').each(function(){
-//   $(this).find('#tabs-1')
-// })
-
-// let holeList = "";
-// let holeImgList = "";
-
-// for (let i = 1; i < 19; i++) {
-//   holeList += `<li class="swiper-slide"><a href="#tabs-${i}">${i} HOLE</a></li>`;
-//   holeImgList += `
-//     <div id="tabs-${i}"></div>
-//   `;
-// }
-// $("#hole_desc .img_container").html(holeImgList);
-// $(".swiper-wrapper").html(holeList);
-
 $("#hole_desc #tabs-east .img_container #tabs-1").html(
   '<img src="img/동코스1.svg" alt="" />'
 );
@@ -356,30 +262,10 @@ $("#course .each_course").each(function () {
   }
   console.log($(this));
 
-  // $(this)
-  //   .find(".img_container div")
-  //   .each(function () {
-  //     let holeNum = $(this).index();
-  //     console.log($(this));
-  //     if (holeNum % 2 == 0) {
-  //       holeImg = `
-  //     <img src="img/${courseName}코스1.svg" alt="">
-  //   `;
-  //       $(".img_container > div").html(holeImg);
-  //     } else {
-  //       holeImg = `
-  //     <img src="img/${courseName}코스2.svg" alt="">
-  //   `;
-  //       $(".img_container > div").html(holeImg);
-  //     } //홀번호에따라 이미지 결정
-  //   });
-  // $(".img_container > div").html(holeImg);
-
   $(this).find("#tabs .img_container").html(holeImgList);
   $("#course .swiper-wrapper").html(holeList);
 });
 
-// $("#tabs p").eq(0).show();
 let swiperSlideBtn = $(".swiper a"),
   imgContainer = $("#hole_desc .img_container > div");
 
@@ -390,24 +276,6 @@ swiperSlideBtn.click(function () {
   let holeName = $(this).text();
   let holeNum = holeName.substr(0, 2);
   console.log(holeNum);
-
-  // if (holeNum % 2 == 0) {
-  //   $(this).parents("#tabs").siblings(".hole1desc").eq(1).show();
-  // } else {
-  //   $(this).parents("#tabs").siblings("").eq(1).show();
-  // }
-  // let holeId = $(this).attr("href");
-  // let imgSrc = ``;
-
-  // if (holeNum % 2 == 0) {
-  //   imgSrc = `
-  //   <img src="img/${courseName}코스2.svg" alt="" />
-  //   `;
-  // } else {
-  //   imgSrc = `
-  //   <img src="img/${courseName}코스1.svg" alt="" />
-  //   `;
-  // }
 
   console.log(courseName);
   // console.log(holeName);
@@ -478,8 +346,10 @@ if (matchMedia("screen and (max-width: 360px)").matches) {
   let pointerTarget = $("#tabs .swiper");
   pointerTarget.append(pointer);
 
-  let menus = menu.find(".main_menus");
-  menus.find("li:nth-child(3)").html(`<a href="">오시는길</a>`);
+  let menus = menu.find(".menus");
+  menus
+    .find("li:nth-child(3)")
+    .html(`<a href="" class="main_menu">오시는길</a>`);
   menus.find("li:nth-child(4)").hide();
   let previewIconClone = $(".weather_cast .preview ul li").text();
   menuBtn.prepend(previewIconHTML);
