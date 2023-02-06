@@ -259,28 +259,40 @@ section img,
 
 .facility-nav-wrapper {
   padding-left: 85px;
-}
-
-.facility .facility-nav-wrapper > ul {
-  padding-bottom: 27px;
-  border-bottom: 3px solid var(--secondary-brown);
   position: relative;
 }
-.facility .facility-nav-wrapper > ul #bar {
+
+.ul-wrapper {
+  position: relative;
+}
+
+.facility .facility-nav-wrapper .ul-wrapper ul {
+  padding-bottom: 27px;
+  border-bottom: 3px solid var(--secondary-brown);
+  text-align: center;
+}
+
+.facility .facility-nav-wrapper .ul-wrapper ul li {
+  width: 20%;
+}
+
+.facility .ul-wrapper #bar {
   display: block;
   z-index: 3;
   position: absolute;
+  left: 0;
+  /* 사전에 left 값이 있어야 */
   width: 20%;
-  border-bottom: 3px solid var(--primary-ygreen);
-  left: 38px;
+  bottom: 10px;
+  border-bottom: 3px solid black;
   transition: 0.4s cubic-bezier(0.65, 0, 0.35, 1);
-  bottom: -3px;
+  bottom: 1px;
 }
 
 /* .facility .facility-nav-wrapper > ul li.active ul #bar {
   opacity: 1;
 } */
-.facility .facility-nav-wrapper > ul li.active a {
+.facility .facility-nav-wrapper ul li.active a {
   color: var(--typo-C-Green);
   font-weight: 700;
 }
@@ -691,9 +703,13 @@ header::after {
   .fac-nav-img-wrapper {
     margin: 0;
   }
-  .facility-wrapper .facility .facility-nav-wrapper ul #bar {
+  /* .facility-wrapper .facility .facility-nav-wrapper ul #bar {
     display: none;
+  } */
+  #bar {
+    bottom: 20% !important;
   }
+
   .fac-pager {
     margin: 15px 0;
     gap: 10px;

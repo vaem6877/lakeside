@@ -18,7 +18,8 @@ navBtn.click(function (e) {
   showSlide(tabIdx);
 
   // navBar.css({ left: liOSL - 0.021 * navBtn.offset().left });
-  navBar.css({ left: liOSL - 0.022 * navBtn.offset().left });
+  navBar.stop().animate({ left: liOSL });
+  // 0206 수정
 
   // 왜지??????????? 픽셀이나 퍼센트 쓰면 안움직이고... 그냥쓰면움직임???;;
   // 이거 가운데로 어케오게하니...
