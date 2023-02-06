@@ -73,7 +73,7 @@
   }
 }
 @media screen and (max-width: 360px) {
-  .widget_box {
+  /* .widget_box {
     display: none !important;
   }
   .menu {
@@ -150,7 +150,7 @@
   .menu .button i {
     display: block;
     font-size: 50px;
-  }
+  } */
 
   h2 {
     font-size: var(--mobile-mainTT-fz);
