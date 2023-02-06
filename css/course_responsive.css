@@ -73,9 +73,6 @@
   }
 }
 @media screen and (max-width: 360px) {
-  footer {
-    display: none;
-  }
   .widget_box {
     display: none !important;
   }
