@@ -22,10 +22,6 @@ $(function () {
   });
 }); //홀 탭
 
-// $(".ui-tabs-tab").each(function () {
-//   $(this).click(function () {});
-// });
-
 $("#hole_desc #tabs-east .img_container #tabs-1").html(
   '<img src="img/course_img/동코스1.png" alt="" />'
 );
@@ -151,11 +147,9 @@ $(window).scroll(function () {
   console.log($(window).scrollTop());
   if ($(window).scrollTop() > wvOST - wvOST / 2) {
     // console.log(wholeView.find("h3").text());
-    wholeView.find("*").each(function (idx) {
-      $(this)
-        .delay(300 * idx)
-        .stop()
-        .animate({ opacity: 1 });
-    });
+    wholeView.find("h3").animate({ opacity: 1 }, 300);
+    wholeView.find("h2").delay(300).animate({ opacity: 1 }, 300);
+    wholeView.find("> p").delay(600).animate({ opacity: 1 }, 300);
+    wholeView.find("> div").delay(1000).animate({ opacity: 1 }, 1000);
   }
 });
