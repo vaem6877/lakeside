@@ -76,7 +76,10 @@ section {
   background: var(--bg-green);
 }
 .south-course {
-  margin: 191px 0;
+  /* margin: 191px 0; */
+
+  margin: 0 191px 0;
+  padding-top: 191px;
 }
 
 .main-slide ul li {

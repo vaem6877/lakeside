@@ -85,10 +85,6 @@ img:not(#directions *):not(#api_map *) {
   text-align: left;
 }
 
-#contest {
-  padding-top: 240px;
-}
-
 .desc-contest > h2,
 .desc-history > h2 {
   margin-bottom: 108px;
@@ -446,10 +442,16 @@ header::after {
 
 /* ==map === */
 
-.map-wrapper {
+/* .map-wrapper {
   margin-bottom: 70px;
-}
+} */
 /* ===================== 반응형 ============================= */
+
+@media (min-width: 1200px) {
+  #contest {
+    padding-top: 240px;
+  }
+}
 
 @media (max-width: 1200px) {
   header::after,
@@ -559,6 +561,9 @@ header::after {
 
 /* ============= 모바일 ========================= */
 @media (max-width: 361px) {
+  .facility-information {
+    padding: 0 12px;
+  }
   .container {
     padding: 0 12px;
     width: auto !important;
@@ -582,7 +587,7 @@ header::after {
   .facility-wrapper .desc-facility h2,
   .facility-information .facility-info-wrapper h4,
   .directions .desc-directions h2 {
-    font-size: var(--mobile-KrTT-fz);
+    font-size: var(--mobile-KrTT-fz) !important;
     line-height: 20px;
     font-weight: 700;
     margin-top: 0;
