@@ -70,9 +70,14 @@ h4 {
 }
 
 /* description */
+
 p {
   font-weight: 300;
   font-size: var(--second-TT-fz);
+}
+
+.preview_widget p {
+  font-size: inherit;
 }
 
 a {

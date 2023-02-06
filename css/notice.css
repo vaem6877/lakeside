@@ -44,6 +44,12 @@ h4,
 p {
   line-height: 27px;
 }
+
+.preview_widget p {
+  line-height: inherit;
+  font-size: inherit;
+}
+
 h3 {
   font-weight: 500;
   color: var(--typo-C-grey);
