@@ -269,7 +269,7 @@ footer .notice-slide {
   }
 
   .main-course {
-    margin-bottom: 330px;
+    margin-bottom: 250px;
   }
 
   .main-course a {
@@ -280,6 +280,21 @@ footer .notice-slide {
   .footer-notice-wrapper .notice > h4,
   .footer-notice-wrapper .notice > a {
     display: none;
+  }
+
+  .main-course a {
+    margin-bottom: 120px;
+  }
+  .main-course .west-course .img-wrapper {
+    margin-top: 120px;
+  }
+
+  .east-course {
+    margin-bottom: 0;
+    margin-top: 120px;
+  }
+  .south-course {
+    padding-top: 120px;
   }
 }
 
@@ -303,6 +318,26 @@ footer .notice-slide {
 
   .main-course {
     margin-bottom: 0;
+  }
+
+  .main-course .course-desc a {
+    margin-bottom: 0;
+  }
+
+  .main-course .course-desc a.align-self-start {
+    margin: 0;
+  }
+
+  .south-course {
+    padding: 0;
+  }
+
+  .course-desc .img-wrapper {
+    margin-top: 0 !important;
+  }
+
+  .course-desc a {
+    margin-bottom: 0 !important;
   }
 
   .west-wrapper {
