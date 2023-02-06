@@ -28,55 +28,52 @@ $("#datepicker").datepicker({
   // showOtherMonths: true,
 });
 
-let taps = $(".taps li");
+let tabs = $(".tabs li");
 content = $("section");
 
-taps.on("click", function () {
+tabs.on("click", function () {
   let targetidx = $(this).index();
 
-  taps.removeClass("active");
+  tabs.removeClass("active");
   $(this).addClass("active");
 
   content.hide();
   content.eq(targetidx).show();
 });
 
-/* ======book_data taps and content json realtime update table===== */
+/* ======book_data tabs and content json realtime update table===== */
 
-let dataBoard = $(".course-content tbody"),
-  dataAddItemCount = 6, //표시할 개수
-  dataAdded = 0, //표시된 개수
-  dataAllData = []; //json 파일내 내용을 담을 배열
+$(function () {
+  $("#data_tabs").tabs();
+});
 
-$.getJSON("js/book_data.js", initDataboard);
+let dataBoard = $(".course_content tbody"),
+  dataArray = [],
+  dataAdd = 0,
+  dataLength = 6;
 
-function initDataboard(result) {
-  dataAllData = result.products;
-  console.log(dataAllData);
-  addItems(); //목록 추가
+$.getJSON("js/book_data.json", initData);
+
+function initData(result) {
+  dataArray = result;
+  bookData();
 }
-
-function addItems() {
-  let itemHTML = "",
-    slicedData = dataAllData.slice(dataAdded, dataAdded + dataAddItemCount);
-
-  $.each(slicedData, function (i, item) {
-    itemHTML += `
-    <tr>
-        <td>${item.course}</td>
-        <td>${item.title}</td>
-        <td>${item.hole}</td>
-        <td>${item.price}</td>
+function bookData() {
+  let tableArray = "";
+  for (let i = 0; i < dataArray.length; i++) {
+    let dai = dataArray[i];
+    for (let ii = 0; ii < dai.time.length; ii++) {
+      tableArray += `
+      <tr>
+        <td>${dai.course}</td>
+        <td>${dai.time[ii]}</td>
+        <td>${dai.hole}홀</td>
+        <td>${dai.price.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</td>
         <td><a href="" class="btn_booking">예약하기</a></td>
-    </tr>      
-  `;
-  });
-  dataBoard.append(itemHTML);
-  added += addItemCount;
-
-  if (added < allData.length) {
-    loadMoreBtn.show();
-  } else {
-    loadMoreBtn.hide();
+       </tr>
+     `;
+    }
   }
-} //addItems
+
+  dataBoard.append(tableArray);
+}

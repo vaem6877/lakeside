@@ -18,21 +18,21 @@ li {
   text-align: center;
 }
 
-.taps {
+.tabs {
   font-size: var(--second-TT-fz);
   font-weight: 500;
 }
 
-.taps {
+.tabs {
   margin-bottom: 91px;
 }
-.taps li {
+.tabs li {
   color: var(--typo-C-grey);
   padding-bottom: 17px;
   border-bottom: 3px solid var(--typo-C-grey);
 }
 
-.taps li.active {
+.tabs li.active {
   color: var(--secondary-brown);
   border-bottom: 3px solid var(--secondary-brown);
 }
@@ -206,31 +206,37 @@ section.active {
 .book_time p {
   line-height: 27px;
 }
-.data ul {
+/* ========== DATABOARD ========== */
+#data_tabs ul {
   font-size: var(--content-fz);
   font-weight: 400;
 }
-/* ========== DATABOARD ========== */
-.data h4 {
+#data_tabs h4 {
   margin-bottom: 19px;
 }
-.course-taps {
+#data_tabs {
   line-height: 45px;
-  border: 2px solid var(--secondary-brown);
-  color: var(--secondary-brown);
   margin-bottom: 25px;
 }
-.course-taps li {
+#data_tabs a {
+  display: block;
+  color: var(--secondary-brown);
+  width: 100%;
+}
+#data_tabs li {
   border-right: 2px solid var(--secondary-brown);
 }
-.course-taps li:last-child {
+#data_tabs li:last-child {
   border-right: none;
 }
-.course-taps li.active {
+
+#data_tabs .ui-tabs-active {
   background: var(--secondary-brown);
+}
+#data_tabs .ui-tabs-active a {
   color: var(--bg-white);
 }
-.course-content table {
+.course_content table {
   width: 100%;
   margin: 0 auto;
   font-size: var(--content-fz);
@@ -239,16 +245,16 @@ section.active {
   border-top: 3px solid var(--secondary-brown);
   border-bottom: 3px solid var(--secondary-brown);
 }
-.course-content table th,
-.course-content table td {
+.course_content table th,
+.course_content table td {
   text-align: center;
 }
-.course-content table thead {
+.course_content table thead {
   font-weight: 500;
   line-height: 43px;
   border-bottom: 1px solid var(--secondary-brown);
 }
-.course-content table tbody tr td {
+.course_content table tbody tr td {
   line-height: 48px;
   border-bottom: 1px solid #bcbcbc;
   box-sizing: border-box;
@@ -463,7 +469,7 @@ select form:focus {
 }
 
 @media (max-width: 1000px) {
-  .taps {
+  .tabs {
     font-size: var(--second-content-fz);
     font-weight: 500;
   }
@@ -476,11 +482,11 @@ select form:focus {
   }
 }
 @media (max-width: 768px) {
-  .taps {
+  .tabs {
     display: flex;
     flex-direction: column;
   }
-  .taps li {
+  .tabs li {
     padding: 12px;
   }
   .data h4 {
@@ -511,21 +517,21 @@ li {
   text-align: center;
 }
 
-.taps {
+.tabs {
   font-size: var(--second-TT-fz);
   font-weight: 500;
 }
 
-.taps {
+.tabs {
   margin-bottom: 91px;
 }
-.taps li {
+.tabs li {
   color: var(--typo-C-grey);
   padding-bottom: 17px;
   border-bottom: 3px solid var(--typo-C-grey);
 }
 
-.taps li.active {
+.tabs li.active {
   color: var(--secondary-brown);
   border-bottom: 3px solid var(--secondary-brown);
 }
@@ -699,31 +705,31 @@ section.active {
 .book_time p {
   line-height: 27px;
 }
-.data ul {
+#data_tabs ul {
   font-size: var(--content-fz);
   font-weight: 400;
 }
 /* ========== DATABOARD ========== */
-.data h4 {
+#data_tabs h4 {
   margin-bottom: 19px;
 }
-.course-taps {
+.course_tabs {
   line-height: 45px;
   border: 2px solid var(--secondary-brown);
   color: var(--secondary-brown);
   margin-bottom: 25px;
 }
-.course-taps li {
+.course_tabs li {
   border-right: 2px solid var(--secondary-brown);
 }
-.course-taps li:last-child {
+.course_tabs li:last-child {
   border-right: none;
 }
-.course-taps li.active {
+.course_tabs li.active {
   background: var(--secondary-brown);
   color: var(--bg-white);
 }
-.course-content table {
+.course_content table {
   width: 100%;
   margin: 0 auto;
   font-size: var(--content-fz);
@@ -732,16 +738,16 @@ section.active {
   border-top: 3px solid var(--secondary-brown);
   border-bottom: 3px solid var(--secondary-brown);
 }
-.course-content table th,
-.course-content table td {
+.course_content table th,
+.course_content table td {
   text-align: center;
 }
-.course-content table thead {
+.course_content table thead {
   font-weight: 500;
   line-height: 43px;
   border-bottom: 1px solid var(--secondary-brown);
 }
-.course-content table tbody tr td {
+.course_content table tbody tr td {
   line-height: 48px;
   border-bottom: 1px solid #bcbcbc;
   box-sizing: border-box;
@@ -956,7 +962,7 @@ select form:focus {
 }
 
 @media (max-width: 1000px) {
-  .taps {
+  .tabs {
     font-size: var(--second-content-fz);
     font-weight: 500;
   }
@@ -969,11 +975,11 @@ select form:focus {
   }
 }
 @media (max-width: 768px) {
-  .taps {
+  .tabs {
     display: flex;
     flex-direction: column;
   }
-  .taps li {
+  .tabs li {
     padding: 12px;
   }
   .data h4 {
