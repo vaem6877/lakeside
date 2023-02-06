@@ -513,12 +513,12 @@ footer address p {
 }
 .menu .button.active::before {
   left: 30%;
-  transform: rotate(45deg) translateY(-5px);
+  transform: rotate(45deg) translateY(-6px);
   background: #fff;
 }
 .menu .button.active::after {
   left: 30%;
-  transform: rotate(-45deg) translateY(5px);
+  transform: rotate(-45deg) translateY(6px);
   background: #fff;
 }
 
