@@ -237,9 +237,10 @@ header {
 }
 #holeinone .item img:hover {
   border: 5px solid #234a35;
-  offset-path: path("M100,0 A100,100 0 1,1 100,200 A100,100 0 1,1 100,0");
 }
-
+#holeinone .item p {
+  font-size: 24px;
+}
 #holeinone .item p:nth-child(2) {
   width: 83px;
   height: 27px;
