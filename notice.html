@@ -140,6 +140,9 @@
         </ul>
         <div class="button"></div>
       </div>
+      <div class="icon_mouse">
+        <img src="img/icon_mouse.svg" alt="" />
+      </div>
     </header>
     <main>
       <nav class="aside-nav d-flex flex-column align-items-end">
@@ -445,14 +448,19 @@
             <div
               class="col-md-8 col-sm-12 d-flex flex-column facility-nav-wrapper order-md-last"
             >
-              <ul class="d-flex justify-content-evenly">
-                <li><a href="">클럽하우스</a></li>
-                <li><a href="">레스토랑</a></li>
-                <li><a href="">락커룸</a></li>
-                <li><a href="">그늘집</a></li>
-                <li><a href="">프로샵</a></li>
+              <!-- justify-content-evenly 사ㅣㄱ제 -->
+
+              <div class="ul-wrapper">
+                <ul class="d-flex">
+                  <li><a href="">클럽하우스</a></li>
+                  <li><a href="">레스토랑</a></li>
+                  <li><a href="">락커룸</a></li>
+                  <li><a href="">그늘집</a></li>
+                  <li><a href="">프로샵</a></li>
+                </ul>
                 <span id="bar"></span>
-              </ul>
+              </div>
+
               <div class="fac-nav-img-wrapper">
                 <img
                   src="./img/notice-img/facility-club2.png"
@@ -605,7 +613,7 @@
       referrerpolicy="no-referrer"
     ></script>
 
-    <script src="js/jquery.mousewheel.min.js"></script>
+    <!-- <script src="js/jquery.mousewheel.min.js"></script> -->
     <!-- <script src="./node_modules/aos/dist/aos.js"></script> -->
     <script src="./node_module_Used/aos.js"></script>
     <script src="js/script.js"></script>

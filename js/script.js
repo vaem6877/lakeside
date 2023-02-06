@@ -4,7 +4,7 @@ let topBtn = $("#go-top");
 $(window).on("scroll", function () {
   let scrAmt = $(this).scrollTop();
 
-  if (scrAmt > 300) {
+  if (scrAmt > 900) {
     topBtn.fadeIn();
   } else {
     topBtn.fadeOut();
@@ -31,6 +31,7 @@ let wholeSectionWrap = $("main"),
 asideNav.each(function () {
   let sectionLink = $(this).attr("href");
   sections.push($(sectionLink));
+
   sectionsOST.push($(sectionLink).offset().top);
 });
 
@@ -68,6 +69,15 @@ $(window).scroll(function () {
 });
 
 // ========================= aside bar 끝 // 0204 윤희
+
+// ====================== 마우스아이콘 클릭 이벤트 //0206 윤희 =======================
+
+let mouseIcon = $(".icon_mouse");
+mouseIcon.click(function () {
+  $("html, body").stop().animate({
+    scrollTop: sectionsOST[0],
+  });
+});
 
 //메뉴 시작 ======================================================
 
