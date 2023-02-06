@@ -579,7 +579,7 @@ header::after {
   .container .contest .desc-contest h3,
   .rocess-wrapper .desc-r h3,
   .facility-wrapper .desc-facility h3 {
-    font-size: var(--mobile-mainTT-fz);
+    font-size: var(--mobile-content-fz);
     line-height: 12px;
     font-weight: 300;
     margin-bottom: 10px;

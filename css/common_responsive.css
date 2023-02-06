@@ -260,8 +260,8 @@
     background-image: url(../img/logo_white.png);
   }
   footer .footer-logo {
-    width: 104px;
-    height: 21px;
+    width: 104px !important;
+    height: 21px !important;
   }
   .aside-nav {
     display: none !important;
@@ -284,7 +284,7 @@
     justify-content: center !important;
     flex-wrap: nowrap !important;
     gap: 0 !important;
-    padding-bottom: 13px;
+    padding-bottom: 13px !important;
   }
   footer .terms a:nth-child(3) {
     font-weight: 400;
@@ -315,7 +315,7 @@
     font-size: var(--mobile-content-fz) !important;
   }
   footer address dl:first-of-type {
-    padding-top: 12px;
+    padding-top: 12px !important;
   }
   footer address dl dt {
     padding-right: 0;
@@ -350,6 +350,6 @@
     display: none !important;
   }
   footer address p {
-    padding-bottom: 15px;
+    padding-bottom: 15px !important;
   }
 }
