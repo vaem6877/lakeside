@@ -16,14 +16,14 @@ main {
   z-index: 2;
 }
 .circle1 {
-  top: 11.8%;
+  top: 15%;
 }
 .circle2 {
-  top: 111.5%;
+  top: 150.9%;
 }
 
-.history-desc,
-.contest-desc,
+.desc-history,
+.desc-contest,
 div,
 section,
 .history-img-wrapper,
@@ -33,7 +33,7 @@ img {
 }
 
 header {
-  background-image: url(../img/notice_banner.png);
+  background-image: url(../img/notice-img/notice_banner.png);
 }
 
 h3,
@@ -44,6 +44,12 @@ h4,
 p {
   line-height: 27px;
 }
+
+.preview_widget p {
+  line-height: inherit;
+  font-size: inherit;
+}
+
 h3 {
   font-weight: 500;
   color: var(--typo-C-grey);
@@ -62,34 +68,40 @@ h2 {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
-p {
+p:not(.widget_box p):not(footer address p) {
   font-weight: 300;
   font-size: var(--content-fz);
   color: var(--typo-C-Green);
   vertical-align: top;
 }
 
-/* img {
+img:not(#directions *):not(#api_map *) {
   object-fit: cover;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-} */
+}
 
-.contest-desc > h2,
-.history-desc > h2 {
+.desc-history > h2,
+.desc-history > h3 {
+  text-align: left;
+}
+
+.desc-contest > h2,
+.desc-history > h2 {
   margin-bottom: 108px;
 }
 
-[class$="desc"] > h3 {
+[class^="desc"] > h3 {
   margin-bottom: 4px;
 }
-.facility-desc > h3,
-.facility-desc > h2,
-.directions-desc > h3,
-.directions-desc > h2 {
+
+.desc-facility > h3,
+.desc-facility > h2,
+.desc-directions > h3,
+.desc-directions > h2 {
   margin-bottom: 5px;
 }
 
-[class$="desc"] > h4,
+[class^="desc"] > h4,
 .directions > h4 {
   font-weight: 300;
   font-size: var(--content-fz);
@@ -109,37 +121,41 @@ section img,
   width: 100%;
 }
 
-.history-desc ul li > *,
-.contest-desc ul li > *,
-.rocess-guide-desc ul li > *,
-.cart-guide-desc ul li > * {
+.desc-history ul li > *,
+.desc-contest ul li > *,
+.desc-rocess-guide ul li > *,
+.desc-cart-guide ul li > * {
   display: inline-block;
 }
-.history-desc ul li,
-.rocess-guide-desc ul li,
-.cart-guide-desc ul li {
+.desc-history ul li,
+.desc-rocess-guide ul li,
+.desc-cart-guide ul li {
   display: flex;
 }
 
-.history-desc ul li,
-.contest-desc ul li,
-.rocess-guide-desc ul li,
-.cart-guide-desc ul li {
+[class^="desc"] ul li p {
+  text-align: left;
+}
+
+.desc-history ul li,
+.desc-contest ul li,
+.desc-rocess-guide ul li,
+.desc-cart-guide ul li {
   margin-bottom: 27px;
 }
 
-.history-desc ul li:last-child,
-.contest-desc ul li:last-child {
+.desc-history ul li:last-child,
+.desc-contest ul li:last-child {
   margin: 0;
 }
 
-.history-desc ul li h4,
-.rocess-guide-desc ul li h4,
-.cart-guide-desc ul li h4 {
+.desc-history ul li h4,
+.desc-rocess-guide ul li h4,
+.desc-cart-guide ul li h4 {
   margin-right: 29px;
 }
 
-.contest-desc ul li h4 {
+.desc-contest ul li h4 {
   margin-left: 28px;
 }
 
@@ -165,7 +181,7 @@ section img,
 }
 
 .history-img-wrapper::after {
-  top: 53.5%;
+  top: 72.5%;
   left: -0.3%;
   border: 8px solid var(--primary-ygreen);
 }
@@ -175,9 +191,9 @@ section img,
   background: var(--primary-ygreen);
 }
 
-.history-img-wrapper img {
+/* .history-img-wrapper img {
   margin-bottom: 240px;
-}
+} */
 
 .contest-img-wrapper img {
   margin-bottom: 268px;
@@ -200,14 +216,14 @@ section img,
   background: var(--bg-green);
 }
 
-.r-desc > h4 {
+.desc-r > h4 {
   padding-bottom: 86px;
 }
-.r-desc {
+.desc-r {
   padding-top: 100px;
 }
 
-.rocess-guide-desc {
+.desc-rocess-guide {
   padding-right: 0;
   padding-left: 52px;
 }
@@ -216,15 +232,15 @@ section img,
   margin-bottom: 183px;
 }
 
-.c-desc {
+.desc-c {
   padding-top: 129px;
 }
 
-.c-desc > h4 {
+.desc-c > h4 {
   padding-bottom: 74px;
 }
 
-.cart-guide-desc {
+.desc-cart-guide {
   margin-bottom: 271px;
 }
 /* =========================================== */
@@ -234,6 +250,11 @@ section img,
   line-height: 37px;
   color: var(--typo-C-Green);
   margin: 27px 0 17px;
+}
+
+.facility-information ul li h4,
+.facility-information ul li p {
+  text-align: left;
 }
 
 .facility-nav-wrapper {
@@ -251,14 +272,14 @@ section img,
   position: absolute;
   width: 20%;
   border-bottom: 3px solid var(--primary-ygreen);
-
+  left: 38px;
   transition: 0.4s cubic-bezier(0.65, 0, 0.35, 1);
   bottom: -3px;
 }
 
-.facility .facility-nav-wrapper > ul li.active ul #bar {
+/* .facility .facility-nav-wrapper > ul li.active ul #bar {
   opacity: 1;
-}
+} */
 .facility .facility-nav-wrapper > ul li.active a {
   color: var(--typo-C-Green);
   font-weight: 700;
@@ -286,7 +307,7 @@ section img,
   transition: 0.3s;
 }
 
-.fac-pager li.active a {
+.fac-pager a.active {
   background: #123723;
 }
 
@@ -294,7 +315,7 @@ section img,
   background: var(--secondary-ivory);
 }
 
-.facility-desc {
+.desc-facility {
   padding-top: 63px;
   padding-bottom: 78px;
 }
@@ -315,14 +336,14 @@ section img,
 
 /* ===================== directions === */
 
-.directions-desc {
-  margin-top: 243px;
+.desc-directions {
+  padding-top: 243px;
 }
 /* .map-wrapper {
   padding-top: 783px;
 } */
 
-.directions-desc h4 {
+.desc-directions h4 {
   margin-bottom: 76px;
 }
 
@@ -362,7 +383,7 @@ header::after,
 
 .contest::before {
   width: 100%;
-  top: -87%;
+  top: -49%;
 }
 
 header::after {
@@ -372,7 +393,65 @@ header::after {
   top: 234%;
 }
 
-/* ================================================== */
+.preview_shortcut p,
+.today_temp p {
+  line-height: 0;
+}
+
+/* ===================================== map api //상혁 ======================================== */
+
+/* ======================= kakao map api =========================== */
+.map-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#api_map {
+  width: 100%;
+  height: 85vh;
+}
+.api_overlay {
+  width: 316px;
+  height: 135px;
+  background: rgba(24, 31, 27, 0.8);
+  padding: 29px 32px;
+}
+
+.api_overlay p:first-child {
+  color: #fff;
+  font-size: 27px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 27px;
+}
+.api_overlay p:first-child i {
+  margin-right: 15px;
+}
+.api_overlay p:nth-child(2) {
+  color: #8ba63d;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 36px;
+  line-height: 27px;
+}
+.api_overlay p:last-child {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* ==map === */
+
+/* .map-wrapper {
+  margin-bottom: 70px;
+} */
+/* ===================== 반응형 ============================= */
+
+@media (min-width: 1200px) {
+  #contest {
+    padding-top: 240px;
+  }
+}
 
 @media (max-width: 1200px) {
   header::after,
@@ -407,13 +486,20 @@ header::after {
 
   .contest {
     margin-bottom: 130px;
+    padding-top: 0;
   }
 
-  .directions-desc {
-    margin-top: 120px;
+  .desc-directions {
+    padding-top: 120px;
+  }
+  .facility-information ul li h4 {
+    font-size: var(--second-TT-fz) !important;
   }
 }
 @media (max-width: 768px) {
+  .facility-info-wrapper p {
+    margin-bottom: 0;
+  }
   .history {
     margin-bottom: 125px;
     margin-top: 170px;
@@ -426,15 +512,16 @@ header::after {
   .cart-guide-img-wrapper {
     display: none !important;
   }
-  .rocess-guide-desc {
+  .desc-rocess-guide {
     padding-left: 15px;
     padding-bottom: 120px;
   }
-  .cart-guide-desc {
+  .desc-cart-guide {
     margin-bottom: 130px;
   }
-  .facility-desc {
+  .desc-facility {
     padding-top: 120px;
+    padding-bottom: 50px;
   }
   .facility-nav-wrapper {
     padding-left: 0;
@@ -445,11 +532,20 @@ header::after {
   .facility-information {
     margin-bottom: 130px;
   }
+  .fac-nav-img-wrapper {
+    margin-top: 27px;
+  }
+  .fac-pager {
+    margin-bottom: 27px;
+  }
+  .facility-information {
+    padding-left: 0;
+  }
 }
 
 @media (max-width: 576px) {
-  .history-desc,
-  .contest-desc {
+  .desc-history,
+  .desc-contest {
     padding: 0 12px;
   }
   .facility-nav-wrapper {
@@ -462,42 +558,170 @@ header::after {
 }
 
 /* ====== // 리팩터링 전, 윤희 0203 */
-/* ======================= kakao map api =========================== */
-.map-wrapper {
-  display: flex;
-  justify-content: center;
-}
 
-#api_map {
-  width: 100%;
-  height: 62vh;
-}
-.api_overlay {
-  width: 316px;
-  height: 135px;
-  background: rgba(24, 31, 27, 0.8);
-  padding: 29px 32px;
-}
+/* ============= 모바일 ========================= */
+@media (max-width: 361px) {
+  .facility-information {
+    padding: 0 12px;
+  }
+  .container {
+    padding: 0 12px;
+    width: auto !important;
+  }
+  .history {
+    margin: 94px 0;
+  }
+  .desc-history,
+  .desc-rocess-guide {
+    padding: 0;
+  }
+  .rocess-guide {
+    padding: 0 12px;
+  }
+  .desc-r > h4 {
+    padding-bottom: 10px;
+  }
+  .container .history .desc-history h2,
+  .container .contest .desc-contest h2,
+  .rocess-wrapper .desc-r h2,
+  .facility-wrapper .desc-facility h2,
+  .facility-information .facility-info-wrapper h4,
+  .directions .desc-directions h2 {
+    font-size: var(--mobile-KrTT-fz) !important;
+    line-height: 20px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .desc-history ul li h4,
+  .desc-rocess-guide ul li h4,
+  .desc-cart-guide ul li h4 {
+    margin-right: 16px;
+  }
+  .desc-contest ul li h4 {
+    margin-left: 16px;
+  }
+  .rocess-wrapper .desc-r h2 {
+    margin-bottom: 5px;
+  }
+  .facility-information .facility-info-wrapper h4 {
+    margin-top: 20px;
+  }
+  .container .history .desc-history h3,
+  .container .contest .desc-contest h3,
+  .rocess-wrapper .desc-r h3,
+  .facility-wrapper .desc-facility h3,
+  .directions .desc-directions h3 {
+    font-size: var(--mobile-content-fz);
+    line-height: 12px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    /* display: none; */
+  }
 
-.api_overlay p:first-child {
-  color: #fff;
-  font-size: 27px;
-  text-transform: uppercase;
-  font-weight: 500;
-  line-height: 27px;
-}
-.api_overlay p:first-child i {
-  margin-right: 15px;
-}
-.api_overlay p:nth-child(2) {
-  color: #8ba63d;
-  font-size: 18px;
-  font-weight: 500;
-  margin-left: 36px;
-  line-height: 27px;
-}
-.api_overlay p:last-child {
-  color: #fff;
-  font-size: 12px;
-  font-weight: 400;
+  .container .history .desc-history p,
+  .container .contest .desc-contest p,
+  .rocess-wrapper .desc-r p,
+  .rocess-wrapper .desc-rocess-guide p,
+  .facility-wrapper .facility-info-wrapper p {
+    font-size: var(--mobile-content-fz);
+    vertical-align: top;
+    /* line-height: 10px; */
+    font-weight: 400;
+  }
+  .facility-wrapper .facility-info-wrapper p {
+    line-height: 17px;
+    margin-bottom: 70px;
+  }
+  .desc-r > h4 {
+    font-size: var(--small-content-fz);
+    padding-bottom: 20px;
+  }
+  /* .container .contest .desc-contest ul li {
+    justify-content: center !important;
+  } */
+  .desc-history ul li,
+  .desc-contest ul li,
+  .desc-rocess-guide ul li,
+  .desc-cart-guide ul li {
+    margin-bottom: 0px;
+  }
+
+  .container .history .desc-history ul li h4,
+  .container .contest .desc-contest ul li h4,
+  .rocess-wrapper .desc-r ul li h4,
+  .rocess-wrapper .desc-rocess-guide h4,
+  .facility-wrapper .desc-facility h4,
+  .directions .desc-directions h4 {
+    font-size: var(--small-content-fz);
+    /* vertical-align: top; */
+  }
+
+  .directions .desc-directions > h4 {
+    line-height: 1;
+  }
+  /* {
+    font-size: var(--small-content-fz) !important;
+  } */
+  #cart {
+    display: none;
+  }
+  .rocess-wrapper {
+    background: none;
+  }
+  .desc-r {
+    padding: 0;
+  }
+  .contest,
+  .rocess-wrapper {
+    margin-bottom: 94px;
+  }
+  .facility .facility-nav-wrapper ul li a {
+    font-size: var(--small-content-fz);
+  }
+  .desc-facility {
+    padding: 65px 0 35px;
+  }
+
+  .facility-wrapper .facility .facility-nav-wrapper ul {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border: none;
+  }
+  .fac-nav-img-wrapper {
+    margin: 0;
+  }
+  .facility-wrapper .facility .facility-nav-wrapper ul #bar {
+    display: none;
+  }
+  .fac-pager {
+    margin: 15px 0;
+    gap: 10px;
+  }
+
+  footer {
+    display: block;
+  }
+  .facility-information .facility-info-wrapper h4 {
+    margin: 20px 0 15px;
+  }
+  .facility-wrapper .desc-facility h2 {
+    margin-bottom: 10px;
+  }
+  /* .facility-information ul li h4{
+
+  } */
+
+  .desc-directions {
+    padding-top: 70px;
+  }
+  .map-wrapper {
+    margin-bottom: 50px;
+  }
+  #api_map {
+    height: 50vh;
+  }
+  .desc-directions h4 {
+    margin-bottom: 35px;
+  }
 }
