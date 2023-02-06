@@ -474,10 +474,9 @@ footer address p {
 
 .menu .button {
   position: fixed;
-  /* background: black; */
   top: 50%;
   transform: translateY(-50%);
-  right: 0px;
+  right: 5px;
   width: 32px;
   height: 135px;
   z-index: 200;
@@ -513,12 +512,12 @@ footer address p {
 }
 .menu .button.active::before {
   left: 30%;
-  transform: rotate(45deg) translateY(-6px);
+  transform: rotate(45deg) translateY(-5px);
   background: #fff;
 }
 .menu .button.active::after {
   left: 30%;
-  transform: rotate(-45deg) translateY(6px);
+  transform: rotate(-45deg) translateY(5px);
   background: #fff;
 }
 
