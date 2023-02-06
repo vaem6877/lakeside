@@ -35,6 +35,12 @@ header {
   );
   padding: 108px 0;
 }
+#course_wv .img_container .rotate {
+  transition: 0.5s;
+}
+#course_wv .img_container .rotate:hover {
+  transform: rotateZ(45deg);
+}
 #course_wv > * {
   opacity: 0;
 }

@@ -489,8 +489,8 @@ footer address p {
 .menu .button:before {
   content: "";
   display: block;
-  width: 6px;
-  height: 30px;
+  width: 7px;
+  height: 35px;
   background: #000;
   border: 1px solid #fff;
   position: absolute;
@@ -503,8 +503,8 @@ footer address p {
   border-radius: 2px;
   content: "";
   display: block;
-  width: 6px;
-  height: 30px;
+  width: 7px;
+  height: 35px;
   background: #000;
   border: 1px solid #fff;
   position: absolute;
@@ -517,13 +517,15 @@ footer address p {
 }
 .menu .button.active::before {
   left: 30%;
-  transform: rotate(45deg) translateY(-5px);
+  transform: rotate(45deg) translate(-2px, -6px);
   background: #fff;
+  height: 37px;
 }
 .menu .button.active::after {
   left: 30%;
-  transform: rotate(-45deg) translateY(5px);
+  transform: rotate(-45deg) translate(-4px, 8px);
   background: #fff;
+  height: 37px;
 }
 
 /* ======================= // 위젯 ===================== */
@@ -622,6 +624,10 @@ footer address p {
   text-align: center;
   padding: 11.5px 0px;
 }
+.weather_cast .shortcut > *:hover {
+  color: #000;
+  background: #fff;
+}
 .weather_cast .shortcut p {
   font-size: var(--content-fz);
 }
@@ -652,7 +658,7 @@ footer address p {
   font-size: 30px;
 }
 .preview_widget p {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 .preview_widget .today_temp span {
   display: none;
