@@ -624,10 +624,6 @@ footer address p {
 .weather_cast .shortcut i {
   font-size: var(--content-fz);
 }
-.weather_cast .shortcut .faq {
-  background: #fff;
-  color: #000;
-}
 .weather_cast .shortcut .map {
   text-indent: 6px;
 }
