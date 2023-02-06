@@ -29,7 +29,93 @@
   <body>
     <header class="text-center">
       <h1 id="logo"><a href="#">lakeside</a></h1>
-      <div class="widget"></div>
+      <div class="widget_box d-flex">
+        <div class="weather_cast">
+          <div class="preview d-flex">
+            <ul class="d-flex"></ul>
+          </div>
+          <div class="swiper container">
+            <ul class="swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-prev">◀</div>
+          <div class="swiper-button-next">▶</div>
+          <div class="shortcut">
+            <div
+              class="reservation d-flex justify-content-center align-items-center gap-4"
+            >
+              <div class="calendar"><p>예약하기</p></div>
+              <i class="fa-solid fa-calendar-plus"></i>
+            </div>
+            <div
+              class="faq d-flex justify-content-center align-items-center gap-4"
+            >
+              <div class="phone"><p>문의하기</p></div>
+              <i class="fa-solid fa-square-phone-flip"></i>
+            </div>
+            <div
+              class="location d-flex justify-content-center align-items-center gap-4"
+            >
+              <div class="map"><p>오시는길</p></div>
+              <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+          </div>
+        </div>
+        <div class="preview_widget">
+          <div class="today_weather">
+            <div class="today_icon"></div>
+            <div class="today_temp"></div>
+            <div class="today_date"></div>
+            <div class="preview_shortcut">
+              <p>
+                <i class="fa-solid fa-calendar-plus"></i>
+              </p>
+              <p><i class="fa-solid fa-square-phone-flip"></i></p>
+              <p><i class="fa-solid fa-map-location-dot"></i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="menu d-flex flex-column justify-content-center align-items-center"
+      >
+        <ul class="main_menus d-flex">
+          <li><a href="">예약하기</a></li>
+          <li><a href="">코스안내</a></li>
+          <li><a href="">클럽안내</a></li>
+          <li><a href="">클럽인포</a></li>
+          <li><a href="">회원정보</a></li>
+        </ul>
+        <div class="sub_menus d-flex">
+          <ul class="sub_menu">
+            <li><a href="">예약안내</a></li>
+            <li><a href="">예약하기</a></li>
+            <li><a href="">예약확인</a></li>
+          </ul>
+          <ul class="sub_menu">
+            <li><a href="">코스소개</a></li>
+            <li><a href="">코스갤러리</a></li>
+            <li><a href="">홀인원이벤트</a></li>
+          </ul>
+          <ul class="sub_menu">
+            <li><a href="">연혁/대회</a></li>
+            <li><a href="">이용안내</a></li>
+            <li><a href="">시설안내</a></li>
+            <li><a href="">오시는길</a></li>
+          </ul>
+          <ul class="sub_menu">
+            <li><a href="">공지사항</a></li>
+            <li><a href="">명예의 전당</a></li>
+          </ul>
+          <ul class="sub_menu">
+            <li><a href="">회원정보관리</a></li>
+            <li><a href="">쿠폰함</a></li>
+          </ul>
+        </div>
+        <div class="button">
+          <p>=</p>
+        </div>
+      </div>
     </header>
     <main>
       <nav class="aside-nav d-flex flex-column align-items-end">
@@ -60,10 +146,17 @@
       </nav>
       <div class="container">
         <section id="history" class="history row">
-          <div class="history-img-wrapper col-lg-5">
+          <div class="history-img-wrapper col-lg-5" data-aos="fade-right">
+            <!-- <div class="img-container"> -->
             <img src="./img/notice_history.png" alt="" />
+            <!-- </div> -->
+            <!-- <span class="linebox"></span> -->
           </div>
-          <div class="offset-lg-2 offset-md-1 col-lg-5 col-md-12 history-desc">
+          <div
+            class="desc-history offset-lg-2 offset-md-1 col-lg-5 col-md-12"
+            data-aos="fade-left"
+            data-aos-delay="400"
+          >
             <h3>the lake side</h3>
             <h2>history</h2>
             <ul class="d-flex flex-column align-items-start">
@@ -109,11 +202,16 @@
           </div>
         </section>
         <section id="contest" class="contest row">
-          <div class="contest-img-wrapper col-lg-5 offset-lg-2 offset-md-1">
+          <div
+            class="contest-img-wrapper col-lg-5 offset-lg-2 offset-md-1"
+            data-aos="fade-left"
+          >
             <img src="./img/notice_contest.png" alt="" />
           </div>
           <div
-            class="contest-desc col-lg-5 col-md-12 order-md-first d-flex flex-column align-items-end"
+            class="desc-contest col-lg-5 col-md-12 order-md-first d-flex flex-column align-items-end"
+            data-aos="fade-right"
+            data-aos-delay="400"
           >
             <h3>the lake side</h3>
             <h2>contest</h2>
@@ -165,7 +263,7 @@
       </div>
       <div id="rocess" class="rocess-wrapper">
         <div class="container">
-          <div class="r-desc">
+          <div class="desc-r" data-aos="fade-right">
             <h3>the lake side</h3>
             <h2>rocess guide</h2>
             <h4>경기 진행 안내</h4>
@@ -176,7 +274,11 @@
             >
               <img src="./img/notice_rocess.png" alt="" />
             </div>
-            <div class="col-md-9 col-sm-12 rocess-guide-desc">
+            <div
+              class="desc-rocess-guide col-md-9 col-sm-12"
+              data-aos="fade-left"
+              data-aos-delay="400"
+            >
               <ul>
                 <li class="">
                   <h4>01</h4>
@@ -232,7 +334,7 @@
         </div>
       </div>
       <div id="cart" class="container">
-        <div class="c-desc">
+        <div class="desc-c" data-aos="fade-right">
           <h3>the lake side</h3>
           <h2>Cart Use Guide</h2>
           <h4>카트 이용 안내</h4>
@@ -241,7 +343,11 @@
           <div class="col-md-3 d-flex align-items-start cart-guide-img-wrapper">
             <img src="./img/notice_cart.png" alt="" />
           </div>
-          <div class="col-md-9 col-sm-12 order-md-first cart-guide-desc">
+          <div
+            class="desc-cart-guide col-md-9 col-sm-12 order-md-first"
+            data-aos="fade-right"
+            data-aos-delay="400"
+          >
             <ul>
               <li>
                 <h4>01</h4>
@@ -305,7 +411,7 @@
       </div>
       <div id="facility" class="facility-wrapper">
         <div class="container">
-          <div class="text-center facility-desc">
+          <div class="desc-facility text-center">
             <h3>the lake side</h3>
             <h2>Facility information</h2>
             <h4>레이크 사이드 시설안내</h4>
@@ -329,10 +435,10 @@
                   class="active"
                   alt="클럽하우스"
                 />
-                <img src="./img/facility-club2.png" alt="레스토랑" />
-                <img src="./img/facility-club2.png" alt="락커룸" />
-                <img src="./img/facility-club2.png" alt="그늘집" />
-                <img src="./img/facility-club2.png" alt="프로샵" />
+                <img src="./img/facility-restaurant2.png" alt="레스토랑" />
+                <img src="./img/facility-locker2.png" alt="락커룸" />
+                <img src="./img/facility-shadow2.png" alt="그늘집" />
+                <img src="./img/facility-proshop2.png" alt="프로샵" />
               </div>
               <p class="fac-pager d-flex justify-content-end">
                 <a href="">클럽하우스</a>
@@ -341,6 +447,12 @@
                 <a href="">그늘집</a>
                 <a href="">프로샵</a>
               </p>
+              <!-- 다 겹쳐놓으세요 
+              !!!! absolute ㄴㄴㄴㄴㄴㄴ
+            그냥 배치만 똑같이 하고서 dn db 주세요 -->
+              <!-- jQUery UI 로드할필요 X,
+          다 클릭했을때 idx로 연결.
+        링크 # 아이디 필요X -->
             </div>
             <div class="col-md-4 col-sm-12 facility-information">
               <ul>
@@ -356,7 +468,7 @@
                 </li>
 
                 <li class="facility-info-wrapper">
-                  <img src="./img/facility-club.png" alt="" />
+                  <img src="./img/facility-restaurant.png" alt="" />
                   <h4>레스토랑</h4>
                   <p>
                     레이크사이드 클럽하우스 식당은 한식, 중식, 양식은 물론
@@ -368,7 +480,7 @@
                   </p>
                 </li>
                 <li class="facility-info-wrapper">
-                  <img src="./img/facility-club.png" alt="" />
+                  <img src="./img/facility-locker.png" alt="" />
                   <h4>락커룸</h4>
                   <p>
                     운동의 시작과 끝을 기분 좋게 풀어드립니다. 대자연과 함께
@@ -377,7 +489,7 @@
                   </p>
                 </li>
                 <li class="facility-info-wrapper">
-                  <img src="./img/facility-club.png" alt="" />
+                  <img src="./img/facility-shadow.png" alt="" />
                   <h4>그늘집</h4>
                   <p>
                     천수호가 자리잡고 있는 홀로써 아름다운 자연이 펼쳐져 있는
@@ -388,7 +500,7 @@
                   </p>
                 </li>
                 <li class="facility-info-wrapper">
-                  <img src="./img/facility-club.png" alt="" />
+                  <img src="./img/facility-proshop.png" alt="" />
                   <h4>프로샵</h4>
                   <p>
                     럭셔리한 품격과 탁월한 성능 및 최적의 기능 아늑하고 차별화된
@@ -403,12 +515,12 @@
         </div>
       </div>
       <div id="directions" class="directions">
-        <section class="text-center directions-desc">
+        <section class="desc-directions text-center">
           <h3>the lake side</h3>
           <h2>directions</h2>
           <h4>오시는 길 안내</h4>
-          <div class="map-wrapper">
-            <!-- MAP API -->
+          <div class="map-wrapper text-start">
+            <div id="api_map"></div>
           </div>
         </section>
       </div>
@@ -456,10 +568,48 @@
     </footer>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.0.2/swiper-bundle.min.js"
+      integrity="sha512-LGC9ji+Ma2hNS7Dnt7iFOYJgez3pcjaHDeMXSVm0pO8R477pEGwTepZK0P2xBmVHTk8gLzoxpopsMv4TgVZceA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     ></script>
+
+    <script src="js/jquery.mousewheel.min.js"></script>
     <script src="./node_modules/aos/dist/aos.js"></script>
+    <script src="js/script.js"></script>
     <script src="js/notice.js"></script>
+
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d753200077e444dd40df1e458903dfd3"
+    ></script>
+    <script>
+      var container = document.getElementById("api_map"); //지도를 담을 영역의 DOM 레퍼런스
+      var options = {
+        //지도를 생성할 때 필요한 기본 옵션
+        center: new kakao.maps.LatLng(37.319537, 127.179127), //지도의 중심좌표.
+        level: 4, //지도의 레벨(확대, 축소 정도)
+      };
+
+      var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+
+      map.setZoomable(false);
+
+      var zoomControl = new kakao.maps.ZoomControl();
+      var marker = new kakao.maps.Marker({
+        position: new kakao.maps.LatLng(37.319537, 127.179127), // 마커의 좌표
+        map: map,
+      });
+
+      // 커스텀 오버레이를 생성하고 지도에 표시한다
+      var customOverlay = new kakao.maps.CustomOverlay({
+        map: map,
+        content:
+          '<div style="padding:0;"><div class="api_overlay"><p><i class="fa-sharp fa-solid fa-location-dot"></i>lake side map</p>      <p>레이크사이드CC</p><p>주소 : 16887 경기도 용인시 처인구 모현읍 능원로 181</p></div></div>',
+        position: new kakao.maps.LatLng(37.320915, 127.185426), // 커스텀 오버레이를 표시할 좌표
+        xAnchor: 0.5, // 컨텐츠의 x 위치
+        yAnchor: 0, // 컨텐츠의 y 위치
+      });
+    </script>
   </body>
 </html>
