@@ -324,15 +324,11 @@ footer .notice-slide {
     margin-bottom: 0;
   }
 
-  .main-course .course-desc a.align-self-start {
-    margin: 0;
-  }
-
   .south-course {
     padding: 0;
   }
 
-  .course-desc .img-wrapper {
+  .west-course .img-wrapper {
     margin-top: 0 !important;
   }
 
