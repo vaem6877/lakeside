@@ -25,7 +25,6 @@ $(function () {
 $("#hole_desc #tabs-east .img_container #tabs-1").html(
   '<img src="img/course_img/동코스1.png" alt="" />'
 );
-//<img src="img/동코스1.svg" alt="" />
 
 var courseSwiper = new Swiper("#course .swiper", {
   slidesPerView: "6",

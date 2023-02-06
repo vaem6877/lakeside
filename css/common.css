@@ -452,8 +452,13 @@ footer address p {
   border-bottom: 2px solid #fff;
 }
 .menu .sub_menu {
+  opacity: 0.7;
   font-size: 20px;
   margin: 45px 0;
+}
+.menus .sub_menu:hover {
+  opacity: 1;
+  font-weight: bold;
 }
 .menu .sub_menu:first-child {
   padding-top: 45px;
@@ -467,10 +472,6 @@ footer address p {
   display: inline-block;
   font-size: 20px;
   margin-bottom: 25px;
-}
-.menu .sub_menu li a:hover {
-  font-weight: bold;
-  text-decoration: underline;
 }
 .menu.active {
   left: 0;
@@ -586,6 +587,12 @@ footer address p {
 .weather_cast .preview .temp p:first-child {
   margin-bottom: 5px;
 }
+.weather_cast .preview .temp p {
+  font-weight: bold;
+}
+.weather_cast .preview .temp p span {
+  font-weight: normal;
+}
 .weather_cast .swiper {
   width: 80%;
   margin-bottom: 6px;
@@ -620,6 +627,13 @@ footer address p {
   color: #fff;
   z-index: 1;
 }
+.weather_cast .swiper-slide.active {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #fff;
+}
+.weather_cast .shortcut i {
+  transition: 0.5s;
+}
 .weather_cast .shortcut > * {
   text-align: center;
   padding: 11.5px 0px;
@@ -627,6 +641,10 @@ footer address p {
 .weather_cast .shortcut > *:hover {
   color: #000;
   background: #fff;
+}
+.weather_cast .shortcut > *:hover i {
+  transform: translateY(360deg);
+  perspective: 100px;
 }
 .weather_cast .shortcut p {
   font-size: var(--content-fz);
@@ -736,7 +754,7 @@ footer address p {
   }
   .menu.active {
     left: 0;
-    z-index: 100;
+    z-index: 110;
   }
 
   .menu .button {
@@ -745,6 +763,15 @@ footer address p {
     top: 50%;
     transform: translateY(-50%);
     right: 5px;
+    width: 32px;
+    height: 135px;
+    z-index: 200;
+  }
+  .menu .button.active {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 35px;
     width: 32px;
     height: 135px;
     z-index: 200;
@@ -787,11 +814,6 @@ footer address p {
     left: 30%;
     transform: rotate(-45deg) translateY(5px);
     background: #fff;
-  }
-  .menu .button.active p {
-    text-align: center;
-    line-height: 135px;
-    color: #000;
   }
 
   @media screen and (max-width: 768px) {

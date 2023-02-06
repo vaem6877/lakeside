@@ -188,7 +188,12 @@ $.getJSON(
       `;
       target.append(trHTML);
     }); //요일 리스트 가져오기
+    $(".widget_box .swiper-slide").click(function () {
+      $(this).siblings().removeClass("active");
+      $(this).addClass("active");
+    });
 
+    $(".widget_box .swiper-slide").eq(0).addClass("active");
     console.log(dateList);
     console.log(date);
     let Temp = "";
@@ -266,7 +271,7 @@ $(".widget_box").hover(
     $(this)
       .find(".preview_widget")
       .stop()
-      .animate({ left: "-90px" }, 500, "easeInBack", function () {
+      .animate({ left: "-90px" }, 100, "linear", function () {
         $(this).prev().stop().animate({ left: "0" });
       });
   },
@@ -274,7 +279,7 @@ $(".widget_box").hover(
     $(this)
       .find(".weather_cast")
       .stop()
-      .animate({ left: "-253px" }, 400, "linear", function () {
+      .animate({ left: "-253px" }, 200, "linear", function () {
         $(this).next().stop().animate({ left: "-40px" });
       });
   }
