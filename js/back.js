@@ -44,32 +44,30 @@ taps.on("click", function () {
 /* ======book_data taps and content json realtime update table===== */
 
 let dataBoard = $(".course-content tbody"),
-  dataAddItemCount = 10, //표시할 개수
+  dataAddItemCount = 6, //표시할 개수
   dataAdded = 0, //표시된 개수
   dataAllData = []; //json 파일내 내용을 담을 배열
 
-$.getJSON("book_data.json", initDataboard);
+$.getJSON("js/book_data.js", initDataboard);
 
 function initDataboard(result) {
   dataAllData = result.products;
   console.log(dataAllData);
   addItems(); //목록 추가
-} //initGallery
+}
 
 function addItems() {
   let itemHTML = "",
-    slicedData = dataAllData.slice(dataAdded, dataAdded + addItemCount);
+    slicedData = dataAllData.slice(dataAdded, dataAdded + dataAddItemCount);
 
   $.each(slicedData, function (i, item) {
     itemHTML += `
     <tr>
         <td>${item.course}</td>
         <td>${item.title}</td>
-        <td>${item.hole - length}</td>
+        <td>${item.hole}</td>
         <td>${item.price}</td>
-        <td>
-            <img src="${item.thumbnail}" alt="${item.description}">
-        </td>
+        <td><a href="" class="btn_booking">예약하기</a></td>
     </tr>      
   `;
   });
