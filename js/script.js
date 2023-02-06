@@ -39,11 +39,9 @@ asideNav.click(function (e) {
 
   targetIdx = $(this).index();
 
-  $("html, body")
-    .stop()
-    .animate({
-      scrollTop: sectionsOST[targetIdx] - 200,
-    });
+  $("html, body").stop().animate({
+    scrollTop: sectionsOST[targetIdx],
+  });
 });
 
 // 스크롤양에 따라 보이고 안보임
@@ -59,10 +57,10 @@ function btnFade(btn, ost) {
 
 $(window).scroll(function () {
   let SCT = $(this).scrollTop();
-  btnFade(asideNav, 830);
+  btnFade(asideNav, 400);
 
   $.each(sections, function (idx, item) {
-    if (SCT >= item.offset().top - 400) {
+    if (SCT >= item.offset().top - 300) {
       asideNav.removeClass("active");
       asideNav.eq(idx).addClass("active");
     }
@@ -95,7 +93,7 @@ var widgetSwiper = new Swiper(".widget_box .swiper", {
   },
 });
 let target = $(".widget_box .swiper-wrapper");
-//홀 스와이퍼 라이브러리
+//홀 스와이퍼
 
 let newDate = new Date();
 let year = newDate.getFullYear(); // 년도
@@ -130,25 +128,37 @@ let weatherIcon = {
 let Temp = "";
 let TempArr = [];
 let iconArr = [];
-let previewIcon = "";
-let previewIconBox = "";
-let previewIconHTML = "";
 
 $.getJSON(
-  "http://api.openweathermap.org/data/2.5/forecast?lat=37.5683&lon=126.9778&appid=d5787a1c2196a85e7ed4d4fbd60ce03e&units=metric",
+  "http://api.openweathermap.org/data/2.5/forecast?lat=37.5683&lon=126.9778&appid=6683b822924895deb0d2f90cf228a02e&units=metric",
   function (result) {
     console.log(result);
     let list = result.list;
-
     console.log(list);
-    $.each(list, function (i) {
-      let convertDate = new Date(list[i].dt * 1000);
+    let convertDate = "";
+    let korWeek = ["일", "월", "화", "수", "목", "금", "토"];
+    list.map((item) => {
+      let newDate = new Date(item.dt * 1000);
+      let year = newDate.getFullYear(); // 년도
+      function add0(n) {
+        return n < 10 ? "0" + n : n;
+      }
+      let month = newDate.getMonth() + 1; // 월
+      let date = newDate.getDate(); // 날짜
+      let day = newDate.getDay(); // 요일
+      let hour = newDate.getHours();
+      let minutes = newDate.getMinutes();
+      let seconds = newDate.getSeconds();
+      let time = `${add0(hour)}:${add0(minutes)}:${add0(seconds)}`;
+      convertDate = `${add0(year)}-${add0(month)}-${add0(date)} ${time}`;
       console.log(convertDate);
+      item.dt = convertDate;
     });
 
     const filteredDay = list.reduce((acc, current) => {
+      let convertDateACC = new Date(acc.dt * 1000);
       const x = acc.find(
-        (item) => item.dt_txt.substr(0, 10) === current.dt_txt.substr(0, 10)
+        (item) => item.dt.substr(0, 10) === current.dt.substr(0, 10)
       );
       if (!x) {
         return acc.concat([current]);
@@ -161,11 +171,11 @@ $.getJSON(
     let date = "";
     let dateList = [];
     $.each(filteredDay, function (i) {
-      date = filteredDay[i].dt_txt.substr(0, 10); // 각 날짜(년-월-일)
+      date = filteredDay[i].dt.substr(0, 10); // 각 날짜(년-월-일)
 
       dateList.push(date);
 
-      let day = filteredDay[i].dt_txt.substr(8, 2); //각 날짜의 일
+      let day = filteredDay[i].dt.substr(8, 2); //각 날짜의 일
       let korDay = korWeek[new Date(dateList[i]).getDay()];
 
       let trHTML = `
@@ -180,20 +190,16 @@ $.getJSON(
     }); //요일 리스트 가져오기
 
     console.log(dateList);
-    // let date = filteredDay[0].dt_txt.substr(8, 2);
-    // console.log(date);
-    // let Temp = "";
-    // let TempArr = [];
-    // let iconArr = [];
-    // let previewIcon = '';
-    // let previewIconBox = '';
-    // let previewIconHTML = '';
+    console.log(date);
+    let Temp = "";
 
     $.each(dateList, function (i) {
       Temp = list.filter(function (item) {
-        return item.dt_txt.substr(0, 10) == dateList[i];
+        return item.dt.substr(0, 10) == dateList[i];
       });
       console.log(Temp);
+      let TempArr = [];
+      let iconArr = [];
       Temp.map((item) => {
         TempArr.push(item.main.temp);
         if (item.dt_txt.substr(-8) == "12:00:00") {
@@ -204,7 +210,6 @@ $.getJSON(
       console.log(iconArr);
 
       let icon = `<i class="fa-solid ${weatherIcon[iconArr]}"></i>`;
-      // console.log(weatherIcon[iconArr[i]]);
       let maxTemp = Math.max(...TempArr);
       let minTemp = Math.min(...TempArr);
 
@@ -232,11 +237,11 @@ $.getJSON(
     });
 
     //preview - icon
-    previewIcon = iconArr[0];
+    let previewIcon = $(".preview ul >li:first-child .fa-solid").clone();
     console.log(previewIcon);
-    previewIconBox = $(".today_icon");
-    previewIconHTML = `<i class="fa-solid ${weatherIcon[previewIcon]}"></i>`;
-    previewIconBox.append(previewIconHTML);
+    let previewIconBox = $(".today_icon");
+    let previewIconHTML = `<i class="fa-solid ${weatherIcon[previewIcon]}"></i>`;
+    previewIconBox.append(previewIcon);
     $(".menu .button").prepend(previewIconHTML);
 
     //preview - temp
@@ -276,3 +281,16 @@ $(".widget_box").hover(
 );
 
 // 위젯 끝 ======================================================
+
+//반응형 메뉴
+if (matchMedia("screen and (max-width: 360px)").matches) {
+  let menus = menu.find(".menus");
+  menus
+    .find("li:nth-child(3)")
+    .html(`<a href="" class="main_menu">오시는길</a>`);
+  menus.find("li:nth-child(4)").hide();
+  let previewIconClone = $(".weather_cast .preview ul li").text();
+  menuBtn.prepend(previewIconHTML);
+  console.log(previewIconClone);
+  $(".menu .button").addClass("d-flex justify-content-between");
+}

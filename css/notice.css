@@ -16,10 +16,10 @@ main {
   z-index: 2;
 }
 .circle1 {
-  top: 11.8%;
+  top: 15%;
 }
 .circle2 {
-  top: 111.5%;
+  top: 150.9%;
 }
 
 .desc-history,
@@ -181,7 +181,7 @@ section img,
 }
 
 .history-img-wrapper::after {
-  top: 53.5%;
+  top: 72.5%;
   left: -0.3%;
   border: 8px solid var(--primary-ygreen);
 }
@@ -191,9 +191,9 @@ section img,
   background: var(--primary-ygreen);
 }
 
-.history-img-wrapper img {
+/* .history-img-wrapper img {
   margin-bottom: 240px;
-}
+} */
 
 .contest-img-wrapper img {
   margin-bottom: 268px;
@@ -337,7 +337,7 @@ section img,
 /* ===================== directions === */
 
 .desc-directions {
-  margin-top: 243px;
+  padding-top: 243px;
 }
 /* .map-wrapper {
   padding-top: 783px;
@@ -383,7 +383,7 @@ header::after,
 
 .contest::before {
   width: 100%;
-  top: -87%;
+  top: -49%;
 }
 
 header::after {
@@ -440,7 +440,18 @@ header::after {
   font-weight: 400;
 }
 
+/* ==map === */
+
+/* .map-wrapper {
+  margin-bottom: 70px;
+} */
 /* ===================== 반응형 ============================= */
+
+@media (min-width: 1200px) {
+  #contest {
+    padding-top: 240px;
+  }
+}
 
 @media (max-width: 1200px) {
   header::after,
@@ -475,13 +486,20 @@ header::after {
 
   .contest {
     margin-bottom: 130px;
+    padding-top: 0;
   }
 
   .desc-directions {
-    margin-top: 120px;
+    padding-top: 120px;
+  }
+  .facility-information ul li h4 {
+    font-size: var(--second-TT-fz) !important;
   }
 }
 @media (max-width: 768px) {
+  .facility-info-wrapper p {
+    margin-bottom: 0;
+  }
   .history {
     margin-bottom: 125px;
     margin-top: 170px;
@@ -503,6 +521,7 @@ header::after {
   }
   .desc-facility {
     padding-top: 120px;
+    padding-bottom: 50px;
   }
   .facility-nav-wrapper {
     padding-left: 0;
@@ -512,6 +531,15 @@ header::after {
   }
   .facility-information {
     margin-bottom: 130px;
+  }
+  .fac-nav-img-wrapper {
+    margin-top: 27px;
+  }
+  .fac-pager {
+    margin-bottom: 27px;
+  }
+  .facility-information {
+    padding-left: 0;
   }
 }
 
@@ -533,6 +561,9 @@ header::after {
 
 /* ============= 모바일 ========================= */
 @media (max-width: 361px) {
+  .facility-information {
+    padding: 0 12px;
+  }
   .container {
     padding: 0 12px;
     width: auto !important;
@@ -554,8 +585,9 @@ header::after {
   .container .contest .desc-contest h2,
   .rocess-wrapper .desc-r h2,
   .facility-wrapper .desc-facility h2,
-  .facility-information .facility-info-wrapper h4 {
-    font-size: var(--mobile-KrTT-fz);
+  .facility-information .facility-info-wrapper h4,
+  .directions .desc-directions h2 {
+    font-size: var(--mobile-KrTT-fz) !important;
     line-height: 20px;
     font-weight: 700;
     margin-top: 0;
@@ -578,7 +610,8 @@ header::after {
   .container .history .desc-history h3,
   .container .contest .desc-contest h3,
   .rocess-wrapper .desc-r h3,
-  .facility-wrapper .desc-facility h3 {
+  .facility-wrapper .desc-facility h3,
+  .directions .desc-directions h3 {
     font-size: var(--mobile-content-fz);
     line-height: 12px;
     font-weight: 300;
@@ -598,7 +631,7 @@ header::after {
   }
   .facility-wrapper .facility-info-wrapper p {
     line-height: 17px;
-    margin-bottom: 94px;
+    margin-bottom: 70px;
   }
   .desc-r > h4 {
     font-size: var(--small-content-fz);
@@ -618,10 +651,18 @@ header::after {
   .container .contest .desc-contest ul li h4,
   .rocess-wrapper .desc-r ul li h4,
   .rocess-wrapper .desc-rocess-guide h4,
-  .facility-wrapper .desc-facility h4 {
+  .facility-wrapper .desc-facility h4,
+  .directions .desc-directions h4 {
     font-size: var(--small-content-fz);
     /* vertical-align: top; */
   }
+
+  .directions .desc-directions > h4 {
+    line-height: 1;
+  }
+  /* {
+    font-size: var(--small-content-fz) !important;
+  } */
   #cart {
     display: none;
   }
@@ -657,9 +698,7 @@ header::after {
     margin: 15px 0;
     gap: 10px;
   }
-  .directions {
-    display: none;
-  }
+
   footer {
     display: block;
   }
@@ -672,4 +711,17 @@ header::after {
   /* .facility-information ul li h4{
 
   } */
+
+  .desc-directions {
+    padding-top: 70px;
+  }
+  .map-wrapper {
+    margin-bottom: 50px;
+  }
+  #api_map {
+    height: 50vh;
+  }
+  .desc-directions h4 {
+    margin-bottom: 35px;
+  }
 }
