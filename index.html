@@ -122,8 +122,26 @@
     </header>
 
     <main>
+      <nav class="aside-nav d-flex flex-column align-items-end">
+        <a href="#east-course"
+          ><span class="nav-text">동코스</span>
+          <span> </span>
+        </a>
+        <a href="#west-course"
+          ><span class="nav-text">서코스</span>
+          <span> </span>
+        </a>
+        <a href="#south-course"
+          ><span class="nav-text">남코스</span>
+          <span> </span>
+        </a>
+        <a href="#event-slides"
+          ><span class="nav-text">이벤트</span>
+          <span> </span>
+        </a>
+      </nav>
       <section class="main-course">
-        <div class="east-wrapper container">
+        <div id="east-course" class="east-wrapper container">
           <div class="east-course row mx-auto">
             <div
               class="img-wrapper d-flex flex-column justify-content-center col-md-6"
@@ -151,7 +169,7 @@
             </div>
           </div>
         </div>
-        <div class="west-wrapper">
+        <div id="west-course" class="west-wrapper">
           <div class="container">
             <div
               class="row west-course d-flex align-items-center justify-content-center flex-row-reverse"
@@ -186,7 +204,7 @@
           </div>
         </div>
 
-        <div class="south-wrapper container">
+        <div id="south-course" class="south-wrapper container">
           <div class="south-course row mx-auto">
             <div
               class="img-wrapper col-md-6 d-flex flex-column justify-content-center"
@@ -217,7 +235,7 @@
           </div>
         </div>
       </section>
-      <section class="container">
+      <section id="event-slides" class="container">
         <div class="slideWrapper mx-auto">
           <ul class="main-slide text-center">
             <li>
