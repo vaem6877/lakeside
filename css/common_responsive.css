@@ -1,0 +1,224 @@
+/* =======================반응형 태블릿(768)================== */
+@media screen and (max-width: 768px) {
+  /* ========== 메뉴 ========== */
+  .containerBox {
+    width: 85%;
+  }
+  h2 {
+    margin: 8px 0 13px;
+  }
+  p {
+    font-size: var(--content-fz);
+  }
+  .menu {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    left: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transition: left 0.7s;
+    z-index: 200;
+    text-align: center;
+  }
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .menu .menus {
+    gap: 30px;
+  }
+  .menu .main_menu {
+    font-size: 27px;
+    padding: 27px;
+    border-bottom: 2px solid #fff;
+  }
+  .menu .sub_menu {
+    font-size: 20px;
+    margin: 45px 0;
+  }
+  .menu .sub_menu:first-child {
+    padding-top: 45px;
+  }
+  .menu .sub_menu:last-child {
+    margin-bottom: 0;
+  }
+
+  .menu .sub_menu li a {
+    color: #fff;
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+  .menu .sub_menu li a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .menu.active {
+    left: 0;
+    z-index: 100;
+  }
+
+  .menu .button {
+    position: fixed;
+    /* background: black; */
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+    width: 32px;
+    height: 135px;
+    z-index: 200;
+  }
+  .menu .button:before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 30px;
+    background: #000;
+    border: 1px solid #fff;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transition: 0.7s;
+    border-radius: 2px;
+  }
+  .menu .button:after {
+    border-radius: 2px;
+    content: "";
+    display: block;
+    width: 6px;
+    height: 30px;
+    background: #000;
+    border: 1px solid #fff;
+    position: absolute;
+    bottom: 42%;
+    left: 20%;
+    transition: 0.7s;
+  }
+  .menu .button i {
+    display: none;
+  }
+  .menu .button.active::before {
+    left: 30%;
+    transform: rotate(45deg) translateY(-5px);
+    background: #fff;
+  }
+  .menu .button.active::after {
+    left: 30%;
+    transform: rotate(-45deg) translateY(5px);
+    background: #fff;
+  }
+  .menu .button.active p {
+    text-align: center;
+    line-height: 135px;
+    color: #000;
+  }
+
+  @media screen and (max-width: 768px) {
+    /* ========== 숨김컨텐츠 ========== */
+    .aside-nav {
+      display: none !important;
+
+      /* ========== 메뉴 ========== */
+    }
+    .containerBox {
+      width: 85%;
+    }
+    .menu .menus {
+      gap: 20px;
+    }
+    .menu .main_menu {
+      font-size: 18px;
+    }
+    .menu .sub_menu {
+      font-size: 12px;
+    }
+    .menu a {
+      white-space: nowrap;
+    }
+  }
+}
+@media screen and (max-width: 360px) {
+  /* ========== 숨김컨텐츠 ========== */
+  .widget_box {
+    display: none !important;
+  }
+  /* ========== 메뉴 ========== */
+  .menu {
+    position: fixed;
+    gap: 30px;
+    background: rgba(24, 34, 26, 0.8);
+    left: 0;
+    top: auto;
+    left: 0;
+    bottom: 100%;
+    transition: bottom 0.7s;
+    z-index: 100;
+  }
+  .menu .menus {
+    flex-direction: column;
+  }
+  .menu .menus li {
+    margin-top: 27px;
+  }
+  .menu .menus ul {
+    display: none;
+  }
+  .menu .main_menu {
+    font-size: 18px;
+  }
+  .menu .sub_menu {
+    font-size: 12px;
+  }
+  .menu .main_menus {
+    width: 90%;
+    gap: 50px;
+    border: none;
+    flex-direction: column;
+  }
+  .menu.active {
+    bottom: 0;
+  }
+  .menu .button {
+    position: fixed;
+    background: #1b221a;
+    top: 0;
+    transform: none;
+    width: 100%;
+    height: 60px;
+    right: auto;
+    z-index: 90;
+  }
+  .menu .button:before {
+    height: 6px;
+    width: 30px;
+    background: #fff;
+    top: 33%;
+    left: 84%;
+  }
+  .menu .button:after {
+    height: 6px;
+    width: 30px;
+    background: #fff;
+    top: 53%;
+    left: 86%;
+  }
+  .menu .button.active::before {
+    left: 85%;
+    transform: rotate(-45deg) translate(-1px, -5px);
+    transform-origin: right;
+    background: #fff;
+  }
+  .menu .button.active::after {
+    left: 85%;
+    transform: rotate(45deg) translate(1px, 8px);
+    transform-origin: right;
+    background: #fff;
+  }
+  .menu .button i {
+    display: block;
+    font-size: 50px;
+  }
+}
