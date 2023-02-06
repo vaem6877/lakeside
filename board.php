@@ -243,7 +243,6 @@ require_once('php/config.php');
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/back.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/widget.js"></script>
   </body>
 </html>
 
