@@ -140,6 +140,34 @@
     }
   }
 }
+
+/* 푸터 반응형 */
+@media (max-width: 576px) {
+  .terms {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .terms a {
+    width: 30%;
+    text-align: center;
+  }
+  address dl.d-flex {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  address dl.d-flex > dt {
+    padding: 0;
+    width: 18%;
+  }
+  address dl.d-flex > dd {
+    padding: 0;
+    width: 60%;
+  }
+  .facility-information {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (max-width: 360px) {
   /* ========== 숨김컨텐츠 ========== */
   .widget_box {
@@ -220,5 +248,108 @@
   .menu .button i {
     display: block;
     font-size: 50px;
+  }
+
+  /* =================== 반응형 모바일 헤더, 푸터 */
+
+  /* header {
+    position: relative;
+    z-index: 1000;
+  } */
+  #logo a {
+    background-image: url(../img/logo_white.png);
+  }
+  footer .footer-logo {
+    width: 104px !important;
+    height: 21px !important;
+  }
+  .aside-nav {
+    display: none !important;
+  }
+
+  /* ===================== 푸터 반응형 360 ===================== */
+
+  footer {
+    display: block;
+  }
+  footer * {
+    color: var(--typo-C-lightgrey) !important;
+  }
+  footer address * {
+    width: auto !important;
+  }
+  footer .terms {
+    font-size: var(--mobile-content-fz);
+    line-height: 10px;
+    justify-content: center !important;
+    flex-wrap: nowrap !important;
+    gap: 0 !important;
+    padding-bottom: 13px !important;
+  }
+  footer .terms a:nth-child(3) {
+    font-weight: 400;
+  }
+
+  footer address dl *,
+  footer address p {
+    font-size: var(--mobile-tab-fz) !important;
+    line-height: 9px;
+  }
+
+  footer .footer-notice-wrapper {
+    display: none !important;
+  }
+  .facility-information {
+    margin-bottom: 0;
+  }
+  footer .terms a:nth-child(2n) {
+    display: none;
+  }
+  footer .terms a:last-child {
+    display: inline-block;
+    padding-right: 0;
+  }
+  footer .terms a {
+    width: auto;
+    padding-right: 32px;
+    font-size: var(--mobile-content-fz) !important;
+  }
+  footer address dl:first-of-type {
+    padding-top: 12px !important;
+  }
+  footer address dl dt {
+    padding-right: 0;
+  }
+
+  footer address dl dt:first-of-type {
+    padding-left: 15%;
+  }
+  footer address dl dd:first-of-type {
+    padding-right: 13%;
+  }
+  footer address dl dt:nth-of-type(2) {
+    padding-left: -3%;
+  }
+
+  address dl.d-flex {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+  }
+
+  footer address dl dt {
+    padding-right: 2px;
+  }
+
+  footer address dl dd {
+    padding-right: 15px;
+  }
+  footer address dl:nth-of-type(2),
+  footer address dl:nth-of-type(3) {
+    display: none !important;
+  }
+  footer address p {
+    padding-bottom: 15px !important;
   }
 }
