@@ -1,7 +1,4 @@
-img/course_img/
-img/main-img/
-img/notice-img/
-node_module_Used/
-course.html
-index.html
-notice.html
+css/common.css
+css/reset.css
+js/script.js
+common.html
