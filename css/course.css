@@ -1,3 +1,11 @@
+header {
+  background: url(../img/course_img/course_banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
 .containerBox {
   width: 80%;
   margin: 0 auto;
