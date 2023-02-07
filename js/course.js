@@ -3,15 +3,13 @@
 document.querySelector("li").removeAttribute("style");
 
 $(function () {
-  $("#hole_desc #tabs").tabs({
-    active: 0,
-  });
+  $("#hole_desc #tabs").tabs();
 }); //코스 탭
 
 let courseTab = $("#tabs").find("li"),
   courseBtn = courseTab.find("a");
 
-courseBtn.click(function () {
+courseBtn.click(function (item) {
   courseTab.removeClass("active");
   $(this).parents().addClass("active");
 });
@@ -91,8 +89,8 @@ let exitBtn = courseGallery.find("i");
 galleryImg.click(function (e) {
   e.preventDefault();
   let imgSrc = $(this).attr("src");
-  let showImg = `<img src="${imgSrc}" alt="" />`;
-  bigImg.append(showImg);
+  let showImg = `<img src="${imgSrc}" alt="" /><i class="fa-solid fa-x"></i>`;
+  bigImg.html(showImg);
   bigImg.show();
 });
 
@@ -148,5 +146,5 @@ $(window).scroll(function () {
     //     $(this).delay(1000).stop().animate({ height: "100%" });
     //   }
     // });
-  }
+  } //
 });

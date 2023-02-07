@@ -30,6 +30,7 @@ header {
 #tabs .img_container {
   border: 10px solid #dfdfdf;
   width: 100%;
+  padding: 0;
 }
 #course_wv {
   background-image: linear-gradient(
@@ -94,41 +95,34 @@ header {
   padding: 0;
   margin-bottom: 0;
 }
-#hole_desc #tabs > ul li {
+#hole_desc #tabs > ul li a {
+  display: block;
   background: #234a35;
   border: 1px solid #000;
+  color: #fff;
+  width: 100%;
   padding: 28px 0px;
-}
-#hole_desc #tabs > ul li.active {
-  background: #fff;
+  white-space: nowrap;
+  text-decoration: none;
 }
 #hole_desc #tabs > ul li.active a {
-  color: #234a35;
-}
-#hole_desc #tabs > ul li:hover {
   background: #fff;
-}
-#hole_desc #tabs > ul li:hover a {
   color: #234a35;
-}
-#hole_desc #tabs > ul li a {
-  color: #fff;
-  text-decoration: none;
-  white-space: nowrap;
 }
 #hole_desc #tabs > ul li a:hover {
-  text-decoration: underline;
+  background: #fff;
+  color: #234a35;
 }
 #hole_desc #tabs .tab_group {
   padding: 163px 0px 82px;
 }
 #hole_desc #tabs .tab_group p {
   width: 90%;
-  margin: 57px auto;
+  margin: 45px auto;
 }
 #tabs .swiper {
   padding: 10px 40px;
-  margin-bottom: 76px;
+  margin-bottom: 45px;
 }
 #tabs .swiper-container {
   position: relative;
@@ -167,10 +161,10 @@ header {
 }
 #tabs .swiper-slide a {
   display: block;
-  width: 150px;
+  width: 130px;
   height: 100%;
   text-align: center;
-  line-height: 150px;
+  line-height: 130px;
   border-radius: 50%;
   background: #8ba63d;
   margin: 0;
@@ -236,8 +230,7 @@ header {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
-  height: 70%;
+  height: 60vh;
 }
 #course_gallery .course_img_big i {
   width: 50px;
@@ -257,7 +250,7 @@ header {
 #holeinone {
   width: 100%;
   background: #f0f6e2;
-  padding: 164px 0px 74px;
+  padding: 164px 0px;
 }
 #holeinone > div {
   padding: 54px 0px;
@@ -273,21 +266,22 @@ header {
   border-radius: 50%;
   width: 180px;
   height: 180px;
+  margin-bottom: 18px;
 }
 #holeinone .item img:hover {
   border: 5px solid #234a35;
+  transition: 0.1s;
 }
 #holeinone .item p {
-  font-size: 24px;
+  font-size: 20px;
+  line-height: 26px;
 }
 #holeinone .item p:nth-child(2) {
-  width: 83px;
+  width: 100px;
   height: 27px;
   background: #234a35;
   color: #fff;
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 6px;
+  margin: 6px auto;
 }
 #holeinone .east_course {
   width: 100%;
