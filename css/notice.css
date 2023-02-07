@@ -288,23 +288,24 @@ section img,
   /* 사전에 left 값이 있어야 */
   width: 20%;
   bottom: 10px;
-  border-bottom: 3px solid black;
-  transition: 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  border-bottom: 3px solid var(--primary-green);
+  transition: 0.2s cubic-bezier(0.65, 0, 0.35, 1);
   bottom: 1px;
 }
 
 /* .facility .facility-nav-wrapper > ul li.active ul #bar {
   opacity: 1;
 } */
-.facility .facility-nav-wrapper ul li.active a {
-  color: var(--typo-C-Green);
-  font-weight: 700;
-}
 
 .facility-nav-wrapper ul li a {
   color: var(--secondary-brown);
   font-size: var(--second-TT-fz);
   font-weight: 500;
+}
+
+.facility .facility-nav-wrapper ul li.active a {
+  color: var(--typo-C-Green);
+  font-weight: 700;
 }
 .fac-pager {
   margin-top: 27px;
