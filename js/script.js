@@ -141,7 +141,7 @@ let TempArr = [];
 let iconArr = [];
 
 $.getJSON(
-  "http://api.openweathermap.org/data/2.5/forecast?lat=37.5683&lon=126.9778&appid=6683b822924895deb0d2f90cf228a02e&units=metric",
+  "https://api.openweathermap.org/data/2.5/forecast?lat=37.5683&lon=126.9778&appid=6683b822924895deb0d2f90cf228a02e&units=metric",
   function (result) {
     console.log(result);
     let list = result.list;

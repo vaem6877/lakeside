@@ -106,8 +106,6 @@ if (matchMedia("screen and (max-width: 768px)").matches) {
   let swiper = new Swiper(".swiper", {
     slidesPerView: "6",
     spaceBetween: 10,
-    observer: true,
-    observeParents: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -142,6 +140,13 @@ $(window).scroll(function () {
     wholeView.find("h3").animate({ opacity: 1 }, 300);
     wholeView.find("h2").delay(300).animate({ opacity: 1 }, 300);
     wholeView.find("> p").delay(600).animate({ opacity: 1 }, 300);
-    wholeView.find("> div").delay(1000).animate({ opacity: 1 }, 1000);
+    wholeView
+      .find(".img_container")
+      .delay(1000)
+      .animate({ opacity: 1, width: "80%" }, 1000);
+    // wholeView
+    //   .find(".img_container img")
+    //   .delay(1300)
+    //   .animate({ opacity: 1 }, 1000);
   }
 });
