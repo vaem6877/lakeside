@@ -109,6 +109,23 @@ header {
   padding-bottom: 100vh;
 }
 
+#logo-mobile {
+  display: none;
+  width: 100px;
+  height: 20.38px;
+  position: absolute;
+  z-index: 10000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#logo-mobile img {
+  width: 100%;
+  object-fit: contain;
+  box-shadow: none !important;
+}
+
 /* ========= FOOTER ======== */
 
 footer {
@@ -738,9 +755,9 @@ footer address p {
     /* ========== 숨김컨텐츠 ========== */
     .aside-nav {
       display: none !important;
-
-      /* ========== 메뉴 ========== */
     }
+    /* ========== 메뉴 ========== */
+
     .containerBox {
       width: 85%;
     }
@@ -874,19 +891,9 @@ footer address p {
     position: relative;
   }
 
-  /* header {
-    position: relative;
-    z-index: 1000;
-  } */
-  #logo a {
-    background-image: url(../img/logo_white.png);
-  }
   footer .footer-logo {
     width: 104px !important;
     height: 21px !important;
-  }
-  .aside-nav {
-    display: none !important;
   }
 
   /* ===================== 푸터 반응형 360 ===================== */
@@ -918,9 +925,6 @@ footer address p {
     line-height: 9px;
   }
 
-  footer .footer-notice-wrapper {
-    display: none !important;
-  }
   .facility-information {
     margin-bottom: 0;
   }
@@ -973,5 +977,9 @@ footer address p {
   }
   .icon_mouse {
     display: none;
+  }
+
+  #logo-mobile {
+    display: block;
   }
 }
