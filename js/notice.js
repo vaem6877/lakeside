@@ -60,6 +60,8 @@ pager.click(function (e) {
   let tabIdx = $(this).index();
 
   showSlide(tabIdx);
+  liOSL = navBtn.eq(tabIdx).offset().left - navUl.offset().left;
+  navBar.stop().animate({ left: liOSL }, 200);
 });
 // pager 클릭시 할일
 
