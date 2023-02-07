@@ -32,9 +32,50 @@
   <body>
     <header class="text-center">
       <h1 id="logo"><a href="#">lakeside</a></h1>
-      <div class="widget"></div>
-    </header>
-    <!-- <section id="menu"> -->
+      <div class="widget_box d-flex">
+        <div class="weather_cast">
+          <div class="preview d-flex">
+            <ul class="d-flex"></ul>
+          </div>
+          <div class="swiper container">
+            <ul class="swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-prev">◀</div>
+          <div class="swiper-button-next">▶</div>
+          <div class="shortcut">
+            <div
+              class="reservation d-flex justify-content-center align-items-center gap-4"
+            >
+              <div class="calendar"><a href="book.html">예약하기</a></div>
+              <i class="fa-solid fa-calendar-plus"></i>
+            </div>
+            <div class="faq d-flex justify-content-center align-items-center gap-4">
+              <div class="phone"><a href="">문의하기</a></div>
+              <i class="fa-solid fa-square-phone-flip"></i>
+            </div>
+            <div
+              class="location d-flex justify-content-center align-items-center gap-4"
+            >
+              <div class="map"><a href="notice.html#directions">오시는길</a></div>
+              <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+          </div>
+        </div>
+        <div class="preview_widget">
+          <div class="today_weather">
+            <div class="today_icon"></div>
+            <div class="today_temp"></div>
+            <div class="today_date"></div>
+            <div class="preview_shortcut">
+              <p>
+                <i class="fa-solid fa-calendar-plus"></i>
+              </p>
+              <p><i class="fa-solid fa-square-phone-flip"></i></p>
+              <p><i class="fa-solid fa-map-location-dot"></i></p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div
         class="menu d-flex flex-column justify-content-center align-items-center"
       >
@@ -80,53 +121,15 @@
           </li>
         </ul>
         <div class="button">
+          <a href="index.html" id="logo-mobile"
+            ><img src="./img/logo_white.png" alt=""
+          /></a>
         </div>
       </div>
-      </div>
-    <!-- </section> -->
-    <div class="widget_box d-flex">
-      <div class="weather_cast">
-        <div class="preview d-flex">
-          <ul class="d-flex"></ul>
-        </div>
-        <div class="swiper container">
-          <ul class="swiper-wrapper"></ul>
-        </div>
-        <div class="swiper-button-prev">◀</div>
-        <div class="swiper-button-next">▶</div>
-        <div class="shortcut">
-          <div
-            class="reservation d-flex justify-content-center align-items-center gap-4"
-          >
-            <div class="calendar"><a href="book.html">예약하기</a></div>
-            <i class="fa-solid fa-calendar-plus"></i>
-          </div>
-          <div class="faq d-flex justify-content-center align-items-center gap-4">
-            <div class="phone"><a href="">문의하기</a></div>
-            <i class="fa-solid fa-square-phone-flip"></i>
-          </div>
-          <div
-            class="location d-flex justify-content-center align-items-center gap-4"
-          >
-            <div class="map"><a href="notice.html#directions">오시는길</a></div>
-            <i class="fa-solid fa-map-location-dot"></i>
-          </div>
-        </div>
-      </div>
-      <div class="preview_widget">
-        <div class="today_weather">
-          <div class="today_icon"></div>
-          <div class="today_temp"></div>
-          <div class="today_date"></div>
-          <div class="preview_shortcut">
-            <p>
-              <i class="fa-solid fa-calendar-plus"></i>
-            </p>
-            <p><i class="fa-solid fa-square-phone-flip"></i></p>
-            <p><i class="fa-solid fa-map-location-dot"></i></p>
-          </div>
-        </div>
-      </div>
+    <div class="icon_mouse">
+      <img src="img/icon_mouse.svg" alt="" />
+    </div>
+    </header>
     </div>
     <main id="course">
       <nav class="aside-nav d-flex flex-column align-items-end">
@@ -146,7 +149,7 @@
     ><span class="nav-text">홀인원 이벤트</span>
     <span> </span>
   </a>
-</nav>
+      </nav>
       <section id="course_wv">
         <h3>THE LAKE SIDE</h3>
         <h2>ALL COURSE</h2>
