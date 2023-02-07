@@ -40,9 +40,13 @@ asideNav.click(function (e) {
 
   targetIdx = $(this).index();
 
-  $("html, body").stop().animate({
-    scrollTop: sectionsOST[targetIdx],
-  });
+  $("html, body").stop().animate(
+    {
+      scrollTop: sectionsOST[targetIdx],
+    },
+    200,
+    "easeOutQuart"
+  );
 });
 
 // 스크롤양에 따라 보이고 안보임
