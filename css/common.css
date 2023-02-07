@@ -299,6 +299,10 @@ footer address p {
   visibility: visible;
 }
 
+.aside-nav a.active span:last-child:after {
+  transform: scale(0.8) translateX(-50%);
+}
+
 /* ======================= // 마우스바운싱 애니메이션 ===================== */
 
 .icon_mouse {
