@@ -800,6 +800,9 @@ footer address p {
   .widget_box {
     display: none !important;
   }
+  .footer-notice-wrapper {
+    display: none;
+  }
   /* ========== 메뉴 ========== */
   .menu {
     position: fixed;
