@@ -1,3 +1,6 @@
+body {
+  text-align: center;
+}
 header {
   background: url(../img/course_img/course_banner.jpg);
   background-repeat: no-repeat;
