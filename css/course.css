@@ -117,6 +117,7 @@ header {
   padding: 163px 0px 82px;
 }
 #hole_desc #tabs .tab_group p {
+  height: 81px;
   width: 90%;
   margin: 45px auto;
 }

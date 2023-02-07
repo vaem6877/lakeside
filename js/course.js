@@ -2,9 +2,8 @@
 
 document.querySelector("li").removeAttribute("style");
 
-$(function () {
-  $("#hole_desc #tabs").tabs();
-}); //코스 탭
+$("#hole_desc #tabs").tabs();
+//코스 탭
 
 let courseTab = $("#tabs").find("li"),
   courseBtn = courseTab.find("a");
