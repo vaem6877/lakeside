@@ -180,6 +180,9 @@ header {
   padding: 10px;
 }
 #course_gallery .mix-wrapper img {
+  opacity: 0;
+  transform: translateX(10px) rotateY(180deg);
+  perspective: 300px;
   cursor: pointer;
 }
 #course_gallery .course_img_big {
