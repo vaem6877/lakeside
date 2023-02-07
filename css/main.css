@@ -61,7 +61,8 @@ section {
 }
 
 .east-course {
-  margin: 181px 0 196px;
+  padding-top: 181px;
+  margin: 0 0 196px;
 }
 
 .west-course {
@@ -291,7 +292,7 @@ footer .notice-slide {
 
   .east-course {
     margin-bottom: 0;
-    margin-top: 120px;
+    padding-top: 120px;
   }
   .south-course {
     padding-top: 120px;
