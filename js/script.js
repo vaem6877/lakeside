@@ -39,11 +39,9 @@ asideNav.click(function (e) {
 
   targetIdx = $(this).index();
 
-  $("html, body")
-    .stop()
-    .animate({
-      scrollTop: sectionsOST[targetIdx] - 200,
-    });
+  $("html, body").stop().animate({
+    scrollTop: sectionsOST[targetIdx],
+  });
 });
 
 // 스크롤양에 따라 보이고 안보임
