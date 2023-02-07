@@ -258,7 +258,6 @@ $.getJSON(
     let previewIconBox = $(".today_icon");
     let previewIconHTML = `<i class="fa-solid ${weatherIcon[previewIcon]}"></i>`;
     previewIconBox.append(previewIcon);
-    $(".menu .button").prepend(previewIconHTML);
 
     //preview - temp
     let todayTemp = $(".preview ul >li:first-child .temp").html();
@@ -305,8 +304,8 @@ if (matchMedia("screen and (max-width: 360px)").matches) {
     .find("li:nth-child(3)")
     .html(`<a href="" class="main_menu">오시는길</a>`);
   menus.find("li:nth-child(4)").hide();
-  let previewIconClone = $(".weather_cast .preview ul li").text();
-  menuBtn.prepend(previewIconHTML);
+  let previewIconClone = $(".preview today_icon").html();
   console.log(previewIconClone);
   $(".menu .button").addClass("d-flex justify-content-between");
+  $(".menu .button").prepend(`<i class="fa-solid ${previewIconClone[0]}"></i>`);
 }

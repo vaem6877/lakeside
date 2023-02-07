@@ -443,15 +443,13 @@ footer address p {
 }
 .menu .button.active::before {
   left: 30%;
-  transform: rotate(45deg) translate(-10px, -7px);
+  transform: rotate(45deg) translate(0px, -8px);
   background: #fff;
-  height: 50px;
 }
 .menu .button.active::after {
   left: 30%;
-  transform: rotate(-45deg) translate(-12px, 10px);
+  transform: rotate(-45deg) translate(0px, 10px);
   background: #fff;
-  height: 50px;
 }
 
 /* ======================= // 위젯 ===================== */
@@ -738,17 +736,13 @@ footer address p {
   }
   .menu .button.active::before {
     left: 30%;
-    transform: rotate(45deg) translate(-10px, -7px);
+    transform: rotate(45deg) translate(5px, -10px);
     background: rgb(255, 255, 255);
-    height: 50px;
-    width: 10px;
   }
   .menu .button.active::after {
     left: 30%;
-    transform: rotate(-45deg) translate(-13px, 10px);
+    transform: rotate(-45deg) translate(4px, 12px);
     background: rgb(255, 255, 255);
-    height: 50px;
-    width: 10px;
   }
 
   @media screen and (max-width: 768px) {
@@ -854,6 +848,16 @@ footer address p {
     right: auto;
     z-index: 90;
   }
+  .menu .button.active {
+    position: fixed;
+    background: #1b221a;
+    top: 0;
+    transform: none;
+    width: 100%;
+    height: 60px;
+    right: auto;
+    z-index: 90;
+  }
   .menu .button:before {
     height: 6px;
     width: 30px;
@@ -868,6 +872,7 @@ footer address p {
     top: 53%;
     left: 86%;
   }
+
   .menu .button.active::before {
     left: 85%;
     transform: rotate(-45deg) translate(-1px, -5px);
