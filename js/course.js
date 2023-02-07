@@ -3,7 +3,9 @@
 document.querySelector("li").removeAttribute("style");
 
 $(function () {
-  $("#hole_desc #tabs").tabs();
+  $("#hole_desc #tabs").tabs({
+    active: 0,
+  });
 }); //코스 탭
 
 let courseTab = $("#tabs").find("li"),
@@ -62,16 +64,7 @@ swiperSlideBtn.click(function () {
   let courseName = $(this).parents("div")[2].dataset.name;
   let makeHoleName = $(".tab_group h2");
   let holeName = $(this).text();
-  let holeNum = holeName.substr(0, 2);
-  console.log(holeNum);
-
-  console.log(courseName);
-  // console.log(holeName);
-  // console.log(holeId);
-  // console.log(holeNum);
-  // imgContainer.html(imgSrc);
   makeHoleName.text(holeName);
-  // imgContainer.text("이미지");
 });
 
 let mix = mixitup(".mix-wrapper", {
@@ -113,6 +106,8 @@ if (matchMedia("screen and (max-width: 768px)").matches) {
   let swiper = new Swiper(".swiper", {
     slidesPerView: "6",
     spaceBetween: 10,
+    observer: true,
+    observeParents: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -136,18 +131,17 @@ if (matchMedia("screen and (max-width: 360px)").matches) {
 }
 
 //스크롤이벤트
-let $window = $(window),
-  wholeView = $("#course_wv"),
+let wholeView = $("#course_wv"),
   wvOST = wholeView.offset().top;
 console.log(wvOST);
 
-$window.scroll(function () {
+$(window).scroll(function () {
   console.log($(window).scrollTop());
   if ($(window).scrollTop() > wvOST - wvOST / 2) {
     // console.log(wholeView.find("h3").text());
     wholeView.find("h3").animate({ opacity: 1 }, 300);
     wholeView.find("h2").delay(300).animate({ opacity: 1 }, 300);
     wholeView.find("> p").delay(600).animate({ opacity: 1 }, 300);
-    wholeView.find("> div").delay(800).animate({ opacity: 1 }, 1000);
+    wholeView.find("> div").delay(1000).animate({ opacity: 1 }, 1000);
   }
 });

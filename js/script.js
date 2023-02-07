@@ -39,13 +39,11 @@ asideNav.click(function (e) {
 
   targetIdx = $(this).index();
 
-  $("html, body").stop().animate(
-    {
-      scrollTop: sectionsOST[targetIdx],
-    },
-    200,
-    "easeOutQuart"
-  );
+  $("html, body")
+    .stop()
+    .animate({
+      scrollTop: sectionsOST[targetIdx] - 200,
+    });
 });
 
 // 스크롤양에 따라 보이고 안보임
@@ -67,7 +65,6 @@ $(window).scroll(function () {
     if (SCT >= item.offset().top - 400) {
       asideNav.removeClass("active");
       asideNav.eq(idx).addClass("active");
-      asideNav.css({ display: "inline-block" });
     }
   });
 });
@@ -259,8 +256,12 @@ $.getJSON(
     let previewIcon = $(".preview ul >li:first-child .fa-solid").clone();
     console.log(previewIcon);
     let previewIconBox = $(".today_icon");
-    let previewIconHTML = `<i class="fa-solid ${weatherIcon[previewIcon]}"></i>`;
     previewIconBox.append(previewIcon);
+    // let previewIconHTML = `<i class="fa-solid ${weatherIcon[iconArr]}"></i>`;
+    // menuBtn.append(previewIconHTML);
+    // setTimeout(function () {
+    //   menuBtn.append(previewIcon);
+    // }, 3000);
 
     //preview - temp
     let todayTemp = $(".preview ul >li:first-child .temp").html();
@@ -300,6 +301,7 @@ $(".widget_box").hover(
 
 // 위젯 끝 ======================================================
 
+console.log($(".preview_widget .today_icon i:before").contents());
 //반응형 메뉴
 if (matchMedia("screen and (max-width: 360px)").matches) {
   let menus = menu.find(".menus");
@@ -307,8 +309,4 @@ if (matchMedia("screen and (max-width: 360px)").matches) {
     .find("li:nth-child(3)")
     .html(`<a href="" class="main_menu">오시는길</a>`);
   menus.find("li:nth-child(4)").hide();
-  let previewIconClone = $(".preview .today_icon").contents();
-  console.log(previewIconClone);
-  $(".menu .button").addClass("d-flex justify-content-between");
-  $(".menu .button").prepend(previewIconClone);
 }

@@ -170,9 +170,9 @@
 
 @media screen and (max-width: 360px) {
   /* ========== 숨김컨텐츠 ========== */
-  .widget_box {
+  /* .widget_box {
     display: none !important;
-  }
+  } */
   /* ========== 메뉴 ========== */
   .menu {
     position: fixed;

@@ -729,7 +729,7 @@ footer address p {
     left: 20%;
     transition: 0.7s;
   }
-  .menu .button i {
+  .menu .button i:before {
     display: none;
   }
   .menu .button.active::before {
@@ -886,9 +886,12 @@ footer address p {
     transform-origin: right;
     background: #fff;
   }
-  .menu .button i {
+  .menu .button i:before {
     display: block;
-    font-size: 50px;
+    font-size: 35px;
+    line-height: 60px;
+    padding-left: 10px;
+    color: #fff;
   }
 
   /* =================== 반응형 모바일 헤더, 푸터 */

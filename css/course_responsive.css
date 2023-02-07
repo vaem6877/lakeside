@@ -73,85 +73,6 @@
   }
 }
 @media screen and (max-width: 360px) {
-  /* .widget_box {
-    display: none !important;
-  }
-  .menu {
-    position: fixed;
-    gap: 30px;
-    background: rgba(24, 34, 26, 0.8);
-    left: 0;
-    top: auto;
-    left: 0;
-    bottom: 100%;
-    transition: bottom 0.7s;
-    z-index: 100;
-  }
-  .menu .menus {
-    flex-direction: column;
-  }
-  .menu .menus li {
-    margin-top: 27px;
-  }
-  .menu .menus ul {
-    display: none;
-  }
-  .menu .main_menu {
-    font-size: 18px;
-  }
-  .menu .sub_menu {
-    font-size: 12px;
-  }
-  .menu .main_menus {
-    width: 90%;
-    gap: 50px;
-    border: none;
-    flex-direction: column;
-  }
-  .menu.active {
-    bottom: 0;
-  }
-  .menu .button {
-    position: fixed;
-    background: #1b221a;
-    top: 0;
-    transform: none;
-    width: 100%;
-    height: 60px;
-    right: auto;
-    z-index: 90;
-  }
-  .menu .button:before {
-    height: 6px;
-    width: 30px;
-    background: #fff;
-    top: 33%;
-    left: 84%;
-  }
-  .menu .button:after {
-    height: 6px;
-    width: 30px;
-    background: #fff;
-    top: 53%;
-    left: 86%;
-  }
-  .menu .button.active::before {
-    left: 85%;
-    transform: rotate(-45deg) translate(-1px, -5px);
-    transform-origin: right;
-    background: #fff;
-  }
-  .menu .button.active::after {
-    left: 85%;
-    transform: rotate(45deg) translate(1px, 8px);
-    transform-origin: right;
-    background: #fff;
-  }
-  .menu .button i {
-    display: block;
-    font-size: 50px;
-  } */
-
   h2 {
     font-size: var(--mobile-mainTT-fz);
   }
@@ -193,7 +114,7 @@
     width: 90%;
   }
   #hole_desc #tabs .tab_group {
-    padding: 43px 0px;
+    padding: 64px 0px;
   }
   .containerBox h2 {
     margin-bottom: 0;
@@ -233,7 +154,7 @@
       transform: translateX(0px);
     }
   }
-  #tabs .img_container {
-    margin-bottom: 76px;
+  #tabs .swiper {
+    margin-bottom: 51px;
   }
 }
