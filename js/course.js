@@ -84,18 +84,7 @@ let mix = mixitup(".mix-wrapper", {
 }); //코스갤러리 필터
 
 let courseGallery = $("#course_gallery"),
-  courseGalleryBtn = courseGallery.find("button"),
-  galleryOST = courseGallery.offset().top;
-
-$(window).scroll(function () {
-  if ($(window).scrollTop() > galleryOST - galleryOST / 2) {
-    courseGallery.find("img").each(function (idx) {
-      $(this)
-        .delay(idx * 200)
-        .animate({ opacity: 1, transform: "translateX(0px) rotateY(0deg)" });
-    });
-  }
-});
+  courseGalleryBtn = courseGallery.find("button");
 
 courseGalleryBtn.click(function () {
   courseGalleryBtn.removeClass("active");

@@ -304,8 +304,8 @@ if (matchMedia("screen and (max-width: 360px)").matches) {
     .find("li:nth-child(3)")
     .html(`<a href="" class="main_menu">오시는길</a>`);
   menus.find("li:nth-child(4)").hide();
-  let previewIconClone = $(".preview today_icon").html();
+  let previewIconClone = $(".preview .today_icon").contents();
   console.log(previewIconClone);
   $(".menu .button").addClass("d-flex justify-content-between");
-  $(".menu .button").prepend(`<i class="fa-solid ${previewIconClone[0]}"></i>`);
+  $(".menu .button").prepend(previewIconClone);
 }
