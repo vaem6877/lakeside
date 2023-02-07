@@ -39,13 +39,6 @@ asideNav.click(function (e) {
 
   targetIdx = $(this).index();
 
-<<<<<<< HEAD
-  $("html, body")
-    .stop()
-    .animate({
-      scrollTop: sectionsOST[targetIdx] - 200,
-    });
-=======
   $("html, body").stop().animate(
     {
       scrollTop: sectionsOST[targetIdx],
@@ -53,7 +46,6 @@ asideNav.click(function (e) {
     200,
     "easeOutQuart"
   );
->>>>>>> 227dd6918cfaea31deb360fc5873a0c4d4a951e5
 });
 
 // 스크롤양에 따라 보이고 안보임
@@ -75,6 +67,7 @@ $(window).scroll(function () {
     if (SCT >= item.offset().top - 400) {
       asideNav.removeClass("active");
       asideNav.eq(idx).addClass("active");
+      asideNav.css({ display: "inline-block" });
     }
   });
 });

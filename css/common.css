@@ -262,28 +262,26 @@ footer address p {
 
 .aside-nav a span:last-child {
   margin-left: 10px;
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   background: var(--primary-ygreen);
   border-radius: 50%;
   position: relative;
+  transform: scale(0.8);
 }
 
-.aside-nav a:hover span:last-child {
-  width: 18px;
-  height: 18px;
-  background: var(--primary-green);
-}
+.aside-nav a:hover span:last-child,
 .aside-nav a.active span:last-child {
-  width: 18px;
-  height: 18px;
   background: var(--primary-green);
+  transform: scale(1);
 }
+
 .aside-nav a.active .nav-text {
   visibility: visible;
 }
 
 .aside-nav a span:last-child:after {
+  top: 100%;
   z-index: -1;
   content: "";
   display: block;
