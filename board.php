@@ -121,12 +121,16 @@ require_once('php/config.php');
         </div>
       </div>
     </header>
-    <main class="board_wrapper">
-      <div class="container">
+
+
+
+    <main id="board">
+    <div class="board_wrapper">
+      <div class="container ">
         <div class="search"> 
           <div class="switch_wb">  
             <?php if(isset($_SESSION['id'])) { ?>
-            <a href="write.html" class="write_btn">글쓰기</a>
+            <a href="write.html#write" class="write_btn">글쓰기</a>
             <?php } ?>
          </div>
           <form action="">
@@ -152,11 +156,9 @@ require_once('php/config.php');
                 $sql = "SELECT * FROM lake_bbs ORDER BY idx DESC LIMIT 0,10";
                 $result = $connect->query($sql);
                 while ($row = $result->fetch_assoc()) {
-                if(mb_strlen($row['title']) > 10){
+                if(mb_strlen($row['title']) > 18){
                     $title = mb_substr($row['title'], 0, 10, 'utf-8').'...';
                     //$title = str_replace($row['title'], mb_substr($row['title'], 0, 10, 'utf-8').'...', $row['title']);
-                   
-                    
 
                 } else{
                     $title = $row['title'];
@@ -166,7 +168,7 @@ require_once('php/config.php');
             ?>
             <tr>
               <td><?= $row['idx'] ?></td>
-              <td><a href=""><?= $title ?></a></td>
+              <td><a href="view.php?idx=<?=$row["idx"]?>#view"><?= $title ?></a></td>
               <td><?= $row['name'] ?></td>
               <td><?= $row['date'] ?></td>
             </tr>
@@ -186,6 +188,10 @@ require_once('php/config.php');
           <i class="fa-solid fa-chevron-right"></i>
         </div>
       </div>
+   </div>
+   
+   
+   
     </main>
  
     <a href="#" id="go-top"><i class="fa-solid fa-arrow-up"></i></a>

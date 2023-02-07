@@ -1,18 +1,10 @@
 <?php
-  session_start();
-  if(!isset($_SESSION['id'])) {
-      echo "<script>alert('세션감지실패');</script>";
-      echo "<script>location.replace('login.html');</script>";            
-  }
-  
-  else {
-    echo "<script>alert('세션감지성공');</script>";          
-      $id = $_SESSION['id'];
-      $name = $_SESSION['name'];
-  } 
-  ?>
-
-
+    session_start();
+    require_once('php/config.php');
+    $idx = $_GET["idx"];
+    $sql = "SELECT * FROM lake_bbs WHERE idx='{$idx}' ";
+    $result = mysqli_query($connect, $sql);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +32,7 @@
     <link rel="stylesheet" href="css/back.css" />
   </head>
   <body>
-    <header class="text-center login_header">
+    <header class="text-center board_header">
       <h1 id="logo"><a href="#">lakeside</a></h1>
       <div class="widget_box d-flex">
         <div class="weather_cast">
@@ -132,42 +124,32 @@
         </div>
       </div>
     </header>
-
-
-
-
-
-
-
-
-
-
-    <main id="session">
-        <div class="session_wrapper">
-            <div class="session container">
-                <div class="session_title">login info</div>
-                <div class="session_info d-flex justify-content-between">
-                    <p  class=" d-flex align-items-center justify-content-center">
-                        <?php echo "$id($name)"; ?>
-                    </p>
-                    <a href="php/logout.php" class="btn_logout d-flex align-items-center justify-content-center">LOGOUT</a>
-                </div>
-                
-            </div>
+    <main id="view">
+      <div class="view_wrapper container">
+        <div class="view_container">
+          <div class="view_box">
+          <?php
+if($row = mysqli_fetch_array($result)){ ?>
+            <h4 class="view_title"><?=$row['title'] ?></h4>
+            <p class="view_name"><?=$row['name'] ?></p>
+            <p class="view_date"><?=$row['date'] ?></p>
+            <article>
+              <p>
+                <?=$row['content'] ?>
+              </p>
+            </article>
+        <?php
+        }
+        mysqli_close($connect);
+        ?>    
+          </div>
+          <a href="board.php#board">목록으로</a>
         </div>
+      </div>
     </main>
+    <a href="#" id="go-top"><i class="fa-solid fa-arrow-up"></i></a>
+    <!-- 탑 버튼 -->
 
-
-
-
-
-
-
-
-
-
-
- 
     <footer>
       <div class="terms d-flex justify-content-center">
         <a href="">이용약관</a>

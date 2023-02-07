@@ -4,6 +4,7 @@ $("#datepicker").datepicker({
   prevText: "",
   nextText: "",
   minDate: "+d",
+  maxDate: "+4w",
   monthNames: [
     "01",
     "02",
@@ -27,44 +28,30 @@ $("#datepicker").datepicker({
   },
   // showOtherMonths: true,
 });
-
-let tabs = $(".tabs li");
-content = $("section");
-
-tabs.on("click", function () {
-  let targetidx = $(this).index();
-
-  tabs.removeClass("active");
-  $(this).addClass("active");
-
-  content.hide();
-  content.eq(targetidx).show();
-});
-
-/* ======book_data tabs and content json realtime update table===== */
-
 $(function () {
-  $("#data_tabs").tabs();
+  $("#tabs").tabs();
 });
+/* ======book_data tabs and content json realtime update table===== */
+let courseTabs = $(".course_tabs li"),
+  dataArray = [];
 
-let dataBoard = $(".course_content tbody"),
-  dataArray = [],
-  dataAdd = 0,
-  dataLength = 6;
-
+// console.log(dataBoard.eq(0).html());
 $.getJSON("js/book_data.json", initData);
 
 function initData(result) {
   dataArray = result;
+
   bookData();
 }
+
 function bookData() {
   let tableArray = "";
+
   for (let i = 0; i < dataArray.length; i++) {
     let dai = dataArray[i];
     for (let ii = 0; ii < dai.time.length; ii++) {
       tableArray += `
-      <tr>
+      <tr class="${dai.type}">
         <td>${dai.course}</td>
         <td>${dai.time[ii]}</td>
         <td>${dai.hole}홀</td>
@@ -75,5 +62,23 @@ function bookData() {
     }
   }
 
-  dataBoard.append(tableArray);
+  $(".course_content tbody").append(tableArray);
 }
+
+courseTabs.click(function () {
+  let target = $(this).attr("data-course");
+
+  showTable(target);
+  courseTabs.removeClass("active");
+  $(this).addClass("active");
+});
+function showTable(cl) {
+  if (cl == "all") {
+    $(".course_content tbody tr").show();
+  } else {
+    $(".course_content tbody tr").hide();
+    $(cl).css({ display: "table-row" });
+  }
+}
+showTable(".east");
+courseTabs.eq(1).trigger("click");
