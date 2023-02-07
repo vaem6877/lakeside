@@ -22,6 +22,10 @@ main {
   top: 150.9%;
 }
 
+.widget_box p {
+  line-height: inherit !important;
+}
+
 .desc-history,
 .desc-contest,
 div,

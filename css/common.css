@@ -971,4 +971,7 @@ footer address p {
   footer address p {
     padding-bottom: 15px !important;
   }
+  .icon_mouse {
+    display: none;
+  }
 }
