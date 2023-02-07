@@ -2,8 +2,9 @@
 
 document.querySelector("li").removeAttribute("style");
 
-$("#hole_desc #tabs").tabs();
-//코스 탭
+$(function () {
+  $("#hole_desc #tabs").tabs();
+}); //코스 탭
 
 let courseTab = $("#tabs").find("li"),
   courseBtn = courseTab.find("a");
@@ -83,8 +84,8 @@ courseGalleryBtn.click(function () {
 
 let galleryImg = courseGallery.find("img");
 let bigImg = courseGallery.find(".course_img_big");
-let exitBtn = courseGallery.find("i");
-
+let exitBtn = bigImg.find("i");
+console.log(exitBtn);
 galleryImg.click(function (e) {
   e.preventDefault();
   let imgSrc = $(this).attr("src");
@@ -94,7 +95,8 @@ galleryImg.click(function (e) {
 });
 
 exitBtn.click(function () {
-  bigImg.hide();
+  alert("클릭");
+  // bigImg.hide();
 });
 
 //반응형

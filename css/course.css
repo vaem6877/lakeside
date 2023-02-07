@@ -224,7 +224,7 @@ header {
   bottom: 0;
   color: #fff;
   transition: 1s;
-  z-index: 100;
+  z-index: 200;
 }
 #course_gallery .course_img_big img {
   position: absolute;
