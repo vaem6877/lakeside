@@ -225,7 +225,7 @@ footer address p {
   top: 50%;
   transform: translateY(-50%);
   right: 3%;
-  z-index: 100;
+  z-index: 99;
 }
 
 .aside-nav * {
@@ -389,6 +389,7 @@ footer address p {
   right: 5px;
   width: 32px;
   height: 135px;
+  transition: 0.7s;
   z-index: 200;
 }
 .menu .button:before {
@@ -420,17 +421,20 @@ footer address p {
 .menu .button i {
   display: none;
 }
+.menu .button.active {
+  right: 45px;
+}
 .menu .button.active::before {
   left: 30%;
-  transform: rotate(45deg) translate(-2px, -6px);
+  transform: rotate(45deg) translate(-10px, -7px);
   background: #fff;
-  height: 37px;
+  height: 50px;
 }
 .menu .button.active::after {
   left: 30%;
-  transform: rotate(-45deg) translate(-4px, 8px);
+  transform: rotate(-45deg) translate(-12px, 10px);
   background: #fff;
-  height: 37px;
+  height: 50px;
 }
 
 /* ======================= // 위젯 ===================== */
@@ -542,9 +546,15 @@ footer address p {
   text-align: center;
   padding: 11.5px 0px;
 }
+.weather_cast .shortcut a {
+  color: #fff;
+}
 .weather_cast .shortcut > *:hover {
-  color: #000;
   background: #fff;
+}
+.weather_cast .shortcut > *:hover a,
+.weather_cast .shortcut > *:hover i {
+  color: #000;
 }
 .weather_cast .shortcut > *:hover i {
   transform: translateY(360deg);
@@ -711,13 +721,17 @@ footer address p {
   }
   .menu .button.active::before {
     left: 30%;
-    transform: rotate(45deg) translateY(-5px);
-    background: #fff;
+    transform: rotate(45deg) translate(-10px, -7px);
+    background: rgb(255, 255, 255);
+    height: 50px;
+    width: 10px;
   }
   .menu .button.active::after {
     left: 30%;
-    transform: rotate(-45deg) translateY(5px);
-    background: #fff;
+    transform: rotate(-45deg) translate(-13px, 10px);
+    background: rgb(255, 255, 255);
+    height: 50px;
+    width: 10px;
   }
 
   @media screen and (max-width: 768px) {

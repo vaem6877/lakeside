@@ -3,9 +3,7 @@
 document.querySelector("li").removeAttribute("style");
 
 $(function () {
-  $("#hole_desc #tabs").tabs({
-    active: 0,
-  });
+  $("#hole_desc #tabs").tabs();
 }); //코스 탭
 
 let courseTab = $("#tabs").find("li"),
@@ -86,7 +84,18 @@ let mix = mixitup(".mix-wrapper", {
 }); //코스갤러리 필터
 
 let courseGallery = $("#course_gallery"),
-  courseGalleryBtn = courseGallery.find("button");
+  courseGalleryBtn = courseGallery.find("button"),
+  galleryOST = courseGallery.offset().top;
+
+$(window).scroll(function () {
+  if ($(window).scrollTop() > galleryOST - galleryOST / 2) {
+    courseGallery.find("img").each(function (idx) {
+      $(this)
+        .delay(idx * 200)
+        .animate({ opacity: 1, transform: "translateX(0px) rotateY(0deg)" });
+    });
+  }
+});
 
 courseGalleryBtn.click(function () {
   courseGalleryBtn.removeClass("active");
@@ -138,17 +147,18 @@ if (matchMedia("screen and (max-width: 360px)").matches) {
 }
 
 //스크롤이벤트
-let wholeView = $("#course_wv"),
+let $window = $(window),
+  wholeView = $("#course_wv"),
   wvOST = wholeView.offset().top;
 console.log(wvOST);
 
-$(window).scroll(function () {
+$window.scroll(function () {
   console.log($(window).scrollTop());
   if ($(window).scrollTop() > wvOST - wvOST / 2) {
     // console.log(wholeView.find("h3").text());
     wholeView.find("h3").animate({ opacity: 1 }, 300);
     wholeView.find("h2").delay(300).animate({ opacity: 1 }, 300);
     wholeView.find("> p").delay(600).animate({ opacity: 1 }, 300);
-    wholeView.find("> div").delay(1000).animate({ opacity: 1 }, 1000);
+    wholeView.find("> div").delay(800).animate({ opacity: 1 }, 1000);
   }
 });
