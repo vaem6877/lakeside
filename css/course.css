@@ -1,3 +1,8 @@
+#course {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='50 50 50 50' style='fill:black;font-size:24px;'><text y='50%'>⛳</text></svg>")
+      16 0,
+    auto;
+}
 header {
   background: url(../img/course_img/course_banner.jpg);
   background-repeat: no-repeat;
@@ -23,6 +28,7 @@ header {
   list-style: none;
 }
 #tabs .img_container {
+  border: 10px solid #dfdfdf;
   width: 100%;
 }
 #course_wv {
@@ -43,12 +49,42 @@ header {
   margin-bottom: 73px;
 }
 .img_container {
+  position: relative;
   width: 80%;
   background: #fff;
   margin: 0 auto;
-  border: 10px solid #dfdfdf;
   padding: 35px 0px;
 }
+.img_container span {
+  position: absolute;
+  background: #dfdfdf;
+  transition: all 0.5s;
+}
+.img_container span:nth-child(1) {
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 10px;
+}
+.img_container span:nth-child(2) {
+  right: 0;
+  top: 0;
+  width: 10px;
+  height: 0;
+}
+.img_container span:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 10px;
+}
+.img_container span:nth-child(4) {
+  left: 0;
+  bottom: 0;
+  width: 10px;
+  height: 0;
+}
+
 .img_container img {
   width: 70%;
 }
@@ -87,7 +123,8 @@ header {
   padding: 163px 0px 82px;
 }
 #hole_desc #tabs .tab_group p {
-  margin: 57px 0;
+  width: 90%;
+  margin: 57px auto;
 }
 #tabs .swiper {
   padding: 10px 40px;
