@@ -128,8 +128,11 @@ if (matchMedia("screen and (max-width: 360px)").matches) {
 
 //스크롤이벤트
 let wholeView = $("#course_wv"),
-  wvOST = wholeView.offset().top;
+  holeInOne = $("#holeinone"),
+  wvOST = wholeView.offset().top,
+  hioOST = holeInOne.offset().top;
 console.log(wvOST);
+console.log(hioOST);
 
 $(window).scroll(function () {
   console.log($(window).scrollTop());
@@ -146,5 +149,13 @@ $(window).scroll(function () {
     //     $(this).delay(1000).stop().animate({ height: "100%" });
     //   }
     // });
-  } //
+  } //코스전경
+  if ($(window).scrollTop() > hioOST - holeInOne.height()) {
+    holeInOne.find("h3").animate({ opacity: 1 }, 300);
+    holeInOne.find("h2").delay(300).animate({ opacity: 1 }, 300);
+    holeInOne.find("> p").delay(600).animate({ opacity: 1 }, 300);
+    setTimeout(() => {
+      holeInOne.find("> div >*").css({ transform: "translateX(0px)" });
+    }, 1000);
+  }
 });

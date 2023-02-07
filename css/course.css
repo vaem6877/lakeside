@@ -252,8 +252,21 @@ header {
   background: #f0f6e2;
   padding: 164px 0px;
 }
+#holeinone > *:not(div) {
+  opacity: 0;
+}
 #holeinone > div {
   padding: 54px 0px;
+  overflow: hidden;
+}
+#holeinone > .west_course > *,
+#holeinone > .south_course > * {
+  transform: translateX(2000px);
+  transition: 0.85s;
+}
+#holeinone > .east_course > * {
+  transform: translateX(-2000px);
+  transition: 0.85s;
 }
 #holeinone .containerBox h2 {
   margin-bottom: 72px;
