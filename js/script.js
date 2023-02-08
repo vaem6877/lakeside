@@ -64,7 +64,7 @@ function btnFade(btn, ost) {
 
 $(window).scroll(function () {
   let SCT = $(this).scrollTop();
-  btnFade(asideNav, 400);
+  btnFade(asideNav, 500);
 
   $.each(sections, function (idx, item) {
     if (SCT >= item.offset().top - 300) {
