@@ -30,7 +30,9 @@ header {
 #tabs .img_container {
   border: 10px solid #dfdfdf;
   width: 100%;
-  padding: 0;
+}
+#tabs .img_container img {
+  height: 400px;
 }
 #course_wv {
   background-image: linear-gradient(

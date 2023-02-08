@@ -256,7 +256,7 @@ $.getJSON(
     let previewIconBox = $(".today_icon");
     previewIconBox.append(previewIcon);
     // let previewIconHTML = `<i class="fa-solid ${weatherIcon[iconArr]}"></i>`;
-    // menuBtn.append(previewIconHTML);
+    // menuBtn.append(previewIcon);
     // setTimeout(function () {
     //   menuBtn.append(previewIcon);
     // }, 3000);
