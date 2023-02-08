@@ -48,7 +48,7 @@
   }
   #holeinone .item img {
     width: 100px;
-    height: 80px;
+    height: 100px;
   }
   #holeinone .item p {
     word-break: keep-all;
@@ -80,7 +80,7 @@
     display: none;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 500px) {
   h2 {
     font-size: var(--mobile-mainTT-fz);
   }

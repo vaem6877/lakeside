@@ -247,8 +247,11 @@ $.getJSON(
     });
 
     $(".widget_box .preview ul li").eq(0).find("> *").show();
+    $(".widget_box .swiper-slide").eq(0).addClass("active");
     $(".widget_box .swiper-slide a").click(function (e) {
       e.preventDefault();
+      $(this).parent().siblings().removeClass("active");
+      $(this).parent().addClass("active");
       $(".widget_box .preview ul li > *").hide();
       let idx = $(this).parent().index();
       $(".widget_box .preview ul li").eq(idx).find("> *").show();
@@ -305,14 +308,12 @@ $(".widget_box").hover(
 // 위젯 끝 ======================================================
 
 //반응형 메뉴
-if (matchMedia("screen and (max-width: 360px)").matches) {
+if (matchMedia("screen and (max-width: 500px)").matches) {
   let menus = menu.find(".menus");
   menus
     .find("li:nth-child(3)")
     .html(`<a href="" class="main_menu">오시는길</a>`);
   menus.find("li:nth-child(4)").hide();
   let previewIconClone = $(".weather_cast .preview ul li").text();
-  // menuBtn.prepend(previewIconHTML);
-  console.log(previewIconClone);
-  $(".menu .button").addClass("d-flex justify-content-between");
+  menuBtn.addClass("d-flex");
 }

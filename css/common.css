@@ -799,7 +799,7 @@ footer address p {
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 500px) {
   /* ========== 숨김컨텐츠 ========== */
   .widget_box {
     display: none !important;

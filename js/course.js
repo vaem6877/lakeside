@@ -26,7 +26,8 @@ $("#hole_desc #tabs-east .img_container #tabs-1").html(
 
 var courseSwiper = new Swiper("#course .swiper", {
   slidesPerView: "6",
-  spaceBetween: 40,
+  spaceBetween: 30,
+  slidesPerGroup: 3,
   navigation: {
     nextEl: "#course .swiper-button-next",
     prevEl: "#course .swiper-button-prev",
@@ -89,14 +90,13 @@ console.log(exitBtn);
 galleryImg.click(function (e) {
   e.preventDefault();
   let imgSrc = $(this).attr("src");
-  let showImg = `<img src="${imgSrc}" alt="" /><i class="fa-solid fa-x"></i>`;
-  bigImg.html(showImg);
+  let targetImg = bigImg.find("img").attr("src", imgSrc);
   bigImg.show();
 });
 
 exitBtn.click(function () {
-  alert("클릭");
-  // bigImg.hide();
+  console.log("클릭");
+  $(this).parent().hide();
 });
 
 //반응형
@@ -112,7 +112,7 @@ if (matchMedia("screen and (max-width: 768px)").matches) {
   });
 }
 
-if (matchMedia("screen and (max-width: 360px)").matches) {
+if (matchMedia("screen and (max-width: 500px)").matches) {
   $("#hole_desc #tabs ul li a span").hide();
   let swiper = new Swiper(".swiper", {
     slidesPerView: "5",
@@ -125,7 +125,6 @@ if (matchMedia("screen and (max-width: 360px)").matches) {
   let pointer = `<i class="fa-regular fa-hand-pointer"></i>`;
   let pointerTarget = $("#tabs .swiper");
   pointerTarget.append(pointer);
-  $(".menu .button").addClass("d-flex");
 }
 let wvOST, hioOST, gallOST;
 
@@ -149,7 +148,7 @@ $(window).scroll(function () {
     wholeView.find("h3").animate({ opacity: 1 }, 300);
     wholeView.find("h2").delay(300).animate({ opacity: 1 }, 300);
     wholeView.find("> p").delay(600).animate({ opacity: 1 }, 300);
-    wholeView.find(".img_container").delay(900).animate({ opacity: 1 }, 500);
+    wholeView.find(".img_container").delay(1000).animate({ opacity: 1 }, 1000);
     wholeView.find(".img_container span").each(function (idx) {
       setTimeout(() => {
         if (idx % 2 == 0) {
