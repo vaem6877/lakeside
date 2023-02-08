@@ -312,7 +312,7 @@ if (matchMedia("screen and (max-width: 360px)").matches) {
     .html(`<a href="" class="main_menu">오시는길</a>`);
   menus.find("li:nth-child(4)").hide();
   let previewIconClone = $(".weather_cast .preview ul li").text();
-  menuBtn.prepend(previewIconHTML);
+  // menuBtn.prepend(previewIconHTML);
   console.log(previewIconClone);
   $(".menu .button").addClass("d-flex justify-content-between");
 }
