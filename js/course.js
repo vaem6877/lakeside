@@ -138,23 +138,26 @@ setTimeout(() => {
     (hioOST = holeInOne.offset().top),
     (gallOST = gallary.offset().top);
 }, 500);
-
+let $status = false;
 $(window).scroll(function () {
   if ($(window).scrollTop() > wvOST - wvOST / 2) {
     // console.log(wholeView.find("h3").text());
-    wholeView.find("h3").animate({ opacity: 1 }, 300);
-    wholeView.find("h2").delay(300).animate({ opacity: 1 }, 300);
-    wholeView.find("> p").delay(600).animate({ opacity: 1 }, 300);
-    wholeView.find(".img_container").delay(1000).animate({ opacity: 1 }, 1000);
-    wholeView.find(".img_container span").each(function (idx) {
-      setTimeout(() => {
-        if (idx % 2 == 0) {
-          $(this).stop().animate({ width: "100%" });
-        } else {
-          $(this).stop().animate({ height: "100%" });
-        }
-      }, 2000);
-    });
+    if($status == false){
+      $status = true;
+      wholeView.find("h3").animate({ opacity: 1 }, 300);
+      wholeView.find("h2").delay(300).animate({ opacity: 1 }, 300);
+      wholeView.find("> p").delay(600).animate({ opacity: 1 }, 300);
+      wholeView.find(".img_container").delay(1000).animate({ opacity: 1 }, 1000);
+      wholeView.find(".img_container span").each(function (idx) {
+        setTimeout(() => {
+          if (idx % 2 == 0) {
+            $(this).stop().animate({ width: "100%" });
+          } else {
+            $(this).stop().animate({ height: "100%" });
+          }
+        }, 2000);
+      });
+      }
   } //코스전경 스크롤
   if ($(window).scrollTop() > gallOST - 500) {
     gallary.find(".mix-wrapper img").each(function (idx) {

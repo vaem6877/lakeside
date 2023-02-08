@@ -118,10 +118,9 @@ let year = newDate.getFullYear(); // 년도
 let month = newDate.getMonth() + 1; // 월
 let date = newDate.getDate(); // 날짜
 let day = newDate.getDay(); // 요일
-let korWeek = new Array("일", "월", "화", "수", "목", "금", "토");
 let today = `${year}-0${month}-${date}`;
-console.log(date);
 
+let korWeek = new Array("일", "월", "화", "수", "목", "금", "토");
 let weatherIcon = {
   "01d": "fa-sun",
   "01n": "fa-moon",
@@ -148,8 +147,48 @@ let TempArr = [];
 let iconArr = [];
 
 $.getJSON(
-  "http://api.openweathermap.org/data/2.5/forecast?lat=37.5683&lon=126.9778&appid=6683b822924895deb0d2f90cf228a02e&units=metric",
+  "http://api.openweathermap.org/data/2.5/weather?lat=37.319579&lon=127.179104&appid=6683b822924895deb0d2f90cf228a02e&units=metric",
   function (result) {
+    let minTemp = result.main.temp_min;
+    let maxTemp = result.main.temp_max;
+    let code = result.weather[0].icon;
+
+    let todayWeatherIcon = `<i class="fa-solid ${weatherIcon[code]}"></i>`
+
+    let todayWeather = `
+    <li class="d-flex gap-3">
+    ${todayWeatherIcon}
+      <span class="temp">
+        <p><span>MAX </span>${maxTemp.toFixed(1)}<span>˚C</span></p>
+        <p><span>MIN </span>${minTemp.toFixed(1)}<span>˚C</span></p>
+      <span>
+    </li>
+    `
+    $(".widget_box .preview ul").append(todayWeather)
+    console.log(todayWeather)
+
+    
+    let newDate = new Date(result.dt * 1000);
+    let todayDate = ("0"+newDate.getDate()).substr(-2);
+    let todayKorDate = korWeek[newDate.getDay()];
+    console.log(todayDate,todayKorDate)
+
+    let todayHTML = `
+    <li class="swiper-slide">
+    <a href="">
+    <p class="date">${todayDate}</p>
+    <p class="day">(${todayKorDate})</p>
+    </a>
+    </li>
+    `
+    target.append(todayHTML)
+    console.log(todayHTML)
+  }) //현재날씨
+
+$.getJSON(
+  "http://api.openweathermap.org/data/2.5/forecast?lat=37.319579&lon=127.179104&appid=6683b822924895deb0d2f90cf228a02e&units=metric",
+  function (result) {
+    console.log(new Date())
     console.log(result);
     let list = result.list;
     console.log(list);
@@ -187,8 +226,10 @@ $.getJSON(
         return acc;
       }
     }, []);
-    filteredDay.shift();
     console.log(filteredDay);
+    if(filteredDay[0].dt.substr(0,10) == convertCurrentTime){
+      filteredDay.shift();
+    }
     // console.log(filteredDay.shift());
 
     let date = "";
@@ -218,7 +259,7 @@ $.getJSON(
 
     $.each(dateList, function (i) {
       Temp = list.filter(function (item) {
-        return item.dt.substr(0, 10) == dateList[i] && item.dt.substr(0,10) != convertCurrentTime;
+        return item.dt.substr(0, 10) == dateList[i];
       });
       console.log(Temp);
       let TempArr = [];
@@ -291,44 +332,7 @@ $.getJSON(
     })</p></div>`;
     previewDateBox.html(previewDateHTML);
   }
-); //예보
-
-$.getJSON(
-  "http://api.openweathermap.org/data/2.5/weather?lat=37.5683&lon=126.9778&appid=6683b822924895deb0d2f90cf228a02e&units=metric",
-  function (result) {
-    console.log(result)
-    let newDate = new Date(result.dt * 1000);
-    let todayDate = ("0"+newDate.getDate()).substr(-2);
-    let todayKorDate = korWeek[newDate.getDay()];
-    console.log(todayDate,todayKorDate)
-    let minTemp = result.main.temp_min;
-    let maxTemp = result.main.temp_max;
-    let code = result.weather[0].icon;
-    let todayWeatherIcon = `<i class="fa-solid ${weatherIcon[code]}"></i>`
-    console.log(minTemp, maxTemp, code)
-
-    let todayWeather = `
-    <li class="d-flex gap-3">
-    ${todayWeatherIcon}
-      <span class="temp">
-        <p><span>MAX </span>${maxTemp.toFixed(1)}<span>˚C</span></p>
-        <p><span>MIN </span>${minTemp.toFixed(1)}<span>˚C</span></p>
-      <span>
-    </li>
-    `
-    $(".widget_box .preview ul").append(todayWeather)
-
-    let todayHTML = `
-    <li class="swiper-slide">
-    <a href="">
-    <p class="date">${todayDate}</p>
-    <p class="day">(${todayKorDate})</p>
-    </a>
-    </li>
-    `
-    target.append(todayHTML)
-    console.log(todayWeather)
-  })
+); //5일 예보
 
 $(".widget_box").hover(
   function () {
