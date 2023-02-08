@@ -25,6 +25,14 @@
     white-space: nowrap;
   }
 
+  /* 홀 설명 */
+  #hole_desc #tabs .tab_group {
+    padding: 164px 0px 82px;
+  }
+  #hole_desc #tabs .img_container img {
+    height: 200px;
+  }
+
   /* 코스갤러리 */
   #course_gallery button {
     font-size: 14px;
@@ -96,11 +104,14 @@
     border-radius: 10px;
     background: #dfdfdf;
   }
-  #hole_desc #tabs ul li {
-    padding: 8px 0px;
+  #hole_desc #tabs > ul li a {
+    padding: 14px 0;
   }
   #hole_desc #tabs > ul li a:hover {
     text-decoration: none;
+  }
+  #hole_desc #tabs .img_container img {
+    height: 150px;
   }
   #hole_desc #tabs ul li a {
     /* font-size: 10px; */
@@ -155,6 +166,6 @@
     }
   }
   #tabs .swiper {
-    margin-bottom: 51px;
+    margin-bottom: 45px;
   }
 }

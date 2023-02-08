@@ -438,7 +438,7 @@ footer address p {
   transition: 0.7s;
 }
 .menu .button i {
-  display: none;
+  display: none !important;
 }
 .menu .button.active {
   right: 45px;
@@ -896,6 +896,9 @@ footer address p {
     line-height: 60px;
     padding-left: 10px;
     color: #fff;
+  }
+  .menu .button i {
+    display: block !important;
   }
 
   /* =================== 반응형 모바일 헤더, 푸터 */

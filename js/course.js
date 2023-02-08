@@ -67,7 +67,7 @@ swiperSlideBtn.click(function () {
 
 let mix = mixitup(".mix-wrapper", {
   animation: {
-    duration: 391,
+    duration: 201,
     nudge: false,
     reverseOut: false,
     effects: "scale(0.01)",
@@ -125,38 +125,56 @@ if (matchMedia("screen and (max-width: 360px)").matches) {
   let pointer = `<i class="fa-regular fa-hand-pointer"></i>`;
   let pointerTarget = $("#tabs .swiper");
   pointerTarget.append(pointer);
+  $(".menu .button").addClass("d-flex");
 }
+let wvOST, hioOST, gallOST;
 
 //스크롤이벤트
 let wholeView = $("#course_wv"),
   holeInOne = $("#holeinone"),
-  wvOST = wholeView.offset().top,
-  hioOST = holeInOne.offset().top;
-console.log(wvOST);
-console.log(hioOST);
+  gallary = $("#course_gallery");
+
+setTimeout(() => {
+  (wvOST = wholeView.offset().top),
+    (hioOST = holeInOne.offset().top),
+    (gallOST = gallary.offset().top);
+}, 500);
 
 $(window).scroll(function () {
-  console.log($(window).scrollTop());
+  console.log("스크롤양:" + $(window).scrollTop());
+  console.log("ost값:" + gallOST);
+  console.log("높이/2:" + gallary.height() / 2);
   if ($(window).scrollTop() > wvOST - wvOST / 2) {
     // console.log(wholeView.find("h3").text());
     wholeView.find("h3").animate({ opacity: 1 }, 300);
     wholeView.find("h2").delay(300).animate({ opacity: 1 }, 300);
     wholeView.find("> p").delay(600).animate({ opacity: 1 }, 300);
     wholeView.find(".img_container").delay(900).animate({ opacity: 1 }, 500);
-    // wholeView.find(".img_container span").each(function (idx) {
-    //   if (idx % 2 == 0) {
-    //     $(this).delay(1000).stop().animate({ width: "100%" });
-    //   } else {
-    //     $(this).delay(1000).stop().animate({ height: "100%" });
-    //   }
-    // });
-  } //코스전경
-  if ($(window).scrollTop() > hioOST - holeInOne.height()) {
+    wholeView.find(".img_container span").each(function (idx) {
+      setTimeout(() => {
+        if (idx % 2 == 0) {
+          $(this).stop().animate({ width: "100%" });
+        } else {
+          $(this).stop().animate({ height: "100%" });
+        }
+      }, 1000);
+    });
+  } //코스전경 스크롤
+  if ($(window).scrollTop() > gallOST - 500) {
+    gallary.find(".mix-wrapper img").each(function (idx) {
+      // $(this).css({ opacity: 1 });
+      setTimeout(() => {
+        $(this).animate({ opacity: 1 });
+      }, 100 * idx);
+    });
+  }
+
+  if ($(window).scrollTop() > hioOST - holeInOne.height() / 2) {
     holeInOne.find("h3").animate({ opacity: 1 }, 300);
     holeInOne.find("h2").delay(300).animate({ opacity: 1 }, 300);
     holeInOne.find("> p").delay(600).animate({ opacity: 1 }, 300);
     setTimeout(() => {
       holeInOne.find("> div >*").css({ transform: "translateX(0px)" });
     }, 1000);
-  }
+  } //홀인원 스크롤
 });

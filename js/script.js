@@ -216,7 +216,9 @@ $.getJSON(
       let iconArr = [];
       Temp.map((item) => {
         TempArr.push(item.main.temp);
-        if (item.dt_txt.substr(-8) == "12:00:00") {
+        console.log(item.dt.substr(-8) == "21:00:00");
+        let confirm = item.dt.substr(-8) == "18:00:00";
+        if (confirm == true) {
           iconArr.push(item.weather[0].icon);
         }
       });
@@ -256,7 +258,7 @@ $.getJSON(
     let previewIconBox = $(".today_icon");
     previewIconBox.append(previewIcon);
     // let previewIconHTML = `<i class="fa-solid ${weatherIcon[iconArr]}"></i>`;
-    // menuBtn.append(previewIcon);
+    menuBtn.append(previewIcon.clone());
     // setTimeout(function () {
     //   menuBtn.append(previewIcon);
     // }, 3000);
