@@ -1002,3 +1002,31 @@ footer address p {
     display: block;
   }
 }
+/* ======================== */
+
+#menu-logo {
+  display: none;
+  top: 30px;
+  /* opacity: 0; */
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+  width: 135px;
+  /* height: 27px; */
+}
+
+#menu-logo img {
+  box-shadow: none !important;
+  width: 100%;
+  object-fit: contain;
+}
+/* 
+#logo a {
+  display: inline-block;
+  background: url(../img/logo_black.png) no-repeat 0 27px / contain;
+  overflow: hidden;
+  width: 133px;
+  height: 27px;
+  text-indent: -9999em;
+  padding-bottom: 100vh;
+} */

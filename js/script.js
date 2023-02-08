@@ -93,6 +93,8 @@ let menu = $(".menu"),
 menuBtn.click(function () {
   menu.toggleClass("active");
   $(this).toggleClass("active");
+
+  $("#menu-logo").delay(700).fadeIn();
 });
 
 //메뉴 끝 ======================================================
@@ -317,3 +319,5 @@ if (matchMedia("screen and (max-width: 500px)").matches) {
   let previewIconClone = $(".weather_cast .preview ul li").text();
   menuBtn.addClass("d-flex");
 }
+
+// ============================
