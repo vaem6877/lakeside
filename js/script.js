@@ -155,6 +155,7 @@ $.getJSON(
     console.log(list);
     let convertDate = "";
     let korWeek = ["일", "월", "화", "수", "목", "금", "토"];
+
     list.map((item) => {
       let newDate = new Date(item.dt * 1000);
       let year = newDate.getFullYear(); // 년도
@@ -169,22 +170,26 @@ $.getJSON(
       let seconds = newDate.getSeconds();
       let time = `${add0(hour)}:${add0(minutes)}:${add0(seconds)}`;
       convertDate = `${add0(year)}-${add0(month)}-${add0(date)} ${time}`;
-      console.log(convertDate);
       item.dt = convertDate;
     });
+    
+    let currentTime = new Date();
+    let convertCurrentTime = `${currentTime.getFullYear()}-${("0"+(currentTime.getMonth()+1)).substr(-2)}-${("0"+currentTime.getDate()).substr(-2)}`
+    console.log(convertCurrentTime)
 
     const filteredDay = list.reduce((acc, current) => {
       let convertDateACC = new Date(acc.dt * 1000);
       const x = acc.find(
-        (item) => item.dt.substr(0, 10) === current.dt.substr(0, 10)
-      );
+        (item) => item.dt.substr(0, 10) === current.dt.substr(0, 10));
       if (!x) {
         return acc.concat([current]);
       } else {
         return acc;
       }
     }, []);
+    filteredDay.shift();
     console.log(filteredDay);
+    // console.log(filteredDay.shift());
 
     let date = "";
     let dateList = [];
@@ -213,7 +218,7 @@ $.getJSON(
 
     $.each(dateList, function (i) {
       Temp = list.filter(function (item) {
-        return item.dt.substr(0, 10) == dateList[i];
+        return item.dt.substr(0, 10) == dateList[i] && item.dt.substr(0,10) != convertCurrentTime;
       });
       console.log(Temp);
       let TempArr = [];
@@ -286,7 +291,44 @@ $.getJSON(
     })</p></div>`;
     previewDateBox.html(previewDateHTML);
   }
-);
+); //예보
+
+$.getJSON(
+  "http://api.openweathermap.org/data/2.5/weather?lat=37.5683&lon=126.9778&appid=6683b822924895deb0d2f90cf228a02e&units=metric",
+  function (result) {
+    console.log(result)
+    let newDate = new Date(result.dt * 1000);
+    let todayDate = ("0"+newDate.getDate()).substr(-2);
+    let todayKorDate = korWeek[newDate.getDay()];
+    console.log(todayDate,todayKorDate)
+    let minTemp = result.main.temp_min;
+    let maxTemp = result.main.temp_max;
+    let code = result.weather[0].icon;
+    let todayWeatherIcon = `<i class="fa-solid ${weatherIcon[code]}"></i>`
+    console.log(minTemp, maxTemp, code)
+
+    let todayWeather = `
+    <li class="d-flex gap-3">
+    ${todayWeatherIcon}
+      <span class="temp">
+        <p><span>MAX </span>${maxTemp.toFixed(1)}<span>˚C</span></p>
+        <p><span>MIN </span>${minTemp.toFixed(1)}<span>˚C</span></p>
+      <span>
+    </li>
+    `
+    $(".widget_box .preview ul").append(todayWeather)
+
+    let todayHTML = `
+    <li class="swiper-slide">
+    <a href="">
+    <p class="date">${todayDate}</p>
+    <p class="day">(${todayKorDate})</p>
+    </a>
+    </li>
+    `
+    target.append(todayHTML)
+    console.log(todayWeather)
+  })
 
 $(".widget_box").hover(
   function () {
