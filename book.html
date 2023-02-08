@@ -25,7 +25,7 @@
   </head>
   <body>
     <header class="text-center book_header">
-      <h1 id="logo"><a href="#">lakeside</a></h1>
+      <h1 id="logo"><a href="index.html">lakeside</a></h1>
       <div class="widget_box d-flex">
         <div class="weather_cast">
           <div class="preview d-flex">
@@ -74,9 +74,7 @@
           </div>
         </div>
       </div>
-      <!-- <div class="icon_mouse">
-        <img src="img/common/icon_mouse.svg" alt="" />
-      </div> -->
+
       <div
         class="menu d-flex flex-column justify-content-center align-items-center"
       >
@@ -144,7 +142,14 @@
             </ul>
           </li>
         </ul>
-        <div class="button"></div>
+        <div class="button">
+          <a href="index.html" id="logo-mobile"
+            ><img src="./img/logo_white.png" alt=""
+          /></a>
+        </div>
+      </div>
+      <div class="icon_mouse">
+        <img src="img/icon_mouse.svg" alt="" />
       </div>
     </header>
 
@@ -152,7 +157,7 @@
       <div class="book_wrapper">
         <div id="tabs" class="container mb-5 mt-5">
           <ul class="tabs row">
-            <li class="col active">
+            <li class="col">
               <a href="#tabs-1">실시간예약</a>
             </li>
             <li class="col">
@@ -166,13 +171,13 @@
             </li>
           </ul>
           <section id="tabs-1" class="rtbook row text-start">
-            <aside class="col-lg-5">
+            <aside class="col-xl-5 col-xs-auto">
               <div class="book_cal">
                 <div
                   class="cal_head d-flex justify-content-between align-items-end"
                 >
                   <h4>예약일자</h4>
-                  <div class="noti">
+                  <div class="book_noti">
                     <span><i></i> 오늘</span><span>예약가능</span
                     ><span>예약마감</span>
                   </div>
@@ -197,7 +202,7 @@
                 </div>
               </div>
             </aside>
-            <div id="data_tabs" class="col-lg-7">
+            <div id="data_tabs" class="col-xl-7 col-xs-auto">
               <h4>코스 선택</h4>
               <ul class="course_tabs row g-0">
                 <li class="col" data-course="all">전체코스</li>
@@ -276,6 +281,7 @@
         </p>
       </address>
     </footer>
+
     <script
       src="https://code.jquery.com/jquery-3.6.3.min.js"
       integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="

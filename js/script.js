@@ -4,7 +4,7 @@ let topBtn = $("#go-top");
 $(window).on("scroll", function () {
   let scrAmt = $(this).scrollTop();
 
-  if (scrAmt > 300) {
+  if (scrAmt > 900) {
     topBtn.fadeIn();
   } else {
     topBtn.fadeOut();
@@ -28,11 +28,18 @@ let wholeSectionWrap = $("main"),
   currentIdx = 0,
   targetIdx;
 
-asideNav.each(function () {
-  let sectionLink = $(this).attr("href");
-  sections.push($(sectionLink));
-  sectionsOST.push($(sectionLink).offset().top);
-});
+function navArray() {
+  asideNav.each(function () {
+    let sectionLink = $(this).attr("href");
+    sections.push($(sectionLink));
+
+    sectionsOST.push($(sectionLink).offset().top);
+  });
+}
+
+setTimeout(() => {
+  navArray();
+}, 500);
 
 asideNav.click(function (e) {
   e.preventDefault();
@@ -57,7 +64,7 @@ function btnFade(btn, ost) {
 
 $(window).scroll(function () {
   let SCT = $(this).scrollTop();
-  btnFade(asideNav, 400);
+  btnFade(asideNav, 500);
 
   $.each(sections, function (idx, item) {
     if (SCT >= item.offset().top - 300) {
@@ -68,6 +75,15 @@ $(window).scroll(function () {
 });
 
 // ========================= aside bar 끝 // 0204 윤희
+
+// ====================== 마우스아이콘 클릭 이벤트 //0206 윤희 =======================
+
+let mouseIcon = $(".icon_mouse");
+mouseIcon.click(function () {
+  $("html, body").stop().animate({
+    scrollTop: sectionsOST[0],
+  });
+});
 
 //메뉴 시작 ======================================================
 
@@ -202,7 +218,9 @@ $.getJSON(
       let iconArr = [];
       Temp.map((item) => {
         TempArr.push(item.main.temp);
-        if (item.dt_txt.substr(-8) == "12:00:00") {
+        console.log(item.dt.substr(-8) == "21:00:00");
+        let confirm = item.dt.substr(-8) == "18:00:00";
+        if (confirm == true) {
           iconArr.push(item.weather[0].icon);
         }
       });
@@ -242,7 +260,11 @@ $.getJSON(
     let previewIconBox = $(".today_icon");
     let previewIconHTML = `<i class="fa-solid ${weatherIcon[previewIcon]}"></i>`;
     previewIconBox.append(previewIcon);
-    $(".menu .button").prepend(previewIconHTML);
+    // let previewIconHTML = `<i class="fa-solid ${weatherIcon[iconArr]}"></i>`;
+    menuBtn.append(previewIcon.clone());
+    // setTimeout(function () {
+    //   menuBtn.append(previewIcon);
+    // }, 3000);
 
     //preview - temp
     let todayTemp = $(".preview ul >li:first-child .temp").html();
@@ -290,7 +312,7 @@ if (matchMedia("screen and (max-width: 360px)").matches) {
     .html(`<a href="" class="main_menu">오시는길</a>`);
   menus.find("li:nth-child(4)").hide();
   let previewIconClone = $(".weather_cast .preview ul li").text();
-  menuBtn.prepend(previewIconHTML);
+  // menuBtn.prepend(previewIconHTML);
   console.log(previewIconClone);
   $(".menu .button").addClass("d-flex justify-content-between");
 }

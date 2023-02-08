@@ -12,7 +12,7 @@ $sql = "INSERT INTO lake_bbs (title, name, content, date) VALUES('{$title}','{$u
 if($connect->query($sql) === true){
     echo "<script>
     alert('저장성공');
-    location.href = '../board.php';
+    location.href = '../board.php#board';
     </script>";
 }else{
     echo "Error:" . $connect->error;

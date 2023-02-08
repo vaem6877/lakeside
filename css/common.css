@@ -109,6 +109,23 @@ header {
   padding-bottom: 100vh;
 }
 
+#logo-mobile {
+  display: none;
+  width: 100px;
+  height: 20.38px;
+  position: absolute;
+  z-index: 10000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#logo-mobile img {
+  width: 100%;
+  object-fit: contain;
+  box-shadow: none !important;
+}
+
 /* ========= FOOTER ======== */
 
 footer {
@@ -164,7 +181,7 @@ footer .footer-logo {
 }
 
 footer address p {
-  padding-bottom: 32px;
+  padding-bottom: 12px;
   font-size: var(--xsmall-content-fz);
 }
 
@@ -179,6 +196,7 @@ footer address p {
   text-align: center;
   bottom: 33px;
   right: 9%;
+  display: none;
   /* =========0203추가 */
   z-index: 100;
 }
@@ -224,7 +242,7 @@ footer address p {
   top: 50%;
   transform: translateY(-50%);
   right: 3%;
-  z-index: 100;
+  z-index: 99;
 }
 
 .aside-nav * {
@@ -244,28 +262,26 @@ footer address p {
 
 .aside-nav a span:last-child {
   margin-left: 10px;
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   background: var(--primary-ygreen);
   border-radius: 50%;
   position: relative;
+  transform: scale(0.8);
 }
 
-.aside-nav a:hover span:last-child {
-  width: 18px;
-  height: 18px;
-  background: var(--primary-green);
-}
+.aside-nav a:hover span:last-child,
 .aside-nav a.active span:last-child {
-  width: 18px;
-  height: 18px;
   background: var(--primary-green);
+  transform: scale(1);
 }
+
 .aside-nav a.active .nav-text {
   visibility: visible;
 }
 
 .aside-nav a span:last-child:after {
+  top: 100%;
   z-index: -1;
   content: "";
   display: block;
@@ -283,133 +299,40 @@ footer address p {
   visibility: visible;
 }
 
-/* ======================= // 윤희_0203 ===================== */
-
-/*--버튼--*/
-.hole_btn {
-  width: 110px;
-  height: 110px;
-  background: #8ba63d;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 110px;
-  font-weight: 700;
-  color: #fff;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  text-transform: uppercase;
-}
-.hole_btn:hover {
-  background: #234a35;
-}
-.more_btn {
-  width: 109px;
-  height: 28px;
-  border: 1px solid #fff;
-  font-size: 10px;
-  font-weight: 700;
-  text-align: center;
-  line-height: 28px;
-  text-transform: uppercase;
-  color: #fff;
-  letter-spacing: 0.16em;
-}
-.all_btn {
-  width: 220px;
-  height: 54px;
-  background: #234a35;
-  text-align: center;
-  line-height: 54px;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 27px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-}
-.all_btn:hover {
-  background: #8ba63d;
-}
-.more_course_btn {
-  width: 160px;
-  height: 30px;
-  color: #fff;
-  font-size: 18px;
-  text-align: center;
-  line-height: 30px;
-  background: #234a35;
-  border-radius: 5px;
-}
-.more_course_btn:hover {
-  background: #8ba63d;
-}
-.all_ev_btn {
-  width: 124px;
-  height: 38px;
-  color: #fff;
-  font-size: 18px;
-  text-align: center;
-  line-height: 38px;
-  background: #8ba63d;
-  border-radius: 20px;
-}
-.all_ev_btn:hover {
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-}
-.course_btn {
-  width: 483px;
-  height: 81px;
-  color: #fff;
-  font-weight: 500;
-  font-size: 27px;
-  text-align: center;
-  line-height: 81px;
-  background: #234a35;
-}
-.course_btn:hover {
-  background: #fff;
-  border: 1px solid #181f1b;
-  color: #234a35;
+.aside-nav a.active span:last-child:after {
+  transform: scale(0.8) translateX(-50%);
 }
 
-/* ======================= // 마우스바운싱 ===================== */
+/* ======================= // 마우스바운싱 애니메이션 ===================== */
 
 .icon_mouse {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  margin-bottom: 28px;
-}
-.icon_mouse img {
-  height: 31px;
-  width: 48px;
-  transform-origin: bottom;
-}
-.icon_mouse:hover img {
+  width: 31px;
+  height: 48px;
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  transform: translateX(-50%);
   animation: bounce 0.8s infinite;
+  cursor: pointer;
 }
+
+.icon_mouse img {
+  box-shadow: none !important;
+}
+
 @keyframes bounce {
   0% {
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
     animation-timing-function: ease-in;
   }
-  34% {
-    height: 31px;
-    width: 48px;
-  }
+
   45% {
-    transform: translateY(50%);
-    height: 30px;
-    width: 52px;
-    animation-timing-function: ease-out;
+    transform: translateX(-50%) translateY(60%);
+    animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
   }
-  55% {
-    height: 31px;
-    width: 48px;
-  }
+
   90% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
   }
 }
 
@@ -452,8 +375,13 @@ footer address p {
   border-bottom: 2px solid #fff;
 }
 .menu .sub_menu {
+  opacity: 0.7;
   font-size: 20px;
   margin: 45px 0;
+}
+.menus .sub_menu:hover {
+  opacity: 1;
+  font-weight: bold;
 }
 .menu .sub_menu:first-child {
   padding-top: 45px;
@@ -468,10 +396,6 @@ footer address p {
   font-size: 20px;
   margin-bottom: 25px;
 }
-.menu .sub_menu li a:hover {
-  font-weight: bold;
-  text-decoration: underline;
-}
 .menu.active {
   left: 0;
   z-index: 100;
@@ -484,6 +408,7 @@ footer address p {
   right: 5px;
   width: 32px;
   height: 135px;
+  transition: 0.7s;
   z-index: 200;
 }
 .menu .button:before {
@@ -513,19 +438,20 @@ footer address p {
   transition: 0.7s;
 }
 .menu .button i {
-  display: none;
+  display: none !important;
+}
+.menu .button.active {
+  right: 45px;
 }
 .menu .button.active::before {
   left: 30%;
-  transform: rotate(45deg) translate(-2px, -6px);
+  transform: rotate(45deg) translate(0px, -8px);
   background: #fff;
-  height: 37px;
 }
 .menu .button.active::after {
   left: 30%;
-  transform: rotate(-45deg) translate(-4px, 8px);
+  transform: rotate(-45deg) translate(0px, 10px);
   background: #fff;
-  height: 37px;
 }
 
 /* ======================= // 위젯 ===================== */
@@ -586,6 +512,12 @@ footer address p {
 .weather_cast .preview .temp p:first-child {
   margin-bottom: 5px;
 }
+.weather_cast .preview .temp p {
+  font-weight: bold;
+}
+.weather_cast .preview .temp p span {
+  font-weight: normal;
+}
 .weather_cast .swiper {
   width: 80%;
   margin-bottom: 6px;
@@ -620,13 +552,30 @@ footer address p {
   color: #fff;
   z-index: 1;
 }
+.weather_cast .swiper-slide.active {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #fff;
+}
+.weather_cast .shortcut i {
+  transition: 0.5s;
+}
 .weather_cast .shortcut > * {
   text-align: center;
   padding: 11.5px 0px;
 }
+.weather_cast .shortcut a {
+  color: #fff;
+}
 .weather_cast .shortcut > *:hover {
-  color: #000;
   background: #fff;
+}
+.weather_cast .shortcut > *:hover a,
+.weather_cast .shortcut > *:hover i {
+  color: #000;
+}
+.weather_cast .shortcut > *:hover i {
+  transform: translateY(360deg);
+  perspective: 100px;
 }
 .weather_cast .shortcut p {
   font-size: var(--content-fz);
@@ -736,7 +685,7 @@ footer address p {
   }
   .menu.active {
     left: 0;
-    z-index: 100;
+    z-index: 110;
   }
 
   .menu .button {
@@ -745,6 +694,15 @@ footer address p {
     top: 50%;
     transform: translateY(-50%);
     right: 5px;
+    width: 32px;
+    height: 135px;
+    z-index: 200;
+  }
+  .menu .button.active {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 35px;
     width: 32px;
     height: 135px;
     z-index: 200;
@@ -775,32 +733,27 @@ footer address p {
     left: 20%;
     transition: 0.7s;
   }
-  .menu .button i {
+  .menu .button i:before {
     display: none;
   }
   .menu .button.active::before {
     left: 30%;
-    transform: rotate(45deg) translateY(-5px);
-    background: #fff;
+    transform: rotate(45deg) translate(5px, -10px);
+    background: rgb(255, 255, 255);
   }
   .menu .button.active::after {
     left: 30%;
-    transform: rotate(-45deg) translateY(5px);
-    background: #fff;
-  }
-  .menu .button.active p {
-    text-align: center;
-    line-height: 135px;
-    color: #000;
+    transform: rotate(-45deg) translate(4px, 12px);
+    background: rgb(255, 255, 255);
   }
 
   @media screen and (max-width: 768px) {
     /* ========== 숨김컨텐츠 ========== */
     .aside-nav {
       display: none !important;
-
-      /* ========== 메뉴 ========== */
     }
+    /* ========== 메뉴 ========== */
+
     .containerBox {
       width: 85%;
     }
@@ -851,6 +804,9 @@ footer address p {
   .widget_box {
     display: none !important;
   }
+  .footer-notice-wrapper {
+    display: none;
+  }
   /* ========== 메뉴 ========== */
   .menu {
     position: fixed;
@@ -897,6 +853,16 @@ footer address p {
     right: auto;
     z-index: 90;
   }
+  .menu .button.active {
+    position: fixed;
+    background: #1b221a;
+    top: 0;
+    transform: none;
+    width: 100%;
+    height: 60px;
+    right: auto;
+    z-index: 90;
+  }
   .menu .button:before {
     height: 6px;
     width: 30px;
@@ -911,6 +877,7 @@ footer address p {
     top: 53%;
     left: 86%;
   }
+
   .menu .button.active::before {
     left: 85%;
     transform: rotate(-45deg) translate(-1px, -5px);
@@ -923,26 +890,26 @@ footer address p {
     transform-origin: right;
     background: #fff;
   }
-  .menu .button i {
+  .menu .button i:before {
     display: block;
-    font-size: 50px;
+    font-size: 35px;
+    line-height: 60px;
+    padding-left: 10px;
+    color: #fff;
+  }
+  .menu .button i {
+    display: block !important;
   }
 
   /* =================== 반응형 모바일 헤더, 푸터 */
 
-  /* header {
+  header {
     position: relative;
-    z-index: 1000;
-  } */
-  #logo a {
-    background-image: url(../img/logo_white.png);
   }
+
   footer .footer-logo {
     width: 104px !important;
     height: 21px !important;
-  }
-  .aside-nav {
-    display: none !important;
   }
 
   /* ===================== 푸터 반응형 360 ===================== */
@@ -974,9 +941,6 @@ footer address p {
     line-height: 9px;
   }
 
-  footer .footer-notice-wrapper {
-    display: none !important;
-  }
   .facility-information {
     margin-bottom: 0;
   }
@@ -1026,5 +990,12 @@ footer address p {
   }
   footer address p {
     padding-bottom: 15px !important;
+  }
+  .icon_mouse {
+    display: none;
+  }
+
+  #logo-mobile {
+    display: block;
   }
 }
