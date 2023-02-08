@@ -140,9 +140,6 @@ setTimeout(() => {
 }, 500);
 
 $(window).scroll(function () {
-  console.log("스크롤양:" + $(window).scrollTop());
-  console.log("ost값:" + gallOST);
-  console.log("높이/2:" + gallary.height() / 2);
   if ($(window).scrollTop() > wvOST - wvOST / 2) {
     // console.log(wholeView.find("h3").text());
     wholeView.find("h3").animate({ opacity: 1 }, 300);
@@ -156,7 +153,7 @@ $(window).scroll(function () {
         } else {
           $(this).stop().animate({ height: "100%" });
         }
-      }, 1000);
+      }, 2000);
     });
   } //코스전경 스크롤
   if ($(window).scrollTop() > gallOST - 500) {
@@ -170,8 +167,8 @@ $(window).scroll(function () {
 
   if ($(window).scrollTop() > hioOST - holeInOne.height() / 2) {
     holeInOne.find("h3").animate({ opacity: 1 }, 300);
-    holeInOne.find("h2").delay(300).animate({ opacity: 1 }, 300);
-    holeInOne.find("> p").delay(600).animate({ opacity: 1 }, 300);
+    holeInOne.find("h2").delay(400).animate({ opacity: 1 }, 300);
+    holeInOne.find("> p").delay(700).animate({ opacity: 1 }, 300);
     setTimeout(() => {
       holeInOne.find("> div >*").css({ transform: "translateX(0px)" });
     }, 1000);

@@ -379,9 +379,12 @@ footer address p {
   font-size: 20px;
   margin: 45px 0;
 }
-.menus .sub_menu:hover {
+.menus .sub_menu:hover:not(.disable) {
   opacity: 1;
   font-weight: bold;
+}
+.menus .sub_menu.disable a {
+  cursor: default;
 }
 .menu .sub_menu:first-child {
   padding-top: 45px;
