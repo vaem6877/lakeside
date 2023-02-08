@@ -28,23 +28,30 @@ let wholeSectionWrap = $("main"),
   currentIdx = 0,
   targetIdx;
 
-asideNav.each(function () {
-  let sectionLink = $(this).attr("href");
-  sections.push($(sectionLink));
-  sectionsOST.push($(sectionLink).offset().top);
-});
+function navArray() {
+  asideNav.each(function () {
+    let sectionLink = $(this).attr("href");
+    sections.push($(sectionLink));
+
+    sectionsOST.push($(sectionLink).offset().top);
+  });
+}
+
+setTimeout(() => {
+  navArray();
+}, 500);
 
 asideNav.click(function (e) {
   e.preventDefault();
 
   targetIdx = $(this).index();
 
-  $("html, body").stop().animate({
+  $("html, body").stop().animate({
     scrollTop: sectionsOST[targetIdx],
   });
 });
 
-// 스크롤양에 따라 보이고 안보임
+// 스크롤양에 따라 보이고 안보임
 function btnFade(btn, ost) {
   let scrAmt = $(window).scrollTop();
 
@@ -57,10 +64,10 @@ function btnFade(btn, ost) {
 
 $(window).scroll(function () {
   let SCT = $(this).scrollTop();
-  btnFade(asideNav, 830);
+  btnFade(asideNav, 400);
 
   $.each(sections, function (idx, item) {
-    if (SCT >= item.offset().top - 400) {
+    if (SCT >= item.offset().top - 300) {
       asideNav.removeClass("active");
       asideNav.eq(idx).addClass("active");
     }
@@ -139,7 +146,7 @@ let TempArr = [];
 let iconArr = [];
 
 $.getJSON(
-  "https://api.openweathermap.org/data/2.5/forecast?lat=37.5683&lon=126.9778&appid=6683b822924895deb0d2f90cf228a02e&units=metric",
+  "http://api.openweathermap.org/data/2.5/forecast?lat=37.5683&lon=126.9778&appid=6683b822924895deb0d2f90cf228a02e&units=metric",
   function (result) {
     console.log(result);
     let list = result.list;
@@ -197,12 +204,7 @@ $.getJSON(
       `;
       target.append(trHTML);
     }); //요일 리스트 가져오기
-    $(".widget_box .swiper-slide").click(function () {
-      $(this).siblings().removeClass("active");
-      $(this).addClass("active");
-    });
 
-    $(".widget_box .swiper-slide").eq(0).addClass("active");
     console.log(dateList);
     console.log(date);
     let Temp = "";
@@ -256,6 +258,7 @@ $.getJSON(
     let previewIcon = $(".preview ul >li:first-child .fa-solid").clone();
     console.log(previewIcon);
     let previewIconBox = $(".today_icon");
+    let previewIconHTML = `<i class="fa-solid ${weatherIcon[previewIcon]}"></i>`;
     previewIconBox.append(previewIcon);
     // let previewIconHTML = `<i class="fa-solid ${weatherIcon[iconArr]}"></i>`;
     menuBtn.append(previewIcon.clone());
@@ -285,7 +288,7 @@ $(".widget_box").hover(
     $(this)
       .find(".preview_widget")
       .stop()
-      .animate({ left: "-90px" }, 100, "linear", function () {
+      .animate({ left: "-90px" }, 500, "easeInBack", function () {
         $(this).prev().stop().animate({ left: "0" });
       });
   },
@@ -293,7 +296,7 @@ $(".widget_box").hover(
     $(this)
       .find(".weather_cast")
       .stop()
-      .animate({ left: "-253px" }, 200, "linear", function () {
+      .animate({ left: "-253px" }, 400, "linear", function () {
         $(this).next().stop().animate({ left: "-40px" });
       });
   }
@@ -301,7 +304,6 @@ $(".widget_box").hover(
 
 // 위젯 끝 ======================================================
 
-console.log($(".preview_widget .today_icon i:before").contents());
 //반응형 메뉴
 if (matchMedia("screen and (max-width: 360px)").matches) {
   let menus = menu.find(".menus");
@@ -309,4 +311,8 @@ if (matchMedia("screen and (max-width: 360px)").matches) {
     .find("li:nth-child(3)")
     .html(`<a href="" class="main_menu">오시는길</a>`);
   menus.find("li:nth-child(4)").hide();
+  let previewIconClone = $(".weather_cast .preview ul li").text();
+  menuBtn.prepend(previewIconHTML);
+  console.log(previewIconClone);
+  $(".menu .button").addClass("d-flex justify-content-between");
 }
