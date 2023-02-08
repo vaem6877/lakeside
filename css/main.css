@@ -77,8 +77,6 @@ section {
   background: var(--bg-green);
 }
 .south-course {
-  /* margin: 191px 0; */
-
   margin: 0 191px 0;
   padding-top: 191px;
 }
@@ -192,8 +190,6 @@ footer .notice-slide {
   transform: translateX(-50%);
   top: 80%;
   overflow: hidden;
-  /* font-family: "Noto Sans KR", sans-serif; */
-  /* display: none; */
 }
 
 .west-course .mobile-btn {
@@ -230,7 +226,6 @@ footer .notice-slide {
   display: none;
 }
 
-/*   content: "south course"; */
 /* ========================================== 반응형 */
 
 @media (max-width: 1200px) {
