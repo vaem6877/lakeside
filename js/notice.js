@@ -127,3 +127,8 @@ AOS.init({
   easing: "easeInOutCubic",
   disable: "mobile", // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
 });
+
+//반응형 메뉴
+// if (matchMedia("screen and (max-width: 360px)").matches) {
+//   $(".menu .button").addClass("d-flex");
+// }

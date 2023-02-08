@@ -64,7 +64,7 @@ function btnFade(btn, ost) {
 
 $(window).scroll(function () {
   let SCT = $(this).scrollTop();
-  btnFade(asideNav, 400);
+  btnFade(asideNav, 500);
 
   $.each(sections, function (idx, item) {
     if (SCT >= item.offset().top - 300) {
@@ -315,5 +315,11 @@ if (matchMedia("screen and (max-width: 500px)").matches) {
     .html(`<a href="" class="main_menu">오시는길</a>`);
   menus.find("li:nth-child(4)").hide();
   let previewIconClone = $(".weather_cast .preview ul li").text();
+<<<<<<< HEAD
   menuBtn.addClass("d-flex");
+=======
+  // menuBtn.prepend(previewIconHTML);
+  console.log(previewIconClone);
+  $(".menu .button").addClass("d-flex justify-content-between");
+>>>>>>> 925bbe6aded96d8ae50787295e982a2ec4c7c6d4
 }
