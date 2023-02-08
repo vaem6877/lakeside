@@ -577,7 +577,7 @@ header::after {
 /* ====== // 리팩터링 전, 윤희 0203 */
 
 /* ============= 모바일 ========================= */
-@media (max-width: 361px) {
+@media (max-width: 500px) {
   .facility-information {
     padding: 0 12px;
   }

@@ -306,7 +306,7 @@ footer .notice-slide {
   }
 }
 
-@media (max-width: 361px) {
+@media (max-width: 500px) {
   .container {
     padding: 0;
     width: auto !important;
