@@ -258,7 +258,11 @@ $.getJSON(
     let previewIconBox = $(".today_icon");
     let previewIconHTML = `<i class="fa-solid ${weatherIcon[previewIcon]}"></i>`;
     previewIconBox.append(previewIcon);
-    $(".menu .button").prepend(previewIconHTML);
+    // let previewIconHTML = `<i class="fa-solid ${weatherIcon[iconArr]}"></i>`;
+    // menuBtn.append(previewIcon);
+    // setTimeout(function () {
+    //   menuBtn.append(previewIcon);
+    // }, 3000);
 
     //preview - temp
     let todayTemp = $(".preview ul >li:first-child .temp").html();

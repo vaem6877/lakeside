@@ -142,7 +142,7 @@ $(window).scroll(function () {
     wholeView.find("h3").animate({ opacity: 1 }, 300);
     wholeView.find("h2").delay(300).animate({ opacity: 1 }, 300);
     wholeView.find("> p").delay(600).animate({ opacity: 1 }, 300);
-    wholeView.find(".img_container").delay(800).animate({ opacity: 1 }, 300);
+    wholeView.find(".img_container").delay(900).animate({ opacity: 1 }, 500);
     // wholeView.find(".img_container span").each(function (idx) {
     //   if (idx % 2 == 0) {
     //     $(this).delay(1000).stop().animate({ width: "100%" });
