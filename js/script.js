@@ -216,7 +216,8 @@ $.getJSON(
     console.log(convertCurrentTime);
 
     let filteredDay = list.reduce((acc, cur) => {
-      let convertDateACC = new Date(acc.dt * 1000);
+      console.log(acc);
+      console.log(cur);
       const filter = acc.find(
         (item) => item.dt.substr(0, 10) === cur.dt.substr(0, 10)
       );
