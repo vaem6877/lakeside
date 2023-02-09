@@ -1,11 +1,11 @@
 .login_header {
-  background-image: url(../img/back/bg_banner_login.png);
+  background-image: url(../img/back/bg_banner_login.webp);
 }
 .board_header {
-  background-image: url(../img/back/bg_banner_board.png);
+  background-image: url(../img/back/bg_banner_board.webp);
 }
 .book_header {
-  background-image: url(../img/back/bg_banner_book.png);
+  background-image: url(../img/back/bg_banner_book.webp);
 }
 
 /* ========== book-header ========== */
@@ -52,7 +52,7 @@ input:focus {
   outline: none;
 }
 .board_common_btn {
-  display: block;
+  display: inline-block;
   border: none;
   background: var(--secondary-brown);
   width: 88px;

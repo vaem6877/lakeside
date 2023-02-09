@@ -1,8 +1,4 @@
-<!-- ================= 헤더(배너) =================== -->
-<!-- common.css참조 -->
-
-<header class="text-center">
-  <h1 id="logo"><a href="index.html">lakeside</a></h1>
+ <h1 id="logo"><a href="index.html">lakeside</a></h1>
   <div class="widget_box d-flex">
     <div class="weather_cast">
       <div class="preview d-flex">
@@ -55,18 +51,22 @@
       <li>
         <a href="book.html" class="main_menu">예약하기</a>
         <ul>
-          <li class="sub_menu"><a href="">예약안내</a></li>
+          <li class="sub_menu disable"><a href="">예약안내</a></li>
           <li class="sub_menu">
             <a href="book.html#book_wrapper">예약하기</a>
           </li>
-          <li class="sub_menu"><a href="">예약확인</a></li>
+          <li class="sub_menu disable"><a href="">예약확인</a></li>
         </ul>
       </li>
       <li>
         <a href="course.html" class="main_menu">코스안내</a>
         <ul>
-          <li class="sub_menu"><a href="course.html#course_wv">코스전경</a></li>
-          <li class="sub_menu"><a href="course.html#hole_desc">코스소개</a></li>
+          <li class="sub_menu">
+            <a href="course.html#course_wv">코스전경</a>
+          </li>
+          <li class="sub_menu">
+            <a href="course.html#hole_desc">코스소개</a>
+          </li>
           <li class="sub_menu">
             <a href="course.html#course_gallery">코스갤러리</a>
           </li>
@@ -92,16 +92,16 @@
           <li class="sub_menu">
             <a href="board.php#board_wrapper">공지사항</a>
           </li>
-          <li class="sub_menu"><a href="">명예의전당</a></li>
+          <li class="sub_menu disable"><a href="">명예의전당</a></li>
         </ul>
       </li>
       <li>
         <a href="login.html" class="main_menu">회원정보</a>
         <ul>
           <li class="sub_menu">
-            <a href="login.html#login_wrapper">로그인하기</a>
+            <a href="session.php">로그인하기</a>
           </li>
-          <li class="sub_menu"><a href="">회원정보관리</a></li>
+          <li class="sub_menu"><a href="session.php">회원정보관리</a></li>
         </ul>
       </li>
     </ul>
@@ -115,78 +115,3 @@
     <img src="img/icon_mouse.svg" alt="" />
   </div>
 </header>
-
-<!-- ================= 헤더끝 ==================== -->
-
-<nav class="aside-nav d-flex flex-column align-items-end">
-  <a href="#여기"
-    ><span class="nav-text">연혁</span>
-    <span> </span>
-  </a>
-  <a href="#contest"
-    ><span class="nav-text">대회</span>
-    <span> </span>
-  </a>
-  <a href="#rocess"
-    ><span class="nav-text">경기 진행 안내</span>
-    <span> </span>
-  </a>
-  <a href="#cart"
-    ><span class="nav-text">카트 이용 안내</span>
-    <span> </span>
-  </a>
-  <a href="#facility"
-    ><span class="nav-text">시설안내</span>
-    <span> </span>
-  </a>
-  <a href="#directions"
-    ><span class="nav-text">오시는 길</span>
-    <span> </span>
-  </a>
-</nav>
-
-<!-- ===================== 푸터 ======================== -->
-
-<a href="#" id="go-top"><i class="fa-solid fa-arrow-up"></i></a>
-<!-- 탑 버튼 -->
-
-<footer>
-  <div class="terms d-flex justify-content-center">
-    <a href="">이용약관</a>
-    <a href="">웹회원 약관</a>
-    <a href="">개인정보처리방침</a>
-    <a href="">영상정보처리기기 방침</a>
-    <a href="">사업자정보확인</a>
-    <a href="">사이트맵</a>
-  </div>
-  <a href="index.html" class="footer-logo text-center">logo</a>
-
-  <address class="">
-    <dl class="d-flex justify-content-center">
-      <dt>주소 :</dt>
-      <dd>16887 경기도 용인시 처인구 모현읍 능원로 181</dd>
-      <dt>대표전화 :</dt>
-      <dd>031-334-2111</dd>
-      <dt>팩스 :</dt>
-      <dd>031-332-2106</dd>
-    </dl>
-    <dl class="d-flex justify-content-center">
-      <dt>팩스 :</dt>
-      <dd>031-332-2106</dd>
-      <dt>이메일 :</dt>
-      <dd>lakeside@lakeside.kr</dd>
-    </dl>
-    <dl class="d-flex justify-content-center">
-      <dt>사업자등록번호</dt>
-      <dd>135-81-02491</dd>
-      <dt>통신판매신고</dt>
-      <dd>제 2009-용인처인-0170호</dd>
-      <dt>대표이사</dt>
-      <dd>문지태</dd>
-    </dl>
-    <p class="text-uppercase text-center">
-      copyright lakeside country club. all rights reserved
-    </p>
-  </address>
-</footer>
-<!-- ===================== 푸터끝 ===================== -->
