@@ -1,7 +1,6 @@
 <?php
     require_once("php/config.php");
     $idx = $_GET{'idx'};
-    
     $sql = "SELECT * FROM lake_bbs WHERE idx = '$idx'";
     $result = mysqli_query($connect, $sql);
 ?>
@@ -33,9 +32,7 @@
               </p>
               <p>
                 <label for="content" class="hidden">내용:</label>
-                <textarea name="content" id="content" cols="22" rows="8" value="">
-                    <?= $row['content'] ?>
-                </textarea>
+                <textarea name="content" id="content" cols="32" rows="8" value=""><?= $row['content'] ?></textarea>
               </p>
             </div>
             <p></p>

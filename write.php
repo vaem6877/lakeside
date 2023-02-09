@@ -36,7 +36,7 @@
                 <textarea
                   name="content"
                   id="content"
-                  cols="22"
+                  cols="32"
                   rows="8"
                   required
                 ></textarea>

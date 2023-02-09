@@ -8,7 +8,7 @@
   background-image: url(../img/back/bg_banner_book.webp);
 }
 
-/* ========== book-header ========== */
+/* ========== bg-header ========== */
 
 .hidden {
   display: none;
@@ -62,7 +62,18 @@ input:focus {
   text-align: center;
   color: #fff;
 }
+textarea {
+  font-size: var(--second-content-fz);
+  font-weight: 400;
+}
+textarea:focus {
+  outline: none;
+}
 /* ========== back-common ========== */
+.book_wrapper .container {
+  width: 1110px;
+}
+
 .book_uc p {
   width: 80%;
   height: 50vh;
@@ -74,7 +85,7 @@ input:focus {
 .cal_head {
   margin-bottom: 16px;
 }
-.noti,
+.book_noti,
 .book_time p {
   color: var(--typo-C-grey);
   font-size: 14px;
