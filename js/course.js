@@ -3,10 +3,10 @@
 document.querySelector("li").removeAttribute("style");
 
 $(function () {
-  $("#hole_desc #course_tabs").tabs();
+  $("#hole_desc #tabs").tabs();
 }); //코스 탭
 
-let courseTab = $("#course_tabs").find("li"),
+let courseTab = $("#tabs").find("li"),
   courseBtn = courseTab.find("a");
 
 courseBtn.click(function (item) {
@@ -15,9 +15,9 @@ courseBtn.click(function (item) {
 });
 
 $(function () {
-  $(".swiper #east-tabs").tabs();
-  $(".swiper #west-tabs").tabs();
-  $(".swiper #south-tabs").tabs();
+  $(".swiper #tabs").tabs({
+    active: 0,
+  });
 }); //홀 탭
 
 $("#hole_desc #tabs-east .img_container #tabs-1").html(
