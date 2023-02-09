@@ -165,7 +165,6 @@ input:focus {
 }
 .ui-datepicker-calendar tbody tr:first-child {
   border-collapse: separate;
-  border-spacing: 26px 0 0 0;
 }
 .ui-state-disabled span {
   color: #b3b3b3;
