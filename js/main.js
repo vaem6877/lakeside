@@ -103,10 +103,10 @@ $("footer .notice .notice-slide").slick({
 });
 
 // ===== 메인 모바일 btn
+let mainCourse = $(".main-course");
+let courseSections = mainCourse.find("> div div[class*=course]");
 
 if (matchMedia("screen and (max-width: 500px)").matches) {
-  let mainCourse = $(".main-course"),
-    courseSections = mainCourse.find("> div div[class*=course]");
   $(window).scroll(function () {
     let wins = $(this).scrollTop();
 
