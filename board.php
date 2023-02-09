@@ -42,8 +42,8 @@ require_once('php/config.php');
                 $sql = "SELECT * FROM lake_bbs ORDER BY idx DESC LIMIT 0,10";
                 $result = $connect->query($sql);
                 while ($row = $result->fetch_assoc()) {
-                if(mb_strlen($row['title']) > 18){
-                    $title = mb_substr($row['title'], 0, 10, 'utf-8').'...';
+                if(mb_strlen($row['title']) > 20){
+                    $title = mb_substr($row['title'], 0, 20, 'utf-8').'...';
                     //$title = str_replace($row['title'], mb_substr($row['title'], 0, 10, 'utf-8').'...', $row['title']);
 
                 } else{
@@ -66,10 +66,6 @@ require_once('php/config.php');
           <i class="fa-solid fa-chevron-left"></i>
           <ol>
             <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
           </ol>
           <i class="fa-solid fa-chevron-right"></i>
         </div>

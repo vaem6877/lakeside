@@ -1,8 +1,3 @@
-#course {
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='50 50 50 50' style='fill:black;font-size:24px;'><text y='50%'>⛳</text></svg>")
-      16 0,
-    auto;
-}
 header {
   background: url(../img/course_img/course_banner.webp);
   background-repeat: no-repeat;
@@ -93,13 +88,13 @@ header {
 }
 
 /* section: 코스설명 */
-#hole_desc #tabs > ul {
+#hole_desc #course_tabs > ul {
   padding: 0;
   margin-bottom: 0;
 }
-#hole_desc #tabs > ul li a {
+#hole_desc #course_tabs > ul li a {
   display: block;
-  background: #234a35;
+  background: var(--primary-green);
   border: 1px solid #000;
   color: #fff;
   width: 100%;
@@ -107,18 +102,18 @@ header {
   white-space: nowrap;
   text-decoration: none;
 }
-#hole_desc #tabs > ul li.active a {
+#hole_desc #course_tabs > ul li.active a {
   background: #fff;
-  color: #234a35;
+  color: var(--primary-green);
 }
-#hole_desc #tabs > ul li a:hover {
+#hole_desc #course_tabs > ul li a:hover {
   background: #fff;
-  color: #234a35;
+  color: var(--primary-green);
 }
-#hole_desc #tabs .tab_group {
+#hole_desc #course_tabs .tab_group {
   padding: 163px 0px 82px;
 }
-#hole_desc #tabs .tab_group p {
+#hole_desc #course_tabs .tab_group p {
   height: 81px;
   width: 90%;
   margin: 45px auto;
@@ -145,14 +140,14 @@ header {
 }
 
 #tabs .swiper-button-prev {
-  color: #181818;
+  color: var(--typo-C-Green);
   font-size: 57px;
   position: absolute;
   top: 80px;
   left: 10px;
 }
 #tabs .swiper-button-next {
-  color: #181818;
+  color: var(--typo-C-Green);
   font-size: 57px;
   position: absolute;
   top: 80px;
@@ -169,16 +164,16 @@ header {
   text-align: center;
   line-height: 130px;
   border-radius: 50%;
-  background: #8ba63d;
+  background: var(--primary-ygreen);
   margin: 0;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
 }
 #tabs .swiper-slide.ui-state-hover a {
-  background: #234a35;
+  background: var(--primary-green);
 }
 #tabs .swiper-slide.ui-tabs-active a {
-  background: #234a35;
+  background: var(--primary-green);
 }
 #tabs .swiper-slide a {
   color: #fff;
@@ -194,7 +189,7 @@ header {
 #course_gallery button {
   width: 20%;
   height: 54px;
-  background: #8ba63d;
+  background: var(--primary-ygreen);
   color: #fff;
   border: none;
   margin-right: 33px;
@@ -202,10 +197,10 @@ header {
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
 }
 #course_gallery button:hover {
-  background: #234a35;
+  background: var(--primary-green);
 }
 #course_gallery button.active {
-  background: #234a35;
+  background: var(--primary-green);
 }
 #course_gallery button:last-child {
   margin-right: 0;
@@ -286,17 +281,17 @@ header {
   margin-bottom: 18px;
 }
 #holeinone .item img:hover {
-  border: 5px solid #234a35;
+  border: 5px solid var(--primary-green);
   transition: 0.1s;
 }
 #holeinone .item p {
-  font-size: 20px;
+  font-size: var(--content-fz);
   line-height: 26px;
 }
 #holeinone .item p:nth-child(2) {
   width: 100px;
-  height: 27px;
-  background: #234a35;
+  height: var(--second-TT-fz);
+  background: var(--primary-green);
   color: #fff;
   margin: 6px auto;
 }
