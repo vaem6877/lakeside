@@ -199,6 +199,12 @@ footer address p {
   display: none;
   /* =========0203추가 */
   z-index: 100;
+  /* === 0209 추가 */
+  transition: background 0.3s;
+}
+
+#go-top:hover {
+  background: var(--primary-ygreen);
 }
 
 @media (max-width: 960px) {
