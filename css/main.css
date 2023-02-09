@@ -14,7 +14,7 @@ img:not(#event-slides *) {
 }
 
 .main-course {
-  margin-bottom: 209px;
+  margin-bottom: 317px;
 }
 
 .course-desc,
@@ -41,7 +41,7 @@ section {
 
 #event-slides h2 {
   margin-top: 0;
-  margin-bottom: 155px;
+  margin-bottom: 100px;
 }
 
 .main-course .img-wrapper img {
