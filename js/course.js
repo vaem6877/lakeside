@@ -21,7 +21,7 @@ $(function () {
 }); //홀 탭
 
 $("#hole_desc #tabs-east .img_container #tabs-1").html(
-  '<img src="img/course_img/동코스1.png" alt="" />'
+  '<img src="img/course_img/동코스1.webp" alt="" />'
 );
 
 var courseSwiper = new Swiper("#course .swiper", {
@@ -44,7 +44,7 @@ $("#course .each_course").each(function () {
     holeList += `<li class="swiper-slide"><a href="#tabs-${i}">${i}<span> HOLE</span></a></li>`;
     holeImgList += `
     <div id="tabs-${i}">
-    <img src="img/course_img/${courseName}코스${i}.png" alt="">
+    <img src="img/course_img/${courseName}코스${i}.webp" alt="">
     </div>
   `;
   }
