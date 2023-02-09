@@ -53,11 +53,14 @@ section {
   border-radius: 5px;
   background: var(--primary-green);
   margin-top: 54px;
+  transition: background 0.3s;
 }
 
 .main-course .west-course a {
-  background: var(--primary-ygreen);
   margin-bottom: 187px;
+}
+.main-course a:hover {
+  background: var(--primary-ygreen);
 }
 
 .east-course {
@@ -146,6 +149,11 @@ footer .notice-slide {
   margin-bottom: 231px;
   margin-left: auto;
   margin-right: 20px;
+  transition: background 0.3s;
+}
+
+.round-btn:hover {
+  background: var(--primary-green);
 }
 
 .main-course {
@@ -176,6 +184,7 @@ footer .notice-slide {
 }
 
 .mobile-btn {
+  opacity: 0;
   font-size: var(--mobile-content-fz);
   text-align: center;
   line-height: 28px;
@@ -188,12 +197,14 @@ footer .notice-slide {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 80%;
-  overflow: hidden;
+  top: -8%;
+  transition: top 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+  /* top: 80%; */
+  /* overflow: hidden; */
 }
 
 .west-course .mobile-btn {
-  top: 0%;
+  top: 2%;
 }
 .south-course .mobile-btn::after,
 .west-course .mobile-btn::after,
@@ -210,6 +221,17 @@ footer .notice-slide {
   bottom: 40px;
   color: rgba(255, 255, 255, 0.8);
   font-family: "Noto Sans KR", sans-serif;
+}
+
+.east-course.active .mobile-btn,
+.south-course.active .mobile-btn {
+  top: -75%;
+  opacity: 1;
+}
+
+.west-course.active .mobile-btn {
+  top: -57%;
+  opacity: 1;
 }
 
 .south-course .mobile-btn::after {

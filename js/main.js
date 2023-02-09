@@ -101,3 +101,21 @@ $("footer .notice .notice-slide").slick({
   // instead of a settings object
   // ],
 });
+
+// ===== 메인 모바일 btn
+
+if (matchMedia("screen and (max-width: 500px)").matches) {
+  let mainCourse = $(".main-course"),
+    courseSections = mainCourse.find("> div div[class*=course]");
+  $(window).scroll(function () {
+    let wins = $(this).scrollTop();
+
+    courseSections.each(function () {
+      if ($(this).offset().top - 400 < wins) {
+        $(this).addClass("active");
+      }
+    });
+  });
+} else {
+  courseSections.removeClass("active");
+}
