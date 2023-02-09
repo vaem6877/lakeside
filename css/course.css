@@ -53,7 +53,7 @@ header {
 }
 .img_container {
   position: relative;
-  width: 75%;
+  width: 70%;
   background: #fff;
   margin: 0 auto;
   padding: 35px 0px;
@@ -247,7 +247,7 @@ header {
   font-size: 32px;
   position: absolute;
   top: 17%;
-  left: 86%;
+  left: 77%;
 }
 
 /* section: 홀인원 */

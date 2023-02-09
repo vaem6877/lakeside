@@ -104,6 +104,9 @@
     border-radius: 10px;
     background: #dfdfdf;
   }
+  .img_container span {
+    display: none;
+  }
   #hole_desc #tabs > ul li a {
     padding: 14px 0;
   }
