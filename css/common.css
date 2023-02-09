@@ -573,7 +573,8 @@ footer address p {
   background: #fff;
 }
 .weather_cast .shortcut > *:hover a,
-.weather_cast .shortcut > *:hover i {
+.weather_cast .shortcut > *:hover i,
+.weather_cast .shortcut > *:hover p {
   color: #000;
 }
 .weather_cast .shortcut > *:hover i {
