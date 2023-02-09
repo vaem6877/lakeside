@@ -585,7 +585,7 @@ footer address p {
   color: #000;
 }
 .weather_cast .shortcut > *:hover i {
-  transform: rotateY(360deg);
+  transform: rotateY(180deg);
   perspective: 100px;
 }
 .weather_cast .shortcut p {
