@@ -153,25 +153,22 @@ $.getJSON(
     let maxTemp = result.main.temp_max;
     let code = result.weather[0].icon;
 
-    let todayWeatherIcon = `<i class="fa-solid ${weatherIcon[code]}"></i>`
+    let todayWeatherIcon = `<i class="fa-solid ${weatherIcon[code]}"></i>`;
+
+    let newDate = new Date(result.dt * 1000);
+    let todayDate = ("0" + newDate.getDate()).substr(-2);
+    let todayKorDate = korWeek[newDate.getDay()];
 
     let todayWeather = `
     <li class="d-flex gap-3">
     ${todayWeatherIcon}
-      <span class="temp">
-        <p><span>MAX </span>${maxTemp.toFixed(1)}<span>˚C</span></p>
-        <p><span>MIN </span>${minTemp.toFixed(1)}<span>˚C</span></p>
-      <span>
+    <span class="temp">
+    <p><span>MAX </span>${maxTemp.toFixed(1)}<span>˚C</span></p>
+    <p><span>MIN </span>${minTemp.toFixed(1)}<span>˚C</span></p>
+    <span>
     </li>
-    `
-    $(".widget_box .preview ul").append(todayWeather)
-    console.log(todayWeather)
-
-    
-    let newDate = new Date(result.dt * 1000);
-    let todayDate = ("0"+newDate.getDate()).substr(-2);
-    let todayKorDate = korWeek[newDate.getDay()];
-    console.log(todayDate,todayKorDate)
+    `;
+    $(".widget_box .preview ul").prepend(todayWeather);
 
     let todayHTML = `
     <li class="swiper-slide">
@@ -180,62 +177,65 @@ $.getJSON(
     <p class="day">(${todayKorDate})</p>
     </a>
     </li>
-    `
-    target.append(todayHTML)
-    console.log(todayHTML)
-  }) //현재날씨
+    `;
+    target.prepend(todayHTML);
+  }
+); //현재날씨
 
 $.getJSON(
   "http://api.openweathermap.org/data/2.5/forecast?lat=37.319579&lon=127.179104&appid=6683b822924895deb0d2f90cf228a02e&units=metric",
   function (result) {
-    console.log(new Date())
     console.log(result);
     let list = result.list;
+    console.log(new Date());
     console.log(list);
-    let convertDate = "";
-    let korWeek = ["일", "월", "화", "수", "목", "금", "토"];
 
+    let convertDate = "";
     list.map((item) => {
       let newDate = new Date(item.dt * 1000);
-      let year = newDate.getFullYear(); // 년도
-      function add0(n) {
-        return n < 10 ? "0" + n : n;
-      }
-      let month = newDate.getMonth() + 1; // 월
-      let date = newDate.getDate(); // 날짜
-      let day = newDate.getDay(); // 요일
+      let year = newDate.getFullYear();
+      let month = newDate.getMonth() + 1;
+      let date = newDate.getDate();
+      let day = newDate.getDay();
       let hour = newDate.getHours();
       let minutes = newDate.getMinutes();
       let seconds = newDate.getSeconds();
+      function add0(n) {
+        return n < 10 ? "0" + n : n;
+      }
       let time = `${add0(hour)}:${add0(minutes)}:${add0(seconds)}`;
       convertDate = `${add0(year)}-${add0(month)}-${add0(date)} ${time}`;
       item.dt = convertDate;
     });
-    
-    let currentTime = new Date();
-    let convertCurrentTime = `${currentTime.getFullYear()}-${("0"+(currentTime.getMonth()+1)).substr(-2)}-${("0"+currentTime.getDate()).substr(-2)}`
-    console.log(convertCurrentTime)
 
-    const filteredDay = list.reduce((acc, current) => {
+    let currentTime = new Date();
+    let convertCurrentTime = `${currentTime.getFullYear()}-${(
+      "0" +
+      (currentTime.getMonth() + 1)
+    ).substr(-2)}-${("0" + currentTime.getDate()).substr(-2)}`;
+    console.log(convertCurrentTime);
+
+    let filteredDay = list.reduce((acc, cur) => {
       let convertDateACC = new Date(acc.dt * 1000);
-      const x = acc.find(
-        (item) => item.dt.substr(0, 10) === current.dt.substr(0, 10));
-      if (!x) {
-        return acc.concat([current]);
+      const filter = acc.find(
+        (item) => item.dt.substr(0, 10) === cur.dt.substr(0, 10)
+      );
+      if (!filter) {
+        return acc.concat([cur]);
       } else {
         return acc;
       }
     }, []);
+
     console.log(filteredDay);
-    if(filteredDay[0].dt.substr(0,10) == convertCurrentTime){
+    if (filteredDay[0].dt.substr(0, 10) == convertCurrentTime) {
       filteredDay.shift();
     }
-    // console.log(filteredDay.shift());
 
-    let date = "";
+    // let date = "";
     let dateList = [];
     $.each(filteredDay, function (i) {
-      date = filteredDay[i].dt.substr(0, 10); // 각 날짜(년-월-일)
+      let date = filteredDay[i].dt.substr(0, 10); // 각 날짜(년-월-일)
 
       dateList.push(date);
 
@@ -311,11 +311,7 @@ $.getJSON(
     let previewIconBox = $(".today_icon");
     let previewIconHTML = `<i class="fa-solid ${weatherIcon[previewIcon]}"></i>`;
     previewIconBox.append(previewIcon);
-    // let previewIconHTML = `<i class="fa-solid ${weatherIcon[iconArr]}"></i>`;
     menuBtn.append(previewIcon.clone());
-    // setTimeout(function () {
-    //   menuBtn.append(previewIcon);
-    // }, 3000);
 
     //preview - temp
     let todayTemp = $(".preview ul >li:first-child .temp").html();

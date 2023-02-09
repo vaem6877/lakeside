@@ -35,8 +35,7 @@ var courseSwiper = new Swiper("#course .swiper", {
 }); //홀 스와이퍼
 
 $("#course .each_course").each(function () {
-  let courseName = $(this).attr("data-name"); //동,서,남
-  console.log(courseName);
+  let courseName = $(this).attr("data-name");
   let holeList = "";
   let holeImgList = "";
   let holeImg = "";
@@ -49,8 +48,6 @@ $("#course .each_course").each(function () {
     </div>
   `;
   }
-  console.log($(this));
-
   $(this).find("#tabs .img_container").html(holeImgList);
   $("#course .swiper-wrapper").html(holeList);
 });
@@ -142,12 +139,15 @@ let $status = false;
 $(window).scroll(function () {
   if ($(window).scrollTop() > wvOST - wvOST / 2) {
     // console.log(wholeView.find("h3").text());
-    if($status == false){
+    if ($status == false) {
       $status = true;
       wholeView.find("h3").animate({ opacity: 1 }, 300);
       wholeView.find("h2").delay(300).animate({ opacity: 1 }, 300);
       wholeView.find("> p").delay(600).animate({ opacity: 1 }, 300);
-      wholeView.find(".img_container").delay(1000).animate({ opacity: 1 }, 1000);
+      wholeView
+        .find(".img_container")
+        .delay(1000)
+        .animate({ opacity: 1 }, 1000);
       wholeView.find(".img_container span").each(function (idx) {
         setTimeout(() => {
           if (idx % 2 == 0) {
@@ -157,7 +157,7 @@ $(window).scroll(function () {
           }
         }, 2000);
       });
-      }
+    }
   } //코스전경 스크롤
   if ($(window).scrollTop() > gallOST - 500) {
     gallary.find(".mix-wrapper img").each(function (idx) {
