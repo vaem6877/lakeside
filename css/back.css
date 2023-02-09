@@ -554,7 +554,8 @@ textarea {
   }
 }
 @media (max-width: 768px) {
-  .container {
+  .container,
+  .book_wrapper .container {
     width: 100%;
   }
   /* ========== book ========== */
