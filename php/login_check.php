@@ -12,13 +12,13 @@ include 'config.php';
     if($row !=null){
         $_SESSION['id'] = $row['tb_id'];
         $_SESSION['name'] = $row['tb_name'];
-        echo "<script>alert('아이디나 패스워드가 일치합니다.')</script>";
-        echo "<script>location.replace('../session.php');</script>";
+        echo "<script>alert('로그인 성공!')</script>";
+        echo "<script>location.replace('../session.php#session');</script>";
         exit;
     }
     else{
         echo "<script>alert('아이디나 패스워드가 잘못됐습니다.')</script>";
-        echo "<script>location.replace('../login.html');</script>";
+        echo "<script>location.replace('../login.php#login');</script>";
         exit;
     }
 ?>

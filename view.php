@@ -35,7 +35,7 @@
                 <a href="board.php#board" class="board_common_btn">목록으로</a>
                 <? 
                 if(isset($_SESSION['id'])){ ?>
-                <a href="update.php?idx=<?=$idx?>" class="board_common_btn">수정하기</a>
+                <a href="update.php?idx=<?=$idx?>#update" class="board_common_btn">수정하기</a>
                 <a href="php/delete.php?idx=<?=$idx?>" class="board_common_btn">삭제하기</a>
                 <? }
                 mysqli_close($connect);

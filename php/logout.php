@@ -3,5 +3,5 @@
     session_destroy();
     ?>
     <script>
-        location.replace('../session.php')
+        location.replace('../session.php#session')
         </script>

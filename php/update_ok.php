@@ -9,6 +9,6 @@ $content = $_POST['content'];
 $sql = "UPDATE lake_bbs SET title='$title',name='$name', content='$content' WHERE idx='$idx'";
 $result = mysqli_query($connect, $sql);
 
-echo "<script>location.replace('../board.php');</script>";
+echo "<script>location.replace('../board.php#board');</script>";
 
 mysqli_close($connect);
