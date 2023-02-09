@@ -14,7 +14,7 @@ img:not(#event-slides *) {
 }
 
 .main-course {
-  margin-bottom: 417px;
+  margin-bottom: 209px;
 }
 
 .course-desc,
@@ -31,11 +31,17 @@ section {
   line-height: 27px;
 }
 
-.main-course .course-desc h2 {
+.main-course .course-desc h2,
+#event-slides h2 {
   font-size: var(--main-TT-fz);
   font-weight: 500;
   margin-bottom: 55px;
   display: inline-block;
+}
+
+#event-slides h2 {
+  margin-top: 0;
+  margin-bottom: 155px;
 }
 
 .main-course .img-wrapper img {
