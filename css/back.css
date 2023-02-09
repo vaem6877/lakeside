@@ -1,11 +1,11 @@
 .login_header {
-  background-image: url(../img/back/bg_banner_login.png);
+  background-image: url(../img/back/bg_banner_login.webp);
 }
 .board_header {
-  background-image: url(../img/back/bg_banner_board.png);
+  background-image: url(../img/back/bg_banner_board.webp);
 }
 .book_header {
-  background-image: url(../img/back/bg_banner_book.png);
+  background-image: url(../img/back/bg_banner_book.webp);
 }
 
 /* ========== book-header ========== */
@@ -18,29 +18,49 @@ li {
   text-align: center;
 }
 
-.taps {
+.tabs {
   font-size: var(--second-TT-fz);
   font-weight: 500;
-}
-
-.taps {
   margin-bottom: 91px;
 }
-.taps li {
+
+.tabs li {
   color: var(--typo-C-grey);
   padding-bottom: 17px;
   border-bottom: 3px solid var(--typo-C-grey);
 }
-
-.taps li.active {
-  color: var(--secondary-brown);
+.col.ui-tabs-active {
   border-bottom: 3px solid var(--secondary-brown);
 }
-section {
-  display: none;
+.col.ui-tabs-active a {
+  color: var(--secondary-brown);
 }
-section.active {
-  display: block;
+input {
+  width: 317px;
+  font-size: var(--second-content-fz);
+  padding-bottom: 10px;
+  border-width: 0 0 1px 0;
+  border-color: #767272;
+}
+input::placeholder {
+  font-weight: 300;
+  font-size: var(--second-content-fz);
+  color: var(--typo-C-Green);
+}
+
+input:focus {
+  outline: none;
+}
+.board_common_btn {
+  display: inline-block;
+  border: none;
+  background: var(--secondary-brown);
+  width: 88px;
+  line-height: 42px;
+  font-size: var(--content-fz);
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
 }
 /* ========== back-common ========== */
 .book_uc p {
@@ -60,13 +80,13 @@ section.active {
   font-size: 14px;
   font-weight: 500;
 }
-.noti span {
+.book_noti span {
   margin-right: 10px;
 }
-.noti span:last-child {
+.book_noti span:last-child {
   margin-right: 0;
 }
-.noti span i {
+.book_noti span i {
   display: inline-block;
   width: 7px;
   height: 7px;
@@ -75,7 +95,7 @@ section.active {
   margin-right: 6px;
   transform: translateY(-25%);
 }
-.noti span:last-child {
+.book_noti span:last-child {
   color: #b3b3b3;
 }
 
@@ -180,6 +200,7 @@ section.active {
   border-radius: 50%;
   background: var(--secondary-brown);
 }
+
 /* ========== book time ========== */
 .book_time {
   margin-top: 38px;
@@ -206,31 +227,31 @@ section.active {
 .book_time p {
   line-height: 27px;
 }
-.data ul {
+#data_tabs ul {
   font-size: var(--content-fz);
   font-weight: 400;
 }
 /* ========== DATABOARD ========== */
-.data h4 {
+#data_tabs h4 {
   margin-bottom: 19px;
 }
-.course-taps {
+.course_tabs {
   line-height: 45px;
   border: 2px solid var(--secondary-brown);
   color: var(--secondary-brown);
   margin-bottom: 25px;
 }
-.course-taps li {
+.course_tabs li {
   border-right: 2px solid var(--secondary-brown);
 }
-.course-taps li:last-child {
+.course_tabs li:last-child {
   border-right: none;
 }
-.course-taps li.active {
+.course_tabs li.active {
   background: var(--secondary-brown);
   color: var(--bg-white);
 }
-.course-content table {
+.course_content table {
   width: 100%;
   margin: 0 auto;
   font-size: var(--content-fz);
@@ -239,20 +260,26 @@ section.active {
   border-top: 3px solid var(--secondary-brown);
   border-bottom: 3px solid var(--secondary-brown);
 }
-.course-content table th,
-.course-content table td {
+.course_content table th,
+.course_content table td {
   text-align: center;
 }
-.course-content table thead {
+.course_content table thead {
   font-weight: 500;
   line-height: 43px;
   border-bottom: 1px solid var(--secondary-brown);
 }
-.course-content table tbody tr td {
+.course_content table tbody tr td {
   line-height: 48px;
   border-bottom: 1px solid #bcbcbc;
   box-sizing: border-box;
   width: 20%;
+}
+.course_content tbody tr {
+  display: none;
+}
+.course_content tbody tr.east {
+  display: table-row;
 }
 
 .btn_booking {
@@ -277,7 +304,7 @@ section.active {
   margin: 161px auto;
 }
 
-.login_wrapper legend {
+.login_wrapper .legend {
   color: var(--typo-C-Green);
   font-size: var(--big-TT-fz);
   font-weight: 700;
@@ -291,25 +318,13 @@ section.active {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 30px 0 40px 0;
 }
-.login_field {
-  margin: 38px 0;
+
+.login_field p:first-child {
+  margin-bottom: 28px;
 }
-.login_field p input {
-  width: 100%;
-  line-height: 37px;
-  border-width: 0 0 2px 0;
-  border-color: var(--secondary-brown);
-}
-input:focus {
-  outline: none;
-}
-.login_field p input::placeholder {
-  font-weight: 300;
-  font-size: var(--second-content-fz);
-  color: var(--typo-C-Green);
-}
-.btn_logout,
+
 .login_wrapper button {
   width: 185px;
   height: 111px;
@@ -326,7 +341,11 @@ input:focus {
   justify-content: space-between;
 }
 .btn_help {
-  /* display: block; */
+  display: flex;
+  justify-content: space-between;
+  gap: 17px;
+}
+.btn_help a {
   width: 182px;
   line-height: 43px;
   background: var(--secondary-ivory);
@@ -335,9 +354,7 @@ input:focus {
   text-align: center;
   box-sizing: border-box;
 }
-.btn_help:first-child {
-  margin-right: 17px;
-}
+
 .login_help .desc {
   font-weight: 300;
   font-size: var(--small-content-fz);
@@ -350,21 +367,27 @@ input:focus {
   width: 350px;
   margin: 161px auto;
 }
-.session_title,
-.write-title {
+.session_title {
   color: var(--typo-C-Green);
-  font-size: var(--big-TT-fz);
+  font-size: var(--main-TT-fz);
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
   padding-bottom: 24px;
   border-bottom: 3px solid var(--secondary-brown);
 }
-.session_info {
-  margin-top: 10px;
+.session_info p {
+  margin: 30px;
 }
-
+.session_info p b {
+  font-weight: 500;
+}
+.session_info .board_common_btn {
+  width: 100%;
+  padding: 15px;
+  letter-spacing: 0.3em;
+}
 /* ========== board ========== */
 
 .board_wrapper {
@@ -381,18 +404,6 @@ select form:focus {
   outline: none;
 }
 
-.write_btn {
-  display: block;
-  border: none;
-  background: var(--secondary-brown);
-  width: 88px;
-
-  line-height: 42px;
-  font-size: var(--content-fz);
-  font-weight: 500;
-  text-align: center;
-  color: #fff;
-}
 .search select {
   width: 115px;
   height: 42px;
@@ -440,7 +451,6 @@ select form:focus {
   line-height: 48px;
   font-weight: 300;
   box-sizing: border-box;
-
   vertical-align: middle;
 }
 .board_wrapper table tbody tr td:nth-child(2) {
@@ -461,12 +471,70 @@ select form:focus {
   display: flex;
   gap: 10px;
 }
-
+/* ========== board - write ========== */
+.write_wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+}
+.write_wrapper fieldset {
+  border: 2px solid var(--secondary-brown);
+  padding: 30px;
+}
+textarea {
+  margin-top: 10px;
+  border: 2px solid var(--secondary-ivory);
+}
+.write_wrapper button {
+  margin-top: 5px;
+}
+/* ========== board - view ========== */
+.view_container {
+  max-width: 768px;
+  margin: 100px auto;
+}
+.view_box {
+  width: 100%;
+  border: 2px solid var(--secondary-brown);
+  padding: 30px;
+}
+.view_title,
+.view_date {
+  margin-bottom: 10px;
+}
+.view_title {
+  line-height: 1.8em;
+  /* border-bottom: 2px solid var(--secondary-ivory); */
+}
+.view_name {
+  margin-bottom: 10px;
+  font-size: var(--second-content-fz);
+  font-weight: 500;
+}
+.view_date {
+  font-size: var(--small-content-fz);
+  font-weight: 400;
+}
+.view_box article {
+  border-top: 2px solid var(--secondary-ivory);
+  padding-top: 10px;
+  min-height: 13em;
+}
+.view_box article p {
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 400;
+}
+.view_container a {
+  margin-top: 5px;
+}
+/* ============================== media ============================== */
 @media (max-width: 1000px) {
-  .taps {
+  .tabs {
     font-size: var(--second-content-fz);
     font-weight: 500;
   }
+
   /* ========== book ========== */
 }
 
@@ -476,18 +544,66 @@ select form:focus {
   }
 }
 @media (max-width: 768px) {
-  .taps {
+  .container {
+    width: 100%;
+  }
+  /* ========== book ========== */
+  .tabs {
     display: flex;
     flex-direction: column;
   }
-  .taps li {
+  .tabs li {
     padding: 12px;
   }
   .data h4 {
     margin-top: 30px;
   }
-  /* ========== book ========== */
 }
-@media (max-width: 520px) {
-  /* ========== board ========== */
+@media (max-width: 550px) {
+  /* ========== login ========== */
+  .login_wrapper form {
+    width: 330px;
+    margin: 50px auto;
+  }
+  .login_wrapper fieldset {
+    flex-direction: column;
+    margin: 10px 0 0px 0;
+  }
+  .login_wrapper button {
+    width: 100%;
+  }
+  .login_field {
+    margin: 25px 0 25px 0;
+  }
+  .login_help {
+    flex-direction: column;
+    text-align: center;
+  }
+  .login_help .desc {
+    width: 100%;
+    margin: 10px 0 10px 0;
+  }
+  br {
+    display: none;
+  }
+  .btn_help a {
+    font-size: var(--small-content-fz);
+  }
+  /* ========== book time ========== */
+  .tabs {
+    margin: 0 5px 38px 5px;
+    font-size: var(--second-TT-fz);
+  }
+  #data_tabs {
+    margin-top: 38px;
+  }
+  .book_time > div {
+    padding: 5px;
+  }
+  .btn_booking {
+    width: 100%;
+  }
+  .course_content table tbody tr td:nth-child(4) {
+    padding: 5px;
+  }
 }
