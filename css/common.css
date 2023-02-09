@@ -274,6 +274,7 @@ footer address p {
   border-radius: 50%;
   position: relative;
   transform: scale(0.8);
+  transition: transform 0.3s;
 }
 
 .aside-nav a:hover span:last-child,
