@@ -16,10 +16,10 @@
     gap: 20px;
   }
   .menu .main_menu {
-    font-size: 18px;
+    font-size: var(--second-content-fz);
   }
   .menu .sub_menu {
-    font-size: 12px;
+    font-size: var(--xsmall-content-fz);
   }
   .menu a {
     white-space: nowrap;
@@ -61,7 +61,7 @@
     padding: 5px 20px;
   }
   #course .swiper-slide a {
-    font-size: 12px;
+    font-size: var(--xsmall-content-fz);
     width: 70px;
     height: 70px;
     line-height: 70px;
@@ -117,8 +117,6 @@
     height: 150px;
   }
   #hole_desc #tabs ul li a {
-    /* font-size: 10px; */
-    /* line-height: 10px; */
     letter-spacing: 0.2em;
   }
   #tabs > ul {
