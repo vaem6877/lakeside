@@ -495,7 +495,7 @@ footer .notice-slide {
   width: 500px;
   padding: 40px;
   position: fixed;
-  top: 8%;
+  top: 6%;
   left: 10%;
   background: white;
   border: 5px solid var(--primary-green);
@@ -529,12 +529,11 @@ footer .notice-slide {
 }
 
 .popup-close {
-  text-align: center;
+  color: var(--primary-green);
   border: none;
   width: 30px;
   height: 30px;
-  background: var(--primary-ygreen);
-  border-radius: 50%;
+  background: none;
   position: absolute;
   right: 10px;
   top: 10px;
