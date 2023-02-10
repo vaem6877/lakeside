@@ -138,8 +138,8 @@ let weatherIcon = {
   "11n": "fa-cloud-bolt",
   "13d": "fa-snowflake",
   "13n": "fa-snowflake",
-  "50d": "fa-cloud-fog",
-  "50n": "fa-cloud-fog",
+  "50d": "fa-smog",
+  "50n": "fa-smog",
 };
 
 let Temp = "";
