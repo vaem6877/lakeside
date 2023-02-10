@@ -495,8 +495,8 @@ footer .notice-slide {
   width: 500px;
   padding: 40px;
   position: fixed;
-  top: 6%;
-  left: 10%;
+  top: 5%;
+  left: -62%;
   background: white;
   border: 5px solid var(--primary-green);
   border-radius: 5px;
