@@ -538,3 +538,7 @@ footer .notice-slide {
   right: 10px;
   top: 10px;
 }
+
+.pop-up label {
+  font-size: var(--small-content-fz);
+}
