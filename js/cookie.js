@@ -1,5 +1,9 @@
 
-    function setCookie(name,value,day){
+   let popupModal = document.querySelector('dialog'),
+    popupClose = popupModal.querySelector('.popup_close'),
+    dayCheck = document.querySelector('#daycheck');
+
+   function setCookie(name,value,day){
         let date = new Date();
         date.setDate(date.getDate()+day);
         document.cookie = `${name}=${value};expires=${date.toUTCString()}`;
