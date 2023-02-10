@@ -1,38 +1,37 @@
+let popupModal = document.querySelector("popup-pages"),
+  popupClose = popupModal.querySelector(".popup_close"),
+  dayCheck = document.querySelector("#daycheck");
 
-   let popupModal = document.querySelector('dialog'),
-    popupClose = popupModal.querySelector('.popup_close'),
-    dayCheck = document.querySelector('#daycheck');
+function setCookie(name, value, day) {
+  let date = new Date();
+  date.setDate(date.getDate() + day);
+  document.cookie = `${name}=${value};expires=${date.toUTCString()}`;
+}
 
-   function setCookie(name,value,day){
-        let date = new Date();
-        date.setDate(date.getDate()+day);
-        document.cookie = `${name}=${value};expires=${date.toUTCString()}`;
+function checkCookie(name) {
+  let cookieArr = document.cookie.split(";");
+
+  let visited = false;
+
+  for (let cookie of cookieArr) {
+    if (cookie.search(name) > -1) {
+      visited = true;
+      break;
     }
+  }
+  console.log(visited);
+  if (visited == false) {
+    popupModal.setAttribute("open", "");
+  }
+}
 
-    function checkCookie(name){
-        let cookieArr = document.cookie.split(';');
+checkCookie("lscookie");
 
-        let visited = false;
-
-        for(let cookie of cookieArr){
-            if(cookie.search(name) > -1){
-                visited = true;
-                break;
-            }
-        }
-	console.log(visited);
-        if(visited == false){
-            popupModal.setAttribute('open','');
-        }
-    }
-
-    checkCookie('lscookie');
-
-    popupClose.addEventListener('click',()=>{
-        if(dayCheck.checked){
-            setCookie('lscookie','home',1);
-        }else{
-            setCookie('lscookie','home',-1);
-        }
-        popupModal.removeAttribute('open');
-    });
+popupClose.addEventListener("click", () => {
+  if (dayCheck.checked) {
+    setCookie("lscookie", "home", 1);
+  } else {
+    setCookie("lscookie", "home", -1);
+  }
+  popupModal.removeAttribute("open");
+});
