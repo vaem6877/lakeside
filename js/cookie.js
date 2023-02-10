@@ -1,7 +1,7 @@
-let popupModal = document.querySelector("popup-pages"),
-  popupClose = popupModal.querySelector(".popup_close"),
-  dayCheck = document.querySelector("#daycheck");
-
+let popupModal = document.querySelector("dialog"),
+  popupClose = document.querySelector(".popup-close"),
+  dayCheck = document.querySelector("#dont-see");
+console.log(popupClose);
 function setCookie(name, value, day) {
   let date = new Date();
   date.setDate(date.getDate() + day);
