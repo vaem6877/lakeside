@@ -324,9 +324,9 @@ $.getJSON(
 
     //preview - date
     let previewDateBox = $(".today_date");
-    let previewDateHTML = `<div class="d-flex justify-content-center "><p>${newDate.getDate()}</p><p>(${
-      korWeek[day]
-    })</p></div>`;
+    let previewDateHTML = `<div class="d-flex justify-content-center "><p>${(
+      "0" + newDate.getDate()
+    ).substr(-2)}</p><p>(${korWeek[day]})</p></div>`;
     previewDateBox.html(previewDateHTML);
   }
 ); //5일 예보
