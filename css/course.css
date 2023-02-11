@@ -118,11 +118,11 @@ header {
   width: 90%;
   margin: 45px auto;
 }
-#tabs .swiper {
+#hole_desc .swiper {
   padding: 10px 40px;
   margin-bottom: 45px;
 }
-#tabs .swiper-container {
+#hole_desc .swiper-container {
   position: relative;
   width: 100%;
   margin-bottom: 76px;
@@ -131,7 +131,7 @@ header {
   overflow: hidden;
   padding: 0;
 }
-#tabs .swiper-slide {
+#hole_desc .swiper-slide {
   width: auto;
   display: flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
   align-items: center; /* 위아래 기준 중앙정렬 */
@@ -139,25 +139,25 @@ header {
   margin: 0 auto;
 }
 
-#tabs .swiper-button-prev {
+#hole_desc .swiper-button-prev {
   color: #181818;
   font-size: 57px;
   position: absolute;
   top: 80px;
   left: 10px;
 }
-#tabs .swiper-button-next {
+#hole_desc .swiper-button-next {
   color: #181818;
   font-size: 57px;
   position: absolute;
   top: 80px;
   right: 10px;
 }
-#tabs div:after,
-#tabs div:before {
+#hole_desc div:after,
+#hole_desc div:before {
   display: none;
 }
-#tabs .swiper-slide a {
+#hole_desc .swiper-slide a {
   display: block;
   width: 130px;
   height: 100%;
@@ -169,13 +169,13 @@ header {
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
 }
-#tabs .swiper-slide.ui-state-hover a {
+#hole_desc .swiper-slide.ui-state-hover a {
   background: #234a35;
 }
-#tabs .swiper-slide.ui-tabs-active a {
+#hole_desc .swiper-slide.ui-tabs-active a {
   background: #234a35;
 }
-#tabs .swiper-slide a {
+#hole_desc .swiper-slide a {
   color: #fff;
   text-decoration: none;
 }

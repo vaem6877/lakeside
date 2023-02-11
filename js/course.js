@@ -18,6 +18,15 @@ $(function () {
   $(".swiper #tabs").tabs({
     active: 0,
   });
+  $("#east_holes").tabs({
+    active: 0,
+  });
+  $("#west_holes").tabs({
+    active: 0,
+  });
+  $("#south_holes").tabs({
+    active: 0,
+  });
 }); //홀 탭
 
 $("#hole_desc #tabs-east .img_container #tabs-1").html(
@@ -48,7 +57,9 @@ $("#course .each_course").each(function () {
     </div>
   `;
   }
-  $(this).find("#tabs .img_container").html(holeImgList);
+  $(this).find("> div .img_container").html(holeImgList);
+  // $(this).find("#west_holes .img_container").html(holeImgList);
+  // $(this).find("#south_holes .img_container").html(holeImgList);
   $("#course .swiper-wrapper").html(holeList);
 });
 
